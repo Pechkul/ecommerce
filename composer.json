@@ -109,7 +109,8 @@
             "Webkul\\Tax\\": "packages/Webkul/Tax/src",
             "Webkul\\Theme\\": "packages/Webkul/Theme/src",
             "Webkul\\User\\": "packages/Webkul/User/src",
-            "Webkul\\Pos\\": "packages/Webkul/Pos/src"
+            "Webkul\\Pos\\": "packages/Webkul/Pos/src",
+            "Webkul\\B2BSuite\\": "packages/Webkul/B2BSuite/src"
         }
     },
     "autoload-dev": {

@@ -43,6 +43,7 @@ use Webkul\Stripe\Providers\StripeServiceProvider;
 use Webkul\Tax\Providers\TaxServiceProvider;
 use Webkul\Theme\Providers\ThemeServiceProvider;
 use Webkul\User\Providers\UserServiceProvider;
+use Webkul\B2BSuite\Providers\B2BSuiteServiceProvider;
 
 return [
     /**
@@ -95,4 +96,5 @@ return [
     ThemeServiceProvider::class,
     UserServiceProvider::class,
     PosServiceProvider::class,
+    B2BSuiteServiceProvider::class,
 ];
