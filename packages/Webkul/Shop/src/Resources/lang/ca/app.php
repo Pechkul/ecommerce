@@ -42,7 +42,7 @@ return [
             'page-title' => 'Inici de sessió del client',
             'password' => 'Contrasenya',
             'resend-verification' => 'Reenvia el correu de verificació',
-            'show-password' => 'Mostrar contrasenya',
+            'social-account-exists' => 'Ja existeix un compte amb aquest correu electrònic. Inicieu la sessió amb el vostre correu electrònic i contrasenya.',
             'title' => 'Iniciar sessió',
             'verify-first' => 'Verifica primer el teu compte de correu electrònic.',
         ],
@@ -373,6 +373,7 @@ return [
                 'remaining-downloads' => 'Descàrregues Restants',
                 'status' => 'Estat',
                 'title' => 'Títol',
+                'unlimited' => 'Il·limitat',
             ],
 
             'wishlist' => [
@@ -545,6 +546,14 @@ return [
             'default-toggle' => 'Alternar per defecte',
         ],
 
+        'form' => [
+            'control-group' => [
+                'control' => [
+                    'show-password' => 'Mostrar contrasenya',
+                ],
+            ],
+        ],
+
         'media' => [
             'index' => [
                 'add-attachments' => 'Afegir adjunts',
@@ -689,6 +698,17 @@ return [
 
                     'custom-filters' => [
                         'clear-all' => 'Esborrar tot',
+                    ],
+
+                    'number-options' => [
+                        'between' => 'Between',
+                        'equals' => 'Equals',
+                        'from' => 'From',
+                        'greater-than' => 'Greater Than',
+                        'greater-than-or-equal' => 'Greater Than Or Equal',
+                        'less-than' => 'Less Than',
+                        'less-than-or-equal' => 'Less Than Or Equal',
+                        'to' => 'To',
                     ],
                 ],
             ],
@@ -1152,6 +1172,9 @@ return [
             'address' => [
                 'add-new' => 'Afegir nova adreça',
                 'add-new-address' => 'Afegir nova adreça',
+                'address-updated-payment-info' => 'Els mètodes de pagament i els totals de la comanda s\'actualitzaran per a la vostra nova adreça. Feu clic a Continuar per veure les opcions més recents.',
+                'address-updated-shipping-info' => 'Els mètodes d\'enviament i les tarifes es tornaran a calcular per a la vostra nova adreça. Feu clic a Continuar per veure les opcions més recents.',
+                'address-updated-title' => 'S\'ha actualitzat la vostra adreça',
                 'back' => 'Tornar',
                 'billing-address' => 'Adreça de facturació',
                 'check-billing-address' => 'Falta l\'adreça de facturació.',
@@ -1255,6 +1278,7 @@ return [
             'categories-carousel' => 'Carrusel de Categories',
             'image-carousel' => 'Carrusel d\'Imatges',
             'offer' => 'Obté FINS A un 40% de DESCOMPTE en la teva primera comanda COMPRA ARA',
+            'preview-banner' => 'Previsualització del tema :theme al canal :channel. Els enllaços estan desactivats a la previsualització.',
             'product-carousel' => 'Carrusel de Productes',
             'resend-verify-email' => 'Reenviar Correu de Verificació',
             'verify-email' => 'Verifica el teu compte de correu electrònic',
@@ -1760,7 +1784,9 @@ return [
 
         'response' => [
             'already-cancel' => 'L\'estat de la RMA ja està cancel·lat.',
+            'cancel-not-allowed' => 'No es permet cancel·lar aquesta sol·licitud RMA.',
             'cancel-success' => 'L\'estat de la RMA s\'ha cancel·lat correctament.',
+            'close-not-allowed' => 'No es permet tancar aquesta sol·licitud RMA.',
             'create-success' => 'Sol·licitud creada correctament.',
             'creation-error' => 'No es pot actualitzar l\'estat de la RMA perquè la factura d\'aquesta comanda no s\'ha creat.',
             'invalid-item' => 'L\'article seleccionat de la comanda no és vàlid.',

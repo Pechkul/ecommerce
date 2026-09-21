@@ -350,6 +350,9 @@ return [
                         'add-btn' => 'Afegir adreça',
                         'add-new' => 'Afegir nova adreça',
                         'add-new-address' => 'Afegir nova adreça',
+                        'address-updated-payment-info' => 'Els mètodes de pagament i els totals de la comanda s\'actualitzaran per a l\'adreça modificada. Feu clic a Continuar per carregar les opcions més recents.',
+                        'address-updated-shipping-info' => 'Els mètodes d\'enviament i les tarifes es tornaran a calcular per a l\'adreça modificada. Feu clic a Continuar per carregar les opcions més recents.',
+                        'address-updated-title' => 'Adreça actualitzada',
                         'addresses' => 'Adreces',
                         'back' => 'Tornar',
                         'billing-address' => 'Adreça de facturació',
@@ -701,6 +704,7 @@ return [
                     'pending' => 'Pendent',
                     'status' => 'Estat',
                     'update-status' => 'Actualitzar Estat',
+                    'view' => 'Veure',
                 ],
             ],
 
@@ -983,6 +987,7 @@ return [
                         'edit' => 'Edita',
                         'enabled' => 'Actiu',
                         'id' => 'ID',
+                        'mass-delete-partial' => 'S\'han eliminat :deleted dels registres seleccionats; :skipped ja s\'havien suprimit.',
                         'mass-delete-success' => 'Les dades seleccionades s\'han suprimit correctament.',
                         'reason-error' => 'El motiu s\'utilitza en un RMA.',
                         'reason' => 'Motiu',
@@ -1024,6 +1029,7 @@ return [
                         'enabled' => 'Actiu',
                         'id' => 'ID',
                         'label' => 'Etiqueta',
+                        'mass-delete-partial' => 'S\'han eliminat :deleted dels registres seleccionats; :skipped ja s\'havien suprimit.',
                         'mass-delete-success' => 'Les dades seleccionades s\'han suprimit correctament.',
                         'no' => 'No',
                         'required' => 'Obligatori',
@@ -1064,6 +1070,7 @@ return [
                         'enabled' => 'Actiu',
                         'exchange-period' => 'Període de canvi (dies)',
                         'id' => 'ID',
+                        'mass-delete-partial' => 'S\'han eliminat :deleted dels registres seleccionats; :skipped ja s\'havien suprimit.',
                         'mass-delete-success' => 'Les dades seleccionades s’han eliminat correctament.',
                         'name' => 'Nom',
                         'reason' => 'Regles',
@@ -1155,10 +1162,12 @@ return [
                     'attribute-family-value' => 'Família d\'atributs - :attribute_family',
                     'category' => 'Categoria',
                     'channel' => 'Canal',
+                    'copy' => 'Copiar',
                     'copy-of' => 'Còpia de :value',
                     'copy-of-slug' => 'copia-de-:value',
                     'delete' => 'Eliminar',
                     'disable' => 'Desactivar',
+                    'edit' => 'Editar',
                     'id' => 'ID',
                     'id-value' => 'ID - :id',
                     'image' => 'Imatge',
@@ -1172,6 +1181,7 @@ return [
                     'qty-value' => ':qty Disponible',
                     'sku' => 'SKU',
                     'sku-value' => 'SKU - :sku',
+                    'stock-disabled' => 'Estoc desactivat',
                     'status' => 'Estat',
                     'type' => 'Tipus',
                     'update-status' => 'Actualitzar estat',
@@ -1222,6 +1232,7 @@ return [
                 ],
 
                 'categories' => [
+                    'search' => 'Search categories',
                     'title' => 'Categories',
                 ],
 
@@ -1809,7 +1820,7 @@ return [
                 'position' => 'Posició',
                 'price' => 'Preu',
                 'regex' => 'Expressió Regular',
-                'regex-info' => 'L\'expressió ha d\'estar entre cometes dobles.',
+                'regex-info' => 'L\'expressió ha d\'anar delimitada per barres, per exemple /^[0-9]+$/.',
                 'save-btn' => 'Guardar Atribut',
                 'select' => 'Seleccionar',
                 'select-type' => 'Tipus d\'Atribut de Selecció',
@@ -1883,7 +1894,7 @@ return [
                 'position' => 'Posició',
                 'price' => 'Preu',
                 'regex' => 'Expressió Regular',
-                'regex-info' => 'L\'expressió ha d\'estar entre cometes dobles.',
+                'regex-info' => 'L\'expressió ha d\'anar delimitada per barres, per exemple /^[0-9]+$/.',
                 'save-btn' => 'Desar Atribut',
                 'select' => 'Seleccionar',
                 'select-type' => 'Tipus d\'Atribut de Selecció',
@@ -1938,6 +1949,7 @@ return [
                     'inactive' => 'Inactiu',
                     'name' => 'Nom',
                     'no-of-products' => 'Visible al menú',
+                    'parent-category' => 'Categoria Pare',
                     'position' => 'Posició',
                     'status' => 'Estat',
                     'update-status' => 'Actualitzar Estat',
@@ -2092,10 +2104,10 @@ return [
             'attribute-family' => 'Família d\'Atributs',
             'attribute-product-error' => 'La família s\'utilitza en productes.',
             'create-success' => 'Família creada amb éxit.',
+            'default-delete-error' => 'La família d\'atributs per defecte no es pot suprimir.',
             'delete-failed' => 'S\'ha produït un error en eliminar la família.',
             'delete-success' => 'Família eliminada amb éxit.',
             'family' => 'Família',
-            'last-delete-error' => 'Es requereix almenys una família.',
             'update-success' => 'Família actualitzada amb éxit.',
             'user-define-error' => 'No es pot eliminar la família d\'atributs del sistema',
         ],
@@ -2120,6 +2132,7 @@ return [
                     'id' => 'ID de Client',
                     'id-value' => 'ID - :id',
                     'inactive' => 'Inactiu',
+                    'login-as-customer' => 'Iniciar sessió com a client',
                     'method-error' => 'Error! Mètode incorrecte detectat, si us plau revisa la configuració de l\'acció massiva',
                     'name' => 'Nom del Client',
                     'no-resource' => 'El recurs proporcionat no és suficient per a l\'acció',
@@ -2133,6 +2146,7 @@ return [
                     'suspended' => 'Suspés',
                     'update-status' => 'Actualizar l\'Estat',
                     'update-success' => 'Clients seleccionats actualitzats correctament',
+                    'view' => 'Veure',
                 ],
 
                 'create' => [
@@ -2275,6 +2289,7 @@ return [
                         'rating' => 'Valoració',
                         'status' => 'Estat',
                         'title' => 'Títol',
+                        'view' => 'Veure',
                     ],
                 ],
 
@@ -2479,7 +2494,9 @@ return [
 
                     'datagrid' => [
                         'active' => 'Actiu',
+                        'delete' => 'Eliminar',
                         'draft' => 'Borrador',
+                        'edit' => 'Editar',
                         'id' => 'ID',
                         'inactive' => 'Inactiu',
                         'name' => 'Nom',
@@ -2516,6 +2533,7 @@ return [
                     'update-success' => 'Actualizat exitosament',
                 ],
 
+                'campaign-associate' => 'Aquesta plantilla s\'utilitza en una o més campanyes.',
                 'delete-failed' => ':name Eliminació Fallida',
                 'delete-success' => 'Plantilla eliminada exitosament',
                 'email-template' => 'Plantilla de Correu Electrònic',
@@ -2619,6 +2637,7 @@ return [
                     ],
                 ],
 
+                'campaign-associate' => 'Aquest esdeveniment s\'utilitza en una o més campanyes.',
                 'delete-failed' => 'Eliminació de :name fallida',
                 'delete-success' => 'Esdeveniments eliminats amb éxit',
                 'edit-error' => 'No es pot editar l\'esdeveniment',
@@ -2983,6 +3002,7 @@ return [
 
                 'create-success' => 'Regla del Catàleg creada amb éxit',
                 'delete-success' => 'Regla del Catàleg eliminada amb éxit',
+                'queue-note' => 'Desar aquesta regla actualitza el preu de cada producte al qual s\'aplica. Si s\'aplica a molts productes, utilitza el controlador de cua database o redis amb un treballador de cua en execució, perquè els preus s\'actualitzin en segon pla en lloc d\'alentir el desament.',
                 'update-success' => 'Regla del Catàleg actualitzada amb éxit',
             ],
 
@@ -3223,6 +3243,312 @@ return [
         'update-success' => 'CMS actualitzat correctament.',
     ],
 
+    'appearance' => [
+        'themes' => [
+            'index' => [
+                'activate-btn' => 'Activa',
+                'activate-success' => ':theme ja està actiu a :channel.',
+                'active' => 'Actiu',
+                'active-on' => 'Actiu a:',
+                'active-on-all' => 'Actiu a tots els canals',
+                'buy-btn' => 'Veure i comprar',
+                'buy-themes' => 'Comprar temes',
+                'by' => 'per',
+                'customize-btn' => 'Personalitza',
+                'info' => 'Explora els temes disponibles per a la teva botiga i tria quin utilitza cada canal.',
+                'my-themes' => 'Els meus temes',
+                'not-in-use' => 'No s\'utilitza',
+                'not-installed' => 'Aquest tema no està instal·lat en aquesta botiga.',
+                'preview-btn' => 'Vista prèvia',
+                'title' => 'Temes',
+
+                'activate' => [
+                    'channels' => 'Canals',
+                    'channels-hint' => 'Mantén premuda la tecla Ctrl (Cmd al Mac) per triar més d\'un canal.',
+                    'confirm-btn' => 'Activa',
+                    'info' => 'Tria els canals que han de començar a utilitzar :theme.',
+                    'title' => 'Activa el tema',
+                    'warning' => ':channel té :count personalitzacions creades per a :theme. Es conserven, però no apareixeran mentre el tema nou estigui actiu.',
+                ],
+            ],
+        ],
+        'sections' => [
+            'index' => [
+                'all-filters-used' => 'Ja s\'han afegit tots els filtres disponibles.',
+                'channel' => 'Canal',
+                'copy-suffix' => 'Còpia',
+                'create-btn' => 'Crea una secció',
+                'delete-confirm' => 'Segur que voleu suprimir aquesta secció?',
+                'desktop' => 'Escriptori',
+                'discard-btn' => 'Descarta',
+                'discarded' => 'S\'han descartat els canvis de l\'esborrany.',
+                'duplicate-btn' => 'Duplica',
+                'empty' => 'Encara no hi ha seccions.',
+                'gone' => 'Aquesta secció ja no existeix.',
+                'inactive-theme' => 'Només es pot personalitzar un tema que estigui actiu en un canal.',
+                'locale' => 'Idioma',
+                'mobile' => 'Mòbil',
+                'no-fields' => 'Aquesta secció no té cap configuració per editar en aquest tema.',
+                'no-types' => 'Aquest tema no ofereix cap tipus de secció per afegir.',
+                'pinned' => 'Fixat a la part inferior de la pàgina.',
+                'preview-btn' => 'Vista prèvia',
+                'publish-btn' => 'Publica',
+                'scoped-to' => 'Es mostren les seccions del tema :theme al canal :channel.',
+                'tablet' => 'Tauleta',
+                'title' => 'Seccions',
+                'unsaved' => 'Canvis sense desar',
+
+                'datagrid' => [
+                    'active' => 'Actiu',
+                    'channel_name' => 'Nom del Canal',
+                    'change-status' => 'Canviar estat',
+                    'delete' => 'Eliminar',
+                    'id' => 'ID',
+                    'inactive' => 'Inactiu',
+                    'name' => 'Nom',
+                    'sort-order' => 'Ordre de Classificació',
+                    'status' => 'Estat',
+                    'theme' => 'Tema',
+                    'type' => 'Tipus',
+                    'view' => 'Veure',
+                ],
+            ],
+
+            'create' => [
+                'name' => 'Nom',
+                'save-btn' => 'Desa la secció',
+                'singleton-exists' => 'Aquest canal només mostra una secció de :type.',
+                'title' => 'Crea una secció',
+
+                'type' => [
+                    'category-carousel' => 'Carrousel de Categoria',
+                    'footer-links' => 'Enllaços del Peu de Pàgina',
+                    'image-carousel' => 'Carrousel d\'Imatges',
+                    'product-carousel' => 'Carrousel de Productes',
+                    'services-content' => 'Contingut de Serveis',
+                    'static-content' => 'Contingut Estàtic',
+                    'title' => 'Tipus',
+                ],
+            ],
+
+            'edit' => [
+                'active' => 'Actiu',
+                'add-column' => 'Afegeix una columna',
+                'add-filter-btn' => 'Afegir Filtres',
+                'add-footer-link-btn' => 'Afegir Enllaç al Peu de Pàgina',
+                'add-image-btn' => 'Afegir Imatge',
+                'add-link' => 'Afegir Enllaç',
+                'add-media' => 'Afegeix contingut multimèdia',
+                'asc' => 'Asc',
+                'back' => 'Enrere',
+                'category-carousel' => 'Carrousel de Categoria',
+                'category-carousel-description' => 'Mostra categories dinàmiques de forma atractiva utilitzant un carrousel de categories adaptable.',
+                'category-id' => 'ID de categoria',
+                'channels' => 'Canals',
+                'column' => 'Columna',
+                'columns' => 'Columnes',
+                'create-filter' => 'Crear Filtre',
+                'css' => 'CSS',
+                'delete' => 'Eliminar',
+                'desc' => 'Desc',
+                'edit' => 'Editar',
+                'featured' => 'Destacat',
+                'filter-title' => 'Títol',
+                'filters' => 'Filtres',
+                'footer-link' => 'Enllaços del Peu de Pàgina',
+                'footer-link-description' => 'Navega pels enllaços del peu de pàgina per explorar el lloc web de manera fluïda i obtenir informació.',
+                'footer-link-form-title' => 'Enllaç al Peu de Pàgina',
+                'footer-title' => 'Títol',
+                'general' => 'General',
+                'html' => 'HTML',
+                'image' => 'Imatge',
+                'image-size' => 'La mida de la imatge ha de ser (1920px x 700px)',
+                'image-title' => 'Títol de la imatge',
+                'image-upload-message' => 'Només s\'admeten imatges (.jpeg, .jpg, .png, .webp, ..).',
+                'inactive' => 'Inactiu',
+                'key' => 'Clau: :key',
+                'key-input' => 'Clau',
+                'limit' => 'Límit',
+                'link' => 'Enllaç',
+                'name' => 'Nom',
+                'new' => 'Nou',
+                'no' => 'No',
+                'parent-id' => 'ID del Pare',
+                'preview' => 'Vista prèvia',
+                'product-carousel' => 'Carrousel de Productes',
+                'product-carousel-description' => 'Mostra productes de forma elegant amb un carrousel de productes dinàmic i adaptable.',
+                'save-btn' => 'Desar',
+                'select' => 'Seleccionar',
+                'slider' => 'Lliscador',
+                'slider-add-btn' => 'Afegir Lliscador',
+                'slider-description' => 'Personalització de temes relacionada amb el lliscador.',
+                'slider-image' => 'Imatge del Lliscador',
+                'slider-required' => 'El camp del lliscador és obligatori.',
+                'sort' => 'Ordenar',
+                'sort-order' => 'Ordre de Classificació',
+                'static-content' => 'Contingut Estàtic',
+                'static-content-description' => 'Millora la interacció amb contingut estàtic concís i informatiu per a la teva audiència.',
+                'status' => 'Estat',
+                'themes' => 'Temes',
+                'title' => 'Edita la secció',
+                'update-slider' => 'Actualitzar Deslizador',
+                'uploading' => 'S\'està pujant…',
+                'url' => 'URL',
+                'value' => 'Valor: :value',
+                'value-input' => 'Valor',
+
+                'services-content' => [
+                    'add-btn' => 'Afegir serveis',
+                    'channels' => 'Canals',
+                    'delete' => 'Eliminar',
+                    'description' => 'Descripció',
+                    'general' => 'General',
+                    'name' => 'Nom',
+                    'save-btn' => 'Desar',
+                    'service-icon' => 'Icona del servei',
+                    'service-icon-class' => 'Classe de icona del servei',
+                    'service-info' => 'Personalització de temes relacionats amb el servei.',
+                    'services' => 'Serveis',
+                    'sort-order' => 'Ordre de classificació',
+                    'status' => 'Estat',
+                    'title' => 'Títol',
+                    'update-service' => 'Actualitzar serveis',
+                ],
+
+                'yes' => 'Sí',
+            ],
+
+            'create-success' => 'La secció s\'ha creat correctament',
+            'delete-success' => 'La secció s\'ha suprimit correctament',
+            'update-success' => 'La secció s\'ha actualitzat correctament',
+        ],
+    ],
+
+    'reporting' => [
+        'sales' => [
+            'index' => [
+                'abandoned-carts' => 'Cistelles Abandonades',
+                'abandoned-products' => 'Productes Abandonats',
+                'abandoned-rate' => 'Taxa d\'Abandonament',
+                'abandoned-revenue' => 'Ingressos Abandonats',
+                'added-to-cart' => 'Afegit a la Cistella',
+                'added-to-cart-info' => 'Només :progress visitants han afegit productes a la cistella',
+                'all-channels' => 'Tots els canals',
+                'average-order-value-over-time' => 'Valor Mitjà de la Comanda al llarg del Temps',
+                'average-sales' => 'Valor Mitjà de la Comanda',
+                'count' => 'Comptar',
+                'coupon-code' => 'Codi de Cupó',
+                'date' => 'Data',
+                'discount' => 'Descompte',
+                'email' => 'Email',
+                'end-date' => 'Data de Finalització',
+                'id' => 'ID',
+                'interval' => 'Interval',
+                'name' => 'Nom',
+                'order-id' => 'ID de Comanda',
+                'orders' => 'Comandes',
+                'orders-over-time' => 'Comandes al llarg del Temps',
+                'payment-method' => 'Mètode de Pagament',
+                'purchase-funnel' => 'Embut de Compra',
+                'purchased' => 'Comprat',
+                'purchased-info' => 'Només :progress visitants realitzen compres',
+                'refunds' => 'Reemborsaments',
+                'refunds-over-time' => 'Reemborsaments al llarg del Temps',
+                'sales-by-coupon' => 'Vendes per Cupó',
+                'sales-over-time' => 'Vendes al llarg del Temps',
+                'shipping-collected' => 'Enviament Recaptat',
+                'shipping-collected-over-time' => 'Enviament Recaptat al llarg del Temps',
+                'start-date' => 'Data d\'Inici',
+                'tax-collected' => 'Impostos Recaptats',
+                'tax-collected-over-time' => 'Impostos Recaptats al llarg del Temps',
+                'title' => 'Vendes',
+                'top-payment-methods' => 'Principals Mètodes de Pagament',
+                'top-shipping-methods' => 'Principals Mètodes d\'Enviament',
+                'top-tax-categories' => 'Principals Categories d\'Impostos',
+                'total' => 'Total',
+                'total-orders' => 'Total de Comandes',
+                'total-sales' => 'Total de Vendes',
+                'view-details' => 'Veure Detalls',
+            ],
+        ],
+
+        'customers' => [
+            'index' => [
+                'all-channels' => 'Tots els Canals',
+                'count' => 'Comptar',
+                'customers' => 'Clients',
+                'customers-over-time' => 'Clients al llarg del Temps',
+                'customers-with-most-orders' => 'Clients amb Més Comandes',
+                'customers-with-most-reviews' => 'Clients amb Més Resenyes',
+                'customers-with-most-sales' => 'Clients amb Més Vendes',
+                'email' => 'Correu Electrònic',
+                'end-date' => 'Data de Finalització',
+                'id' => 'ID',
+                'interval' => 'Interval',
+                'name' => 'Nom',
+                'orders' => 'Comandes',
+                'reviews' => 'Resenyes',
+                'start-date' => 'Data d\'Inici',
+                'title' => 'Clients',
+                'top-customer-groups' => 'Principals Grups de Clients',
+                'total' => 'Total',
+                'total-customers' => 'Total de Clients',
+                'view-details' => 'Veure Detalls',
+            ],
+        ],
+
+        'products' => [
+            'index' => [
+                'all-channels' => 'Tots els Canals',
+                'channel' => 'Canal',
+                'end-date' => 'Data de Finalització',
+                'id' => 'ID',
+                'interval' => 'Interval',
+                'last-search-terms' => 'Últims termes de cerca',
+                'locale' => 'Configuració regional',
+                'name' => 'Nom',
+                'orders' => 'Comandes',
+                'price' => 'Preu',
+                'products-added-over-time' => 'Productes Afegits al llarg del Temps',
+                'products-with-most-reviews' => 'Productes amb Més Resenyes',
+                'quantities' => 'Quantitats',
+                'quantities-sold-over-time' => 'Quantitats Venudes al llarg del Temps',
+                'results' => 'Resultats',
+                'revenue' => 'Ingressos',
+                'reviews' => 'Resenyes',
+                'search-term' => 'Terme de cerca',
+                'start-date' => 'Data d\'Inici',
+                'title' => 'Productes',
+                'top-search-terms' => 'Termes de cerca principals',
+                'top-selling-products-by-quantity' => 'Productes Més Venuts per Quantitat',
+                'top-selling-products-by-revenue' => 'Productes Més Venuts per Ingressos',
+                'total' => 'Total',
+                'total-products-added-to-wishlist' => 'Productes Afegits a la Llista de Desitjos',
+                'total-sold-quantities' => 'Quantitat de Productes Venuts',
+                'uses' => 'Usos',
+                'view-details' => 'Veure Detalls',
+            ],
+        ],
+
+        'view' => [
+            'all-channels' => 'Tots els Canals',
+            'back-btn' => 'Enrere',
+            'day' => 'Dia',
+            'end-date' => 'Data de Finalització',
+            'export-csv' => 'Exportar CSV',
+            'export-xls' => 'Exportar XLS',
+            'month' => 'Mes',
+            'not-available' => 'No hi ha registres disponibles.',
+            'start-date' => 'Data d\'Inici',
+            'year' => 'Any',
+        ],
+
+        'empty' => [
+            'info' => 'No hi ha dades disponibles per al període seleccionat',
+            'title' => 'No hi ha dades disponibles',
+        ],
+    ],
+
     'settings' => [
         'locales' => [
             'index' => [
@@ -3329,9 +3655,10 @@ return [
                     'file-info-example' => 'Per exemple, en cas d\'imatges de productes, els arxius s\'han de col·locar a /project-root/storage/app/import/product-images',
                     'general' => 'General',
                     'images-directory' => 'Ruta del Directori d\'Imatges',
+                    'import-confirmation' => 'La importació començarà tan bon punt es desi. Voleu continuar?',
                     'process-in-queue' => 'Processar en Cua',
                     'results' => 'Resultats',
-                    'save-btn' => 'Desar Importació',
+                    'save-btn' => 'Importa',
                     'settings' => 'Configuracions',
                     'skip-errors' => 'Saltar Errors',
                     'stop-on-errors' => 'Aturar en Errors',
@@ -3356,7 +3683,7 @@ return [
                     'images-directory' => 'Ruta del Directori d\'Imatges',
                     'process-in-queue' => 'Processar en Cua',
                     'results' => 'Resultats',
-                    'save-btn' => 'Desar Importació',
+                    'save-btn' => 'Importa',
                     'settings' => 'Configuracions',
                     'skip-errors' => 'Saltar Errors',
                     'stop-on-errors' => 'Aturar en Errors',
@@ -3378,24 +3705,38 @@ return [
                         'edit' => 'Editar',
                         'error-file' => 'Arxiu d\'Error',
                         'id' => 'ID',
+                        'import' => 'Importa',
                         'started-at' => 'Iniciat el',
                         'state' => 'Estat',
                         'summary' => 'Resum',
                         'updated' => 'Actualitzat',
                         'uploaded-file' => 'Arxiu Pujat',
+                        'view-progress' => 'Mostra el progrés',
                     ],
                 ],
 
                 'import' => [
                     'back-btn' => 'Tornar',
                     'completed-batches' => 'Total de Lots Completats:',
+                    'deleting-info' => 'Eliminació en curs',
                     'download-error-report' => 'Descarregar Informe Complet',
+                    'downloading-info' => 'Baixant imatges',
                     'edit-btn' => 'Editar',
+                    'failed-batches' => ':count lots no s\'han completat. Reviseu el registre d\'errors i torneu a executar la importació per a aquestes files.',
+                    'images-downloaded' => 'Imatges baixades:',
+                    'images-progress' => 'imatges baixades',
                     'imported-info' => 'Enhorabona! La teva importació ha estat exitosa.',
                     'importing-info' => 'Importació en procés',
                     'indexing-info' => 'Indexació de Recursos (Preu, Inventari i Cerca Elàstica) en Progrés',
                     'linking-info' => 'Vinculació de Recursos en Progrés',
                     'progress' => 'Progrés:',
+                    'rows-validated' => 'files validades',
+                    'step-create' => 'Crear',
+                    'step-delete' => 'Eliminar',
+                    'step-download' => 'Imatges',
+                    'step-index' => 'Indexar',
+                    'step-link' => 'Enllaçar',
+                    'step-validate' => 'Validar',
                     'title' => 'Importació',
                     'total-batches' => 'Total de Lots:',
                     'total-created' => 'Total de Registres Creats:',
@@ -3408,7 +3749,27 @@ return [
                     'validate-info' => 'Feu clic a Validar Dades per verificar la teva importació.',
                     'validating-info' => 'Les dades estan sent llegides i validades',
                     'validation-failed-info' => 'La teva importació no és vàlida. Si us plau, corregeix els següents errors i torna a intentar-ho.',
+                    'validation-partial-info' => 'La importació pot continuar, però algunes files s\'ometran. Reviseu els errors següents o descarregueu l\'informe complet.',
                     'validation-success-info' => 'La teva importació és vàlida. Feu clic a Importar per iniciar el procés d\'importació',
+                ],
+
+                'images' => [
+                    'current-archive' => 'Pujat actualment: :name — :count imatge/s a punt.',
+                    'current-images' => 'Ja hi ha :count imatge/s pujada/es per a aquesta importació.',
+                    'directory-example' => 'Per exemple, en el cas de product-images, els fitxers s\'han de posar a la carpeta /project-root/storage/app/import/product-images.',
+                    'directory-hint' => 'Feu servir el camí relatiu a /project-root/storage/app/import, p. ex. product-images, import-images.',
+                    'directory-info' => 'Si teniu accés al codi, poseu les imatges en una carpeta del servidor i indiqueu aquesta carpeta a continuació.',
+                    'directory-placeholder' => 'Camí del directori d\'imatges',
+                    'directory-title' => 'Imatges ja al servidor',
+                    'download-sample-zip' => 'Baixa imatges d\'exemple',
+                    'info' => 'Trieu on s\'han de trobar les imatges indicades al vostre fitxer.',
+                    'recommended' => 'Recomanat',
+                    'replace-archive' => 'Escollir un arxiu nou les substitueix.',
+                    'title' => 'Imatges de producte',
+                    'upload-info' => 'Pugeu un únic arxiu amb totes les imatges. La columna «images» anomena llavors els fitxers que conté.',
+                    'upload-title' => 'Puja un ZIP d\'imatges',
+                    'url-info' => 'Poseu l\'adreça https:// completa de cada imatge a la columna «images». Es baixen abans de la importació, sense haver de deixar res al servidor.',
+                    'url-title' => 'Enllaços d\'imatge al fitxer',
                 ],
 
                 'create-success' => 'Importació creada correctament.',
@@ -3416,6 +3777,7 @@ return [
                 'delete-success' => 'Importació eliminada correctament.',
                 'not-valid' => 'La importació no és vàlida',
                 'nothing-to-import' => 'No hi ha recursos per importar.',
+                'processing-failed' => 'No s\'ha pogut processar la importació. Comproveu el fitxer i torneu-ho a provar.',
                 'setup-queue-error' => 'Si us plau, canvia el teu controlador de cua a "database" o "redis" per iniciar el procés d\'importació.',
                 'update-success' => 'Importació actualitzada correctament.',
             ],
@@ -3793,7 +4155,9 @@ return [
             'incorrect-password' => 'Contrasenya incorrecta',
             'last-delete-error' => 'Error en eliminar l\'últim usuari.',
             'login-error' => 'Si us plau, verifica les teves credencials i intenta-ho de nou.',
+            'role-not-grantable' => 'No podeu assignar un rol amb permisos que no teniu.',
             'update-success' => 'Usuari actualitzat amb éxit.',
+            'user-not-manageable' => 'No podeu modificar un usuari el rol del qual té permisos que no teniu.',
         ],
 
         'roles' => [
@@ -3822,6 +4186,7 @@ return [
                 'name' => 'Nom',
                 'permissions' => 'Permisos',
                 'save-btn' => 'Desar Rol',
+                'search-permissions' => 'Cerca permisos',
                 'title' => 'Crear Rol',
             ],
 
@@ -3843,139 +4208,10 @@ return [
             'delete-failed' => 'Error en eliminar el Rol',
             'delete-success' => 'Rol eliminat amb éxit',
             'last-delete-error' => 'No es pot eliminar l\'últim Rol',
+            'permissions-not-grantable' => 'No podeu concedir permisos que no teniu.',
             'update-success' => 'Rol actualitzat amb éxit',
         ],
 
-        'themes' => [
-            'index' => [
-                'create-btn' => 'Crear Tema',
-                'title' => 'Temes',
-
-                'datagrid' => [
-                    'active' => 'Actiu',
-                    'channel_name' => 'Nom del Canal',
-                    'change-status' => 'Canviar estat',
-                    'delete' => 'Eliminar',
-                    'id' => 'ID',
-                    'inactive' => 'Inactiu',
-                    'name' => 'Nom',
-                    'sort-order' => 'Ordre de Classificació',
-                    'status' => 'Estat',
-                    'theme' => 'Tema',
-                    'type' => 'Tipus',
-                    'view' => 'Veure',
-                ],
-            ],
-
-            'create' => [
-                'name' => 'Nom',
-                'save-btn' => 'Desar tema',
-                'sort-order' => 'Ordre de classificació',
-                'themes' => 'Temes',
-                'title' => 'Crear tema',
-
-                'type' => [
-                    'category-carousel' => 'Carrousel de Categoria',
-                    'footer-links' => 'Enllaços del Peu de Pàgina',
-                    'image-carousel' => 'Carrousel d\'Imatges',
-                    'product-carousel' => 'Carrousel de Productes',
-                    'services-content' => 'Contingut de Serveis',
-                    'static-content' => 'Contingut Estàtic',
-                    'title' => 'Tipus',
-                ],
-            ],
-
-            'edit' => [
-                'active' => 'Actiu',
-                'add-filter-btn' => 'Afegir Filtres',
-                'add-footer-link-btn' => 'Afegir Enllaç al Peu de Pàgina',
-                'add-image-btn' => 'Afegir Imatge',
-                'add-link' => 'Afegir Enllaç',
-                'asc' => 'Asc',
-                'back' => 'Enrere',
-                'category-carousel' => 'Carrousel de Categoria',
-                'category-carousel-description' => 'Mostra categories dinàmiques de forma atractiva utilitzant un carrousel de categories adaptable.',
-                'category-id' => 'ID de categoria',
-                'channels' => 'Canals',
-                'column' => 'Columna',
-                'create-filter' => 'Crear Filtre',
-                'css' => 'CSS',
-                'delete' => 'Eliminar',
-                'desc' => 'Desc',
-                'edit' => 'Editar',
-                'featured' => 'Destacat',
-                'filter-title' => 'Títol',
-                'filters' => 'Filtres',
-                'footer-link' => 'Enllaços del Peu de Pàgina',
-                'footer-link-description' => 'Navega pels enllaços del peu de pàgina per explorar el lloc web de manera fluïda i obtenir informació.',
-                'footer-link-form-title' => 'Enllaç al Peu de Pàgina',
-                'footer-title' => 'Títol',
-                'general' => 'General',
-                'html' => 'HTML',
-                'image' => 'Imatge',
-                'image-size' => 'La mida de la imatge ha de ser (1920px x 700px)',
-                'image-title' => 'Títol de la imatge',
-                'image-upload-message' => 'Només s\'admeten imatges (.jpeg, .jpg, .png, .webp, ..).',
-                'inactive' => 'Inactiu',
-                'key' => 'Clau: :key',
-                'key-input' => 'Clau',
-                'limit' => 'Límit',
-                'link' => 'Enllaç',
-                'name' => 'Nom',
-                'new' => 'Nou',
-                'no' => 'No',
-                'parent-id' => 'ID del Pare',
-                'parent-id-hint' => 'Pots introduir múltiples ID de pare separats per comes (p. ex., 12,15,34)',
-                'preview' => 'Vista prèvia',
-                'product-carousel' => 'Carrousel de Productes',
-                'product-carousel-description' => 'Mostra productes de forma elegant amb un carrousel de productes dinàmic i adaptable.',
-                'save-btn' => 'Desar',
-                'select' => 'Seleccionar',
-                'slider' => 'Lliscador',
-                'slider-add-btn' => 'Afegir Lliscador',
-                'slider-description' => 'Personalització de temes relacionada amb el lliscador.',
-                'slider-image' => 'Imatge del Lliscador',
-                'slider-required' => 'El camp del lliscador és obligatori.',
-                'sort' => 'Ordenar',
-                'sort-order' => 'Ordre de Classificació',
-                'static-content' => 'Contingut Estàtic',
-                'static-content-description' => 'Millora la interacció amb contingut estàtic concís i informatiu per a la teva audiència.',
-                'status' => 'Estat',
-                'themes' => 'Temes',
-                'title' => 'Editar Tema',
-                'update-slider' => 'Actualitzar Deslizador',
-                'url' => 'URL',
-                'value' => 'Valor: :value',
-                'value-input' => 'Valor',
-
-                'services-content' => [
-                    'add-btn' => 'Afegir serveis',
-                    'channels' => 'Canals',
-                    'delete' => 'Eliminar',
-                    'description' => 'Descripció',
-                    'general' => 'General',
-                    'name' => 'Nom',
-                    'save-btn' => 'Desar',
-                    'service-icon' => 'Icona del servei',
-                    'service-icon-class' => 'Classe de icona del servei',
-                    'service-info' => 'Personalització de temes relacionats amb el servei.',
-                    'services' => 'Serveis',
-                    'sort-order' => 'Ordre de classificació',
-                    'status' => 'Estat',
-                    'title' => 'Títol',
-                    'update-service' => 'Actualitzar serveis',
-                ],
-
-                'yes' => 'Sí',
-            ],
-
-            'create-success' => 'Tema creat amb éxit',
-            'delete-success' => 'Tema eliminat amb éxit',
-            'update-success' => 'Tema actualitzat amb éxit',
-        ],
-    ],
-
-    'reporting' => [
         'sales' => [
             'index' => [
                 'abandoned-carts' => 'Cistelles Abandonades',
@@ -4115,11 +4351,11 @@ return [
             'title' => 'Configuració',
 
             'general' => [
-                'info' => 'General',
+                'info' => 'Configuració global d\'unitats, contingut, disseny, tipus de canvi, mapa del lloc i RGPD.',
                 'title' => 'General',
 
                 'general' => [
-                    'info' => 'Configura les opcions d\'unitats i activa o desactiva les opcions de Molles de Pa i Visitants.',
+                    'info' => 'Configuració d\'unitats i molla de pa de la botiga.',
                     'title' => 'General',
 
                     'unit-options' => [
@@ -4137,7 +4373,7 @@ return [
                 ],
 
                 'content' => [
-                    'info' => 'Estableix opcions de comparació, opcions de llistes de desitjos, opcions de cerca d\'imatges, peu de pàgina, alterna el peu de pàgina i scripts personalitzats.',
+                    'info' => 'Bàner d\'oferta, línia de copyright, regles d\'especulació i scripts personalitzats.',
                     'title' => 'Contingut',
 
                     'header-offer' => [
@@ -4150,7 +4386,7 @@ return [
 
                     'copyright-content' => [
                         'title' => 'Contingut de drets d\'autor',
-                        'info' => 'Configura el contingut de drets d\'autor que es mostra al peu de pàgina del teu lloc web per protegir la teva propietat intel·lectual i millorar el reconeixement de la marca.',
+                        'info' => 'La línia de copyright que es mostra al peu de la botiga.',
                     ],
 
                     'speculation-rules' => [
@@ -4191,24 +4427,25 @@ return [
                         'custom-css' => 'CSS Personalitzat',
                         'custom-javascript' => 'Javascript Personalitzat',
                         'title' => 'Scripts Personalitzats',
-                        'title-info' => 'Els scripts personalitzats són peces de codi creades per afegir funcions o característiques específiques al programari, millorant les seves capacitats de manera única.',
+                        'title-info' => 'CSS i JavaScript afegits a totes les pàgines de la botiga.',
                     ],
                 ],
 
                 'design' => [
-                    'info' => 'Establir logotip i icona de favicon.',
+                    'info' => 'Logotip i favicon del tauler d\'administració, i com es mostren les categories del menú de la botiga.',
                     'title' => 'Disseny',
 
                     'admin-logo' => [
                         'favicon' => 'Favicon',
                         'logo-image' => 'Imatge de Logotip',
                         'title' => 'Logotip d\'Administrador',
-                        'title-info' => 'Configura les imatges de logotip i favicon per a la interfície del teu lloc web per a una millor marca i reconeixement.',
+                        'title-info' => 'El logotip i el favicon mostrats al tauler d\'administració i als correus enviats a l\'administrador.',
                     ],
 
                     'menu-category' => [
                         'default' => 'Menú per defecte',
                         'info' => 'Aquesta configuració controla la visibilitat de les categories al menú de capçalera. Pots triar mostrar només les categories pare o totes les categories niades.',
+                        'preview' => 'Vista prèvia',
                         'preview-default' => 'Previsualització del menú per defecte',
                         'preview-sidebar' => 'Previsualització del menú lateral',
                         'sidebar' => 'Menú lateral',
@@ -4218,11 +4455,11 @@ return [
 
                 'gdpr' => [
                     'title' => 'GDPR',
-                    'info' => 'Configuració de compliment de GDPR',
+                    'info' => 'Avís de galetes, categories de consentiment i acord de privadesa mostrat als clients.',
 
                     'settings' => [
                         'title' => 'Configuració de compliment de GDPR',
-                        'info' => 'Gestiona la configuració de compliment de GDPR, incloent l\'acord de privadesa de dades. Habilita o deshabilita les funcions de GDPR segons sigui necessari',
+                        'info' => 'Activa o desactiva les funcions del RGPD per a aquest canal.',
                         'enabled' => 'Habilitar GDPR',
                     ],
 
@@ -4296,7 +4533,7 @@ return [
                 ],
 
                 'sitemap' => [
-                    'info' => 'Estableix les opcions del mapa del lloc.',
+                    'info' => 'Generació del mapa del lloc i límits de fitxer.',
                     'title' => 'Mapa del lloc',
 
                     'settings' => [
@@ -4306,7 +4543,7 @@ return [
                     ],
 
                     'file-limits' => [
-                        'info' => 'Estableix les opcions de límits d\'arxius.',
+                        'info' => 'El nombre màxim d\'URL escrites en un fitxer de mapa del lloc abans de començar-ne un altre.',
                         'max-file-size' => 'Mida màxima de l\'arxiu',
                         'max-url-per-file' => 'Nombre màxim d\'URL per arxiu',
                         'title' => 'Límits d\'arxius',
@@ -4423,18 +4660,18 @@ return [
             ],
 
             'catalog' => [
-                'info' => 'Catàleg',
+                'info' => 'Configuració de productes, fragments enriquits i inventari.',
                 'title' => 'Catàleg',
 
                 'products' => [
-                    'info' => 'Pàgina de vista del producte, pàgina de vista de la cistella, aparador, revisió i compartir atributs a les xarxes socials.',
+                    'info' => 'Pàgines de producte i cistell, cerca, mides d\'imatge, valoracions, atributs i compartir.',
                     'title' => 'Productes',
 
                     'settings' => [
                         'compare-options' => 'Opcions de comparació',
                         'image-search-option' => 'Opció de cerca d\'imatges',
                         'title' => 'Configuració',
-                        'title-info' => 'La configuració fa referència a les opcions configurables que controlen el comportament d\'un sistema, aplicació o dispositiu, adaptades a les preferències i requisits de l\'usuari.',
+                        'title-info' => 'Activa o desactiva la comparació de productes i la cerca per imatge.',
                         'wishlist-options' => 'Opcions de llista de desitjos',
                     ],
 
@@ -4465,13 +4702,13 @@ return [
                         'allow-no-of-related-products' => 'Nombre permès de productes relacionats',
                         'allow-no-of-up-sells-products' => 'Nombre permès de productes de venda creuada',
                         'title' => 'Configuració de la pàgina de vista de producte',
-                        'title-info' => 'La configuració de la pàgina de vista de producte implica ajustar el disseny i els elements a la pàgina de visualització d\'un producte, millorant l\'experiència de l\'usuari i la presentació de la informació.',
+                        'title-info' => 'Quants productes relacionats i de venda superior es mostren a la pàgina del producte.',
                     ],
 
                     'cart-view-page' => [
                         'allow-no-of-cross-sells-products' => 'Nombre permès de productes de venda creuada',
                         'title' => 'Configuració de la pàgina de vista del carret',
-                        'title-info' => 'La configuració de la pàgina de vista del carret implica organitzar elements, detalls i opcions a la pàgina del carret de la compra, millorant la interacció de l\'usuari i el flux de compra.',
+                        'title-info' => 'Quants productes de venda creuada es mostren a la pàgina del cistell.',
                     ],
 
                     'storefront' => [
@@ -4489,14 +4726,14 @@ return [
                         'products-per-page' => 'Productes per pàgina',
                         'sort-by' => 'Ordenar per',
                         'title' => 'Botiga en línia',
-                        'title-info' => 'La botiga en línia és la interfície orientada al client d\'una botiga en línia, que mostra productes, categories i navegació per a una experiència de compra perfecta.',
+                        'title-info' => 'Com es llisten els productes a les pàgines de categoria i de cerca.',
                     ],
 
                     'small-image' => [
                         'height' => 'Alçada',
                         'placeholder' => 'Marcador de posició d\'imatge petita',
                         'title' => 'Imatge petita',
-                        'title-info' => 'La imatge petita és la interfície orientada al client d\'una botiga en línia, que mostra productes, categories i navegació per a una experiència de compra perfecta.',
+                        'title-info' => 'La mida a què es redimensionen les imatges petites de producte, i la imatge per defecte quan el producte no en té.',
                         'width' => 'Amplada',
                     ],
 
@@ -4504,7 +4741,7 @@ return [
                         'height' => 'Alçada',
                         'placeholder' => 'Marcador de posició d\'imatge mitjana',
                         'title' => 'Imatge mitjana',
-                        'title-info' => 'La imatge mitjana es refereix a una imatge de mida moderada que ofereix un equilibri entre el detall i l\'espai a la pantalla, comunament utilitzada per a fins visuals.',
+                        'title-info' => 'La mida a què es redimensionen les imatges mitjanes de producte, i la imatge per defecte quan el producte no en té.',
                         'width' => 'Amplada',
                     ],
 
@@ -4512,7 +4749,7 @@ return [
                         'height' => 'Alçada',
                         'placeholder' => 'Marcador de posició d\'imatge gran',
                         'title' => 'Imatge gran',
-                        'title-info' => 'La imatge gran representa una imatge d\'alta resolució que proporciona un major detall i impacte visual, sovint utilitzada per mostrar productes o gràfics.',
+                        'title-info' => 'La mida a què es redimensionen les imatges grans de producte, i la imatge per defecte quan el producte no en té.',
                         'width' => 'Amplada',
                     ],
 
@@ -4524,25 +4761,25 @@ return [
                         'display-star-count' => 'Mostra el recompte d\'estrelles en les valoracions.',
                         'summary' => 'Resum',
                         'title' => 'Ressenya',
-                        'title-info' => 'Avaluació o valoració d\'alguna cosa, sovint implicant opinions i comentaris.',
+                        'title-info' => 'Qui pot valorar un producte i com es mostren les valoracions a la pàgina del producte.',
                     ],
 
                     'attribute' => [
                         'file-upload-size' => 'Mida màxima de càrrega d\'arxius (en Kb)',
                         'image-upload-size' => 'Mida màxima de càrrega d\'imatges (en Kb)',
                         'title' => 'Atribut',
-                        'title-info' => 'Característica o propietat que defineix un objecte, influenciant el seu comportament, aparença o funció.',
+                        'title-info' => 'La mida màxima d\'imatge i fitxer que es pot pujar per a un valor d\'atribut.',
                     ],
 
                     'social-share' => [
-                        'title-info' => 'Configura la configuració de compartir a les xarxes socials per habilitar el compartir productes a Instagram, Twitter, WhatsApp, Facebook, Pinterest, LinkedIn i per correu electrònic.',
+                        'title-info' => 'Trieu quins botons de compartir apareixen a la pàgina del producte i el missatge que porten.',
                         'title' => 'Compartir a les xarxes socials',
                         'share-message' => 'Missatge de compartir',
                         'share' => 'Compartir',
                         'enable-social-share' => 'Habilitar compartir a les xarxes socials?',
-                        'enable-share-whatsapp-info' => 'L\'enllaç per compartir a WhatsApp només apareixerà en dispositius mòbils.',
-                        'enable-share-whatsapp' => 'Habilitar compartir a WhatsApp?',
-                        'enable-share-twitter' => 'Habilitar compartir a Twitter?',
+                        'enable-share-whatsapp-info' => 'L\'enllaç per compartir a WhatsApp només apareix en dispositius mòbils.',
+                        'enable-share-whatsapp' => 'Voleu activar compartir a WhatsApp?',
+                        'enable-share-twitter' => 'Voleu activar compartir a X (Twitter)?',
                         'enable-share-pinterest' => 'Habilitar compartir a Pinterest?',
                         'enable-share-linkedin' => 'Habilitar compartir a LinkedIn?',
                         'enable-share-facebook' => 'Habilitar compartir a Facebook?',
@@ -4551,7 +4788,7 @@ return [
                 ],
 
                 'rich-snippets' => [
-                    'info' => 'Configurar productes i categories.',
+                    'info' => 'Dades estructurades afegides a les pàgines de la botiga per als cercadors.',
                     'title' => 'Fragments enriquits',
 
                     'products' => [
@@ -4564,14 +4801,14 @@ return [
                         'show-sku' => 'Mostrar SKU',
                         'show-weight' => 'Mostrar pes',
                         'title' => 'Productes',
-                        'title-info' => 'Configura les opcions d\'estoc del producte per permetre comandes pendents, establir quantitats mínimes i màximes a la cistella, i definir limíts de falta d\'estoc.',
+                        'title-info' => 'Trieu quins detalls del producte s\'inclouen a les dades estructurades.',
                     ],
 
                     'categories' => [
                         'enable' => 'Habilitar',
                         'show-search-input-field' => 'Mostrar camp d\'entrada de cerca',
                         'title' => 'Categories',
-                        'title-info' => '"Categories" es refereix a grups o classificacions que ajuden a organitzar i agrupar productes o articles similars per facilitar la navegació i cerca.',
+                        'title-info' => 'Afegeix dades estructurades de categoria a les pàgines de la botiga perquè els cercadors les puguin llegir.',
                     ],
                 ],
 
@@ -4585,13 +4822,13 @@ return [
                         'min-qty-allowed-in-cart' => 'Quantitat mínima permesa a la cistella de la compra',
                         'out-of-stock-threshold' => 'Lindar de falta d\'estoc',
                         'title' => 'Opció d\'estoc de producte',
-                        'info' => 'Configura les opcions d\'estoc de productes per permetre comandes pendents, establir quantitats mínimes i màximes a la cistella i definir llindars de falta d\'estoc.',
+                        'info' => 'Permet comandes sense existències i fixa la quantitat per sota de la qual un producte es considera exhaurit.',
                     ],
                 ],
             ],
 
             'customer' => [
-                'info' => 'Client',
+                'info' => 'Configuració d\'adreces, captcha i comptes de client.',
                 'title' => 'Client',
 
                 'address' => [
@@ -4603,19 +4840,19 @@ return [
                         'country' => 'País',
                         'state' => 'Estat',
                         'title' => 'Requisits',
-                        'title-info' => 'Els requisits són les condicions, característiques o especificacions necessàries perquè alguna cosa es compleixi, s\'aconsegueixi o es satisfaci amb éxit.',
+                        'title-info' => 'Quins camps d\'adreça ha d\'omplir un client.',
                         'zip' => 'Codi Postal',
                     ],
 
                     'information' => [
                         'street-lines' => 'Línies en una adreça de carrer',
                         'title' => 'Informació',
-                        'title-info' => '"Línies en una adreça de carrer" es refereix als segments individuals d\'una adreça, sovint separats per comes, que proporcionen informació d\'ubicació com número de casa, carrer, ciutat i més.',
+                        'title-info' => 'Quantes línies d\'adreça mostra el formulari.',
                     ],
                 ],
 
                 'captcha' => [
-                    'info' => 'Establir la clau del lloc, clau secreta i estat.',
+                    'info' => 'Claus i estat de Google reCAPTCHA Enterprise.',
                     'title' => 'Captcha',
 
                     'credentials' => [
@@ -4630,7 +4867,7 @@ return [
                         'site-key-info' => 'Un cop creat el projecte i la clau API, cerca el servei "reCAPTCHA" a la biblioteca i genera les claus de "reCAPTCHA".',
                         'status' => 'Estat',
                         'title' => 'Credencials',
-                        'title-info' => 'Configura les credencials de Google reCAPTCHA, incloent-hi la clau API, l\'ID del projecte, la clau del lloc, la clau secreta i activa o desactiva l\'estat.',
+                        'title-info' => 'Credencials de Google reCAPTCHA Enterprise i la puntuació que ha d\'assolir una sol·licitud per ser acceptada.',
                     ],
 
                     'validations' => [
@@ -4640,7 +4877,7 @@ return [
                 ],
 
                 'settings' => [
-                    'settings-info' => 'Configura les subscripcions als butlletins, les verificacions per correu electrònic i la connexió social.',
+                    'settings-info' => 'Configura la llista de desitjos, la redirecció després d\'iniciar sessió, les opcions de compte nou, el butlletí, la verificació del correu i l\'inici de sessió social.',
                     'title' => 'Configuració',
 
                     'login-as-customer' => [
@@ -4680,19 +4917,20 @@ return [
 
                     'newsletter' => [
                         'subscription' => 'Permetre la subscripció al butlletí',
+                        'subscription-info' => 'Mostra un formulari de subscripció al peu de la botiga.',
                         'title' => 'Subscripció al butlletí',
-                        'title-info' => '"Informacions del butlletí" conté actualitzacions, ofertes o contingut compartit regularment per correu electrònic amb els subscriptors, mantenint-los informats i compromesos.',
+                        'title-info' => 'Subscripció al butlletí a la botiga.',
                     ],
 
                     'email' => [
                         'email-verification' => 'Permetre la verificació per correu electrònic',
                         'title' => 'Verificació per correu electrònic',
-                        'title-info' => '"Verificació per correu electrònic" confirma l\'autenticitat d\'una adreça de correu electrònic, sovint enviant un enllaç de confirmació, millorant la seguretat del compte i la fiabilitat de la comunicació.',
+                        'title-info' => 'Demana a un client nou que confirmi la seva adreça electrònica abans de poder iniciar sessió.',
                     ],
 
                     'social-login' => [
                         'title' => 'Connexió social',
-                        'info' => '"Connexió social" permet als usuaris accedir a un lloc web utilitzant els seus comptes de xarxes socials, simplificant els processos d\'inscripció i connexió.',
+                        'info' => 'Permet que els clients iniciïn sessió amb un compte extern. Cada proveïdor necessita el seu propi identificador i secret de client.',
 
                         'google' => [
                             'enable-google' => 'Activar Google',
@@ -4771,21 +5009,21 @@ return [
                         ],
 
                         'twitter' => [
-                            'enable-twitter' => 'Activar Twitter',
+                            'enable-twitter' => 'Activa X (Twitter)',
 
                             'client-id' => [
                                 'title' => 'ID de client',
-                                'title-info' => 'Identificador únic proporcionat per Twitter en crear la teva aplicació OAuth.',
+                                'title-info' => 'Identificador únic proporcionat per X en crear la vostra aplicació OAuth.',
                             ],
 
                             'client-secret' => [
                                 'title' => 'Secret de client',
-                                'title-info' => 'Clau secreta associada al teu client OAuth de Twitter. Mantingues-la confidencial.',
+                                'title-info' => 'Clau secreta associada al vostre client OAuth d\'X. Manteniu-la confidencial.',
                             ],
 
                             'redirect' => [
                                 'title' => 'URL de redirecció',
-                                'title-info' => 'URL de retorn on els usuaris són redirigits després d\'autenticar-se amb Twitter. Utilitza el format d\'URL de marcador de posició mostrat (només canvia el teu domini). Ha de coincidir amb la URL configurada a la teva consola de Twitter.',
+                                'title-info' => 'URL de retorn on es redirigeixen els usuaris després d\'autenticar-se a X. Feu servir el format d\'URL mostrat (canvieu només el vostre domini). Ha de coincidir amb l\'URL configurat al portal de desenvolupadors d\'X.',
                             ],
                         ],
                     ],
@@ -4793,18 +5031,25 @@ return [
             ],
 
             'email' => [
-                'info' => 'Correu electrònic',
+                'info' => 'Controlador de correu, dades del remitent i notificacions que envia la botiga.',
                 'title' => 'Correu electrònic',
 
                 'smtp' => [
+                    'brevo-api-key' => 'Clau API de Brevo',
+                    'brevo-api-key-info' => 'Creeu una clau API v3 al vostre compte de Brevo a SMTP & API.',
+                    'driver' => 'Controlador',
+                    'driver-brevo-api' => 'Brevo (API)',
+                    'driver-info' => 'Trieu com envia els correus la vostra botiga.',
                     'driver-mismatch-info' => 'El vostre controlador de correu està establert a ":driver" en lloc de "bagisto-dynamic-smtp". Qualsevol canvi fet aquí no tindrà efecte. Si us plau, actualitzeu MAIL_MAILER=bagisto-dynamic-smtp al vostre fitxer .env per activar aquesta configuració.',
                     'driver-mismatch-title' => 'Aquesta configuració està actualment inactiva.',
+                    'driver-notice' => 'Avís del controlador',
+                    'driver-smtp' => 'SMTP',
                     'encryption' => 'Xifratge',
                     'host' => 'Amfitrió',
-                    'info' => 'Configureu la configuració del servidor SMTP per enviar correus electrònics des de la vostra botiga.',
+                    'info' => 'Trieu com envia els correus la vostra botiga i configureu el controlador seleccionat.',
                     'password' => 'Contrasenya',
                     'port' => 'Port',
-                    'title' => 'SMTP',
+                    'title' => 'Controlador de correu',
                     'username' => 'Nom d\'usuari',
                 ],
 
@@ -4818,12 +5063,13 @@ return [
                     'contact-email-tip' => 'Aquesta adreça de correu electrònic apareixerà al peu de pàgina dels seus correus electrònics.',
                     'contact-name' => 'Nom de contacte',
                     'contact-name-tip' => 'Aquest nom apareixerà al peu de pàgina dels seus correus electrònics.',
-                    'info' => 'Configureu el nom del remitent, l\'adreça de correu electrònic de la botiga, els detalls de l\'administrador i la informació de contacte utilitzats en tots els correus electrònics.',
+                    'info' => 'Trieu com s\'envien els correus i des de quines adreces.',
                     'sender-email' => 'Adreça de correu electrònic del remitent',
                     'sender-email-tip' => 'Els correus electrònics als seus clients s\'enviaran des d\'aquesta adreça.',
                     'sender-name' => 'Nom del remitent',
                     'sender-name-tip' => 'Aquest nom apareixerà a la safata d\'entrada dels seus clients com a remitent del correu electrònic.',
                     'title' => 'Configuració de correu electrònic',
+                    'title-info' => 'Els noms i adreces des dels quals la botiga envia correus i que apareixen al peu.',
                 ],
 
                 'notifications' => [
@@ -4831,7 +5077,7 @@ return [
                     'cancel-order-mail-to-admin' => 'Envia un correu electrònic de notificació a l\'administrador després de cancel·lar una comanda',
                     'customer' => 'Envia les credencials del compte del client després del registre',
                     'customer-registration-confirmation-mail-to-admin' => 'Envia un correu electrònic de confirmació a l\'administrador després del registre del client',
-                    'info' => 'Configura les opcions d\'estoc del producte per permetre comandes pendents, establir quantitats mínimes i màximes al carret de la compra i definir llindars de falta d\'estoc.',
+                    'info' => 'Trieu quins correus s\'envien als clients i a l\'administrador.',
                     'new-inventory-source' => 'Envia un correu electrònic de notificació a la font d\'estoc després de crear un enviament',
                     'new-invoice' => 'Envia un correu electrònic de notificació al client després de crear una nova factura',
                     'new-invoice-mail-to-admin' => 'Envia un correu electrònic de notificació a l\'administrador després de crear una nova factura',
@@ -4843,16 +5089,17 @@ return [
                     'new-shipment-mail-to-admin' => 'Envia un correu electrònic de notificació a l\'administrador després de crear un nou enviament',
                     'registration' => 'Envia un correu electrònic de confirmació després del registre del client',
                     'title' => 'Notificacions',
+                    'title-info' => 'Activa o desactiva cada correu de notificació.',
                     'verification' => 'Envia un correu electrònic de verificació després del registre del client',
                 ],
             ],
 
             'sales' => [
-                'info' => 'Vendes',
+                'info' => 'Configuració d\'enviament, pagaments, comandes, factures, impostos, pagament i devolucions.',
                 'title' => 'Vendes',
 
                 'shipping-setting' => [
-                    'info' => 'Configura la configuració d\'enviament, incloent-hi país, estat, ciutat, adreça, codi postal, nom de la botiga, número de l\'IVA, número de contacte i detalls bancaris.',
+                    'info' => 'L\'adreça des d\'on s\'envien les comandes.',
                     'title' => 'Configuració d\'enviament',
 
                     'origin' => [
@@ -4864,14 +5111,14 @@ return [
                         'store-name' => 'Nom de la botiga',
                         'street-address' => 'Adreça',
                         'title' => 'Origen',
-                        'title-info' => 'L\'origen de l\'enviament fa referència al lloc on els béns o productes es generen abans de ser transportats a la seva destinació.',
+                        'title-info' => 'L\'adreça des d\'on s\'envien les comandes i les dades de la botiga que apareixen a les factures.',
                         'vat-number' => 'Número de l\'IVA',
                         'zip' => 'Codi postal',
                     ],
                 ],
 
                 'shipping-methods' => [
-                    'info' => 'Configura els mètodes d\'enviament, incloent-hi enviament gratuït, tarifa plana i opcions addicionals si és necessari.',
+                    'info' => 'Els mètodes d\'enviament oferts en finalitzar la compra.',
                     'title' => 'Mètodes d\'enviament',
 
                     'free-shipping' => [
@@ -4879,7 +5126,7 @@ return [
                         'page-title' => 'Enviament gratuït',
                         'status' => 'Estat',
                         'title' => 'Títol',
-                        'title-info' => '"Enviament gratuït" fa referència a un mètode d\'enviament on s\'abandona el cost d\'enviament i el venedor cobreix les despeses per lliurar els béns al comprador.',
+                        'title-info' => 'Un mètode d\'enviament sense cost.',
                     ],
 
                     'flat-rate-shipping' => [
@@ -4888,7 +5135,7 @@ return [
                         'rate' => 'Tarifa',
                         'status' => 'Estat',
                         'title' => 'Títol',
-                        'title-info' => 'L\'enviament amb tarifa plana és un mètode d\'enviament on es cobra una tarifa fixa per l\'enviament, independentment del pes, mida o distància del paquet. Això simplifica els costos d\'enviament i pot ser avantatjós tant per a compradors com per a venedors.',
+                        'title-info' => 'Un mètode d\'enviament amb tarifa fixa, per comanda o per article.',
                         'type' => [
                             'per-order' => 'Per comanda',
                             'per-unit' => 'Per unitat',
@@ -4909,36 +5156,46 @@ return [
                     'application-fee' => 'Pagador de la tarifa de l’aplicació',
                     'business-account' => 'Compte d\'empresa',
                     'cash-on-delivery' => 'Pagament contra entrega',
-                    'cash-on-delivery-info' => 'Mètode de pagament en què els clients paguen en efectiu quan reben els béns o serveis a la seva porta.',
+                    'cash-on-delivery-info' => 'Permet que els clients paguin en efectiu en rebre la comanda.',
                     'client-id' => 'ID de client',
-                    'client-id-info' => 'Utilitza "sb" per a proves.',
+                    'client-id-info' => 'L\'identificador de client de la vostra aplicació de PayPal. Feu servir el de l\'aplicació de sandbox mentre Sandbox estigui actiu.',
                     'client-secret' => 'Clau secreta del client',
-                    'client-secret-info' => 'Afegeix aquí la teva clau secreta',
+                    'client-secret-info' => 'El secret de client de la vostra aplicació de PayPal.',
                     'create-success-refund' => 'Reemborsament creat correctament.',
                     'description' => 'Descripció',
                     'enable' => 'Activa',
                     'generate-invoice' => 'Generar automàticament la factura després de realitzar una comanda',
                     'generate-invoice-applicable' => 'Aplicable si es permet la generació automàtica de factures',
-                    'info' => 'Configura la informació dels mètodes de pagament',
+                    'info' => 'Configureu els mètodes de pagament oferts en finalitzar la compra.',
                     'instructions' => 'Instruccions',
                     'logo' => 'Logotip',
-                    'logo-information' => 'La resolució de la imatge ha de ser de 55px x 45px',
+                    'logo-information' => 'Mida recomanada: 55 x 45 píxels.',
                     'mailing-address' => 'Enviar xec a',
                     'merchant-description' => 'Descripció del comerciant',
                     'merchant-id' => 'ID de comerciant',
                     'merchant-key' => 'Clau de comerciant',
                     'merchant-name' => 'Nom del comerciant',
+                    'merchant-private-key' => 'Clau privada del comerciant',
+                    'merchant-private-key-info' => 'Enganxa el contingut del fitxer PEM de la clau privada generada al tauler de PayGlocal. Serveix per signar les sol·licituds.',
                     'merchant-salt' => 'Sal de comerciant',
                     'money-transfer' => 'Transferència de diners',
-                    'money-transfer-info' => 'Transferència de fons d\'una persona o compte a un altre, sovint de forma electrònica, per a transaccions o remeses.',
+                    'money-transfer-info' => 'Permet que els clients paguin per transferència bancària o xec.',
                     'page-title' => 'Mètodes de pagament',
                     'paid' => 'Pagat',
+                    'payglocal' => 'PayGlocal',
+                    'payglocal-info' => 'Accepta pagaments transfronterers mitjançant PayGlocal. <a href="https://dashboard.payglocal.in/app/mca/h8271x" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline hover:text-blue-700">Registra\'t aquí per obtenir les teves credencials.</a>',
+                    'payglocal-merchant-id-info' => 'Disponible al tauler de PayGlocal a My Account.',
+                    'payglocal-private-key-id-info' => 'ID de la teva clau privada, que es mostra al tauler de PayGlocal.',
+                    'payglocal-public-key' => 'Clau pública de PayGlocal',
+                    'payglocal-public-key-id-info' => 'ID de la clau pública de PayGlocal, que es mostra al tauler de PayGlocal.',
+                    'payglocal-public-key-info' => 'Enganxa el contingut del fitxer PEM de la clau pública de PayGlocal. Serveix per xifrar les sol·licituds i verificar les respostes.',
+                    'payglocal-sandbox-info' => 'Envia els pagaments a l\'entorn de proves de PayGlocal.',
                     'paypal-smart-button' => 'PayPal',
-                    'paypal-smart-button-info' => 'Botó intel·ligent de PayPal: simplifica els pagaments en línia amb botons personalitzables per a transaccions segures i multimètode en llocs web i aplicacions.',
+                    'paypal-smart-button-info' => 'Mostra els botons de PayPal en finalitzar la compra perquè els clients paguin amb PayPal o amb targeta.',
                     'paypal-standard' => 'PayPal estàndard',
-                    'paypal-standard-info' => 'PayPal estàndard és una opció de pagament bàsica de PayPal per a negocis en línia, que permet als clients pagar amb els seus comptes de PayPal o targetes de crèdit/dèbit.',
+                    'paypal-standard-info' => 'Envia els clients a PayPal per pagar amb el seu compte de PayPal o amb targeta.',
                     'payu' => 'PayU',
-                    'payu-info' => 'Configurar els paràmetres de la passarel·la de pagament PayU',
+                    'payu-info' => 'Accepta pagaments a través de PayU.',
                     'payu-merchant-key-info' => 'Introduïu la vostra clau de comerciant PayU obtinguda del tauler de PayU',
                     'payu-merchant-salt-info' => 'Introduïu la vostra sal de comerciant PayU obtinguda del tauler de PayU',
                     'pending' => 'Pendent',
@@ -4948,10 +5205,12 @@ return [
                     'phonepe-client-id-info' => 'Introduïu l\'ID de client de PhonePe obtingut del tauler de PhonePe',
                     'phonepe-client-secret-info' => 'Introduïu el secret de client de PhonePe obtingut del tauler de PhonePe',
                     'phonepe-merchant-info' => 'Introduïu l\'ID de comerciant de PhonePe obtingut del tauler de PhonePe',
+                    'private-key-id' => 'ID de la clau privada',
                     'processing' => 'Processant',
                     'production-mode-info' => 'Només per al mode de producció.',
+                    'public-key-id' => 'ID de la clau pública',
                     'razorpay' => 'Razorpay',
-                    'razorpay-info' => 'Razorpay és una plataforma de tecnologia financera que ajuda les empreses a acceptar, processar i distribuir pagaments.',
+                    'razorpay-info' => 'Accepta pagaments a través de Razorpay.',
                     'sandbox' => 'Entorn de proves',
                     'set-invoice-status' => 'Establir l\'estat de la factura després de crear-la a',
                     'set-order-status' => 'Establir l\'estat de la comanda després de crear la factura a',
@@ -4959,7 +5218,7 @@ return [
                     'statement-descriptor' => 'Descripció de l’extracte',
                     'status' => 'Estat',
                     'stripe' => 'Stripe',
-                    'stripe-info' => 'Configure Stripe payment gateway settings for secure online transactions',
+                    'stripe-info' => 'Accepta pagaments amb targeta a través de Stripe.',
                     'test-client-id' => 'ID de client en mode de prova',
                     'test-client-secret' => 'Clau secreta del client en mode de prova',
                     'test-mode-info' => 'Només per al mode de prova/entorn de proves.',
@@ -4967,7 +5226,7 @@ return [
                 ],
 
                 'order-settings' => [
-                    'info' => 'Configura els números de comanda, les comandes mínimes i les comandes pendents.',
+                    'info' => 'Reintents de creació de comandes, números de comanda, import mínim i repetició de comandes.',
                     'title' => 'Configuració de comandes',
 
                     'order-creation' => [
@@ -4978,7 +5237,7 @@ return [
 
                     'order-number' => [
                         'generator' => 'Generador de números de comanda',
-                        'info' => 'Identificador únic assignat a una comanda específica d\'un client, que ajuda a fer un seguiment, la comunicació i la referència durant tot el procés de compra.',
+                        'info' => 'Com es componen els números de comanda generats.',
                         'length' => 'Longitud del número de comanda',
                         'prefix' => 'Prefix del número de comanda',
                         'suffix' => 'Sufix del número de comanda',
@@ -4990,17 +5249,17 @@ return [
                         'enable' => 'Habilitar',
                         'include-discount-amount' => 'Incloure l\'import de descompte',
                         'include-tax-amount' => 'Incloure impost en l\'import',
-                        'info' => 'Criteris configurats que especificen la quantitat o el valor mínim requerit per processar una comanda o qualificar per a beneficis.',
+                        'info' => 'L\'import mínim de comanda amb què un client pot pagar.',
                         'minimum-order-amount' => 'Import mínim de la comanda',
                         'title' => 'Configuració de la comanda mínima',
                     ],
 
                     'reorder' => [
                         'admin-reorder' => 'Reordenar com a administrador',
-                        'admin-reorder-info' => 'Habilitar o deshabilitar la funció de reordenar per als usuaris administradors.',
-                        'info' => 'Habilitar o deshabilitar la funció de reordenar per als usuaris administradors.',
+                        'admin-reorder-info' => 'Permet que un administrador torni a fer una comanda des del tauler d\'administració.',
+                        'info' => 'Permet tornar a fer una comanda des del tauler d\'administració o des de la botiga.',
                         'shop-reorder' => 'Reordenar com a botiga',
-                        'shop-reorder-info' => 'Habilitar o deshabilitar la funció de reordenar per als usuaris de la botiga.',
+                        'shop-reorder-info' => 'Permet que un client torni a fer una comanda des de la botiga.',
                         'title' => 'Permetre reordenar',
                     ],
 
@@ -5012,12 +5271,12 @@ return [
                 ],
 
                 'invoice-settings' => [
-                    'info' => 'Configura el número de factura, els terminis de pagament, el disseny del comprovant de factura i els recordatoris de factura.',
+                    'info' => 'Números de factura, condicions de pagament, impressions PDF i recordatoris.',
                     'title' => 'Configuració de factures',
 
                     'invoice-number' => [
                         'generator' => 'Generador de números de factura',
-                        'info' => 'Configuració de regles o paràmetres per generar i assignar números d\'identificació únics a les factures amb fins organitzatius i de seguiment.',
+                        'info' => 'Com es componen els números de factura generats.',
                         'length' => 'Longitud del número de factura',
                         'prefix' => 'Prefix del número de factura',
                         'suffix' => 'Sufix del número de factura',
@@ -5028,7 +5287,7 @@ return [
                         'due-duration' => 'Durada del venciment',
                         'due-duration-day' => ':due-duration Dia',
                         'due-duration-days' => ':due-duration Dies',
-                        'info' => 'Condicions acordades que dicten quan i com s\'ha de fer el pagament dels béns o serveis per part del comprador al venedor.',
+                        'info' => 'Quant de temps després d\'emetre\'s venç una factura.',
                         'title' => 'Termes de Pagament',
                     ],
 
@@ -5046,7 +5305,7 @@ return [
                     ],
 
                     'invoice-reminders' => [
-                        'info' => 'Notificacions o comunicacions automàtiques enviades als clients per recordar-los els pagaments pendents o propers a les factures.',
+                        'info' => 'Quants recordatoris de pagament s\'envien per una factura impagada, i amb quin interval.',
                         'interval-between-reminders' => 'Interval entre recordatoris',
                         'maximum-limit-of-reminders' => 'Límit màxim de recordatoris',
                         'title' => 'Recordatoris de Factura',
@@ -5055,11 +5314,11 @@ return [
 
                 'taxes' => [
                     'title' => 'Impostos',
-                    'title-info' => 'Els impostos són taxes obligatòries imposades pels governs sobre béns, serveis o transaccions, recaptades pels venedors i remeses a les autoritats.',
+                    'title-info' => 'Categories d\'impost, com es calcula i com es mostra.',
 
                     'categories' => [
                         'title' => 'Categories d\'Impostos',
-                        'title-info' => 'Les categories d\'impostos són classificacions per a diferents tipus d\'impostos, com ara l\'impost sobre les vendes, l\'impost sobre el valor afegit o l\'impost especial, utilitzades per categoritzar i aplicar tipus d\'impostos a productes o serveis.',
+                        'title-info' => 'La categoria d\'impost aplicada a l\'enviament i la predeterminada per als productes nous.',
                         'product' => 'Categoria d\'Impost per Defecte del Producte',
                         'shipping' => 'Categoria d\'Impost d\'Enviament',
                         'none' => 'Cap',
@@ -5079,7 +5338,7 @@ return [
                         'shipping-origin' => 'Origen de l\'Enviament',
                         'shipping-prices' => 'Preus d\'Enviament',
                         'title' => 'Configuració de Càlcul',
-                        'title-info' => 'Detalls sobre el cost dels béns o serveis, incloent el preu base, descomptes, impostos i càrrecs addicionals.',
+                        'title-info' => 'Sobre què es calcula l\'impost i si els preus introduïts ja l\'inclouen.',
                     ],
 
                     'default-destination-calculation' => [
@@ -5087,14 +5346,14 @@ return [
                         'default-post-code' => 'Codi Postal per Defecte',
                         'default-state' => 'Estat per Defecte',
                         'title' => 'Càlcul de Destinació per Defecte',
-                        'title-info' => 'Determinació automàtica d\'una destinació estàndard o inicial basada en factors o configuracions predefinides.',
+                        'title-info' => 'L\'adreça amb què es calcula l\'impost abans que el client introdueixi la seva.',
                     ],
 
                     'shopping-cart' => [
                         'show-tax-breakdown' => 'Mostra el desglossament d\'impostos',
                         'show-tax-breakdown-info' => 'Mostra un desglossament detallat d\'impostos per producte i per tipus al resum de la cistella i la compra. Pensat per a depuració.',
                         'title' => 'Configuració de Visualització del Carret de la Compra',
-                        'title-info' => 'Configura la visualització dels impostos al carret de la compra',
+                        'title-info' => 'Com es mostra l\'impost al cistell i en finalitzar la compra.',
                         'display-prices' => 'Mostrar Preus',
                         'display-subtotal' => 'Mostrar Subtotal',
                         'display-shipping-amount' => 'Mostrar Import d\'Enviament',
@@ -5105,7 +5364,7 @@ return [
 
                     'sales' => [
                         'title' => 'Configuració de Visualització de Comandes, Factures, Reemborsaments',
-                        'title-info' => 'Configura la visualització dels impostos a les comandes, factures i reemborsaments',
+                        'title-info' => 'Com es mostra l\'impost a comandes, factures i devolucions.',
                         'display-prices' => 'Mostrar Preus',
                         'display-subtotal' => 'Mostrar Subtotal',
                         'display-shipping-amount' => 'Mostrar Import d\'Enviament',
@@ -5117,7 +5376,7 @@ return [
 
                 'checkout' => [
                     'title' => 'Pagament',
-                    'info' => 'Configura el pagament per a convidats, habilita o deshabilita el Mini Carret, resum del carret.',
+                    'info' => 'Compra com a convidat, pàgina del cistell, mini cistell i resum del cistell.',
 
                     'shopping-cart' => [
                         'cart-page' => 'Pàgina del Carret',
@@ -5128,21 +5387,21 @@ return [
                         'estimate-shipping-info' => 'Habilita l\'enviament estimat per proporcionar costos d\'enviament anticipats.',
                         'guest-checkout' => 'Permetre el pagament per a convidats',
                         'guest-checkout-info' => 'Habilita el pagament per a convidats per a un procés de compra més ràpid i sense complicacions.',
-                        'info' => 'Habilita el pagament per a convidats, la pàgina del carret, els productes de venda creuada i l\'enviament estimat per millorar la comoditat de l\'usuari i agilitzar el procés de compra per augmentar les vendes.',
+                        'info' => 'Compra com a convidat, pàgina del cistell, productes de venda creuada i enviament estimat.',
                         'title' => 'Carret de la compra',
                     ],
 
                     'my-cart' => [
                         'display-item-quantities' => 'Mostrar quantitats d\'articles',
                         'display-number-in-cart' => 'Mostrar el nombre d\'articles al carret',
-                        'info' => 'Habilita la configuració del Meu Carret per mostrar un resum de les quantitats d\'articles i mostrar el nombre total d\'articles al carret per a un seguiment fàcil.',
+                        'info' => 'Si el comptador del cistell mostra la quantitat total o el nombre d\'articles.',
                         'summary' => 'Resum',
                         'title' => 'El meu carret',
                     ],
 
                     'mini-cart' => [
                         'display-mini-cart' => 'Mostrar Mini Carret',
-                        'info' => 'Habilita la configuració del Mini Carret per mostrar el mini carret i mostrar la informació de l\'oferta del Mini Carret per a un accés ràpid als detalls del carret i promocions.',
+                        'info' => 'Mostra el mini cistell i el text d\'oferta que hi apareix.',
                         'mini-cart-offer-info' => 'Informació de l\'oferta del Mini Carret',
                         'title' => 'Mini Carret',
                     ],
@@ -5172,7 +5431,7 @@ return [
                     'evening' => 'Vespre',
                     'exchange' => 'Canvi',
                     'file-extension-info' => 'Els tipus de fitxers que els clients i els administradors poden adjuntar a una sol·licitud de devolució, com ara fotografies del producte o documents justificatius.',
-                    'info' => 'La RMA forma part del procés de devolució d\'un producte a una empresa per rebre un reemborsament, substitució o reparació.',
+                    'info' => 'Devolucions que els clients poden sol·licitar després de fer una comanda.',
                     'morning' => 'Matí',
                     'new-rma-message-to-customer' => 'Nou missatge RMA al client',
                     'no' => 'No',
@@ -5225,14 +5484,29 @@ return [
                 'warning-config-closures' => 'config:cache fallarà si algun fitxer de configuració retorna closures.',
                 'warning-permissions' => 'Els problemes de permisos del sistema de fitxers poden impedir la generació o l\'esborrat de la memòria cau.',
                 'invalid-action' => 'Acció de memòria cau no vàlida.',
-                'action-success' => 'L\'ordre ":action" s\'ha executat correctament.',
-                'action-failed' => 'L\'ordre ":action" ha fallat. Consulteu la sortida a continuació.',
+                'action-success' => ':action s’ha completat correctament.',
+                'action-failed' => ':action ha fallat. Reviseu la sortida de sota.',
                 'action-exception' => 'L\'acció de memòria cau ha fallat: :message',
                 'clear-console' => 'Esborrar consola',
                 'console-title' => 'Consola de sortida',
                 'console-entries' => 'entrades',
                 'console-empty' => 'Executeu una acció de memòria cau per veure la sortida aquí...',
                 'console-unknown-error' => 'S\'ha produït un error inesperat.',
+
+                'results' => [
+                    'clear-all' => 'S’han buidat totes les memòries cau.',
+                    'clear-config' => 'S’ha buidat la memòria cau de configuració.',
+                    'clear-cache' => 'S’ha buidat la memòria cau de l’aplicació.',
+                    'clear-compiled' => 'S’han eliminat els fitxers de classes compilats.',
+                    'clear-events' => 'S’ha buidat la memòria cau d’esdeveniments.',
+                    'clear-routes' => 'S’ha buidat la memòria cau de rutes.',
+                    'clear-views' => 'S’han buidat les vistes compilades.',
+                    'clear-page-cache' => 'S’ha buidat la memòria cau de pàgines. Cada pàgina de la botiga es tornarà a generar en la següent visita.',
+                    'build-all' => 'S’han reconstruït totes les memòries cau.',
+                    'build-config' => 'S’ha creat la memòria cau de configuració.',
+                    'build-routes' => 'S’ha creat la memòria cau de rutes.',
+                    'build-views' => 'S’han compilat les vistes.',
+                ],
 
                 'actions' => [
                     'clear-all' => 'Esborrar tota la memòria cau',
@@ -5242,10 +5516,27 @@ return [
                     'clear-events' => 'Esborrar memòria cau d\'esdeveniments',
                     'clear-routes' => 'Esborrar memòria cau de rutes',
                     'clear-views' => 'Esborrar memòria cau de vistes',
+                    'clear-page-cache' => 'Buida la memòria cau de pàgines',
                     'build-all' => 'Reconstruir tota la memòria cau',
                     'build-config' => 'Posar en memòria cau la configuració',
                     'build-routes' => 'Posar en memòria cau les rutes',
                     'build-views' => 'Posar en memòria cau les vistes',
+                ],
+
+                'full-page-cache' => [
+                    'title' => 'Full Page Cache',
+                    'info' => 'Serve rendered storefront pages from a cache instead of building them for every visitor.',
+
+                    'settings' => [
+                        'title' => 'Settings',
+                        'info' => 'Turn the page cache on or off and choose how long a page stays cached.',
+                        'enabled' => 'Enable Full Page Cache',
+                        'enabled-info' => 'Storefront pages are served from the cache. Turning this off makes every page render again on each visit.',
+                        'lifetime' => 'Cache Lifetime (Minutes)',
+                        'lifetime-info' => 'How long a cached page is kept before it is rendered again. Leave empty to use the application default.',
+                        'flush' => 'Buida la memòria cau de pàgines',
+                        'flush-info' => 'Buida la memòria cau perquè cada pàgina de la botiga es torni a generar en la següent visita.',
+                    ],
                 ],
             ],
         ],
@@ -5280,6 +5571,10 @@ return [
             ],
 
             'sidebar' => [
+
+                'appearance' => 'Aparença',
+
+                'sections' => 'Seccions',
                 'attribute-families' => 'Famílies d\'atributs',
                 'attributes' => 'Atributs',
                 'booking-product' => 'Reserves',
@@ -5352,6 +5647,7 @@ return [
 
             'toolbar' => [
                 'length-of' => ':length de',
+                'sort-by' => 'Ordena per',
                 'of' => 'de',
                 'per-page' => 'Per pàgina',
                 'results' => ':total Resultats',
@@ -5420,6 +5716,17 @@ return [
                     'today' => 'Avui',
                     'yesterday' => 'Ahir',
                 ],
+
+                'number-options' => [
+                    'between' => 'Between',
+                    'equals' => 'Equals',
+                    'from' => 'From',
+                    'greater-than' => 'Greater Than',
+                    'greater-than-or-equal' => 'Greater Than Or Equal',
+                    'less-than' => 'Less Than',
+                    'less-than-or-equal' => 'Less Than Or Equal',
+                    'to' => 'To',
+                ],
             ],
 
             'table' => [
@@ -5456,6 +5763,7 @@ return [
                 'ai-add-image-btn' => 'Màgia IA',
                 'ai-btn-info' => 'Generar Imatge',
                 'allowed-types' => 'png, jpeg, jpg',
+                'image' => 'Imatge',
                 'not-allowed-error' => 'Només es permeten arxius d\'imatge (.jpeg, .jpg, .png, ..)',
 
                 'ai-generation' => [
@@ -5486,12 +5794,33 @@ return [
                     'use-cases' => 'Casos d\'Ús',
                     'zoom' => 'Zoom',
                 ],
+
+                'seo' => [
+                    'alt-text' => 'Text alternatiu',
+                    'alt-text-info' => 'Es desa per a la configuració regional seleccionada. Si es deixa buit, s\'utilitza el nom del producte.',
+                    'alt-text-placeholder' => 'Descriviu què es mostra a la imatge',
+                    'done-btn' => 'Fet',
+                    'file-name' => 'Nom del fitxer',
+                    'file-name-info' => 'Canviar el nom canvia l\'URL de la imatge. L\'URL antic deixa de funcionar, cosa que pot afectar el posicionament a la cerca d\'imatges.',
+                    'file-name-placeholder' => 'blue-running-shoe-side',
+                    'info' => 'Millora com els cercadors i els lectors de pantalla entenen aquesta imatge.',
+                    'replace' => 'Substitueix la imatge',
+                    'replace-btn' => 'Tria un fitxer',
+                    'replace-info' => 'El text alternatiu i el nom del fitxer anteriors es conserven per a la imatge nova.',
+                    'title' => 'SEO de la imatge',
+                ],
             ],
 
             'videos' => [
                 'add-video-btn' => 'Afegir Vídeo',
                 'allowed-types' => 'mp4, webm, mkv',
                 'not-allowed-error' => 'Només es permeten arxius de vídeo (.mp4, .mov, .ogg ..).',
+                'video' => 'Vídeo',
+
+                'seo' => [
+                    'info' => 'Doneu un nom descriptiu al fitxer de vídeo.',
+                    'title' => 'SEO del vídeo',
+                ],
             ],
         ],
 
@@ -5523,6 +5852,12 @@ return [
     ],
 
     'acl' => [
+
+        'activate' => 'Activa',
+
+        'appearance' => 'Aparença',
+
+        'sections' => 'Seccions',
         'addresses' => 'Adreces',
         'attribute-families' => 'Famílies d\'Atributs',
         'attributes' => 'Atributs',

@@ -42,7 +42,7 @@ return [
             'page-title' => 'Müşteri Girişi',
             'password' => 'Şifre',
             'resend-verification' => 'Doğrulama E-postasını Yeniden Gönder',
-            'show-password' => 'Şifreyi Göster',
+            'social-account-exists' => 'Bu e-posta adresiyle bir hesap zaten mevcut. Lütfen e-posta adresiniz ve şifrenizle giriş yapın.',
             'title' => 'Oturum Aç',
             'verify-first' => 'Lütfen önce e-posta adresinizi doğrulayın.',
         ],
@@ -373,6 +373,7 @@ return [
                 'remaining-downloads' => 'Kalan İndirme Hakkı',
                 'status' => 'Durum',
                 'title' => 'Başlık',
+                'unlimited' => 'Sınırsız',
             ],
 
             'wishlist' => [
@@ -545,6 +546,14 @@ return [
             'default-toggle' => 'Aç/Kapat',
         ],
 
+        'form' => [
+            'control-group' => [
+                'control' => [
+                    'show-password' => 'Şifreyi Göster',
+                ],
+            ],
+        ],
+
         'media' => [
             'index' => [
                 'add-attachments' => 'Dosya Ekle',
@@ -689,6 +698,17 @@ return [
 
                     'custom-filters' => [
                         'clear-all' => 'Tümünü Temizle',
+                    ],
+
+                    'number-options' => [
+                        'between' => 'Between',
+                        'equals' => 'Equals',
+                        'from' => 'From',
+                        'greater-than' => 'Greater Than',
+                        'greater-than-or-equal' => 'Greater Than Or Equal',
+                        'less-than' => 'Less Than',
+                        'less-than-or-equal' => 'Less Than Or Equal',
+                        'to' => 'To',
                     ],
                 ],
             ],
@@ -1152,6 +1172,9 @@ return [
             'address' => [
                 'add-new' => 'Yeni Adres Ekle',
                 'add-new-address' => 'Yeni Adres Ekle',
+                'address-updated-payment-info' => 'Ödeme yöntemleri ve sipariş toplamları yeni adresinize göre yenilenecek. Güncel seçenekleri görmek için Devam Et düğmesine tıklayın.',
+                'address-updated-shipping-info' => 'Kargo yöntemleri ve ücretleri yeni adresinize göre yeniden hesaplanacak. Güncel seçenekleri görmek için Devam Et düğmesine tıklayın.',
+                'address-updated-title' => 'Adresiniz güncellendi',
                 'back' => 'Geri',
                 'billing-address' => 'Fatura Adresi',
                 'check-billing-address' => 'Fatura adresi seçilmedi.',
@@ -1255,6 +1278,7 @@ return [
             'categories-carousel' => 'Kategoriler',
             'image-carousel' => 'Görseller',
             'offer' => 'İlk siparişe özel %40 indirim fırsatı!',
+            'preview-banner' => ':channel kanalında :theme teması önizleniyor. Önizlemede bağlantılar devre dışıdır.',
             'product-carousel' => 'Ürünler',
             'resend-verify-email' => 'Doğrulama e-postasını tekrar gönder',
             'verify-email' => 'E-posta adresinizi doğrulayın',
@@ -1760,7 +1784,9 @@ return [
 
         'response' => [
             'already-cancel' => 'RMA durumu zaten iptal edilmiştir.',
+            'cancel-not-allowed' => 'Bu RMA talebini iptal etmeye izin verilmiyor.',
             'cancel-success' => 'RMA durumu başarıyla iptal edildi.',
+            'close-not-allowed' => 'Bu RMA talebini kapatmaya izin verilmiyor.',
             'create-success' => 'İstek başarıyla oluşturuldu.',
             'creation-error' => 'RMA durumu güncellenemiyor çünkü bu sipariş için fatura oluşturulmamış.',
             'invalid-item' => 'Seçilen sipariş ürünü geçersiz.',

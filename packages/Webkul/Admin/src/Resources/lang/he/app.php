@@ -350,6 +350,9 @@ return [
                         'add-btn' => 'הוסף כתובת',
                         'add-new' => 'הוסף כתובת חדשה',
                         'add-new-address' => 'הוסף כתובת חדשה',
+                        'address-updated-payment-info' => 'אמצעי התשלום וסכומי ההזמנה יעודכנו עבור הכתובת ששונתה. יש ללחוץ על "המשך" כדי לטעון את האפשרויות העדכניות.',
+                        'address-updated-shipping-info' => 'אמצעי המשלוח והתעריפים יחושבו מחדש עבור הכתובת ששונתה. יש ללחוץ על "המשך" כדי לטעון את האפשרויות העדכניות.',
+                        'address-updated-title' => 'הכתובת עודכנה',
                         'addresses' => 'כתובות',
                         'back' => 'חזור',
                         'billing-address' => 'כתובת לחיוב',
@@ -701,6 +704,7 @@ return [
                     'pending' => 'ממתין',
                     'status' => 'סטטוס',
                     'update-status' => 'עדכן סטטוס',
+                    'view' => 'צפה',
                 ],
             ],
 
@@ -983,6 +987,7 @@ return [
                         'edit' => 'ערוך',
                         'enabled' => 'פעיל',
                         'id' => 'מזהה',
+                        'mass-delete-partial' => 'נמחקו :deleted מהרשומות שנבחרו; :skipped כבר הוסרו.',
                         'mass-delete-success' => 'הנתונים שנבחרו נמחקו בהצלחה.',
                         'reason-error' => 'הסיבה נמצאת בשימוש ב-RMA.',
                         'reason' => 'סיבה',
@@ -1024,6 +1029,7 @@ return [
                         'enabled' => 'פעיל',
                         'id' => 'מזהה',
                         'label' => 'תווית',
+                        'mass-delete-partial' => 'נמחקו :deleted מהרשומות שנבחרו; :skipped כבר הוסרו.',
                         'mass-delete-success' => 'הנתונים שנבחרו נמחקו בהצלחה.',
                         'no' => 'לא',
                         'required' => 'נדרש',
@@ -1064,6 +1070,7 @@ return [
                         'enabled' => 'פעיל',
                         'exchange-period' => 'תקופת החלפה (ימים)',
                         'id' => 'מזהה',
+                        'mass-delete-partial' => 'נמחקו :deleted מהרשומות שנבחרו; :skipped כבר הוסרו.',
                         'mass-delete-success' => 'הנתונים שנבחרו נמחקו בהצלחה.',
                         'name' => 'שם',
                         'reason' => 'כללים',
@@ -1155,10 +1162,12 @@ return [
                     'attribute-family-value' => 'משפחת מאפיינים - :attribute_family',
                     'category' => 'קטגוריה',
                     'channel' => 'ערוץ',
+                    'copy' => 'העתק',
                     'copy-of' => 'העתק של :value',
                     'copy-of-slug' => 'העתק-של-:value',
                     'delete' => 'מחק',
                     'disable' => 'השבת',
+                    'edit' => 'ערוך',
                     'id' => 'מזהה',
                     'id-value' => 'מזהה - :id',
                     'image' => 'תמונה',
@@ -1172,6 +1181,7 @@ return [
                     'qty-value' => ':qty זמינים',
                     'sku' => 'SKU',
                     'sku-value' => 'SKU - :sku',
+                    'stock-disabled' => 'מלאי מושבת',
                     'status' => 'מצב',
                     'type' => 'סוג',
                     'update-status' => 'עדכן מצב',
@@ -1222,6 +1232,7 @@ return [
                 ],
 
                 'categories' => [
+                    'search' => 'Search categories',
                     'title' => 'קטגוריות',
                 ],
 
@@ -1809,7 +1820,7 @@ return [
                 'position' => 'מיקום',
                 'price' => 'מחיר',
                 'regex' => 'Regex',
-                'regex-info' => 'הביטוי צריך להיות בציטוטיים כפולים.',
+                'regex-info' => 'הביטוי חייב להיות תחום בלוכסנים, לדוגמה /^[0-9]+$/.',
                 'save-btn' => 'שמור תכונה',
                 'select' => 'בחירה',
                 'select-type' => 'סוג תכונה',
@@ -1883,7 +1894,7 @@ return [
                 'position' => 'מיקום',
                 'price' => 'מחיר',
                 'regex' => 'Regex',
-                'regex-info' => 'הביטוי צריך להיות בציטוטיים כפולים.',
+                'regex-info' => 'הביטוי חייב להיות תחום בלוכסנים, לדוגמה /^[0-9]+$/.',
                 'save-btn' => 'שמור מאפיין',
                 'select' => 'בחירה',
                 'select-type' => 'סוג מאפיין בחירה',
@@ -1938,6 +1949,7 @@ return [
                     'inactive' => 'לא פעיל',
                     'name' => 'שם',
                     'no-of-products' => 'מספר מוצרים',
+                    'parent-category' => 'קטגוריה אב',
                     'position' => 'מיקום',
                     'status' => 'נראה בתפריט',
                     'update-status' => 'עדכן סטטוס',
@@ -2092,10 +2104,10 @@ return [
             'attribute-family' => 'משפחת מאפיינים',
             'attribute-product-error' => 'משפחה בשימוש במוצרים.',
             'create-success' => 'משפחה נוצרה בהצלחה.',
+            'default-delete-error' => 'לא ניתן למחוק את משפחת המאפיינים המוגדרת כברירת מחדל.',
             'delete-failed' => 'אירעה שגיאה במהלך מחיקת המשפחה.',
             'delete-success' => 'משפחה נמחקה בהצלחה.',
             'family' => 'משפחה',
-            'last-delete-error' => 'נדרשת לפחות משפחה אחת.',
             'update-success' => 'משפחה עודכנה בהצלחה.',
             'user-define-error' => 'אין אפשרות למחוק משפחת מאפיינים מערכתית',
         ],
@@ -2120,6 +2132,7 @@ return [
                     'id' => 'מזהה לקוח',
                     'id-value' => 'מזהה - :id',
                     'inactive' => 'לא פעיל',
+                    'login-as-customer' => 'התחבר כלקוח',
                     'method-error' => 'שגיאה! אותרה שיטת לא נכונה, נא לבדוק את הגדרות פעולה מראש',
                     'name' => 'שם הלקוח',
                     'no-resource' => 'המשאב אינו מספיק לביצוע הפעולה',
@@ -2133,6 +2146,7 @@ return [
                     'suspended' => 'מושהה',
                     'update-status' => 'עדכן סטטוס',
                     'update-success' => 'הלקוחות שנבחרו עודכנו בהצלחה',
+                    'view' => 'צפה',
                 ],
 
                 'create' => [
@@ -2275,6 +2289,7 @@ return [
                         'rating' => 'דירוג',
                         'status' => 'סטטוס',
                         'title' => 'כותרת',
+                        'view' => 'צפה',
                     ],
                 ],
 
@@ -2479,7 +2494,9 @@ return [
 
                     'datagrid' => [
                         'active' => 'פעיל',
+                        'delete' => 'מחק',
                         'draft' => 'טיוטה',
+                        'edit' => 'ערוך',
                         'id' => 'מזהה',
                         'inactive' => 'לא פעיל',
                         'name' => 'שם',
@@ -2516,6 +2533,7 @@ return [
                     'update-success' => 'עודכן בהצלחה',
                 ],
 
+                'campaign-associate' => 'תבנית זו נמצאת בשימוש בקמפיין אחד או יותר.',
                 'delete-failed' => ':name נמחקה בהצלחה',
                 'delete-success' => 'תבנית נמחקה בהצלחה',
                 'email-template' => 'תבנית דוא"ל',
@@ -2619,6 +2637,7 @@ return [
                     ],
                 ],
 
+                'campaign-associate' => 'אירוע זה נמצא בשימוש בקמפיין אחד או יותר.',
                 'delete-failed' => 'מחיקת :name נכשלה',
                 'delete-success' => 'האירועים נמחקו בהצלחה',
                 'edit-error' => 'לא ניתן לערוך את האירוע',
@@ -2983,6 +3002,7 @@ return [
 
                 'create-success' => 'כלל קטלוג נוצר בהצלחה',
                 'delete-success' => 'כלל קטלוג נמחק בהצלחה',
+                'queue-note' => 'שמירת הכלל הזה מעדכנת את המחיר של כל מוצר שהוא חל עליו. אם הוא חל על מוצרים רבים, השתמשו במנהל התורים database או redis עם worker תורים פעיל, כדי שהמחירים יתעדכנו ברקע במקום להאט את השמירה.',
                 'update-success' => 'כלל קטלוג עודכן בהצלחה',
             ],
 
@@ -3223,6 +3243,312 @@ return [
         'update-success' => 'עמוד עודכן בהצלחה.',
     ],
 
+    'appearance' => [
+        'themes' => [
+            'index' => [
+                'activate-btn' => 'הפעלה',
+                'activate-success' => ':theme פעילה כעת ב-:channel.',
+                'active' => 'פעילה',
+                'active-on' => 'פעילה ב:',
+                'active-on-all' => 'פעילה בכל הערוצים',
+                'buy-btn' => 'צפייה ורכישה',
+                'buy-themes' => 'רכישת ערכות נושא',
+                'by' => 'מאת',
+                'customize-btn' => 'התאמה אישית',
+                'info' => 'עיינו בערכות הנושא הזמינות לחנות שלכם ובחרו באיזו ישתמש כל ערוץ.',
+                'my-themes' => 'ערכות הנושא שלי',
+                'not-in-use' => 'לא בשימוש',
+                'not-installed' => 'ערכת נושא זו אינה מותקנת בחנות הזו.',
+                'preview-btn' => 'תצוגה מקדימה',
+                'title' => 'ערכות נושא',
+
+                'activate' => [
+                    'channels' => 'ערוצים',
+                    'channels-hint' => 'החזיקו Ctrl (או Cmd במק) כדי לבחור יותר מערוץ אחד.',
+                    'confirm-btn' => 'הפעלה',
+                    'info' => 'בחרו את הערוצים שיתחילו להשתמש ב-:theme.',
+                    'title' => 'הפעלת ערכת נושא',
+                    'warning' => 'ל-:channel יש :count התאמות שנבנו עבור :theme. הן יישמרו, אך לא יופיעו כל עוד ערכת הנושא החדשה פעילה.',
+                ],
+            ],
+        ],
+        'sections' => [
+            'index' => [
+                'all-filters-used' => 'כל המסננים הזמינים כבר נוספו.',
+                'channel' => 'ערוץ',
+                'copy-suffix' => 'עותק',
+                'create-btn' => 'יצירת מקטע',
+                'delete-confirm' => 'האם אתה בטוח שברצונך למחוק את המקטע הזה?',
+                'desktop' => 'שולחן עבודה',
+                'discard-btn' => 'בטל',
+                'discarded' => 'שינויי הטיוטה בוטלו.',
+                'duplicate-btn' => 'שכפל',
+                'empty' => 'אין עדיין מקטעים.',
+                'gone' => 'מקטע זה אינו קיים עוד.',
+                'inactive-theme' => 'ניתן להתאים אישית רק ערכת נושא שפעילה בערוץ.',
+                'locale' => 'שפה',
+                'mobile' => 'נייד',
+                'no-fields' => 'למקטע זה אין הגדרות לעריכה בערכת נושא זו.',
+                'no-types' => 'ערכת נושא זו אינה מציעה סוגי מקטעים להוספה.',
+                'pinned' => 'מוצמד לתחתית העמוד.',
+                'preview-btn' => 'תצוגה מקדימה',
+                'publish-btn' => 'פרסם',
+                'scoped-to' => 'מוצגים המקטעים של ערכת הנושא :theme בערוץ :channel.',
+                'tablet' => 'טאבלט',
+                'title' => 'מקטעים',
+                'unsaved' => 'שינויים שלא נשמרו',
+
+                'datagrid' => [
+                    'active' => 'פעיל',
+                    'channel_name' => 'שם הערוץ',
+                    'change-status' => 'שנה סטטוס',
+                    'delete' => 'מחק',
+                    'id' => 'מזהה',
+                    'inactive' => 'לא פעיל',
+                    'name' => 'שם',
+                    'sort-order' => 'סדר מיון',
+                    'status' => 'סטטוס',
+                    'theme' => 'נושא',
+                    'type' => 'סוג',
+                    'view' => 'הצג',
+                ],
+            ],
+
+            'create' => [
+                'name' => 'שם',
+                'save-btn' => 'שמירת מקטע',
+                'singleton-exists' => 'ערוץ זה מציג מקטע :type אחד בלבד.',
+                'title' => 'יצירת מקטע',
+
+                'type' => [
+                    'category-carousel' => 'קרוסלת קטגוריות',
+                    'footer-links' => 'קישורי תחתית',
+                    'image-carousel' => 'קרוסלת תמונות',
+                    'product-carousel' => 'קרוסלת מוצרים',
+                    'services-content' => 'תוכן שירותים',
+                    'static-content' => 'תוכן סטטי',
+                    'title' => 'סוג',
+                ],
+            ],
+
+            'edit' => [
+                'active' => 'פעיל',
+                'add-column' => 'הוסף עמודה',
+                'add-filter-btn' => 'הוסף מסנן',
+                'add-footer-link-btn' => 'הוסף קישור לתחתית',
+                'add-image-btn' => 'הוסף תמונה',
+                'add-link' => 'הוסף קישור',
+                'add-media' => 'הוספת מדיה',
+                'asc' => 'עולה',
+                'back' => 'חזור',
+                'category-carousel' => 'קרוסלת קטגוריות',
+                'category-carousel-description' => 'הצג קטגוריות באופן מושך באמצעות קרוסלת קטגוריות רספונסיבית.',
+                'category-id' => 'מזהה קטגוריה',
+                'channels' => 'ערוצים',
+                'column' => 'עמודה',
+                'columns' => 'עמודות',
+                'create-filter' => 'צור מסנן',
+                'css' => 'CSS',
+                'delete' => 'מחק',
+                'desc' => 'יורד',
+                'edit' => 'ערוך',
+                'featured' => 'מומלץ',
+                'filter-title' => 'כותרת',
+                'filters' => 'מסננים',
+                'footer-link' => 'קישורי תחתית',
+                'footer-link-description' => 'נווט דרך קישורים בתחתית הדף לחוויית גלישה חלקה ומידע.',
+                'footer-link-form-title' => 'קישור לתחתית',
+                'footer-title' => 'כותרת',
+                'general' => 'כללי',
+                'html' => 'HTML',
+                'image' => 'תמונה',
+                'image-size' => 'גודל התמונה צריך להיות (1920px X 700px)',
+                'image-title' => 'כותרת התמונה',
+                'image-upload-message' => 'רק תמונות (.jpeg, .jpg, .png, .webp, ..) מותרות.',
+                'inactive' => 'לא פעיל',
+                'key' => 'מפתח: :key',
+                'key-input' => 'מפתח',
+                'limit' => 'מגבלה',
+                'link' => 'קישור',
+                'name' => 'שם',
+                'new' => 'חדש',
+                'no' => 'לא',
+                'parent-id' => 'מזהה הורה',
+                'preview' => 'תצוגה מקדימה',
+                'product-carousel' => 'קרוסלת מוצרים',
+                'product-carousel-description' => 'הצגת מוצרים בצורה אלגנטית עם קרוסלת מוצרים דינמית ורספונסיבית.',
+                'save-btn' => 'שמור',
+                'select' => 'בחר',
+                'slider' => 'מחוון',
+                'slider-add-btn' => 'הוסף מחוון',
+                'slider-description' => 'התאמת נושא הסליידר.',
+                'slider-image' => 'תמונת מחוון',
+                'slider-required' => 'שדה הסליידר הוא שדה חובה.',
+                'sort' => 'מיין',
+                'sort-order' => 'סדר מיון',
+                'static-content' => 'תוכן סטטי',
+                'static-content-description' => 'שפרו את ההתערבות עם תוכן סטטי כמוי ומידע לקהל שלכם.',
+                'status' => 'סטטוס',
+                'themes' => 'נושאים',
+                'title' => 'עריכת מקטע',
+                'update-slider' => 'עדכן מחוון',
+                'uploading' => 'מעלה…',
+                'url' => 'קישור',
+                'value' => 'ערך: :value',
+                'value-input' => 'ערך',
+
+                'services-content' => [
+                    'add-btn' => 'הוסף שירותים',
+                    'channels' => 'ערוצים',
+                    'delete' => 'מחק',
+                    'description' => 'תיאור',
+                    'general' => 'כללי',
+                    'name' => 'שם',
+                    'save-btn' => 'שמור',
+                    'service-icon' => 'סמל שירות',
+                    'service-icon-class' => 'מחלקת סמל שירות',
+                    'service-info' => 'התאמת ערכות נושא הקשורות לשירות.',
+                    'services' => 'שירותים',
+                    'sort-order' => 'סדר מיון',
+                    'status' => 'סטטוס',
+                    'title' => 'כותרת',
+                    'update-service' => 'עדכן שירותים',
+                ],
+
+                'yes' => 'כן',
+            ],
+
+            'create-success' => 'המקטע נוצר בהצלחה',
+            'delete-success' => 'המקטע נמחק בהצלחה',
+            'update-success' => 'המקטע עודכן בהצלחה',
+        ],
+    ],
+
+    'reporting' => [
+        'sales' => [
+            'index' => [
+                'abandoned-carts' => 'עגלות נטושות',
+                'abandoned-products' => 'מוצרים נטושים',
+                'abandoned-rate' => 'שיעור נטישה',
+                'abandoned-revenue' => 'רווח נטוש',
+                'added-to-cart' => 'נוסף לעגלה',
+                'added-to-cart-info' => 'רק :progress מבקרים הוסיפו מוצרים לעגלה',
+                'all-channels' => 'כל הערוצים',
+                'average-order-value-over-time' => 'ערך הזמנה ממוצע במהלך הזמן',
+                'average-sales' => 'ערך הזמנה ממוצע',
+                'count' => 'מספר',
+                'coupon-code' => 'קוד קופון',
+                'date' => 'תאריך',
+                'discount' => 'הנחה',
+                'email' => 'דוא\"ל',
+                'end-date' => 'תאריך סיום',
+                'id' => 'מזהה',
+                'interval' => 'מרווח זמן',
+                'name' => 'שם',
+                'order-id' => 'מזהה הזמנה',
+                'orders' => 'הזמנות',
+                'orders-over-time' => 'הזמנות לפי זמן',
+                'payment-method' => 'אמצעי תשלום',
+                'purchase-funnel' => 'משפך רכישה',
+                'purchased' => 'נרכש',
+                'purchased-info' => 'רק :progress מבקרים ביצעו רכישות',
+                'refunds' => 'החזרים',
+                'refunds-over-time' => 'החזרים לפי זמן',
+                'sales-by-coupon' => 'מכירות לפי קופון',
+                'sales-over-time' => 'מכירות לפי זמן',
+                'shipping-collected' => 'איסוף משלוח',
+                'shipping-collected-over-time' => 'איסוף משלוח לפי זמן',
+                'start-date' => 'תאריך התחלה',
+                'tax-collected' => 'אוסף מס',
+                'tax-collected-over-time' => 'אוסף מס לפי זמן',
+                'title' => 'מכירות',
+                'top-payment-methods' => 'שיטות תשלום מובילות',
+                'top-shipping-methods' => 'שיטות משלוח מובילות',
+                'top-tax-categories' => 'קטגוריות מס מובילות',
+                'total' => 'סה"כ',
+                'total-orders' => 'סה"כ הזמנות',
+                'total-sales' => 'סה"כ מכירות',
+                'view-details' => 'הצג פרטים',
+            ],
+        ],
+
+        'customers' => [
+            'index' => [
+                'all-channels' => 'כל הערוצים',
+                'count' => 'כמות',
+                'customers' => 'לקוחות',
+                'customers-over-time' => 'לקוחות לפי זמן',
+                'customers-with-most-orders' => 'לקוחות עם הכי הרבה הזמנות',
+                'customers-with-most-reviews' => 'לקוחות עם הכי הרבה ביקורות',
+                'customers-with-most-sales' => 'לקוחות עם הכי הרבה מכירות',
+                'email' => 'אימייל',
+                'end-date' => 'תאריך סיום',
+                'id' => 'מזהה',
+                'interval' => 'מרווח זמן',
+                'name' => 'שם',
+                'orders' => 'הזמנות',
+                'reviews' => 'ביקורות',
+                'start-date' => 'תאריך התחלה',
+                'title' => 'לקוחות',
+                'top-customer-groups' => 'קבוצות לקוחות מובילות',
+                'total' => 'סה"כ',
+                'total-customers' => 'סה"כ לקוחות',
+                'view-details' => 'הצג פרטים',
+            ],
+        ],
+
+        'products' => [
+            'index' => [
+                'all-channels' => 'כל הערוצים',
+                'channel' => 'ערוץ',
+                'end-date' => 'תאריך סיום',
+                'id' => 'מזהה',
+                'interval' => 'מרווח זמן',
+                'last-search-terms' => 'מונחי חיפוש אחרונים',
+                'locale' => 'אזור',
+                'name' => 'שם',
+                'orders' => 'הזמנות',
+                'price' => 'מחיר',
+                'products-added-over-time' => 'מוצרים הוספו לאורך זמן',
+                'products-with-most-reviews' => 'מוצרים עם הכי הרבה ביקורות',
+                'quantities' => 'כמויות',
+                'quantities-sold-over-time' => 'כמויות שנמכרו לאורך זמן',
+                'results' => 'תוצאות',
+                'revenue' => 'הכנסות',
+                'reviews' => 'ביקורות',
+                'search-term' => 'מונח חיפוש',
+                'start-date' => 'תאריך התחלה',
+                'title' => 'מוצרים',
+                'top-search-terms' => 'מונחי חיפוש מובילים',
+                'top-selling-products-by-quantity' => 'המוצרים הנמכרים בכמויות הגבוהות ביותר',
+                'top-selling-products-by-revenue' => 'המוצרים הנמכרים בהכנסה הגבוהה ביותר',
+                'total' => 'סך הכל',
+                'total-products-added-to-wishlist' => 'סה"כ מוצרים התווספו לרשימת משאלות',
+                'total-sold-quantities' => 'סה"כ יחידות שנמכרו',
+                'uses' => 'שימושים',
+                'view-details' => 'צפה בפרטים',
+            ],
+        ],
+
+        'view' => [
+            'all-channels' => 'כל הערוצים',
+            'back-btn' => 'חזור',
+            'day' => 'יום',
+            'end-date' => 'תאריך סיום',
+            'export-csv' => 'ייצוא ל־CSV',
+            'export-xls' => 'ייצוא ל־XLS',
+            'month' => 'חודש',
+            'not-available' => 'אין רשומות זמינות.',
+            'start-date' => 'תאריך התחלה',
+            'year' => 'שנה',
+        ],
+
+        'empty' => [
+            'info' => 'אין נתונים זמינים עבור הטווח הנבחר',
+            'title' => 'אין נתונים זמינים',
+        ],
+    ],
+
     'settings' => [
         'locales' => [
             'index' => [
@@ -3329,9 +3655,10 @@ return [
                     'file-info-example' => 'לדוגמה, במקרה של תמונות מוצרים, יש לשים את הקבצים בתיקייה /project-root/storage/app/import/product-images.',
                     'general' => 'כללי',
                     'images-directory' => 'נתיב תיקיית התמונות',
+                    'import-confirmation' => 'הייבוא יתחיל מיד עם השמירה. להמשיך?',
                     'process-in-queue' => 'תהליך בתור',
                     'results' => 'תוצאות',
-                    'save-btn' => 'שמירת יבוא',
+                    'save-btn' => 'ייבוא',
                     'settings' => 'הגדרות',
                     'skip-errors' => 'דילוג על שגיאות',
                     'stop-on-errors' => 'עצירה במקרה של שגיאות',
@@ -3356,7 +3683,7 @@ return [
                     'images-directory' => 'נתיב תיקיית התמונות',
                     'process-in-queue' => 'תהליך בתור',
                     'results' => 'תוצאות',
-                    'save-btn' => 'שמירת יבוא',
+                    'save-btn' => 'ייבוא',
                     'settings' => 'הגדרות',
                     'skip-errors' => 'דילוג על שגיאות',
                     'stop-on-errors' => 'עצירה במקרה של שגיאות',
@@ -3378,24 +3705,38 @@ return [
                         'edit' => 'עריכה',
                         'error-file' => 'קובץ שגיאות',
                         'id' => 'מזהה',
+                        'import' => 'ייבוא',
                         'started-at' => 'התחיל בתאריך',
                         'state' => 'מצב',
                         'summary' => 'סיכום',
                         'updated' => 'עודכן',
                         'uploaded-file' => 'קובץ הועלה',
+                        'view-progress' => 'הצג התקדמות',
                     ],
                 ],
 
                 'import' => [
                     'back-btn' => 'חזרה',
                     'completed-batches' => 'סך הכל פקודות הושלמו:',
+                    'deleting-info' => 'מתבצעת מחיקה',
                     'download-error-report' => 'הורד דוח מלא',
+                    'downloading-info' => 'מוריד תמונות',
                     'edit-btn' => 'ערוך',
+                    'failed-batches' => ':count אצוות לא הושלמו. בדקו את יומן השגיאות והריצו את הייבוא שוב עבור שורות אלה.',
+                    'images-downloaded' => 'תמונות שהורדו:',
+                    'images-progress' => 'תמונות הורדו',
                     'imported-info' => 'ברכות! הייבוא שלך הצליח.',
                     'importing-info' => 'ייבוא בתהליך',
                     'indexing-info' => 'אינדקסציה של משאבים (מחיר, מלאי וחיפוש אלסטי) בתהליך',
                     'linking-info' => 'קישורי משאבים בתהליך',
                     'progress' => 'התקדמות:',
+                    'rows-validated' => 'שורות אומתו',
+                    'step-create' => 'יצירה',
+                    'step-delete' => 'מחיקה',
+                    'step-download' => 'תמונות',
+                    'step-index' => 'אינדוקס',
+                    'step-link' => 'קישור',
+                    'step-validate' => 'אימות',
                     'title' => 'ייבוא',
                     'total-batches' => 'סך הכל פקודות:',
                     'total-created' => 'סך הכל רשומות שנוצרו:',
@@ -3408,7 +3749,27 @@ return [
                     'validate-info' => 'לחץ על אימות נתונים כדי לבדוק את הייבוא שלך.',
                     'validating-info' => 'המידע מתחיל לקרוא ולאמת',
                     'validation-failed-info' => 'הייבוא שלך אינו תקין. יש לתקן את השגיאות הבאות ולנסות שוב.',
+                    'validation-partial-info' => 'הייבוא יכול להמשיך, אך חלק מהשורות ידולגו. בדוק את השגיאות שלהלן או הורד את הדוח המלא.',
                     'validation-success-info' => 'הייבוא שלך תקין. לחץ על ייבוא כדי להתחיל בתהליך הייבוא.',
+                ],
+
+                'images' => [
+                    'current-archive' => 'הועלה כעת: :name — :count תמונות מוכנות.',
+                    'current-images' => 'כבר הועלו :count תמונות לייבוא הזה.',
+                    'directory-example' => 'לדוגמה, במקרה של product-images יש להניח את הקבצים בתיקייה /project-root/storage/app/import/product-images.',
+                    'directory-hint' => 'השתמש בנתיב יחסי אל /project-root/storage/app/import, למשל product-images, import-images.',
+                    'directory-info' => 'אם יש לך גישה לקוד, הנח את התמונות בתיקייה על השרת וציין אותה להלן.',
+                    'directory-placeholder' => 'נתיב תיקיית התמונות',
+                    'directory-title' => 'התמונות כבר על השרת',
+                    'download-sample-zip' => 'הורדת תמונות לדוגמה',
+                    'info' => 'בחר היכן יש לאתר את התמונות המצוינות בקובץ שלך.',
+                    'recommended' => 'מומלץ',
+                    'replace-archive' => 'בחירת ארכיון חדש תחליף אותן.',
+                    'title' => 'תמונות מוצר',
+                    'upload-info' => 'העלה ארכיון יחיד המכיל את כל התמונות. העמודה «images» מציינת אז את שמות הקבצים שבתוכו.',
+                    'upload-title' => 'העלאת קובץ ZIP של תמונות',
+                    'url-info' => 'הזן את כתובת ה-https:// המלאה של כל תמונה בעמודה «images». הן יורדות לפני הרצת הייבוא, כך שאין צורך להניח דבר על השרת מראש.',
+                    'url-title' => 'קישורי תמונות בקובץ',
                 ],
 
                 'create-success' => 'ייבוא נוצר בהצלחה.',
@@ -3416,6 +3777,7 @@ return [
                 'delete-success' => 'ייבוא נמחק בהצלחה.',
                 'not-valid' => 'הייבוא אינו תקין',
                 'nothing-to-import' => 'אין משאבים לייבוא.',
+                'processing-failed' => 'לא ניתן היה לעבד את הייבוא. אנא בדקו את הקובץ ונסו שוב.',
                 'setup-queue-error' => 'יש לשנות את מנהל התורים שלך ל-"database" או "redis" כדי להתחיל בתהליך הייבוא.',
                 'update-success' => 'ייבוא עודכן בהצלחה.',
             ],
@@ -3793,7 +4155,9 @@ return [
             'incorrect-password' => 'סיסמה שגויה',
             'last-delete-error' => 'נכשל במחיקת המשתמש האחרון.',
             'login-error' => 'אנא בדוק את פרטי הכניסה שלך ונסה שוב.',
+            'role-not-grantable' => 'אינך יכול להקצות תפקיד עם הרשאות שאין לך.',
             'update-success' => 'המשתמש עודכן בהצלחה.',
+            'user-not-manageable' => 'אינך יכול לשנות משתמש שלתפקידו יש הרשאות שאין לך.',
         ],
 
         'roles' => [
@@ -3822,6 +4186,7 @@ return [
                 'name' => 'שם',
                 'permissions' => 'הרשאות',
                 'save-btn' => 'שמור תפקיד',
+                'search-permissions' => 'חיפוש הרשאות',
                 'title' => 'יצירת תפקיד',
             ],
 
@@ -3843,139 +4208,10 @@ return [
             'delete-failed' => 'נכשלה המחיקה של התפקיד',
             'delete-success' => 'התפקיד נמחק בהצלחה',
             'last-delete-error' => 'תפקיד האחרון לא יכול להימחק',
+            'permissions-not-grantable' => 'אינך יכול להעניק הרשאות שאין לך.',
             'update-success' => 'התפקיד עודכן בהצלחה',
         ],
 
-        'themes' => [
-            'index' => [
-                'create-btn' => 'צור ערכת עיצוב',
-                'title' => 'ערכות עיצוב',
-
-                'datagrid' => [
-                    'active' => 'פעיל',
-                    'channel_name' => 'שם הערוץ',
-                    'change-status' => 'שנה סטטוס',
-                    'delete' => 'מחק',
-                    'id' => 'מזהה',
-                    'inactive' => 'לא פעיל',
-                    'name' => 'שם',
-                    'sort-order' => 'סדר מיון',
-                    'status' => 'סטטוס',
-                    'theme' => 'נושא',
-                    'type' => 'סוג',
-                    'view' => 'הצג',
-                ],
-            ],
-
-            'create' => [
-                'name' => 'שם',
-                'save-btn' => 'שמור ערכת נושא',
-                'sort-order' => 'סדר מיון',
-                'themes' => 'נושאים',
-                'title' => 'צור ערכת עיצוב',
-
-                'type' => [
-                    'category-carousel' => 'קרוסלת קטגוריות',
-                    'footer-links' => 'קישורי תחתית',
-                    'image-carousel' => 'קרוסלת תמונות',
-                    'product-carousel' => 'קרוסלת מוצרים',
-                    'services-content' => 'תוכן שירותים',
-                    'static-content' => 'תוכן סטטי',
-                    'title' => 'סוג',
-                ],
-            ],
-
-            'edit' => [
-                'active' => 'פעיל',
-                'add-filter-btn' => 'הוסף מסנן',
-                'add-footer-link-btn' => 'הוסף קישור לתחתית',
-                'add-image-btn' => 'הוסף תמונה',
-                'add-link' => 'הוסף קישור',
-                'asc' => 'עולה',
-                'back' => 'חזור',
-                'category-carousel' => 'קרוסלת קטגוריות',
-                'category-carousel-description' => 'הצג קטגוריות באופן מושך באמצעות קרוסלת קטגוריות רספונסיבית.',
-                'category-id' => 'מזהה קטגוריה',
-                'channels' => 'ערוצים',
-                'column' => 'עמודה',
-                'create-filter' => 'צור מסנן',
-                'css' => 'CSS',
-                'delete' => 'מחק',
-                'desc' => 'יורד',
-                'edit' => 'ערוך',
-                'featured' => 'מומלץ',
-                'filter-title' => 'כותרת',
-                'filters' => 'מסננים',
-                'footer-link' => 'קישורי תחתית',
-                'footer-link-description' => 'נווט דרך קישורים בתחתית הדף לחוויית גלישה חלקה ומידע.',
-                'footer-link-form-title' => 'קישור לתחתית',
-                'footer-title' => 'כותרת',
-                'general' => 'כללי',
-                'html' => 'HTML',
-                'image' => 'תמונה',
-                'image-size' => 'גודל התמונה צריך להיות (1920px X 700px)',
-                'image-title' => 'כותרת התמונה',
-                'image-upload-message' => 'רק תמונות (.jpeg, .jpg, .png, .webp, ..) מותרות.',
-                'inactive' => 'לא פעיל',
-                'key' => 'מפתח: :key',
-                'key-input' => 'מפתח',
-                'limit' => 'מגבלה',
-                'link' => 'קישור',
-                'name' => 'שם',
-                'new' => 'חדש',
-                'no' => 'לא',
-                'parent-id' => 'מזהה הורה',
-                'parent-id-hint' => 'אתה יכול להזין מספר מזהות הורה כערכים מופרדים בפסיקים (למשל: 12,15,34)',
-                'preview' => 'תצוגה מקדימה',
-                'product-carousel' => 'קרוסלת מוצרים',
-                'product-carousel-description' => 'הצגת מוצרים בצורה אלגנטית עם קרוסלת מוצרים דינמית ורספונסיבית.',
-                'save-btn' => 'שמור',
-                'select' => 'בחר',
-                'slider' => 'מחוון',
-                'slider-add-btn' => 'הוסף מחוון',
-                'slider-description' => 'התאמת נושא הסליידר.',
-                'slider-image' => 'תמונת מחוון',
-                'slider-required' => 'שדה הסליידר הוא שדה חובה.',
-                'sort' => 'מיין',
-                'sort-order' => 'סדר מיון',
-                'static-content' => 'תוכן סטטי',
-                'static-content-description' => 'שפרו את ההתערבות עם תוכן סטטי כמוי ומידע לקהל שלכם.',
-                'status' => 'סטטוס',
-                'themes' => 'נושאים',
-                'title' => 'ערוך ערכת עיצוב',
-                'update-slider' => 'עדכן מחוון',
-                'url' => 'קישור',
-                'value' => 'ערך: :value',
-                'value-input' => 'ערך',
-
-                'services-content' => [
-                    'add-btn' => 'הוסף שירותים',
-                    'channels' => 'ערוצים',
-                    'delete' => 'מחק',
-                    'description' => 'תיאור',
-                    'general' => 'כללי',
-                    'name' => 'שם',
-                    'save-btn' => 'שמור',
-                    'service-icon' => 'סמל שירות',
-                    'service-icon-class' => 'מחלקת סמל שירות',
-                    'service-info' => 'התאמת ערכות נושא הקשורות לשירות.',
-                    'services' => 'שירותים',
-                    'sort-order' => 'סדר מיון',
-                    'status' => 'סטטוס',
-                    'title' => 'כותרת',
-                    'update-service' => 'עדכן שירותים',
-                ],
-
-                'yes' => 'כן',
-            ],
-
-            'create-success' => 'ערכת העיצוב נוצרה בהצלחה',
-            'delete-success' => 'ערכת העיצוב נמחקה בהצלחה',
-            'update-success' => 'ערכת העיצ',
-        ],
-    ],
-
-    'reporting' => [
         'sales' => [
             'index' => [
                 'abandoned-carts' => 'עגלות נטושות',
@@ -4115,11 +4351,11 @@ return [
             'title' => 'הגדרות',
 
             'general' => [
-                'info' => 'כללי',
+                'info' => 'הגדרות כלל-חנותיות ליחידות, תוכן, עיצוב, שערי חליפין, מפת אתר ו-GDPR.',
                 'title' => 'כללי',
 
                 'general' => [
-                    'info' => 'הגדר אפשרויות יחידות והפעל או השבת את אפשרויות מסלולי הניווט והמבקרים.',
+                    'info' => 'הגדרות יחידות ופירורי לחם בחנות.',
                     'title' => 'כללי',
 
                     'unit-options' => [
@@ -4137,7 +4373,7 @@ return [
                 ],
 
                 'content' => [
-                    'info' => 'הגדר כותרת הצעת הדף הראשי וקודים מותאמים אישית.',
+                    'info' => 'באנר מבצע, שורת זכויות יוצרים, כללי טעינה מקדימה וסקריפטים מותאמים.',
                     'title' => 'תוכן',
 
                     'header-offer' => [
@@ -4150,7 +4386,7 @@ return [
 
                     'copyright-content' => [
                         'title' => 'תוכן זכויות יוצרים',
-                        'info' => 'הגדר את תוכן זכויות היוצרים המוצג בכותרת התחתונה של האתר שלך כדי להגן על הקניין הרוחני שלך ולחזק את זיהוי המותג.',
+                        'info' => 'שורת זכויות היוצרים המוצגת בכותרת התחתונה של החנות.',
                     ],
 
                     'speculation-rules' => [
@@ -4191,24 +4427,25 @@ return [
                         'custom-css' => 'CSS מותאם אישית',
                         'custom-javascript' => 'קוד JavaScript מותאם אישית',
                         'title' => 'קודים מותאמים אישית',
-                        'title-info' => 'קודים מותאמים אישית הם קטעי קוד אישיים שנוצרו כדי להוסיף פונקציות או תכונות מסוימות לתוכנה, משפרים את יכולותיה באופן ייחודי.',
+                        'title-info' => 'CSS ו-JavaScript המתווספים לכל עמוד בחנות.',
                     ],
                 ],
 
                 'design' => [
-                    'info' => 'הגדר לוגו וסמל Favicon עבור לוח הניהול.',
+                    'info' => 'הלוגו והאייקון של לוח הניהול, ואופן הצגת קטגוריות התפריט בחנות.',
                     'title' => 'עיצוב',
 
                     'admin-logo' => [
                         'favicon' => 'סמל Favicon',
                         'logo-image' => 'תמונת לוגו',
                         'title' => 'לוגו מנהל',
-                        'title-info' => 'הגדר תמונת לוגו וסמל Favicon עבור החזית של האתר שלך למיתוג ולהכרה טובה יותר.',
+                        'title-info' => 'הלוגו והאייקון המוצגים בלוח הניהול ובהודעות הנשלחות למנהל.',
                     ],
 
                     'menu-category' => [
                         'default' => 'תפריט ברירת מחדל',
                         'info' => 'הגדרה זו שולטת בנראות הקטגוריות בתפריט הכותרת. ניתן לבחור להציג רק קטגוריות ראשיות או את כל הקטגוריות המקוננות.',
+                        'preview' => 'תצוגה מקדימה',
                         'preview-default' => 'תצוגה מקדימה של תפריט ברירת מחדל',
                         'preview-sidebar' => 'תצוגה מקדימה של תפריט צדדי',
                         'sidebar' => 'תפריט צדדי',
@@ -4218,11 +4455,11 @@ return [
 
                 'gdpr' => [
                     'title' => 'GDPR',
-                    'info' => 'הגדרות תאימות ל-GDPR',
+                    'info' => 'הודעת עוגיות, קטגוריות הסכמה והסכם הפרטיות המוצג ללקוחות.',
 
                     'settings' => [
                         'title' => 'הגדרות תאימות ל-GDPR',
-                        'info' => 'ניהול הגדרות תאימות ל-GDPR, כולל מדיניות פרטיות. הפעל או השבת תכונות GDPR לפי הצורך.',
+                        'info' => 'הפעלה או כיבוי של תכונות GDPR עבור ערוץ זה.',
                         'enabled' => 'הפעל GDPR',
                     ],
 
@@ -4296,7 +4533,7 @@ return [
                 ],
 
                 'sitemap' => [
-                    'info' => 'הגדר אפשרויות מפת אתר.',
+                    'info' => 'יצירת מפת אתר ומגבלות קבצים.',
                     'title' => 'מפת אתר',
 
                     'settings' => [
@@ -4306,7 +4543,7 @@ return [
                     ],
 
                     'file-limits' => [
-                        'info' => 'הגדר אפשרויות גבולות קובץ.',
+                        'info' => 'המספר המרבי של כתובות שנכתבות לקובץ מפת אתר אחד לפני שמתחיל קובץ נוסף.',
                         'max-file-size' => 'גודל קובץ מרבי',
                         'max-url-per-file' => 'מספר מרבי של כתובות URL לכל קובץ',
                         'title' => 'גבולות קובץ',
@@ -4423,18 +4660,18 @@ return [
             ],
 
             'catalog' => [
-                'info' => 'קטלוג',
+                'info' => 'הגדרות מוצרים, תקצירים עשירים ומלאי.',
                 'title' => 'קטלוג',
 
                 'products' => [
-                    'info' => 'דף תצוגת מוצר, דף תצוגת עגלה, חזית חנות, ביקורת ושיתוף חברתי של תכונות.',
+                    'info' => 'עמודי מוצר ועגלה, חיפוש, גדלי תמונות, חוות דעת, מאפיינים ושיתוף.',
                     'title' => 'מוצרים',
 
                     'settings' => [
                         'compare-options' => 'אפשרויות השוואה',
                         'image-search-option' => 'אפשרות חיפוש תמונה',
                         'title' => 'הגדרות',
-                        'title-info' => 'הגדרות מתייחסות לבחירות הניתנות להגדרה של איך מערכת, יישום או התקן מתנהג, מותאם להעדפות ודרישות המשתמש.',
+                        'title-info' => 'הפעלה או כיבוי של השוואת מוצרים וחיפוש בתמונה.',
                         'wishlist-options' => 'אפשרויות רשימת המשאלות',
                     ],
 
@@ -4465,13 +4702,13 @@ return [
                         'allow-no-of-related-products' => 'מספר מוצרים קשורים מותר',
                         'allow-no-of-up-sells-products' => 'מספר מוצרים מותר למכירה נוספת',
                         'title' => 'תצוגת עמוד מוצר',
-                        'title-info' => 'הגדרות תצוגת עמוד מוצר כוללות התאמת הפריסה והרכיבים בדף התצוגה של מוצר, משפרות את חוויית המשתמש וההצגה של מידע.',
+                        'title-info' => 'כמה מוצרים קשורים ומוצרי מכירה משודרגת מוצגים בעמוד המוצר.',
                     ],
 
                     'cart-view-page' => [
                         'allow-no-of-cross-sells-products' => 'מספר מוצרים מותר למכירה מקורס',
                         'title' => 'תצוגת עמוד עגלת הקניות',
-                        'title-info' => 'הגדרות תצוגת עמוד עגלת הקניות כוללות את סידור הפריטים, הפרטים והאפשרויות בעמוד עגלת הקניות, משפרות את האינטראקציה עם המשתמש ותהליך הרכישה.',
+                        'title-info' => 'כמה מוצרי מכירה צולבת מוצגים בעמוד העגלה.',
                     ],
 
                     'storefront' => [
@@ -4489,14 +4726,14 @@ return [
                         'products-per-page' => 'מוצרים לעמוד',
                         'sort-by' => 'מיין לפי',
                         'title' => 'חנות חזית',
-                        'title-info' => 'חנות חזית היא ממשק המופיע ללקוחות בחנות המקוונת, מציג מוצרים, קטגוריות וניווט לחוויית קנייה חלקה.',
+                        'title-info' => 'כיצד מוצרים מוצגים בעמודי קטגוריה וחיפוש.',
                     ],
 
                     'small-image' => [
                         'height' => 'גובה',
                         'placeholder' => 'מציין תמונה קטנה',
                         'title' => 'תמונה קטנה',
-                        'title-info' => 'חנות חזית היא ממשק המופיע ללקוחות בחנות המקוונת, מציג מוצרים, קטגוריות וניווט לחוויית קנייה חלקה.',
+                        'title-info' => 'הגודל שאליו מוקטנות תמונות מוצר קטנות, והתמונה החלופית כשלמוצר אין תמונה.',
                         'width' => 'רוחב',
                     ],
 
@@ -4504,7 +4741,7 @@ return [
                         'height' => 'גובה',
                         'placeholder' => 'מציין תמונה בינונית',
                         'title' => 'תמונה בינונית',
-                        'title-info' => 'תמונה בינונית מתייחסת לתמונה בגודל בינוני שמציעה איזון בין פרטים למקום במסך, נפוצה לשימושים ויזואליים.',
+                        'title-info' => 'הגודל שאליו מוקטנות תמונות מוצר בינוניות, והתמונה החלופית כשלמוצר אין תמונה.',
                         'width' => 'רוחב',
                     ],
 
@@ -4512,7 +4749,7 @@ return [
                         'height' => 'גובה',
                         'placeholder' => 'מציין תמונה גדולה',
                         'title' => 'תמונה גדולה',
-                        'title-info' => 'תמונה גדולה מייצגת תמונה ברזולוציה גבוהה המספקת פרטים משופרים והשפעה ויזואלית, נפוצה להצגת מוצרים או גרפיקה.',
+                        'title-info' => 'הגודל שאליו מוקטנות תמונות מוצר גדולות, והתמונה החלופית כשלמוצר אין תמונה.',
                         'width' => 'רוחב',
                     ],
 
@@ -4524,25 +4761,25 @@ return [
                         'display-star-count' => 'הצג את ספירת הכוכבים בדירוגים.',
                         'summary' => 'סיכום',
                         'title' => 'ביקורת',
-                        'title-info' => 'הערכה או הערכה של משהו, הכוללת לעיתים דעות ומשוב.',
+                        'title-info' => 'מי רשאי לחוות דעה על מוצר, וכיצד חוות הדעת מוצגות בעמוד המוצר.',
                     ],
 
                     'attribute' => [
                         'file-upload-size' => 'גודל העלאת קובץ מותר (בקילובייט)',
                         'image-upload-size' => 'גודל העלאת תמונה מותר (בקילובייט)',
                         'title' => 'מאפיין',
-                        'title-info' => 'תכונה או מאפיין שמגדיר אובייקט, השפכה על התנהגותו, מראה או פונקציונליות.',
+                        'title-info' => 'הגודל המרבי של תמונה וקובץ שניתן להעלות עבור ערך מאפיין.',
                     ],
 
                     'social-share' => [
-                        'title-info' => 'הגדר את הגדרות שיתוף חברתי כדי לאפשר שיתוף מוצרים באינסטגרם, טוויטר, WhatsApp, פייסבוק, פינטרסט, לינקדאין ובאמצעות דוא"ל.',
+                        'title-info' => 'בחר אילו כפתורי שיתוף יופיעו בעמוד המוצר ואיזו הודעה הם יישאו.',
                         'title' => 'שיתוף חברתי',
                         'share-message' => 'הודעת שיתוף',
                         'share' => 'שתף',
                         'enable-social-share' => 'אפשר שיתוף חברתי?',
-                        'enable-share-whatsapp-info' => 'קישור שיתוף ב-WhatsApp יופיע רק למכשירים ניידים.',
-                        'enable-share-whatsapp' => 'אפשר שיתוף ב-WhatsApp?',
-                        'enable-share-twitter' => 'אפשר שיתוף בטוויטר?',
+                        'enable-share-whatsapp-info' => 'קישור השיתוף ב-WhatsApp מופיע במכשירים ניידים בלבד.',
+                        'enable-share-whatsapp' => 'להפעיל שיתוף ב-WhatsApp?',
+                        'enable-share-twitter' => 'להפעיל שיתוף ב-X (Twitter)?',
                         'enable-share-pinterest' => 'אפשר שיתוף בפינטרסט?',
                         'enable-share-linkedin' => 'אפשר שיתוף בלינקדאין?',
                         'enable-share-facebook' => 'אפשר שיתוף בפייסבוק?',
@@ -4551,7 +4788,7 @@ return [
                 ],
 
                 'rich-snippets' => [
-                    'info' => 'הגדר מוצרים וקטגוריות.',
+                    'info' => 'נתונים מובנים המתווספים לעמודי החנות עבור מנועי חיפוש.',
                     'title' => 'קטעי קוד עשירים',
 
                     'products' => [
@@ -4564,14 +4801,14 @@ return [
                         'show-sku' => 'הצג SKU',
                         'show-weight' => 'הצג משקל',
                         'title' => 'מוצרים',
-                        'title-info' => 'הגדרת הגדרות המוצר כולל SKU, משקל, קטגוריות, תמונות, ביקורות, דירוגים, הצעות וכו׳.',
+                        'title-info' => 'בחר אילו פרטי מוצר ייכללו בנתונים המובנים.',
                     ],
 
                     'categories' => [
                         'enable' => 'אפשר',
                         'show-search-input-field' => 'הצג שדה קלט חיפוש',
                         'title' => 'קטגוריות',
-                        'title-info' => '"קטגוריות" מתייחסות לקבוצות או סיווגים העוזרים לארגן ולקבץ מוצרים דומים או פריטים יחד לצורך ניווט וגלישה קלה יותר.',
+                        'title-info' => 'הוסף נתונים מובנים של קטגוריה לעמודי החנות כדי שמנועי חיפוש יוכלו לקרוא אותם.',
                     ],
                 ],
 
@@ -4585,13 +4822,13 @@ return [
                         'min-qty-allowed-in-cart' => 'Minimum Qty Allowed in Shopping Cart',
                         'out-of-stock-threshold' => 'Out-of-Stock Threshold',
                         'title' => 'Product Stock Option',
-                        'info' => 'הגדר אפשרויות מלאי המוצר כדי לאפשר הזמנות מאחור, להגדיר כמויות מינימום ומקסימום בעגלה, ולהגדיר סף חוסר מלאי.',
+                        'info' => 'אפשר הזמנות כשהמלאי אזל, וקבע את הכמות שבה מוצר נחשב אזל.',
                     ],
                 ],
             ],
 
             'customer' => [
-                'info' => 'לקוח',
+                'info' => 'הגדרות כתובות, קאפצ\'ה וחשבונות לקוח.',
                 'title' => 'לקוח',
 
                 'address' => [
@@ -4603,19 +4840,19 @@ return [
                         'country' => 'מדינה',
                         'state' => 'מדינה',
                         'title' => 'דרישות',
-                        'title-info' => 'דרישות הן התנאים, התכונות או המפרטים הנדרשים עבור משהו להתממש, להישג או להתקיים בהצלחה.',
+                        'title-info' => 'אילו שדות כתובת על הלקוח למלא.',
                         'zip' => 'מיקוד',
                     ],
 
                     'information' => [
                         'street-lines' => 'שורות בכתובת רחוב',
                         'title' => 'מידע',
-                        'title-info' => '"שורות בכתובת רחוב" מתייחסות לחלקים יחידים של כתובת, המופרדים לעיתים על ידי פסיקים, ומספקים מידע מקומי כמו מספר בית, רחוב, עיר ועוד.',
+                        'title-info' => 'כמה שורות כתובת מציג טופס הכתובת.',
                     ],
                 ],
 
                 'captcha' => [
-                    'info' => 'הגדרת מפתח אתר, מפתח סודי ומצב.',
+                    'info' => 'מפתחות ומצב של Google reCAPTCHA Enterprise.',
                     'title' => 'Google קפצ',
 
                     'credentials' => [
@@ -4630,7 +4867,7 @@ return [
                         'site-key-info' => 'לאחר שהפרויקט ומפתח ה-API נוצרו, חפש את שירות "reCAPTCHA" בספרייה וצור את מפתחות "reCAPTCHA".',
                         'status' => 'סטטוס',
                         'title' => 'אישורים',
-                        'title-info' => 'הגדר את אישורי Google reCAPTCHA כולל מפתח API, מזהה פרויקט, מפתח אתר, מפתח סודי והפעל או השבת את הסטטוס.',
+                        'title-info' => 'פרטי הגישה של Google reCAPTCHA Enterprise, והניקוד שבקשה צריכה להשיג כדי להתקבל.',
                     ],
 
                     'validations' => [
@@ -4640,7 +4877,7 @@ return [
                 ],
 
                 'settings' => [
-                    'settings-info' => 'הגדר רשימת משאלות, הפניית התחברות, הרשמות לניוזלטר, אפשרות קבוצת ברירת מחדל, אימותי אימייל והתחברות חברתית.',
+                    'settings-info' => 'הגדר רשימת משאלות, הפניה לאחר התחברות, אפשרויות חשבון חדש, ניוזלטר, אימות דוא"ל והתחברות חברתית.',
                     'title' => 'הגדרות',
 
                     'login-as-customer' => [
@@ -4680,19 +4917,20 @@ return [
 
                     'newsletter' => [
                         'subscription' => 'אפשר הרשמה לניוזלטר',
+                        'subscription-info' => 'הצג טופס הרשמה בכותרת התחתונה של החנות.',
                         'title' => 'הרשמה לניוזלטר',
-                        'title-info' => '"מידע על ניוזלטר" מכיל עדכונים, הצעות או תוכן שמועברים באופן קבוע דרך הודעות אימייל למנויים, שמשמרים אותם מעודכנים ומעוררים עניין.',
+                        'title-info' => 'הרשמה לניוזלטר בחנות.',
                     ],
 
                     'email' => [
                         'email-verification' => 'אפשר אימות אימייל',
                         'title' => 'אימות אימייל',
-                        'title-info' => '"אימות אימייל" מאשר את אמיתות כתובת האימייל, לעיתים על ידי שליחת קישור אישור, משפר את אבטחת החשבון ואת אמינות התקשורת.',
+                        'title-info' => 'בקש מלקוח חדש לאשר את כתובת הדוא"ל שלו לפני שיוכל להתחבר.',
                     ],
 
                     'social-login' => [
                         'title' => 'התחברות חברתית',
-                        'info' => '"התחברות חברתית" מאפשרת למשתמשים להיכנס לאתר באמצעות חשבונות המדיה החברתית שלהם, ומפשטת את תהליכי ההרשמה והכניסה.',
+                        'info' => 'אפשר ללקוחות להתחבר באמצעות חשבון חיצוני. כל ספק דורש מזהה לקוח וסוד משלו.',
 
                         'google' => [
                             'enable-google' => 'הפעל Google',
@@ -4771,21 +5009,21 @@ return [
                         ],
 
                         'twitter' => [
-                            'enable-twitter' => 'הפעל Twitter',
+                            'enable-twitter' => 'הפעל X (Twitter)',
 
                             'client-id' => [
                                 'title' => 'מזהה לקוח (Client ID)',
-                                'title-info' => 'מזהה ייחודי שמסופק על ידי Twitter בעת יצירת אפליקציית OAuth.',
+                                'title-info' => 'מזהה ייחודי שמספקת X בעת יצירת יישום ה-OAuth שלך.',
                             ],
 
                             'client-secret' => [
                                 'title' => 'סוד לקוח (Client Secret)',
-                                'title-info' => 'מפתח סודי המשויך ללקוח ה-OAuth שלך ב-Twitter. שמור עליו בסודיות.',
+                                'title-info' => 'המפתח הסודי המשויך ללקוח ה-OAuth שלך ב-X. שמור עליו בסודיות.',
                             ],
 
                             'redirect' => [
                                 'title' => 'כתובת הפנייה (Redirect URL)',
-                                'title-info' => 'כתובת ה-URL שאליה המשתמשים מנותבים לאחר ההזדהות עם Twitter. השתמש בפורמט כתובת URL מציין מיקום המוצג (שנה רק את הדומיין שלך). חייבת להתאים לכתובת שהוגדרה בקונסולה של Twitter.',
+                                'title-info' => 'כתובת החזרה שאליה מופנים המשתמשים לאחר האימות ב-X. השתמש בתבנית הכתובת המוצגת (שנה רק את הדומיין שלך). היא חייבת להתאים לכתובת שהוגדרה בפורטל המפתחים של X.',
                             ],
                         ],
                     ],
@@ -4793,18 +5031,25 @@ return [
             ],
 
             'email' => [
-                'info' => 'אימייל',
+                'info' => 'מנהל התקן הדואר, פרטי השולח וההתראות שהחנות שולחת.',
                 'title' => 'אימייל',
 
                 'smtp' => [
+                    'brevo-api-key' => 'מפתח API של Brevo',
+                    'brevo-api-key-info' => 'צור מפתח API בגרסה 3 בחשבון Brevo שלך תחת SMTP & API.',
+                    'driver' => 'מנהל התקן',
+                    'driver-brevo-api' => 'Brevo (API)',
+                    'driver-info' => 'בחר כיצד החנות שלך שולחת דואר אלקטרוני.',
                     'driver-mismatch-info' => 'מנהל הדואר שלך מוגדר כ-":driver" במקום "bagisto-dynamic-smtp". כל שינוי שייעשה כאן לא יהיה לו כל אפקט. אנא עדכן את MAIL_MAILER=bagisto-dynamic-smtp בקובץ .env שלך כדי להפעיל את ההגדרות האלה.',
                     'driver-mismatch-title' => 'הגדרות אלו כרגע לא פעילות.',
+                    'driver-notice' => 'הודעת מנהל ההתקן',
+                    'driver-smtp' => 'SMTP',
                     'encryption' => 'הצפנה',
                     'host' => 'מארח',
-                    'info' => 'הגדר את הגדרות שרת SMTP לשליחת דוא"ל מהחנות שלך.',
+                    'info' => 'בחר כיצד החנות שלך שולחת דואר אלקטרוני והגדר את מנהל ההתקן שנבחר.',
                     'password' => 'סיסמה',
                     'port' => 'פורט',
-                    'title' => 'SMTP',
+                    'title' => 'מנהל התקן דואר',
                     'username' => 'שם משתמש',
                 ],
 
@@ -4818,12 +5063,13 @@ return [
                     'contact-email-tip' => 'כתובת אימייל זו תוצג בפוטר של האימיילים שלך.',
                     'contact-name' => 'שם ליצירת קשר',
                     'contact-name-tip' => 'שם זה יוצג בפוטר של האימיילים שלך.',
-                    'info' => 'קבע את שם השולח, כתובת אימייל החנות, פרטי המנהל ופרטי הקשר המשמשים בכל האימיילים.',
+                    'info' => 'בחר כיצד נשלח דואר אלקטרוני ומאילו כתובות.',
                     'sender-email' => 'כתובת אימייל שולח',
                     'sender-email-tip' => 'אימיילים ללקוחות שלך יישלחו מכתובת זו.',
                     'sender-name' => 'שם שולח',
                     'sender-name-tip' => 'שם זה יוצג בתיבת הדואר הנכנס של הלקוחות שלך כשולח האימייל.',
                     'title' => 'הגדרות אימייל',
+                    'title-info' => 'השמות והכתובות שמהן החנות שולחת דואר ואשר מופיעים בכותרת התחתונה.',
                 ],
 
                 'notifications' => [
@@ -4831,7 +5077,7 @@ return [
                     'cancel-order-mail-to-admin' => 'שלח דוא"ל התראה למנהל לאחר ביטול הזמנה',
                     'customer' => 'שלח ללקוח פרטי חשבון לאחר הרשמה',
                     'customer-registration-confirmation-mail-to-admin' => 'שלח דוא"ל אישור למנהל לאחר הרשמת לקוח',
-                    'info' => 'כדי להגדיר קבלת מיילים לאימות חשבון, אישורי הזמנות, עדכונים על חשבוניות, החזרים, משלוחים וביטולי הזמנות.',
+                    'info' => 'בחר אילו הודעות נשלחות ללקוחות ולמנהל.',
                     'new-inventory-source' => 'שלח דוא"ל התראה למקור המלאי לאחר יצירת משלוח',
                     'new-invoice' => 'שלח דוא"ל התראה ללקוח לאחר יצירת חשבונית חדשה',
                     'new-invoice-mail-to-admin' => 'שלח דוא"ל התראה למנהל לאחר יצירת חשבונית חדשה',
@@ -4843,16 +5089,17 @@ return [
                     'new-shipment-mail-to-admin' => 'שלח דוא"ל התראה למנהל לאחר יצירת משלוח חדש',
                     'registration' => 'שלח דוא"ל אישור לאחר הרשמת לקוח',
                     'title' => 'התראות',
+                    'title-info' => 'הפעל או כבה כל הודעת התראה בנפרד.',
                     'verification' => 'שלח דוא"ל אימות לאחר הרשמת לקוח',
                 ],
             ],
 
             'sales' => [
-                'info' => 'מכירות',
+                'info' => 'הגדרות משלוח, תשלומים, הזמנות, חשבוניות, מסים, תשלום והחזרות.',
                 'title' => 'מכירות',
 
                 'shipping-setting' => [
-                    'info' => 'הגדרות משלוח, כוללות מדינה, מדינה, עיר, כתובת רחוב, מיקוד, שם חנות, מספר מע"מ, מספר טלפון ופרטי בנק.',
+                    'info' => 'הכתובת שממנה נשלחות ההזמנות.',
                     'title' => 'הגדרות משלוח',
 
                     'origin' => [
@@ -4864,14 +5111,14 @@ return [
                         'store-name' => 'שם חנות',
                         'street-address' => 'כתובת רחוב',
                         'title' => 'מקור',
-                        'title-info' => 'מקור המשלוח מתייחס למיקום ממנו מוצאים הסחורות או המוצרים לפני הובלתם ליעדם.',
+                        'title-info' => 'הכתובת שממנה נשלחות ההזמנות, ופרטי החנות המוצגים בחשבוניות.',
                         'vat-number' => 'מספר מע"מ',
                         'zip' => 'מיקוד',
                     ],
                 ],
 
                 'shipping-methods' => [
-                    'info' => 'הגדרות שיטות משלוח, כוללות משלוח חינם, משלוח במחיר קבוע ואפשרויות נוספות כפי שנדרש.',
+                    'info' => 'שיטות המשלוח המוצעות בעת התשלום.',
                     'title' => 'שיטות משלוח',
 
                     'free-shipping' => [
@@ -4879,7 +5126,7 @@ return [
                         'page-title' => 'משלוח חינם',
                         'status' => 'סטטוס',
                         'title' => 'כותרת',
-                        'title-info' => 'משלוח חינם הוא שיטת משלוח בה עלות המשלוח נכונה, והמוכר מכסה את הוצאות המשלוח למסירת הסחורות לקונה.',
+                        'title-info' => 'שיטת משלוח ללא עלות.',
                     ],
 
                     'flat-rate-shipping' => [
@@ -4888,7 +5135,7 @@ return [
                         'rate' => 'שער',
                         'status' => 'סטטוס',
                         'title' => 'כותרת',
-                        'title-info' => 'משלוח במחיר קבוע הוא שיטת משלוח בה נגבה דמי קבוע עבור המשלוח, ללא קשר למשקל, גודל או מרחק החבילה. זה מספק פשטות בעלויות המשלוח ויכול להיות מועיל לגוף מסחרי ולקונים.',
+                        'title-info' => 'שיטת משלוח בתעריף קבוע, לכל הזמנה או לכל פריט.',
                         'type' => [
                             'per-order' => 'לפי הזמנה',
                             'per-unit' => 'לפי יחידה',
@@ -4909,36 +5156,46 @@ return [
                     'application-fee' => 'משלם דמי יישום',
                     'business-account' => 'חשבון עסקי',
                     'cash-on-delivery' => 'מזומן במסירה',
-                    'cash-on-delivery-info' => 'שיטת תשלום בה הלקוחות משלמים במזומן בעת קבלת הסחורות או השירותים בדלת הבית.',
+                    'cash-on-delivery-info' => 'אפשר ללקוחות לשלם במזומן בעת המסירה.',
                     'client-id' => 'מזהה לקוח',
-                    'client-id-info' => 'השתמש ב-"sb" למטרות בדיקה.',
+                    'client-id-info' => 'מזהה הלקוח של יישום ה-PayPal שלך. השתמש במזהה של יישום ה-Sandbox כל עוד מצב Sandbox פעיל.',
                     'client-secret' => 'סוד לקוח',
-                    'client-secret-info' => 'הוסף את המפתח הסודי שלך כאן',
+                    'client-secret-info' => 'סוד הלקוח של יישום ה-PayPal שלך.',
                     'create-success-refund' => 'ההחזר נוצר בהצלחה.',
                     'description' => 'תיאור',
                     'enable' => 'הפעל',
                     'generate-invoice' => 'יצירת חשבונית באופן אוטומטי לאחר ביצוע הזמנה',
                     'generate-invoice-applicable' => 'ניתן להחיל אם יצירת חשבונית אוטומטית מופעלת',
-                    'info' => 'הגדרות שיטות תשלום',
+                    'info' => 'הגדר את אמצעי התשלום המוצעים בעת התשלום.',
                     'instructions' => 'הוראות',
                     'logo' => 'לוגו',
-                    'logo-information' => 'רזולוציית התמונה צריכה להיות 55 פיקסלים על 45 פיקסלים',
+                    'logo-information' => 'גודל מומלץ: 55 x 45 פיקסלים.',
                     'mailing-address' => 'שליחת צק ל',
                     'merchant-description' => 'תיאור הסוחר',
                     'merchant-id' => 'מזהה סוחר',
                     'merchant-key' => 'מפתח סוחר',
                     'merchant-name' => 'שם הסוחר',
+                    'merchant-private-key' => 'מפתח פרטי של הסוחר',
+                    'merchant-private-key-info' => 'הדביקו את תוכן קובץ ה-PEM של המפתח הפרטי שנוצר בלוח הבקרה של PayGlocal. הוא משמש לחתימת הבקשות.',
                     'merchant-salt' => 'מלח סוחר',
                     'money-transfer' => 'העברת כספים',
-                    'money-transfer-info' => 'העברת כספים מאדם או חשבון לאדם או חשבון אחר, לעיתים תוך שימוש באמצעים אלקטרוניים, למגוון מטרות כגון עסקאות או העברות כספים.',
+                    'money-transfer-info' => 'אפשר ללקוחות לשלם בהעברה בנקאית או בהמחאה.',
                     'page-title' => 'שיטות תשלום',
                     'paid' => 'שולם',
+                    'payglocal' => 'PayGlocal',
+                    'payglocal-info' => 'קבלו תשלומים בין-לאומיים באמצעות PayGlocal. <a href="https://dashboard.payglocal.in/app/mca/h8271x" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline hover:text-blue-700">הירשמו כאן כדי לקבל את פרטי ההזדהות שלכם.</a>',
+                    'payglocal-merchant-id-info' => 'זמין בלוח הבקרה של PayGlocal תחת My Account.',
+                    'payglocal-private-key-id-info' => 'מזהה המפתח הפרטי שלכם, כפי שמוצג בלוח הבקרה של PayGlocal.',
+                    'payglocal-public-key' => 'מפתח ציבורי של PayGlocal',
+                    'payglocal-public-key-id-info' => 'מזהה המפתח הציבורי של PayGlocal, כפי שמוצג בלוח הבקרה של PayGlocal.',
+                    'payglocal-public-key-info' => 'הדביקו את תוכן קובץ ה-PEM של המפתח הציבורי של PayGlocal. הוא משמש להצפנת הבקשות ולאימות התגובות.',
+                    'payglocal-sandbox-info' => 'שליחת תשלומים לסביבת הבדיקות של PayGlocal.',
                     'paypal-smart-button' => 'PayPal',
-                    'paypal-smart-button-info' => 'כפתור PayPal Smart: מספק פשטות בתשלומים מקוונים עם כפתורים מותאמים אישית לעסקאות מרובות בטוחות באתרים וביישומים.',
+                    'paypal-smart-button-info' => 'הצג את כפתורי PayPal בעת התשלום כדי שלקוחות יוכלו לשלם ב-PayPal או בכרטיס.',
                     'paypal-standard' => 'PayPal Standard',
-                    'paypal-standard-info' => 'PayPal Standard הוא אפשרות תשלום בסיסית של PayPal לעסקים מקוונים, המאפשרת ללקוחות לשלם באמצעות חשבונות PayPal שלהם או כרטיסי האשראי/חיוב שלהם.',
+                    'paypal-standard-info' => 'הפנה לקוחות ל-PayPal לתשלום בחשבון ה-PayPal שלהם או בכרטיס.',
                     'payu' => 'PayU',
-                    'payu-info' => 'הגדר את הגדרות שער התשלום PayU',
+                    'payu-info' => 'קבל תשלומים באמצעות PayU.',
                     'payu-merchant-key-info' => 'הזן את מפתח הסוחר של PayU שהתקבל מלוח המחוונים של PayU',
                     'payu-merchant-salt-info' => 'הזן את מלח הסוחר של PayU שהתקבל מלוח המחוונים של PayU',
                     'pending' => 'ממתין',
@@ -4948,10 +5205,12 @@ return [
                     'phonepe-client-id-info' => 'הזן את מזהה הלקוח PhonePe שלך המתקבל מלוח הבקרה של PhonePe',
                     'phonepe-client-secret-info' => 'הזן את סוד הלקוח PhonePe שלך המתקבל מלוח הבקרה של PhonePe',
                     'phonepe-merchant-info' => 'הזן את מזהה הסוחר PhonePe שלך המתקבל מלוח הבקרה של PhonePe',
+                    'private-key-id' => 'מזהה המפתח הפרטי',
                     'processing' => 'מעבד',
                     'production-mode-info' => 'למצב ייצור בלבד.',
+                    'public-key-id' => 'מזהה המפתח הציבורי',
                     'razorpay' => 'Razorpay',
-                    'razorpay-info' => 'Razorpay היא פלטפורמת טכנולוגיה פיננסית שמסייעת לעסקים לקבל, לעבד ולשלם תשלומים.',
+                    'razorpay-info' => 'קבל תשלומים באמצעות Razorpay.',
                     'sandbox' => 'סנדבוקס',
                     'set-invoice-status' => 'הגדר את מצב החשבונית לאחר יצירת החשבונית ל',
                     'set-order-status' => 'הגדר את מצב ההזמנה לאחר יצירת החשבונית ל',
@@ -4959,7 +5218,7 @@ return [
                     'statement-descriptor' => 'תיאור דוח',
                     'status' => 'סטטוס',
                     'stripe' => 'Stripe',
-                    'stripe-info' => 'Configure Stripe payment gateway settings for secure online transactions',
+                    'stripe-info' => 'קבל תשלומי כרטיס באמצעות Stripe.',
                     'test-client-id' => 'מזהה לקוח במצב בדיקה',
                     'test-client-secret' => 'סוד לקוח במצב בדיקה',
                     'test-mode-info' => 'למצב בדיקה/סנדבוקס בלבד.',
@@ -4967,7 +5226,7 @@ return [
                 ],
 
                 'order-settings' => [
-                    'info' => 'הגדר מספרי הזמנות, הזמנה מינימלית והזמנות חוזרות.',
+                    'info' => 'ניסיונות חוזרים ליצירת הזמנה, מספרי הזמנות, סכום מזערי והזמנה חוזרת.',
                     'title' => 'הגדרות הזמנה',
 
                     'order-creation' => [
@@ -4978,7 +5237,7 @@ return [
 
                     'order-number' => [
                         'generator' => 'מחולל מספר הזמנה',
-                        'info' => 'מזהה ייחודי שמוקצה להזמנת לקוח מסוימת, המסייע במעקב, תקשורת והתייחסות לאורך תהליך הרכישה.',
+                        'info' => 'כיצד נבנים מספרי ההזמנות הנוצרים.',
                         'length' => 'אורך מספר הזמנה',
                         'prefix' => 'קידומת מספר הזמנה',
                         'suffix' => 'סיומת מספר הזמנה',
@@ -4990,17 +5249,17 @@ return [
                         'enable' => 'הפעל',
                         'include-discount-amount' => 'כלול סכום הנחה',
                         'include-tax-amount' => 'כלול מס בסכום',
-                        'info' => 'קריטריונים מוגדרים המציינים את הכמות או הערך הנדרש הנמוך ביותר עבור הזמנה כדי שתעבוד או תזכה בהטבות.',
+                        'info' => 'סכום ההזמנה המזערי שבו לקוח יכול לבצע תשלום.',
                         'minimum-order-amount' => 'סכום הזמנה מינימלי',
                         'title' => 'הגדרות הזמנה מינימלית',
                     ],
 
                     'reorder' => [
                         'admin-reorder' => 'הזמנה מחדש על ידי מנהל',
-                        'admin-reorder-info' => 'הפעל או השבת את אפשרות ההזמנה מחדש עבור משתמשי המערכת.',
-                        'info' => 'הפעל או השבת את אפשרות ההזמנה מחדש עבור משתמשי החנות.',
+                        'admin-reorder-info' => 'אפשר למנהל לבצע הזמנה מחדש מלוח הניהול.',
+                        'info' => 'אפשר לבצע הזמנה מחדש מלוח הניהול או מהחנות.',
                         'shop-reorder' => 'הזמנה מחדש על ידי חנות',
-                        'shop-reorder-info' => 'הפעל או השבת את אפשרות ההזמנה מחדש עבור משתמשי החנות.',
+                        'shop-reorder-info' => 'אפשר ללקוח לבצע הזמנה מחדש מהחנות.',
                         'title' => 'אפשר הזמנה מחדש',
                     ],
 
@@ -5012,12 +5271,12 @@ return [
                 ],
 
                 'invoice-settings' => [
-                    'info' => 'הגדר מספר חשבונית, תנאי תשלום, עיצוב קבלת חשבונית ותזכורות לחשבונית.',
+                    'info' => 'מספרי חשבוניות, תנאי תשלום, הדפסות PDF ותזכורות.',
                     'title' => 'הגדרות חשבונית',
 
                     'invoice-number' => [
                         'generator' => 'מחולל מספר חשבונית',
-                        'info' => 'הגדרת כללים או פרמטרים ליצירה והקצאה של מספרי זיהוי ייחודיים לחשבוניות לצורכי ארגון ומעקב.',
+                        'info' => 'כיצד נבנים מספרי החשבוניות הנוצרים.',
                         'length' => 'אורך מספר חשבונית',
                         'prefix' => 'קידומת מספר חשבונית',
                         'suffix' => 'סיומת מספר חשבונית',
@@ -5028,7 +5287,7 @@ return [
                         'due-duration' => 'משך זמן לתשלום',
                         'due-duration-day' => ':due-duration יום',
                         'due-duration-days' => ':due-duration ימים',
-                        'info' => 'תנאים המוסכמים שמגדירים מתי וכיצד יש לבצע תשלום עבור סחורות או שירותים מהקונה למוכר.',
+                        'info' => 'כמה זמן לאחר הנפקתה חשבונית מגיעה לפירעון.',
                         'title' => 'תנאי תשלום',
                     ],
 
@@ -5046,7 +5305,7 @@ return [
                     ],
 
                     'invoice-reminders' => [
-                        'info' => 'הודעות אוטומטיות או תקשורות שנשלחות ללקוחות כדי להזכיר להם על תשלומים קרובים או בעיכוב עבור חשבוניות.',
+                        'info' => 'כמה תזכורות תשלום נשלחות עבור חשבונית שלא שולמה, ובאיזה מרווח.',
                         'interval-between-reminders' => 'מרווח בין תזכורות',
                         'maximum-limit-of-reminders' => 'מגבלה מרבית של תזכורות',
                         'title' => 'תזכורות לחשבונית',
@@ -5055,11 +5314,11 @@ return [
 
                 'taxes' => [
                     'title' => 'מסים',
-                    'title-info' => 'מסים הם דמי חובה שמוטלים על סחורות, שירותים או עסקאות על ידי ממסים ומועברים לרשויות.',
+                    'title-info' => 'קטגוריות מס, אופן חישוב המס ואופן הצגתו.',
 
                     'categories' => [
                         'title' => 'קטגוריות מס',
-                        'title-info' => 'קטגוריות מס הן סיווגים לסוגים שונים של מסים, כמו מס מכירות, מע"מ או מס ייבוא, המשמשים לסווג ולהחיל שיעורי מס על מוצרים או שירותים.',
+                        'title-info' => 'קטגוריית המס החלה על משלוח, וקטגוריית ברירת המחדל למוצרים חדשים.',
                         'product' => 'קטגוריית מס ברירת מחדל למוצרים',
                         'shipping' => 'קטגוריית מס למשלוח',
                         'none' => 'אין',
@@ -5079,7 +5338,7 @@ return [
                         'shipping-origin' => 'מקור המשלוח',
                         'shipping-prices' => 'מחירי המשלוח',
                         'title' => 'הגדרות חישוב',
-                        'title-info' => 'פרטים על עלות הסחורות או השירותים, כולל מחיר בסיס, הנחות, מסים וחיובים נוספים.',
+                        'title-info' => 'על מה מחושב המס, והאם המחירים שהוזנו כוללים אותו כבר.',
                     ],
 
                     'default-destination-calculation' => [
@@ -5087,14 +5346,14 @@ return [
                         'default-post-code' => 'מיקוד ברירת מחדל',
                         'default-state' => 'מדינה ברירת מחדל',
                         'title' => 'חישוב יעד ברירת מחדל',
-                        'title-info' => 'קביעה אוטומטית של יעד סטנדרטי או יעד ראשוני בהתבסס על גורמים או הגדרות מוגדרות מראש.',
+                        'title-info' => 'הכתובת שלפיה מחושב המס לפני שהלקוח מזין את שלו.',
                     ],
 
                     'shopping-cart' => [
                         'show-tax-breakdown' => 'הצג פירוט מס',
                         'show-tax-breakdown-info' => 'הצגת פירוט מס מפורט לפי מוצר ולפי שיעור בסיכום העגלה והתשלום. מיועד לניפוי באגים.',
                         'title' => 'הגדרות תצוגה בעגלת קניות',
-                        'title-info' => 'הגדר את תצוגת המסים בעגלת הקניות',
+                        'title-info' => 'כיצד מוצג המס בעגלה ובעת התשלום.',
                         'display-prices' => 'תצוגת מחירים',
                         'display-subtotal' => 'תצוגת סיכום חלקי',
                         'display-shipping-amount' => 'תצוגת סכום משלוח',
@@ -5105,7 +5364,7 @@ return [
 
                     'sales' => [
                         'title' => 'הגדרות תצוגה בהזמנות, חשבוניות והחזרות',
-                        'title-info' => 'הגדר את תצוגת המסים בהזמנות, חשבוניות והחזרות',
+                        'title-info' => 'כיצד מוצג המס בהזמנות, בחשבוניות ובזיכויים.',
                         'display-prices' => 'תצוגת מחירים',
                         'display-subtotal' => 'תצוגת סיכום חלקי',
                         'display-shipping-amount' => 'תצוגת סכום משלוח',
@@ -5117,7 +5376,7 @@ return [
 
                 'checkout' => [
                     'title' => 'תשלום',
-                    'info' => ' הגדרת תשלום כאורח, הפעל או השבת עגלת הקניות המיני, סיכום עגלת הקניות.',
+                    'info' => 'תשלום כאורח, עמוד העגלה, עגלה מוקטנת וסיכום העגלה.',
 
                     'shopping-cart' => [
                         'cart-page' => 'דף עגלת הקניות',
@@ -5128,21 +5387,21 @@ return [
                         'estimate-shipping-info' => 'הפעל משלוח מוערך כדי לספק עלויות משלוח מראש.',
                         'guest-checkout' => 'אפשר תשלום כאורח',
                         'guest-checkout-info' => 'הפעל תשלום כאורח עבור תהליך רכישה מהיר ונוח.',
-                        'info' => 'הפעל תשלום כאורח, דף עגלת הקניות, מכירה מקורסת של מוצרים ומשלוח מוערך כדי לשפר את נוחות המשתמש ולקצר את תהליך הקנייה למכירות מוגברות.',
+                        'info' => 'תשלום כאורח, עמוד העגלה, מוצרי מכירה צולבת ומשלוח משוער.',
                         'title' => 'עגלת הקניות',
                     ],
 
                     'my-cart' => [
                         'display-item-quantities' => 'הצג כמויות מוצרים',
                         'display-number-in-cart' => 'הצג מספר מוצרים בעגלה',
-                        'info' => 'הפעל הגדרות עבור עגלת הקניות שלי כדי להציג סיכום של כמויות המוצרים ולהציג את מספר הפריטים הכולל בעגלה למעקב קל.',
+                        'info' => 'האם מונה העגלה מציג את סך הכמות או את מספר הפריטים.',
                         'summary' => 'סיכום',
                         'title' => 'עגלת הקניות שלי',
                     ],
 
                     'mini-cart' => [
                         'display-mini-cart' => 'הצג עגלת קניות מינית',
-                        'info' => 'הפעל הגדרות עבור עגלת הקניות המינית כדי להציג את עגלת הקניות המינית ולהציג מידע על הצעות בעגלת הקניות לגישה מהירה לפרטי העגלה ולקידומים.',
+                        'info' => 'הצג את העגלה המוקטנת ואת טקסט המבצע המופיע בתוכה.',
                         'mini-cart-offer-info' => 'מידע על הצעות בעגלת הקניות המינית',
                         'title' => 'עגלת קניות מינית',
                     ],
@@ -5172,7 +5431,7 @@ return [
                     'evening' => 'ערב',
                     'exchange' => 'החלפה',
                     'file-extension-info' => 'סוגי הקבצים שלקוחות ומנהלים רשאים לצרף לבקשת החזרה, כגון תמונות מוצר או מסמכים תומכים.',
-                    'info' => 'RMA הוא חלק מהתהליך של החזרת מוצר לעסק כדי לקבל החזר, החלפה או תיקון.',
+                    'info' => 'החזרות שלקוחות יכולים לבקש לאחר ביצוע הזמנה.',
                     'morning' => 'בוקר',
                     'new-rma-message-to-customer' => 'הודעת RMA חדשה ללקוח',
                     'no' => 'לא',
@@ -5225,14 +5484,29 @@ return [
                 'warning-config-closures' => 'config:cache ייכשל אם קובץ הגדרות כלשהו מחזיר closures.',
                 'warning-permissions' => 'בעיות הרשאות מערכת קבצים עלולות למנוע יצירה או ניקוי מטמון.',
                 'invalid-action' => 'פעולת מטמון לא חוקית.',
-                'action-success' => 'הפקודה ":action" בוצעה בהצלחה.',
-                'action-failed' => 'הפקודה ":action" נכשלה. בדוק את הפלט למטה.',
+                'action-success' => ':action הושלמה בהצלחה.',
+                'action-failed' => ':action נכשלה. בדוק את הפלט למטה.',
                 'action-exception' => 'פעולת מטמון נכשלה: :message',
                 'clear-console' => 'נקה קונסול',
                 'console-title' => 'קונסול פלט',
                 'console-entries' => 'רשומות',
                 'console-empty' => 'הפעל פעולת מטמון כדי לראות פלט כאן...',
                 'console-unknown-error' => 'אירעה שגיאה בלתי צפויה.',
+
+                'results' => [
+                    'clear-all' => 'כל המטמונים נוקו.',
+                    'clear-config' => 'מטמון התצורה נוקה.',
+                    'clear-cache' => 'מטמון האפליקציה נוקה.',
+                    'clear-compiled' => 'קובצי המחלקות המהודרים הוסרו.',
+                    'clear-events' => 'מטמון האירועים נוקה.',
+                    'clear-routes' => 'מטמון הנתיבים נוקה.',
+                    'clear-views' => 'התצוגות המהודרות נוקו.',
+                    'clear-page-cache' => 'מטמון הדפים נוקה. כל עמוד בחנות ייווצר מחדש בביקור הבא.',
+                    'build-all' => 'כל המטמונים נבנו מחדש.',
+                    'build-config' => 'מטמון התצורה נבנה.',
+                    'build-routes' => 'מטמון הנתיבים נבנה.',
+                    'build-views' => 'התצוגות הודרו.',
+                ],
 
                 'actions' => [
                     'clear-all' => 'נקה את כל המטמון',
@@ -5242,10 +5516,27 @@ return [
                     'clear-events' => 'נקה מטמון אירועים',
                     'clear-routes' => 'נקה מטמון נתיבים',
                     'clear-views' => 'נקה מטמון תצוגות',
+                    'clear-page-cache' => 'ניקוי מטמון הדפים',
                     'build-all' => 'בנה מחדש את כל המטמון',
                     'build-config' => 'אחסן הגדרות במטמון',
                     'build-routes' => 'אחסן נתיבים במטמון',
                     'build-views' => 'אחסן תצוגות במטמון',
+                ],
+
+                'full-page-cache' => [
+                    'title' => 'Full Page Cache',
+                    'info' => 'Serve rendered storefront pages from a cache instead of building them for every visitor.',
+
+                    'settings' => [
+                        'title' => 'Settings',
+                        'info' => 'Turn the page cache on or off and choose how long a page stays cached.',
+                        'enabled' => 'Enable Full Page Cache',
+                        'enabled-info' => 'Storefront pages are served from the cache. Turning this off makes every page render again on each visit.',
+                        'lifetime' => 'Cache Lifetime (Minutes)',
+                        'lifetime-info' => 'How long a cached page is kept before it is rendered again. Leave empty to use the application default.',
+                        'flush' => 'ניקוי מטמון הדפים',
+                        'flush-info' => 'רוקן את מטמון הדפים כך שכל עמוד בחנות ייווצר מחדש בביקור הבא.',
+                    ],
                 ],
             ],
         ],
@@ -5280,6 +5571,10 @@ return [
             ],
 
             'sidebar' => [
+
+                'appearance' => 'מראה',
+
+                'sections' => 'מקטעים',
                 'attribute-families' => 'משפחות מאפיינים',
                 'attributes' => 'מאפיינים',
                 'booking-product' => 'הזמנות',
@@ -5352,6 +5647,7 @@ return [
 
             'toolbar' => [
                 'length-of' => ':length של',
+                'sort-by' => 'מיין לפי',
                 'of' => 'של',
                 'per-page' => 'לעמוד',
                 'results' => ':total תוצאות',
@@ -5420,6 +5716,17 @@ return [
                     'today' => 'היום',
                     'yesterday' => 'אתמול',
                 ],
+
+                'number-options' => [
+                    'between' => 'Between',
+                    'equals' => 'Equals',
+                    'from' => 'From',
+                    'greater-than' => 'Greater Than',
+                    'greater-than-or-equal' => 'Greater Than Or Equal',
+                    'less-than' => 'Less Than',
+                    'less-than-or-equal' => 'Less Than Or Equal',
+                    'to' => 'To',
+                ],
             ],
 
             'table' => [
@@ -5456,6 +5763,7 @@ return [
                 'ai-add-image-btn' => 'בינה מלאכותית',
                 'ai-btn-info' => 'יצירת תמונה',
                 'allowed-types' => 'png, jpeg, jpg',
+                'image' => 'תמונה',
                 'not-allowed-error' => 'ניתן להעלות רק קבצי תמונה (.jpeg, .jpg, .png, ..)',
 
                 'ai-generation' => [
@@ -5486,12 +5794,33 @@ return [
                     'use-cases' => 'מטרות שימוש',
                     'zoom' => 'הגדלה',
                 ],
+
+                'seo' => [
+                    'alt-text' => 'טקסט חלופי',
+                    'alt-text-info' => 'נשמר עבור השפה שנבחרה. אם השדה ריק, נעשה שימוש בשם המוצר.',
+                    'alt-text-placeholder' => 'תארו מה מוצג בתמונה',
+                    'done-btn' => 'סיום',
+                    'file-name' => 'שם הקובץ',
+                    'file-name-info' => 'שינוי השם משנה את כתובת התמונה. הכתובת הישנה תפסיק לעבוד, מה שעלול להשפיע על הדירוג בחיפוש תמונות.',
+                    'file-name-placeholder' => 'blue-running-shoe-side',
+                    'info' => 'שפרו את האופן שבו מנועי חיפוש וקוראי מסך מבינים את התמונה הזו.',
+                    'replace' => 'החלפת תמונה',
+                    'replace-btn' => 'בחירת קובץ',
+                    'replace-info' => 'הטקסט החלופי ושם הקובץ שלמעלה יישמרו עבור התמונה החדשה.',
+                    'title' => 'SEO לתמונה',
+                ],
             ],
 
             'videos' => [
                 'add-video-btn' => 'הוסף וידאו',
                 'allowed-types' => 'mp4, webm, mkv',
                 'not-allowed-error' => 'ניתן להעלות רק קבצי וידאו (.mp4, .mov, .ogg ..)',
+                'video' => 'וידאו',
+
+                'seo' => [
+                    'info' => 'תנו לקובץ הווידאו שם תיאורי.',
+                    'title' => 'SEO לווידאו',
+                ],
             ],
         ],
 
@@ -5523,6 +5852,12 @@ return [
     ],
 
     'acl' => [
+
+        'activate' => 'הפעלה',
+
+        'appearance' => 'מראה',
+
+        'sections' => 'מקטעים',
         'addresses' => 'כתובות',
         'attribute-families' => 'משפחות מאפיינים',
         'attributes' => 'מאפיינים',

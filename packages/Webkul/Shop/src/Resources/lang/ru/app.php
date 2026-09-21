@@ -42,7 +42,7 @@ return [
             'page-title' => 'Вход для клиентов',
             'password' => 'Пароль',
             'resend-verification' => 'Повторно отправить письмо подтверждения',
-            'show-password' => 'Показать пароль',
+            'social-account-exists' => 'Учетная запись с этим адресом электронной почты уже существует. Войдите, используя адрес электронной почты и пароль.',
             'title' => 'Войти',
             'verify-first' => 'Сначала подтвердите свой адрес электронной почты.',
         ],
@@ -373,6 +373,7 @@ return [
                 'remaining-downloads' => 'Оставшиеся загрузки',
                 'status' => 'Статус',
                 'title' => 'Заголовок',
+                'unlimited' => 'Неограниченно',
             ],
 
             'wishlist' => [
@@ -545,6 +546,14 @@ return [
             'default-toggle' => 'Переключатель по умолчанию',
         ],
 
+        'form' => [
+            'control-group' => [
+                'control' => [
+                    'show-password' => 'Показать пароль',
+                ],
+            ],
+        ],
+
         'media' => [
             'index' => [
                 'add-attachments' => 'Добавить вложения',
@@ -689,6 +698,17 @@ return [
 
                     'custom-filters' => [
                         'clear-all' => 'Очистить все',
+                    ],
+
+                    'number-options' => [
+                        'between' => 'Between',
+                        'equals' => 'Equals',
+                        'from' => 'From',
+                        'greater-than' => 'Greater Than',
+                        'greater-than-or-equal' => 'Greater Than Or Equal',
+                        'less-than' => 'Less Than',
+                        'less-than-or-equal' => 'Less Than Or Equal',
+                        'to' => 'To',
                     ],
                 ],
             ],
@@ -1152,6 +1172,9 @@ return [
             'address' => [
                 'add-new' => 'Добавить новый адрес',
                 'add-new-address' => 'Добавить новый адрес',
+                'address-updated-payment-info' => 'Способы оплаты и итоговые суммы заказа будут обновлены для вашего нового адреса. Нажмите «Продолжить», чтобы увидеть актуальные варианты.',
+                'address-updated-shipping-info' => 'Способы и стоимость доставки будут пересчитаны для вашего нового адреса. Нажмите «Продолжить», чтобы увидеть актуальные варианты.',
+                'address-updated-title' => 'Ваш адрес обновлен',
                 'back' => 'Назад',
                 'billing-address' => 'Платежный адрес',
                 'check-billing-address' => 'Отсутствует адрес выставления счета.',
@@ -1255,6 +1278,7 @@ return [
             'categories-carousel' => 'Карусель категорий',
             'image-carousel' => 'Карусель изображений',
             'offer' => 'Получите ДО 40% СКИДКИ на ваш первый заказ, ПОКУПАЙТЕ СЕЙЧАС',
+            'preview-banner' => 'Предпросмотр темы :theme для канала :channel. Ссылки в предпросмотре отключены.',
             'product-carousel' => 'Карусель продуктов',
             'resend-verify-email' => 'Повторно отправить письмо с подтверждением',
             'verify-email' => 'Подтвердите вашу электронную почту',
@@ -1760,7 +1784,9 @@ return [
 
         'response' => [
             'already-cancel' => 'Статус RMA уже отменен.',
+            'cancel-not-allowed' => 'Отмена этого запроса RMA не разрешена.',
             'cancel-success' => 'Статус RMA успешно отменен.',
+            'close-not-allowed' => 'Закрытие этого запроса RMA не разрешено.',
             'create-success' => 'Запрос успешно создан.',
             'creation-error' => 'Статус RMA не может быть обновлен, так как счет для этого заказа не был создан.',
             'invalid-item' => 'Выбранный элемент заказа недействителен.',

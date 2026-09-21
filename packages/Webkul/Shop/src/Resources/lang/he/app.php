@@ -42,7 +42,7 @@ return [
             'page-title' => 'התחברות ללקוחות',
             'password' => 'סיסמה',
             'resend-verification' => 'שלח שוב אימייל אימות',
-            'show-password' => 'הצג סיסמה',
+            'social-account-exists' => 'כבר קיים חשבון עם כתובת דוא"ל זו. אנא התחבר באמצעות כתובת הדוא"ל והסיסמה שלך.',
             'title' => 'התחברות',
             'verify-first' => 'אנא אמת את חשבון האימייל שלך תחילה.',
         ],
@@ -373,6 +373,7 @@ return [
                 'remaining-downloads' => 'הורדות נותרו',
                 'status' => 'סטטוס',
                 'title' => 'כותרת',
+                'unlimited' => 'ללא הגבלה',
             ],
 
             'wishlist' => [
@@ -545,6 +546,14 @@ return [
             'default-toggle' => 'מתג ברירת מחדל',
         ],
 
+        'form' => [
+            'control-group' => [
+                'control' => [
+                    'show-password' => 'הצג סיסמה',
+                ],
+            ],
+        ],
+
         'media' => [
             'index' => [
                 'add-attachments' => 'הוסף קבצים מצורפים',
@@ -689,6 +698,17 @@ return [
 
                     'custom-filters' => [
                         'clear-all' => 'נקה הכל',
+                    ],
+
+                    'number-options' => [
+                        'between' => 'Between',
+                        'equals' => 'Equals',
+                        'from' => 'From',
+                        'greater-than' => 'Greater Than',
+                        'greater-than-or-equal' => 'Greater Than Or Equal',
+                        'less-than' => 'Less Than',
+                        'less-than-or-equal' => 'Less Than Or Equal',
+                        'to' => 'To',
                     ],
                 ],
             ],
@@ -1152,6 +1172,9 @@ return [
             'address' => [
                 'add-new' => 'הוסף כתובת חדשה',
                 'add-new-address' => 'הוסף כתובת חדשה',
+                'address-updated-payment-info' => 'אמצעי התשלום וסכומי ההזמנה יעודכנו עבור הכתובת החדשה שלך. יש ללחוץ על "המשך" כדי לראות את האפשרויות העדכניות.',
+                'address-updated-shipping-info' => 'אמצעי המשלוח והתעריפים יחושבו מחדש עבור הכתובת החדשה שלך. יש ללחוץ על "המשך" כדי לראות את האפשרויות העדכניות.',
+                'address-updated-title' => 'הכתובת שלך עודכנה',
                 'back' => 'חזור',
                 'billing-address' => 'כתובת לחיוב',
                 'check-billing-address' => 'כתובת החיוב חסרה.',
@@ -1255,6 +1278,7 @@ return [
             'categories-carousel' => 'קרוסלת קטגוריות',
             'image-carousel' => 'קרוסלת תמונות',
             'offer' => 'קבל עד 40% הנחה על ההזמנה הראשונה שלך, קנה עכשיו',
+            'preview-banner' => 'תצוגה מקדימה של ערכת הנושא :theme בערוץ :channel. הקישורים מושבתים בתצוגה המקדימה.',
             'product-carousel' => 'קרוסלת מוצרים',
             'resend-verify-email' => 'שלח מחדש את מייל האימות',
             'verify-email' => 'אמת את חשבון האימייל שלך',
@@ -1760,7 +1784,9 @@ return [
 
         'response' => [
             'already-cancel' => 'סטטוס RMA כבר בוטל.',
+            'cancel-not-allowed' => 'ביטול בקשת RMA זו אינו מותר.',
             'cancel-success' => 'סטטוס RMA בוטל בהצלחה.',
+            'close-not-allowed' => 'סגירת בקשת RMA זו אינה מותרת.',
             'create-success' => 'הבקשה נוצרה בהצלחה.',
             'creation-error' => 'לא ניתן לעדכן את סטטוס ה-RMA מכיוון שהחשבונית להזמנה זו לא נוצרה.',
             'invalid-item' => 'פריט ההזמנה שנבחר אינו תקין.',

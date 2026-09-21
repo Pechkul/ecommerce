@@ -128,6 +128,8 @@
         app.component('v-multiselect', {
             template: '#v-multiselect-template',
 
+            emits: ['update:modelValue'],
+
             props: {
                 name: {
                     type: String,
@@ -172,6 +174,24 @@
                 };
             },
 
+            watch: {
+                value(newValue, oldValue) {
+                    const incoming = (newValue ?? []).map((id) => String(id));
+
+                    const previous = (oldValue ?? []).map((id) => String(id));
+
+                    if (incoming.join(',') === previous.join(',')) {
+                        return;
+                    }
+
+                    this.selectedIds = incoming;
+                },
+
+                selectedIds(ids) {
+                    this.$emit('update:modelValue', ids);
+                },
+            },
+
             computed: {
                 selectedOptions() {
                     return this.selectedIds
@@ -203,11 +223,6 @@
                     return this.selectedIds.includes(String(id));
                 },
 
-                /**
-                 * Always reassign `selectedIds` with a fresh array reference so the
-                 * `v-model` bound VeeValidate field detects the change and revalidates
-                 * (mutating the array in place would not clear the required error).
-                 */
                 toggle(id) {
                     if (this.isSelected(id)) {
                         this.deselect(id);

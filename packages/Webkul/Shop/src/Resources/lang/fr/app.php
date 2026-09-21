@@ -42,7 +42,7 @@ return [
             'page-title' => 'Connexion client',
             'password' => 'Mot de passe',
             'resend-verification' => 'Renvoyer l\'e-mail de vérification',
-            'show-password' => 'Afficher le mot de passe',
+            'social-account-exists' => 'Un compte existe déjà avec cette adresse e-mail. Veuillez vous connecter avec votre adresse e-mail et votre mot de passe.',
             'title' => 'Se connecter',
             'verify-first' => 'Vérifiez d\'abord votre compte e-mail.',
         ],
@@ -373,6 +373,7 @@ return [
                 'remaining-downloads' => 'Téléchargements restants',
                 'status' => 'Statut',
                 'title' => 'Titre',
+                'unlimited' => 'Illimité',
             ],
 
             'wishlist' => [
@@ -545,6 +546,14 @@ return [
             'default-toggle' => 'Basculer par défaut',
         ],
 
+        'form' => [
+            'control-group' => [
+                'control' => [
+                    'show-password' => 'Afficher le mot de passe',
+                ],
+            ],
+        ],
+
         'media' => [
             'index' => [
                 'add-attachments' => 'Ajouter des pièces jointes',
@@ -689,6 +698,17 @@ return [
 
                     'custom-filters' => [
                         'clear-all' => 'Effacer tout',
+                    ],
+
+                    'number-options' => [
+                        'between' => 'Between',
+                        'equals' => 'Equals',
+                        'from' => 'From',
+                        'greater-than' => 'Greater Than',
+                        'greater-than-or-equal' => 'Greater Than Or Equal',
+                        'less-than' => 'Less Than',
+                        'less-than-or-equal' => 'Less Than Or Equal',
+                        'to' => 'To',
                     ],
                 ],
             ],
@@ -1152,6 +1172,9 @@ return [
             'address' => [
                 'add-new' => 'Ajouter une nouvelle adresse',
                 'add-new-address' => 'Ajouter une nouvelle adresse',
+                'address-updated-payment-info' => 'Les méthodes de paiement et les totaux de la commande seront actualisés pour votre nouvelle adresse. Cliquez sur Continuer pour voir les options les plus récentes.',
+                'address-updated-shipping-info' => 'Les méthodes d\'expédition et les tarifs seront recalculés pour votre nouvelle adresse. Cliquez sur Continuer pour voir les options les plus récentes.',
+                'address-updated-title' => 'Votre adresse a été mise à jour',
                 'back' => 'Retour',
                 'billing-address' => 'Adresse de facturation',
                 'check-billing-address' => 'L\'adresse de facturation est manquante.',
@@ -1255,6 +1278,7 @@ return [
             'categories-carousel' => 'Carrousel de catégories',
             'image-carousel' => 'Carrousel d\'images',
             'offer' => 'Obtenez JUSQU\'À 40% DE RÉDUCTION sur votre 1ère commande, ACHETEZ MAINTENANT',
+            'preview-banner' => 'Aperçu du thème :theme sur le canal :channel. Les liens sont désactivés dans l\'aperçu.',
             'product-carousel' => 'Carrousel de produits',
             'resend-verify-email' => 'Renvoyer l\'e-mail de vérification',
             'verify-email' => 'Vérifiez votre compte e-mail',
@@ -1760,7 +1784,9 @@ return [
 
         'response' => [
             'already-cancel' => 'Le statut RMA a déjà été annulé.',
+            'cancel-not-allowed' => 'L\'annulation de cette demande RMA n\'est pas autorisée.',
             'cancel-success' => 'Le statut RMA a été annulé avec succès.',
+            'close-not-allowed' => 'La fermeture de cette demande RMA n\'est pas autorisée.',
             'create-success' => 'Demande créée avec succès.',
             'creation-error' => "Le statut RMA ne peut pas être mis à jour car la facture pour cette commande n'a pas été créée.",
             'invalid-item' => "L'article de commande sélectionné n'est pas valide.",

@@ -54,6 +54,17 @@ class PayUController extends Controller
             return redirect()->route('shop.checkout.cart.index');
         }
 
+        $currency = strtoupper($cart->base_currency_code ?? core()->getBaseCurrencyCode());
+
+        if (! $this->payU->isCurrencySupported($currency)) {
+            session()->flash('error', trans('payu::app.response.supported-currency-error', [
+                'currency' => $currency,
+                'supportedCurrencies' => implode(', ', $this->payU->getSupportedCurrencies()),
+            ]));
+
+            return redirect()->route('shop.checkout.cart.index');
+        }
+
         $paymentData = $this->payU->getPaymentData($cart);
 
         return view('payu::checkout.redirect', [
@@ -97,6 +108,14 @@ class PayUController extends Controller
             Cart::setCart($cart);
 
             Cart::collectTotals();
+
+            $cart = Cart::getCart();
+
+            if (! $cart) {
+                session()->flash('error', trans('payu::app.response.cart-not-found'));
+
+                return redirect()->route('shop.checkout.cart.index');
+            }
 
             $data = (new OrderResource($cart))->jsonSerialize();
 

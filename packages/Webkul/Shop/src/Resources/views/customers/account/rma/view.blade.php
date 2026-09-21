@@ -67,7 +67,12 @@
                             <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4">
                                 <span class="font-medium text-gray-500">{{ $field->customField->label }} :</span>
 
-                                <span class="font-medium text-gray-800">{{ $field->value }}</span>
+                                <span
+                                    class="font-medium text-gray-800"
+                                    v-pre
+                                >
+                                    {{ $field->value }}
+                                </span>
                             </div>
                         @endforeach
                     @endif
@@ -77,7 +82,12 @@
                         <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4">
                             <span class="font-medium text-gray-500">@lang('shop::app.rma.view-customer-rma.additional-information')</span>
 
-                            <span class="font-medium text-gray-800">{{ $rma->information }}</span>
+                            <span
+                                class="font-medium text-gray-800"
+                                v-pre
+                            >
+                                {{ $rma->information }}
+                            </span>
                         </div>
                     @endif
 
@@ -199,9 +209,10 @@
                             <tr>
                                 <td class="px-4 py-4 align-top">
                                     <div class="flex items-start gap-3">
-                                        @if ($item->orderItem->product?->images?->first())
+                                        @if ($productBaseImage = product_image()->getProductBaseImage($item->orderItem->product))
                                             <img
-                                                src="{{ asset('storage/' . $item->orderItem->product->images->first()->path) }}"
+                                                src="{{ $productBaseImage['small_image_url'] }}"
+                                                alt="{{ $productBaseImage['alt'] }}"
                                                 class="h-16 w-16 shrink-0 rounded-lg border object-cover"
                                             />
                                         @else
@@ -248,7 +259,7 @@
                                 </td>
                                 
                                 <td class="px-4 py-4 align-top text-sm text-gray-600">
-                                    {!! core()->formatPrice($item->orderItem->price, $item->orderItem->order->order_currency_code) !!}
+                                    {{ core()->formatPrice($item->orderItem->price, $item->orderItem->order->order_currency_code) }}
                                 </td>
                                 
                                 <td class="px-4 py-4 align-top text-sm text-gray-600">
@@ -277,9 +288,10 @@
                 @if($item = $rma->item)
                     <div class="rounded-xl border shadow-sm p-4 space-y-3">
                         <div class="flex items-center gap-3">
-                            @if ($item->orderItem->product?->images?->first())
-                                <img 
-                                    src="{{ asset('storage/' . $item->orderItem->product->images->first()->path) }}" 
+                            @if ($productBaseImage = product_image()->getProductBaseImage($item->orderItem->product))
+                                <img
+                                    src="{{ $productBaseImage['small_image_url'] }}"
+                                    alt="{{ $productBaseImage['alt'] }}"
                                     class="w-16 h-16 object-cover rounded border"
                                 />
                             @else
@@ -328,7 +340,7 @@
 
                             <div>
                                 <span class="font-medium text-gray-600">@lang('shop::app.rma.table-heading.price')</span>
-                                <p class="text-gray-600">{!! core()->formatPrice($item->orderItem->price, $item->orderItem->order->order_currency_code) !!}</p>
+                                <p class="text-gray-600">{{ core()->formatPrice($item->orderItem->price, $item->orderItem->order->order_currency_code) }}</p>
                             </div>
 
                             <div>

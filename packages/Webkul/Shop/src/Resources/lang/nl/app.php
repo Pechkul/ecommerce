@@ -42,7 +42,7 @@ return [
             'page-title' => 'Aanmelden',
             'password' => 'Wachtwoord',
             'resend-verification' => 'Verificatie-e-mail opnieuw verzenden',
-            'show-password' => 'Wachtwoord Weergeven',
+            'social-account-exists' => 'Er bestaat al een account met dit e-mailadres. Log in met uw e-mailadres en wachtwoord.',
             'title' => 'Aanmelden',
             'verify-first' => 'Verifieer eerst uw e-mailaccount.',
         ],
@@ -373,6 +373,7 @@ return [
                 'remaining-downloads' => 'Resterende Downloads',
                 'status' => 'Status',
                 'title' => 'Titel',
+                'unlimited' => 'Onbeperkt',
             ],
 
             'wishlist' => [
@@ -545,6 +546,14 @@ return [
             'default-toggle' => 'Standaard Schakelen',
         ],
 
+        'form' => [
+            'control-group' => [
+                'control' => [
+                    'show-password' => 'Wachtwoord Weergeven',
+                ],
+            ],
+        ],
+
         'media' => [
             'index' => [
                 'add-attachments' => 'Bijlagen toevoegen',
@@ -689,6 +698,17 @@ return [
 
                     'custom-filters' => [
                         'clear-all' => 'Alles wissen',
+                    ],
+
+                    'number-options' => [
+                        'between' => 'Between',
+                        'equals' => 'Equals',
+                        'from' => 'From',
+                        'greater-than' => 'Greater Than',
+                        'greater-than-or-equal' => 'Greater Than Or Equal',
+                        'less-than' => 'Less Than',
+                        'less-than-or-equal' => 'Less Than Or Equal',
+                        'to' => 'To',
                     ],
                 ],
             ],
@@ -1152,6 +1172,9 @@ return [
             'address' => [
                 'add-new' => 'Nieuw adres toevoegen',
                 'add-new-address' => 'Nieuw adres toevoegen',
+                'address-updated-payment-info' => 'Betalingsmethoden en besteltotalen worden vernieuwd voor uw nieuwe adres. Klik op "Ga verder" om de nieuwste opties te bekijken.',
+                'address-updated-shipping-info' => 'Verzendmethoden en tarieven worden opnieuw berekend voor uw nieuwe adres. Klik op "Ga verder" om de nieuwste opties te bekijken.',
+                'address-updated-title' => 'Uw adres is bijgewerkt',
                 'back' => 'Terug',
                 'billing-address' => 'Factuuradres',
                 'check-billing-address' => 'Factuuradres ontbreekt.',
@@ -1255,6 +1278,7 @@ return [
             'categories-carousel' => 'Categorieën Carrousel',
             'image-carousel' => 'Afbeeldingen Carrousel',
             'offer' => 'Krijg TOT 40% KORTING op je eerste bestelling, WINKEL NU',
+            'preview-banner' => 'Voorbeeld van het thema :theme op kanaal :channel. Links zijn uitgeschakeld in het voorbeeld.',
             'product-carousel' => 'Producten Carrousel',
             'resend-verify-email' => 'Verificatie-e-mail opnieuw verzenden',
             'verify-email' => 'Verifieer je e-mailaccount',
@@ -1760,7 +1784,9 @@ return [
 
         'response' => [
             'already-cancel' => 'RMA-status is al geannuleerd.',
+            'cancel-not-allowed' => 'Het annuleren van dit RMA-verzoek is niet toegestaan.',
             'cancel-success' => 'RMA-status is succesvol geannuleerd.',
+            'close-not-allowed' => 'Het sluiten van dit RMA-verzoek is niet toegestaan.',
             'create-success' => 'Verzoek succesvol aangemaakt.',
             'creation-error' => 'De RMA-status kan niet worden bijgewerkt omdat de factuur voor deze bestelling niet is aangemaakt.',
             'invalid-item' => 'Het geselecteerde bestelitem is ongeldig.',

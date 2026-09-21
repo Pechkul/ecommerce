@@ -42,7 +42,7 @@ return [
             'page-title' => '用户登录',
             'password' => '密码',
             'resend-verification' => '重新发送验证邮件',
-            'show-password' => '显示密码',
+            'social-account-exists' => '该邮箱已存在账户。请使用您的邮箱和密码登录。',
             'title' => '登录',
             'verify-first' => '请先验证您的电子邮件。',
         ],
@@ -373,6 +373,7 @@ return [
                 'remaining-downloads' => '剩余下载次数',
                 'status' => '状态',
                 'title' => '名称',
+                'unlimited' => '无限制',
             ],
 
             'wishlist' => [
@@ -545,6 +546,14 @@ return [
             'default-toggle' => '默认切换',
         ],
 
+        'form' => [
+            'control-group' => [
+                'control' => [
+                    'show-password' => '显示密码',
+                ],
+            ],
+        ],
+
         'media' => [
             'index' => [
                 'add-attachments' => '添加附件',
@@ -689,6 +698,17 @@ return [
 
                     'custom-filters' => [
                         'clear-all' => '清除所有',
+                    ],
+
+                    'number-options' => [
+                        'between' => 'Between',
+                        'equals' => 'Equals',
+                        'from' => 'From',
+                        'greater-than' => 'Greater Than',
+                        'greater-than-or-equal' => 'Greater Than Or Equal',
+                        'less-than' => 'Less Than',
+                        'less-than-or-equal' => 'Less Than Or Equal',
+                        'to' => 'To',
                     ],
                 ],
             ],
@@ -1152,6 +1172,9 @@ return [
             'address' => [
                 'add-new' => '添加新地址',
                 'add-new-address' => '添加新地址',
+                'address-updated-payment-info' => '系统将根据您的新地址刷新付款方式和订单总额。点击“继续”查看最新选项。',
+                'address-updated-shipping-info' => '系统将根据您的新地址重新计算送货方式和运费。点击“继续”查看最新选项。',
+                'address-updated-title' => '您的地址已更新',
                 'back' => '返回',
                 'billing-address' => '账单地址',
                 'check-billing-address' => '缺少账单地址。',
@@ -1255,6 +1278,7 @@ return [
             'categories-carousel' => '分类轮播',
             'image-carousel' => '图片轮播',
             'offer' => '首单最高可享40%折扣，立即购买',
+            'preview-banner' => '正在预览 :channel 渠道中的 :theme 主题。预览中的链接已禁用。',
             'product-carousel' => '产品轮播',
             'resend-verify-email' => '重新发送验证邮件',
             'verify-email' => '验证您的邮箱账户',
@@ -1760,7 +1784,9 @@ return [
 
         'response' => [
             'already-cancel' => 'RMA 状态已被取消。',
+            'cancel-not-allowed' => '不允许取消此RMA请求。',
             'cancel-success' => 'RMA状态已成功取消。',
+            'close-not-allowed' => '不允许关闭此RMA请求。',
             'create-success' => '请求已成功创建。',
             'creation-error' => '无法更新 RMA 状态，因为尚未为此订单创建发票。',
             'invalid-item' => '所选订单项无效。',

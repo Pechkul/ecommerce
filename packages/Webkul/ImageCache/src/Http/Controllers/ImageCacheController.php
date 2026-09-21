@@ -6,18 +6,25 @@ use Closure;
 use Exception;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
+use Webkul\Core\Helpers\InstalledPackages;
+use Webkul\ImageCache\TemplateRegistry;
 
 class ImageCacheController extends Controller
 {
+    /**
+     * The Bagisto logo URL.
+     */
+    protected const BAGISTO_LOGO = 'https://updates.bagisto.com/bagisto.png';
+
     /**
      * The current cache template name.
      */
     protected string $template = '';
 
     /**
-     * The Bagisto logo URL.
+     * Create a new controller instance.
      */
-    protected const BAGISTO_LOGO = 'https://updates.bagisto.com/bagisto.png';
+    public function __construct(protected TemplateRegistry $templateRegistry) {}
 
     /**
      * Get the HTTP response for the requested image.
@@ -54,9 +61,15 @@ class ImageCacheController extends Controller
         try {
             $image = image_manager()->read($path);
 
-            if (is_object($templateConfig) && method_exists($templateConfig, 'applyFilter')) {
+            if (
+                is_object($templateConfig)
+                && method_exists($templateConfig, 'applyFilter')
+            ) {
                 $image = $templateConfig->applyFilter($image);
-            } elseif (class_exists($templateConfig)) {
+            } elseif (
+                is_string($templateConfig)
+                && class_exists($templateConfig)
+            ) {
                 $filter = new $templateConfig;
 
                 if (method_exists($filter, 'applyFilter')) {
@@ -89,17 +102,17 @@ class ImageCacheController extends Controller
     }
 
     /**
-     * Build the logo URL, appending any tracked modules so the tracker can record which
-     * modules this installation is running against its live instance.
+     * Build the logo URL, appending the packages this installation is running so
+     * the tracker can record what its live instances are made up of.
      */
     protected function getLogoUrl(): string
     {
         $url = self::BAGISTO_LOGO;
 
-        $modules = array_values(config('bagisto.tracked_modules', []));
+        $packages = app(InstalledPackages::class)->all();
 
-        if (! empty($modules)) {
-            $url .= (str_contains($url, '?') ? '&' : '?').http_build_query(['modules' => $modules]);
+        if (! empty($packages)) {
+            $url .= (str_contains($url, '?') ? '&' : '?').http_build_query(['modules' => $packages]);
         }
 
         return $url;
@@ -258,13 +271,11 @@ class ImageCacheController extends Controller
     }
 
     /**
-     * Get the template class or closure.
+     * Get the template class or closure registered under the name, for the theme of the requesting channel.
      */
     protected function getTemplate(string $template): mixed
     {
-        $templates = config('imagecache.templates', []);
-
-        return $templates[$template] ?? null;
+        return $this->templateRegistry->find($template, $this->templateRegistry->currentTheme());
     }
 
     /**
@@ -276,7 +287,7 @@ class ImageCacheController extends Controller
 
         $eTag = md5($content);
 
-        $notModified = isset($_SERVER['HTTP_IF_NONE_MATCH']) && $_SERVER['HTTP_IF_NONE_MATCH'] === $eTag;
+        $notModified = request()->header('If-None-Match') === $eTag;
 
         $statusCode = $notModified ? 304 : 200;
 

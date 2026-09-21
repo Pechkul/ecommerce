@@ -350,6 +350,9 @@ return [
                         'add-btn' => 'Adres toevoegen',
                         'add-new' => 'Nieuw adres toevoegen',
                         'add-new-address' => 'Nieuw adres toevoegen',
+                        'address-updated-payment-info' => 'Betalingsmethoden en besteltotalen worden vernieuwd voor het gewijzigde adres. Klik op "Ga verder" om de nieuwste opties te laden.',
+                        'address-updated-shipping-info' => 'Verzendmethoden en tarieven worden opnieuw berekend voor het gewijzigde adres. Klik op "Ga verder" om de nieuwste opties te laden.',
+                        'address-updated-title' => 'Adres bijgewerkt',
                         'addresses' => 'Adressen',
                         'back' => 'Terug',
                         'billing-address' => 'Factuuradres',
@@ -701,6 +704,7 @@ return [
                     'pending' => 'In afwachting',
                     'status' => 'Status',
                     'update-status' => 'Status bijwerken',
+                    'view' => 'Bekijken',
                 ],
             ],
 
@@ -983,6 +987,7 @@ return [
                         'edit' => 'Bewerken',
                         'enabled' => 'Actief',
                         'id' => 'ID',
+                        'mass-delete-partial' => ':deleted van de geselecteerde records zijn verwijderd; :skipped waren al verwijderd.',
                         'mass-delete-success' => 'Geselecteerde gegevens zijn succesvol verwijderd.',
                         'reason-error' => 'De reden wordt gebruikt in een RMA.',
                         'reason' => 'Reden',
@@ -1024,6 +1029,7 @@ return [
                         'enabled' => 'Actief',
                         'id' => 'ID',
                         'label' => 'Label',
+                        'mass-delete-partial' => ':deleted van de geselecteerde records zijn verwijderd; :skipped waren al verwijderd.',
                         'mass-delete-success' => 'Geselecteerde gegevens zijn succesvol verwijderd.',
                         'no' => 'Nee',
                         'required' => 'Verplicht',
@@ -1064,6 +1070,7 @@ return [
                         'enabled' => 'Actief',
                         'exchange-period' => 'Omruilperiode (dagen)',
                         'id' => 'ID',
+                        'mass-delete-partial' => ':deleted van de geselecteerde records zijn verwijderd; :skipped waren al verwijderd.',
                         'mass-delete-success' => 'Geselecteerde gegevens zijn succesvol verwijderd.',
                         'name' => 'Naam',
                         'reason' => 'Regels',
@@ -1155,10 +1162,12 @@ return [
                     'attribute-family-value' => 'Attribuutfamilie - :attribute_family',
                     'category' => 'Categorie',
                     'channel' => 'Kanaal',
+                    'copy' => 'Kopiëren',
                     'copy-of' => 'Kopie van :value',
                     'copy-of-slug' => 'kopie-van-:value',
                     'delete' => 'Verwijderen',
                     'disable' => 'Uitschakelen',
+                    'edit' => 'Bewerken',
                     'id' => 'ID',
                     'id-value' => 'ID - :id',
                     'image' => 'Afbeelding',
@@ -1172,6 +1181,7 @@ return [
                     'qty-value' => ':qty Beschikbaar',
                     'sku' => 'SKU',
                     'sku-value' => 'SKU - :sku',
+                    'stock-disabled' => 'Voorraad uitgeschakeld',
                     'status' => 'Status',
                     'type' => 'Type',
                     'update-status' => 'Status bijwerken',
@@ -1222,6 +1232,7 @@ return [
                 ],
 
                 'categories' => [
+                    'search' => 'Search categories',
                     'title' => 'Categorieën',
                 ],
 
@@ -1809,7 +1820,7 @@ return [
                 'position' => 'Positie',
                 'price' => 'Prijs',
                 'regex' => 'Regex',
-                'regex-info' => 'Expressie moet tussen dubbele aanhalingstekens staan.',
+                'regex-info' => 'Expressie moet tussen schuine strepen staan, bijvoorbeeld /^[0-9]+$/.',
                 'save-btn' => 'Attribuut Opslaan',
                 'select' => 'Selecteren',
                 'select-type' => 'Selecteer Attribuuttype',
@@ -1883,7 +1894,7 @@ return [
                 'position' => 'Positie',
                 'price' => 'Prijs',
                 'regex' => 'Regex',
-                'regex-info' => 'Expressie moet tussen dubbele aanhalingstekens staan.',
+                'regex-info' => 'Expressie moet tussen schuine strepen staan, bijvoorbeeld /^[0-9]+$/.',
                 'save-btn' => 'Attribuut Opslaan',
                 'select' => 'Selecteren',
                 'select-type' => 'Selecteer Attribuuttype',
@@ -1938,6 +1949,7 @@ return [
                     'inactive' => 'Inactief',
                     'name' => 'Naam',
                     'no-of-products' => 'Aantal Producten',
+                    'parent-category' => 'Ouder Categorie',
                     'position' => 'Positie',
                     'status' => 'Zichtbaar in menu',
                     'update-status' => 'Status Bijwerken',
@@ -2092,10 +2104,10 @@ return [
             'attribute-family' => 'Attribuutfamilie',
             'attribute-product-error' => 'Familie wordt gebruikt in producten.',
             'create-success' => 'Familie succesvol aangemaakt.',
+            'default-delete-error' => 'De standaard attributenfamilie kan niet worden verwijderd.',
             'delete-failed' => 'Fout opgetreden bij het verwijderen van de familie.',
             'delete-success' => 'Familie succesvol verwijderd.',
             'family' => 'Familie',
-            'last-delete-error' => 'Minstens één familie is vereist.',
             'update-success' => 'Familie succesvol bijgewerkt.',
             'user-define-error' => 'Kan systeemattribuutfamilie niet verwijderen.',
         ],
@@ -2120,6 +2132,7 @@ return [
                     'id' => 'Klant ID',
                     'id-value' => 'ID - :id',
                     'inactive' => 'Inactief',
+                    'login-as-customer' => 'Inloggen als klant',
                     'method-error' => 'Fout! Verkeerde methode gedetecteerd, controleer alstublieft de mass action-configuratie',
                     'name' => 'Klantnaam',
                     'no-resource' => 'De verstrekte bron is onvoldoende voor de actie',
@@ -2133,6 +2146,7 @@ return [
                     'suspended' => 'Opgeschort',
                     'update-status' => 'Status bijwerken',
                     'update-success' => 'Geselecteerde klanten succesvol bijgewerkt',
+                    'view' => 'Bekijken',
                 ],
 
                 'create' => [
@@ -2275,6 +2289,7 @@ return [
                         'rating' => 'Beoordeling',
                         'status' => 'Status',
                         'title' => 'Titel',
+                        'view' => 'Bekijken',
                     ],
                 ],
 
@@ -2479,7 +2494,9 @@ return [
 
                     'datagrid' => [
                         'active' => 'Actief',
+                        'delete' => 'Verwijderen',
                         'draft' => 'Concept',
+                        'edit' => 'Bewerken',
                         'id' => 'ID',
                         'inactive' => 'Inactief',
                         'name' => 'Naam',
@@ -2516,6 +2533,7 @@ return [
                     'update-success' => 'Succesvol bijgewerkt',
                 ],
 
+                'campaign-associate' => 'Deze sjabloon wordt in een of meer campagnes gebruikt.',
                 'delete-failed' => ':name Verwijderen Mislukt',
                 'delete-success' => 'Sjabloon succesvol verwijderd',
                 'email-template' => 'E-mail sjabloon',
@@ -2619,6 +2637,7 @@ return [
                     ],
                 ],
 
+                'campaign-associate' => 'Deze gebeurtenis wordt in een of meer campagnes gebruikt.',
                 'delete-failed' => ':name Verwijderen mislukt',
                 'delete-success' => 'Evenementen succesvol verwijderd',
                 'edit-error' => 'Evenement kan niet worden bewerkt',
@@ -2983,6 +3002,7 @@ return [
 
                 'create-success' => 'Catalogusregel succesvol aangemaakt',
                 'delete-success' => 'Catalogusregel succesvol verwijderd',
+                'queue-note' => 'Bij het opslaan van deze regel wordt de prijs bijgewerkt van elk product waarop deze van toepassing is. Geldt de regel voor veel producten, gebruik dan het wachtrijstuurprogramma database of redis met een actieve wachtrij-worker, zodat de prijzen op de achtergrond worden bijgewerkt in plaats van het opslaan te vertragen.',
                 'update-success' => 'Catalogusregel succesvol bijgewerkt',
             ],
 
@@ -3223,6 +3243,312 @@ return [
         'update-success' => 'CMS succesvol bijgewerkt.',
     ],
 
+    'appearance' => [
+        'themes' => [
+            'index' => [
+                'activate-btn' => 'Activeren',
+                'activate-success' => ':theme is nu actief op :channel.',
+                'active' => 'Actief',
+                'active-on' => 'Actief op:',
+                'active-on-all' => 'Actief op alle kanalen',
+                'buy-btn' => 'Bekijken en kopen',
+                'buy-themes' => 'Themes kopen',
+                'by' => 'door',
+                'customize-btn' => 'Aanpassen',
+                'info' => 'Blader door de beschikbare thema’s voor je winkel en kies welke elk kanaal gebruikt.',
+                'my-themes' => 'Mijn themes',
+                'not-in-use' => 'Niet in gebruik',
+                'not-installed' => 'Dit thema is niet geïnstalleerd in deze winkel.',
+                'preview-btn' => 'Voorbeeld',
+                'title' => 'Thema’s',
+
+                'activate' => [
+                    'channels' => 'Kanalen',
+                    'channels-hint' => 'Houd Ctrl (Cmd op Mac) ingedrukt om meerdere kanalen te kiezen.',
+                    'confirm-btn' => 'Activeren',
+                    'info' => 'Kies de kanalen die :theme moeten gaan gebruiken.',
+                    'title' => 'Thema activeren',
+                    'warning' => ':channel heeft :count aanpassingen gemaakt voor :theme. Ze blijven bewaard, maar verschijnen niet zolang het nieuwe thema actief is.',
+                ],
+            ],
+        ],
+        'sections' => [
+            'index' => [
+                'all-filters-used' => 'Alle beschikbare filters zijn al toegevoegd.',
+                'channel' => 'Kanaal',
+                'copy-suffix' => 'Kopie',
+                'create-btn' => 'Sectie aanmaken',
+                'delete-confirm' => 'Weet u zeker dat u deze sectie wilt verwijderen?',
+                'desktop' => 'Desktop',
+                'discard-btn' => 'Verwerpen',
+                'discarded' => 'Conceptwijzigingen verworpen.',
+                'duplicate-btn' => 'Dupliceren',
+                'empty' => 'Nog geen secties.',
+                'gone' => 'Deze sectie bestaat niet meer.',
+                'inactive-theme' => 'Alleen een thema dat actief is op een kanaal kan worden aangepast.',
+                'locale' => 'Taal',
+                'mobile' => 'Mobiel',
+                'no-fields' => 'Deze sectie heeft in dit thema geen instellingen om te bewerken.',
+                'no-types' => 'Dit thema biedt geen sectietypen om toe te voegen.',
+                'pinned' => 'Vastgezet onderaan de pagina.',
+                'preview-btn' => 'Voorbeeld',
+                'publish-btn' => 'Publiceren',
+                'scoped-to' => 'Secties van het thema :theme op kanaal :channel worden weergegeven.',
+                'tablet' => 'Tablet',
+                'title' => 'Secties',
+                'unsaved' => 'Niet-opgeslagen wijzigingen',
+
+                'datagrid' => [
+                    'active' => 'Actief',
+                    'channel_name' => 'Kanaalnaam',
+                    'change-status' => 'Status wijzigen',
+                    'delete' => 'Verwijderen',
+                    'id' => 'ID',
+                    'inactive' => 'Inactief',
+                    'name' => 'Naam',
+                    'sort-order' => 'Sorteervolgorde',
+                    'status' => 'Status',
+                    'theme' => 'Thema',
+                    'type' => 'Type',
+                    'view' => 'Bekijken',
+                ],
+            ],
+
+            'create' => [
+                'name' => 'Naam',
+                'save-btn' => 'Sectie opslaan',
+                'singleton-exists' => 'Dit kanaal toont slechts één sectie van het type :type.',
+                'title' => 'Sectie aanmaken',
+
+                'type' => [
+                    'category-carousel' => 'Categorie Carrousel',
+                    'footer-links' => 'Voetteksten',
+                    'image-carousel' => 'Afbeeldingen carrousel',
+                    'product-carousel' => 'Product Carrousel',
+                    'services-content' => 'Diensten Inhoud',
+                    'static-content' => 'Statische Inhoud',
+                    'title' => 'Type',
+                ],
+            ],
+
+            'edit' => [
+                'active' => 'Actief',
+                'add-column' => 'Kolom toevoegen',
+                'add-filter-btn' => 'Filter toevoegen',
+                'add-footer-link-btn' => 'Voettekstlink toevoegen',
+                'add-image-btn' => 'Afbeelding toevoegen',
+                'add-link' => 'Link toevoegen',
+                'add-media' => 'Media toevoegen',
+                'asc' => 'oplopend',
+                'back' => 'Terug',
+                'category-carousel' => 'Categorie Carrousel',
+                'category-carousel-description' => 'Toon dynamische categorieën aantrekkelijk met een responsieve categoriecarrousel.',
+                'category-id' => 'Categorie-ID',
+                'channels' => 'Kanalen',
+                'column' => 'Kolom',
+                'columns' => 'Kolommen',
+                'create-filter' => 'Filter aanmaken',
+                'css' => 'CSS',
+                'delete' => 'Verwijderen',
+                'desc' => 'aflopend',
+                'edit' => 'Bewerken',
+                'featured' => 'Uitgelicht',
+                'filter-title' => 'Titel',
+                'filters' => 'Filters',
+                'footer-link' => 'Voetteksten',
+                'footer-link-description' => 'Navigeer via voettekstlinks voor naadloze websiteverkenning en informatie.',
+                'footer-link-form-title' => 'Voettekstlink',
+                'footer-title' => 'Titel',
+                'general' => 'Algemeen',
+                'html' => 'HTML',
+                'image' => 'Afbeelding',
+                'image-size' => 'Afbeeldingsresolutie moet zijn (1920px X 700px)',
+                'image-title' => 'Afbeeldingstitel',
+                'image-upload-message' => 'Alleen afbeeldingen (.jpeg, .jpg, .png, .webp, ..) zijn toegestaan.',
+                'inactive' => 'Inactief',
+                'key' => 'Sleutel: :key',
+                'key-input' => 'Sleutel',
+                'limit' => 'Limiet',
+                'link' => 'Link',
+                'name' => 'Naam',
+                'new' => 'Nieuw',
+                'no' => 'Nee',
+                'parent-id' => 'Ouder-ID',
+                'preview' => 'Voorbeeld',
+                'product-carousel' => 'Product Carrousel',
+                'product-carousel-description' => 'Toon producten elegant met een dynamische en responsieve productcarrousel.',
+                'save-btn' => 'Opslaan',
+                'select' => 'Selecteer',
+                'slider' => 'Schuifregelaar',
+                'slider-add-btn' => 'Schuifregelaar toevoegen',
+                'slider-description' => 'Aanpassingen van het thema met betrekking tot de schuifregelaar.',
+                'slider-image' => 'Afbeelding voor schuifregelaar',
+                'slider-required' => 'Het schuifregelaarveld is verplicht.',
+                'sort' => 'Sorteren',
+                'sort-order' => 'Sorteervolgorde',
+                'static-content' => 'Statische Inhoud',
+                'static-content-description' => 'Verbeter de betrokkenheid met beknopte, informatieve statische inhoud voor uw publiek.',
+                'status' => 'Status',
+                'themes' => 'Thema\'s',
+                'title' => 'Sectie bewerken',
+                'update-slider' => 'Schuifregelaar bijwerken',
+                'uploading' => 'Uploaden…',
+                'url' => 'URL',
+                'value' => 'Waarde: :value',
+                'value-input' => 'Waarde',
+
+                'services-content' => [
+                    'add-btn' => 'Diensten toevoegen',
+                    'channels' => 'Kanalen',
+                    'delete' => 'Verwijderen',
+                    'description' => 'Beschrijving',
+                    'general' => 'Algemeen',
+                    'name' => 'Naam',
+                    'save-btn' => 'Opslaan',
+                    'service-icon' => 'Servicepictogram',
+                    'service-icon-class' => 'Servicepictogramklasse',
+                    'service-info' => 'Servicegerelateerde thema-aanpassing.',
+                    'services' => 'Diensten',
+                    'sort-order' => 'Sorteervolgorde',
+                    'status' => 'Status',
+                    'title' => 'Titel',
+                    'update-service' => 'Diensten bijwerken',
+                ],
+
+                'yes' => 'Ja',
+            ],
+
+            'create-success' => 'Sectie succesvol aangemaakt',
+            'delete-success' => 'Sectie succesvol verwijderd',
+            'update-success' => 'Sectie succesvol bijgewerkt',
+        ],
+    ],
+
+    'reporting' => [
+        'sales' => [
+            'index' => [
+                'abandoned-carts' => 'Verlaten winkelwagens',
+                'abandoned-products' => 'Verlaten producten',
+                'abandoned-rate' => 'Verlatingspercentage',
+                'abandoned-revenue' => 'Verlaten omzet',
+                'added-to-cart' => 'Toegevoegd aan winkelwagen',
+                'added-to-cart-info' => 'Alleen :progress bezoekers hebben producten aan de winkelwagen toegevoegd',
+                'all-channels' => 'Alle kanalen',
+                'average-order-value-over-time' => 'Gemiddelde bestelwaarde in de tijd',
+                'average-sales' => 'Gemiddelde bestelwaarde',
+                'count' => 'Aantal',
+                'coupon-code' => 'Coupon Code',
+                'date' => 'Datum',
+                'discount' => 'Korting',
+                'email' => 'E-mail',
+                'end-date' => 'Einddatum',
+                'id' => 'ID',
+                'interval' => 'Interval',
+                'name' => 'Naam',
+                'order-id' => 'Bestel-ID',
+                'orders' => 'Bestellingen',
+                'orders-over-time' => 'Bestellingen in de loop der tijd',
+                'payment-method' => 'Betalingsmethode',
+                'purchase-funnel' => 'Aankoopfunnel',
+                'purchased' => 'Gekocht',
+                'purchased-info' => 'Alleen :progress bezoekers doen aankopen',
+                'refunds' => 'Terugbetalingen',
+                'refunds-over-time' => 'Terugbetalingen in de loop der tijd',
+                'sales-by-coupon' => 'Verkoop per Coupon',
+                'sales-over-time' => 'Verkopen in de loop der tijd',
+                'shipping-collected' => 'Verzamelde verzendkosten',
+                'shipping-collected-over-time' => 'Verzamelde verzendkosten in de loop der tijd',
+                'start-date' => 'Startdatum',
+                'tax-collected' => 'Verzamelde belasting',
+                'tax-collected-over-time' => 'Verzamelde belasting in de loop der tijd',
+                'title' => 'Verkopen',
+                'top-payment-methods' => 'Top betalingsmethoden',
+                'top-shipping-methods' => 'Top verzendmethoden',
+                'top-tax-categories' => 'Top belastingcategorieën',
+                'total' => 'Totaal',
+                'total-orders' => 'Totaal bestellingen',
+                'total-sales' => 'Totaal verkopen',
+                'view-details' => 'Details weergeven',
+            ],
+        ],
+
+        'customers' => [
+            'index' => [
+                'all-channels' => 'Alle kanalen',
+                'count' => 'Aantal',
+                'customers' => 'Klanten',
+                'customers-over-time' => 'Klanten in de loop der tijd',
+                'customers-with-most-orders' => 'Klanten met de meeste bestellingen',
+                'customers-with-most-reviews' => 'Klanten met de meeste beoordelingen',
+                'customers-with-most-sales' => 'Klanten met de meeste verkopen',
+                'email' => 'E-mail',
+                'end-date' => 'Einddatum',
+                'id' => 'ID',
+                'interval' => 'Interval',
+                'name' => 'Naam',
+                'orders' => 'Bestellingen',
+                'reviews' => 'Beoordelingen',
+                'start-date' => 'Startdatum',
+                'title' => 'Klanten',
+                'top-customer-groups' => 'Top klantengroepen',
+                'total' => 'Totaal',
+                'total-customers' => 'Totaal klanten',
+                'view-details' => 'Details weergeven',
+            ],
+        ],
+
+        'products' => [
+            'index' => [
+                'all-channels' => 'Alle kanalen',
+                'channel' => 'Kanaal',
+                'end-date' => 'Einddatum',
+                'id' => 'ID',
+                'interval' => 'Interval',
+                'last-search-terms' => 'Laatste zoektermen',
+                'locale' => 'Regio',
+                'name' => 'Naam',
+                'orders' => 'Bestellingen',
+                'price' => 'Prijs',
+                'products-added-over-time' => 'Producten toegevoegd in de loop der tijd',
+                'products-with-most-reviews' => 'Producten met de meeste beoordelingen',
+                'quantities' => 'Aantallen',
+                'quantities-sold-over-time' => 'Verkochte aantallen in de loop der tijd',
+                'results' => 'Resultaten',
+                'revenue' => 'Omzet',
+                'reviews' => 'Beoordelingen',
+                'search-term' => 'Zoekterm',
+                'start-date' => 'Startdatum',
+                'title' => 'Producten',
+                'top-search-terms' => 'Populaire zoektermen',
+                'top-selling-products-by-quantity' => 'Top verkopende producten op basis van aantallen',
+                'top-selling-products-by-revenue' => 'Top verkopende producten op basis van omzet',
+                'total' => 'Totaal',
+                'total-products-added-to-wishlist' => 'Producten toegevoegd aan verlanglijst',
+                'total-sold-quantities' => 'Totaal aantal verkochte producten',
+                'uses' => 'Gebruiken',
+                'view-details' => 'Details weergeven',
+            ],
+        ],
+
+        'view' => [
+            'all-channels' => 'Alle kanalen',
+            'back-btn' => 'Terug',
+            'day' => 'Dag',
+            'end-date' => 'Einddatum',
+            'export-csv' => 'Exporteer CSV',
+            'export-xls' => 'Exporteer XLS',
+            'month' => 'Maand',
+            'not-available' => 'Geen gegevens beschikbaar.',
+            'start-date' => 'Startdatum',
+            'year' => 'Jaar',
+        ],
+
+        'empty' => [
+            'info' => 'Geen gegevens beschikbaar voor geselecteerd tijdsinterval',
+            'title' => 'Geen gegevens beschikbaar',
+        ],
+    ],
+
     'settings' => [
         'locales' => [
             'index' => [
@@ -3329,9 +3655,10 @@ return [
                     'file-info-example' => 'Bijvoorbeeld, in het geval van productafbeeldingen moeten bestanden worden geplaatst in de map /project-root/storage/app/import/product-images.',
                     'general' => 'Algemeen',
                     'images-directory' => 'Pad naar Afbeeldingenmap',
+                    'import-confirmation' => 'De import start zodra dit is opgeslagen. Wilt u doorgaan?',
                     'process-in-queue' => 'Verwerken In Wachtrij',
                     'results' => 'Resultaten',
-                    'save-btn' => 'Import Opslaan',
+                    'save-btn' => 'Importeren',
                     'settings' => 'Instellingen',
                     'skip-errors' => 'Fouten Overslaan',
                     'stop-on-errors' => 'Stoppen bij Fouten',
@@ -3356,7 +3683,7 @@ return [
                     'images-directory' => 'Pad naar Afbeeldingenmap',
                     'process-in-queue' => 'Verwerken In Wachtrij',
                     'results' => 'Resultaten',
-                    'save-btn' => 'Import Opslaan',
+                    'save-btn' => 'Importeren',
                     'settings' => 'Instellingen',
                     'skip-errors' => 'Fouten Overslaan',
                     'stop-on-errors' => 'Stoppen bij Fouten',
@@ -3378,24 +3705,38 @@ return [
                         'edit' => 'Bewerking',
                         'error-file' => 'Foutbestand',
                         'id' => 'ID kaart',
+                        'import' => 'Importeren',
                         'started-at' => 'Begon bij',
                         'state' => 'Staat',
                         'summary' => 'Samenvatting',
                         'updated' => 'Bijgewerkt',
                         'uploaded-file' => 'Geüpload bestand',
+                        'view-progress' => 'Voortgang bekijken',
                     ],
                 ],
 
                 'import' => [
                     'back-btn' => 'Terug',
                     'completed-batches' => 'Totaal voltooide batches:',
+                    'deleting-info' => 'Verwijderen bezig',
                     'download-error-report' => 'Volledig rapport downloaden',
+                    'downloading-info' => 'Afbeeldingen downloaden',
                     'edit-btn' => 'Bewerken',
+                    'failed-batches' => ':count batches zijn niet voltooid. Controleer het foutenlogboek en voer de import opnieuw uit voor die rijen.',
+                    'images-downloaded' => 'Gedownloade afbeeldingen:',
+                    'images-progress' => 'afbeeldingen gedownload',
                     'imported-info' => 'Gefeliciteerd! Uw import is succesvol voltooid.',
                     'importing-info' => 'Importeren in proces',
                     'indexing-info' => 'Bronnen indexeren (Prijs, Voorraad en Elastic Search) bezig',
                     'linking-info' => 'Bronnen koppelen bezig',
                     'progress' => 'Voortgang:',
+                    'rows-validated' => 'rijen gevalideerd',
+                    'step-create' => 'Aanmaken',
+                    'step-delete' => 'Verwijderen',
+                    'step-download' => 'Afbeeldingen',
+                    'step-index' => 'Indexeren',
+                    'step-link' => 'Koppelen',
+                    'step-validate' => 'Valideren',
                     'title' => 'Importeren',
                     'total-batches' => 'Totaal batches:',
                     'total-created' => 'Totaal gecreëerde records:',
@@ -3408,7 +3749,27 @@ return [
                     'validate-info' => 'Klik op Valideer Gegevens om uw import te controleren.',
                     'validating-info' => 'Het lezen en valideren van gegevens is gestart',
                     'validation-failed-info' => 'Uw import is ongeldig. Los de volgende fouten op en probeer het opnieuw.',
+                    'validation-partial-info' => 'Uw import kan doorgaan, maar sommige rijen worden overgeslagen. Bekijk de fouten hieronder of download het volledige rapport.',
                     'validation-success-info' => 'Uw import is geldig. Klik op Importeren om het importproces te starten.',
+                ],
+
+                'images' => [
+                    'current-archive' => 'Nu geüpload: :name — :count afbeelding(en) gereed.',
+                    'current-images' => 'Er zijn al :count afbeelding(en) geüpload voor deze import.',
+                    'directory-example' => 'Bij product-images moeten de bestanden bijvoorbeeld in de map /project-root/storage/app/import/product-images staan.',
+                    'directory-hint' => 'Gebruik het relatieve pad naar /project-root/storage/app/import, bijv. product-images, import-images.',
+                    'directory-info' => 'Als u toegang tot de codebase hebt, plaats de afbeeldingen dan in een map op de server en geef die map hieronder op.',
+                    'directory-placeholder' => 'Pad naar afbeeldingenmap',
+                    'directory-title' => 'Afbeeldingen staan al op de server',
+                    'download-sample-zip' => 'Voorbeeldafbeeldingen downloaden',
+                    'info' => 'Kies waar de in uw bestand genoemde afbeeldingen gevonden moeten worden.',
+                    'recommended' => 'Aanbevolen',
+                    'replace-archive' => 'Een nieuw archief kiezen vervangt ze.',
+                    'title' => 'Productafbeeldingen',
+                    'upload-info' => 'Upload één archief met alle afbeeldingen. De kolom ‘images’ noemt dan de bestanden daarin.',
+                    'upload-title' => 'Een ZIP met afbeeldingen uploaden',
+                    'url-info' => 'Zet het volledige https://-adres van elke afbeelding in de kolom ‘images’. Ze worden vóór de import gedownload, zodat er niets vooraf op de server hoeft te staan.',
+                    'url-title' => 'Afbeeldingslinks in het bestand',
                 ],
 
                 'create-success' => 'Import succesvol aangemaakt.',
@@ -3416,6 +3777,7 @@ return [
                 'delete-success' => 'Importeren is succesvol verwijderd.',
                 'not-valid' => 'Importeren is ongeldig',
                 'nothing-to-import' => 'Er zijn geen bronnen om te importeren.',
+                'processing-failed' => 'De import kon niet worden verwerkt. Controleer het bestand en probeer het opnieuw.',
                 'setup-queue-error' => 'Wijzig uw wachtrijstuurprogramma in "database" of "redis" om het importproces te starten.',
                 'update-success' => 'Importeren is succesvol bijgewerkt.',
             ],
@@ -3793,7 +4155,9 @@ return [
             'incorrect-password' => 'Onjuist wachtwoord',
             'last-delete-error' => 'Laatste gebruiker kon niet worden verwijderd.',
             'login-error' => 'Controleer uw inloggegevens en probeer het opnieuw.',
+            'role-not-grantable' => 'U kunt geen rol toewijzen met rechten die u zelf niet hebt.',
             'update-success' => 'Gebruiker succesvol bijgewerkt.',
+            'user-not-manageable' => 'U kunt geen gebruiker wijzigen wiens rol rechten heeft die u zelf niet hebt.',
         ],
 
         'roles' => [
@@ -3822,6 +4186,7 @@ return [
                 'name' => 'Naam',
                 'permissions' => 'Machtigingen',
                 'save-btn' => 'Rol Opslaan',
+                'search-permissions' => 'Rechten zoeken',
                 'title' => 'Rol Aanmaken',
             ],
 
@@ -3843,139 +4208,10 @@ return [
             'delete-failed' => 'Rol is verwijderen mislukt',
             'delete-success' => 'Rol is succesvol verwijderd',
             'last-delete-error' => 'Laatste rol kan niet worden verwijderd',
+            'permissions-not-grantable' => 'U kunt geen rechten verlenen die u zelf niet hebt.',
             'update-success' => 'Rol is succesvol bijgewerkt',
         ],
 
-        'themes' => [
-            'index' => [
-                'create-btn' => 'Thema aanmaken',
-                'title' => 'Thema\'s',
-
-                'datagrid' => [
-                    'active' => 'Actief',
-                    'channel_name' => 'Kanaalnaam',
-                    'change-status' => 'Status wijzigen',
-                    'delete' => 'Verwijderen',
-                    'id' => 'ID',
-                    'inactive' => 'Inactief',
-                    'name' => 'Naam',
-                    'sort-order' => 'Sorteervolgorde',
-                    'status' => 'Status',
-                    'theme' => 'Thema',
-                    'type' => 'Type',
-                    'view' => 'Bekijken',
-                ],
-            ],
-
-            'create' => [
-                'name' => 'Naam',
-                'save-btn' => 'Thema opslaan',
-                'sort-order' => 'Sorteervolgorde',
-                'themes' => 'Thema\'s',
-                'title' => 'Thema aanmaken',
-
-                'type' => [
-                    'category-carousel' => 'Categorie Carrousel',
-                    'footer-links' => 'Voetteksten',
-                    'image-carousel' => 'Afbeeldingen carrousel',
-                    'product-carousel' => 'Product Carrousel',
-                    'services-content' => 'Diensten Inhoud',
-                    'static-content' => 'Statische Inhoud',
-                    'title' => 'Type',
-                ],
-            ],
-
-            'edit' => [
-                'active' => 'Actief',
-                'add-filter-btn' => 'Filter toevoegen',
-                'add-footer-link-btn' => 'Voettekstlink toevoegen',
-                'add-image-btn' => 'Afbeelding toevoegen',
-                'add-link' => 'Link toevoegen',
-                'asc' => 'oplopend',
-                'back' => 'Terug',
-                'category-carousel' => 'Categorie Carrousel',
-                'category-carousel-description' => 'Toon dynamische categorieën aantrekkelijk met een responsieve categoriecarrousel.',
-                'category-id' => 'Categorie-ID',
-                'channels' => 'Kanalen',
-                'column' => 'Kolom',
-                'create-filter' => 'Filter aanmaken',
-                'css' => 'CSS',
-                'delete' => 'Verwijderen',
-                'desc' => 'aflopend',
-                'edit' => 'Bewerken',
-                'featured' => 'Uitgelicht',
-                'filter-title' => 'Titel',
-                'filters' => 'Filters',
-                'footer-link' => 'Voetteksten',
-                'footer-link-description' => 'Navigeer via voettekstlinks voor naadloze websiteverkenning en informatie.',
-                'footer-link-form-title' => 'Voettekstlink',
-                'footer-title' => 'Titel',
-                'general' => 'Algemeen',
-                'html' => 'HTML',
-                'image' => 'Afbeelding',
-                'image-size' => 'Afbeeldingsresolutie moet zijn (1920px X 700px)',
-                'image-title' => 'Afbeeldingstitel',
-                'image-upload-message' => 'Alleen afbeeldingen (.jpeg, .jpg, .png, .webp, ..) zijn toegestaan.',
-                'inactive' => 'Inactief',
-                'key' => 'Sleutel: :key',
-                'key-input' => 'Sleutel',
-                'limit' => 'Limiet',
-                'link' => 'Link',
-                'name' => 'Naam',
-                'new' => 'Nieuw',
-                'no' => 'Nee',
-                'parent-id' => 'Ouder-ID',
-                'parent-id-hint' => 'U kunt meerdere ouder-IDs als gescheiden waarden invoeren (bijvoorbeeld: 12,15,34)',
-                'preview' => 'Voorbeeld',
-                'product-carousel' => 'Product Carrousel',
-                'product-carousel-description' => 'Toon producten elegant met een dynamische en responsieve productcarrousel.',
-                'save-btn' => 'Opslaan',
-                'select' => 'Selecteer',
-                'slider' => 'Schuifregelaar',
-                'slider-add-btn' => 'Schuifregelaar toevoegen',
-                'slider-description' => 'Aanpassingen van het thema met betrekking tot de schuifregelaar.',
-                'slider-image' => 'Afbeelding voor schuifregelaar',
-                'slider-required' => 'Het schuifregelaarveld is verplicht.',
-                'sort' => 'Sorteren',
-                'sort-order' => 'Sorteervolgorde',
-                'static-content' => 'Statische Inhoud',
-                'static-content-description' => 'Verbeter de betrokkenheid met beknopte, informatieve statische inhoud voor uw publiek.',
-                'status' => 'Status',
-                'themes' => 'Thema\'s',
-                'title' => 'Thema bewerken',
-                'update-slider' => 'Schuifregelaar bijwerken',
-                'url' => 'URL',
-                'value' => 'Waarde: :value',
-                'value-input' => 'Waarde',
-
-                'services-content' => [
-                    'add-btn' => 'Diensten toevoegen',
-                    'channels' => 'Kanalen',
-                    'delete' => 'Verwijderen',
-                    'description' => 'Beschrijving',
-                    'general' => 'Algemeen',
-                    'name' => 'Naam',
-                    'save-btn' => 'Opslaan',
-                    'service-icon' => 'Servicepictogram',
-                    'service-icon-class' => 'Servicepictogramklasse',
-                    'service-info' => 'Servicegerelateerde thema-aanpassing.',
-                    'services' => 'Diensten',
-                    'sort-order' => 'Sorteervolgorde',
-                    'status' => 'Status',
-                    'title' => 'Titel',
-                    'update-service' => 'Diensten bijwerken',
-                ],
-
-                'yes' => 'Ja',
-            ],
-
-            'create-success' => 'Thema is succesvol aangemaakt',
-            'delete-success' => 'Thema is succesvol verwijderd',
-            'update-success' => 'Thema is succesvol bijgewerkt',
-        ],
-    ],
-
-    'reporting' => [
         'sales' => [
             'index' => [
                 'abandoned-carts' => 'Verlaten winkelwagens',
@@ -4115,11 +4351,11 @@ return [
             'title' => 'Configuratie',
 
             'general' => [
-                'info' => 'Algemeen',
+                'info' => 'Winkelbrede instellingen voor eenheden, inhoud, ontwerp, wisselkoersen, sitemap en AVG.',
                 'title' => 'Algemeen',
 
                 'general' => [
-                    'info' => 'Configureer eenheidsinstellingen en schakel de opties voor Breadcrumbs en Bezoekers in of uit.',
+                    'info' => 'Eenheidsinstellingen en kruimelpad van de winkel.',
                     'title' => 'Algemeen',
 
                     'unit-options' => [
@@ -4137,7 +4373,7 @@ return [
                 ],
 
                 'content' => [
-                    'info' => 'Stel de titel van de aanbieding in de koptekst en aangepaste scripts in.',
+                    'info' => 'Aanbiedingsbalk, copyrightregel, speculatieregels en aangepaste scripts.',
                     'title' => 'Inhoud',
 
                     'header-offer' => [
@@ -4150,7 +4386,7 @@ return [
 
                     'copyright-content' => [
                         'title' => 'Auteursrechtinhoud',
-                        'info' => 'Configureer de auteursrechtinhoud die in de voettekst van uw website wordt weergegeven om uw intellectuele eigendom te beschermen en de merkherkenning te verbeteren.',
+                        'info' => 'De copyrightregel in de voettekst van de winkel.',
                     ],
 
                     'speculation-rules' => [
@@ -4191,24 +4427,25 @@ return [
                         'custom-css' => 'Aangepaste CSS',
                         'custom-javascript' => 'Aangepast Javascript',
                         'title' => 'Aangepaste scripts',
-                        'title-info' => 'Aangepaste scripts zijn gepersonaliseerde stukjes code die zijn gemaakt om specifieke functies of kenmerken aan software toe te voegen, waardoor de mogelijkheden ervan uniek worden verbeterd.',
+                        'title-info' => 'CSS en JavaScript die aan elke pagina van de winkel worden toegevoegd.',
                     ],
                 ],
 
                 'design' => [
-                    'info' => 'Stel logo en favicon-pictogram in voor het beheerderspaneel.',
+                    'info' => 'Logo en favicon van het beheerpaneel, en hoe menucategorieën in de winkel worden getoond.',
                     'title' => 'Ontwerp',
 
                     'admin-logo' => [
                         'favicon' => 'Favicon',
                         'logo-image' => 'Logo-afbeelding',
                         'title' => 'Admin-logo',
-                        'title-info' => 'Configureer het logo en de favicon-afbeeldingen voor de voorkant van uw website voor een betere branding en herkenning.',
+                        'title-info' => 'Het logo en favicon in het beheerpaneel en in e-mails aan de beheerder.',
                     ],
 
                     'menu-category' => [
                         'default' => 'Standaardmenu',
                         'info' => 'Deze instelling bepaalt de zichtbaarheid van categorieën in het hoofdmenu. Je kunt ervoor kiezen om alleen hoofdcategorieën of alle geneste categorieën weer te geven.',
+                        'preview' => 'Voorbeeld',
                         'preview-default' => 'Voorbeeld standaardmenu',
                         'preview-sidebar' => 'Voorbeeld zijbalkmenu',
                         'sidebar' => 'Zijbalkmenu',
@@ -4218,11 +4455,11 @@ return [
 
                 'gdpr' => [
                     'title' => 'GDPR',
-                    'info' => 'GDPR-nalevingsinstellingen',
+                    'info' => 'Cookiemelding, toestemmingscategorieën en de privacyovereenkomst die klanten te zien krijgen.',
 
                     'settings' => [
                         'title' => 'GDPR-nalevingsinstellingen',
-                        'info' => 'Beheer GDPR-nalevingsinstellingen, inclusief het privacybeleid. Schakel GDPR-functies in of uit indien nodig.',
+                        'info' => 'AVG-functies voor dit kanaal in- of uitschakelen.',
                         'enabled' => 'GDPR inschakelen',
                     ],
 
@@ -4296,7 +4533,7 @@ return [
                 ],
 
                 'sitemap' => [
-                    'info' => 'Stel sitemapopties in.',
+                    'info' => 'Sitemapgeneratie en bestandslimieten.',
                     'title' => 'Sitemap',
 
                     'settings' => [
@@ -4306,7 +4543,7 @@ return [
                     ],
 
                     'file-limits' => [
-                        'info' => 'Stel bestandslimietopties in.',
+                        'info' => 'Het maximale aantal URL\'s in één sitemapbestand voordat een nieuw bestand wordt begonnen.',
                         'max-file-size' => 'Maximale bestandsgrootte',
                         'max-url-per-file' => 'Maximaal aantal URL\'s per bestand',
                         'title' => 'Bestandslimieten',
@@ -4423,18 +4660,18 @@ return [
             ],
 
             'catalog' => [
-                'info' => 'Catalogus',
+                'info' => 'Instellingen voor producten, rich snippets en voorraad.',
                 'title' => 'Catalogus',
 
                 'products' => [
-                    'info' => 'Productweergavepagina, winkelwagenweergavepagina, etalage, beoordeling en sociale attributendelingsoptie.',
+                    'info' => 'Product- en winkelwagenpagina\'s, zoeken, afbeeldingsformaten, beoordelingen, attributen en delen.',
                     'title' => 'Producten',
 
                     'settings' => [
                         'compare-options' => 'Vergelijkingsmogelijkheden',
                         'image-search-option' => 'Afbeelding Zoekoptie',
                         'title' => 'Instellingen',
-                        'title-info' => 'Instellingen verwijzen naar configureerbare keuzes die de werking van een systeem, applicatie of apparaat bepalen, afgestemd op gebruikersvoorkeuren en -vereisten.',
+                        'title-info' => 'Productvergelijking en zoeken op afbeelding in- of uitschakelen.',
                         'wishlist-options' => 'Wenslijstopties',
                     ],
 
@@ -4465,13 +4702,13 @@ return [
                         'allow-no-of-related-products' => 'Toegestaan aantal gerelateerde producten',
                         'allow-no-of-up-sells-products' => 'Toegestaan aantal Up-Sell-producten',
                         'title' => 'Configuratie productweergavepagina',
-                        'title-info' => 'Configuratie van de productweergavepagina omvat het aanpassen van de lay-out en elementen op de weergavepagina van een product, waardoor de gebruikerservaring en informatiepresentatie worden verbeterd.',
+                        'title-info' => 'Hoeveel gerelateerde en up-sellproducten op de productpagina worden getoond.',
                     ],
 
                     'cart-view-page' => [
                         'allow-no-of-cross-sells-products' => 'Toegestaan aantal Cross-Sell-producten',
                         'title' => 'Configuratie winkelwagenweergavepagina',
-                        'title-info' => 'Configuratie van de winkelwagenweergavepagina omvat het ordenen van items, details en opties op de winkelwagenpagina, waardoor de gebruikersinteractie en aankoopstroom worden verbeterd.',
+                        'title-info' => 'Hoeveel cross-sellproducten op de winkelwagenpagina worden getoond.',
                     ],
 
                     'storefront' => [
@@ -4489,14 +4726,14 @@ return [
                         'products-per-page' => 'Producten per pagina',
                         'sort-by' => 'Sorteren op',
                         'title' => 'Winkelvoorkant',
-                        'title-info' => 'De winkelvoorkant is de klantgerichte interface van een online winkel, waarin producten, categorieën en navigatie worden getoond voor een naadloze winkelervaring.',
+                        'title-info' => 'Hoe producten op categorie- en zoekpagina\'s worden weergegeven.',
                     ],
 
                     'small-image' => [
                         'height' => 'Hoogte',
                         'placeholder' => 'Plaatsaanduiding kleine afbeelding',
                         'title' => 'Kleine afbeelding',
-                        'title-info' => 'De winkelvoorkant is de klantgerichte interface van een online winkel, waarin producten, categorieën en navigatie worden getoond voor een naadloze winkelervaring.',
+                        'title-info' => 'De grootte waarnaar kleine productafbeeldingen worden geschaald, en de tijdelijke afbeelding als een product er geen heeft.',
                         'width' => 'Breedte',
                     ],
 
@@ -4504,7 +4741,7 @@ return [
                         'height' => 'Hoogte',
                         'placeholder' => 'Plaatsaanduiding middelgrote afbeelding',
                         'title' => 'Middelgrote afbeelding',
-                        'title-info' => 'Middelgrote afbeelding verwijst naar een gematigd formaat afbeelding dat een balans biedt tussen detail en schermruimte, vaak gebruikt voor visuele doeleinden.',
+                        'title-info' => 'De grootte waarnaar middelgrote productafbeeldingen worden geschaald, en de tijdelijke afbeelding als een product er geen heeft.',
                         'width' => 'Breedte',
                     ],
 
@@ -4512,7 +4749,7 @@ return [
                         'height' => 'Hoogte',
                         'placeholder' => 'Plaatsaanduiding grote afbeelding',
                         'title' => 'Grote afbeelding',
-                        'title-info' => 'Grote afbeelding vertegenwoordigt een afbeelding met hoge resolutie die verbeterde details en visuele impact biedt, vaak gebruikt voor het tonen van producten of afbeeldingen.',
+                        'title-info' => 'De grootte waarnaar grote productafbeeldingen worden geschaald, en de tijdelijke afbeelding als een product er geen heeft.',
                         'width' => 'Breedte',
                     ],
 
@@ -4524,25 +4761,25 @@ return [
                         'display-star-count' => 'Geef het aantal sterren in beoordelingen weer.',
                         'summary' => 'Samenvatting',
                         'title' => 'Beoordeling',
-                        'title-info' => 'Evaluatie of beoordeling van iets, vaak met meningen en feedback.',
+                        'title-info' => 'Wie een product mag beoordelen en hoe beoordelingen op de productpagina worden getoond.',
                     ],
 
                     'attribute' => [
                         'file-upload-size' => 'Toegestane bestandsgrootte voor upload (in Kb)',
                         'image-upload-size' => 'Toegestane afbeeldingsgrootte voor upload (in Kb)',
                         'title' => 'Attribuut',
-                        'title-info' => 'Kenmerk of eigenschap die een object definieert en van invloed is op het gedrag, uiterlijk of de functie ervan.',
+                        'title-info' => 'De maximale grootte van een afbeelding of bestand dat voor een attribuutwaarde kan worden geüpload.',
                     ],
 
                     'social-share' => [
-                        'title-info' => 'Configureer sociale deelinstellingen om producten te delen op Instagram, Twitter, WhatsApp, Facebook, Pinterest, LinkedIn en via e-mail.',
+                        'title-info' => 'Kies welke deelknoppen op de productpagina verschijnen en welk bericht ze meesturen.',
                         'title' => 'Sociale media delen',
                         'share-message' => 'Deelbericht',
                         'share' => 'Delen',
                         'enable-social-share' => 'Sociale media delen inschakelen?',
-                        'enable-share-whatsapp-info' => 'De What\'s App deelkoppeling wordt alleen weergegeven op mobiele apparaten.',
-                        'enable-share-whatsapp' => 'Delen via What\'s App inschakelen?',
-                        'enable-share-twitter' => 'Delen via Twitter inschakelen?',
+                        'enable-share-whatsapp-info' => 'De WhatsApp-deellink verschijnt alleen op mobiele apparaten.',
+                        'enable-share-whatsapp' => 'Delen op WhatsApp inschakelen?',
+                        'enable-share-twitter' => 'Delen op X (Twitter) inschakelen?',
                         'enable-share-pinterest' => 'Delen via Pinterest inschakelen?',
                         'enable-share-linkedin' => 'Delen via Linkedin inschakelen?',
                         'enable-share-facebook' => 'Delen via Facebook inschakelen?',
@@ -4551,7 +4788,7 @@ return [
                 ],
 
                 'rich-snippets' => [
-                    'info' => 'Stel producten en categorieën in.',
+                    'info' => 'Gestructureerde gegevens die aan winkelpagina\'s worden toegevoegd voor zoekmachines.',
                     'title' => 'Rijke fragmenten',
 
                     'products' => [
@@ -4564,14 +4801,14 @@ return [
                         'show-sku' => 'SKU weergeven',
                         'show-weight' => 'Gewicht weergeven',
                         'title' => 'Producten',
-                        'title-info' => 'Configureer productinstellingen inclusief SKU, gewicht, categorieën, afbeeldingen, beoordelingen, ratings, aanbiedingen enz.',
+                        'title-info' => 'Kies welke productgegevens in de gestructureerde gegevens worden opgenomen.',
                     ],
 
                     'categories' => [
                         'enable' => 'Inschakelen',
                         'show-search-input-field' => 'Zoekveld weergeven',
                         'title' => 'Categorieën',
-                        'title-info' => '"Categorieën" verwijzen naar groepen of classificaties die helpen bij het organiseren en groeperen van vergelijkbare producten of items voor gemakkelijker browsen en navigeren.',
+                        'title-info' => 'Voeg gestructureerde categoriegegevens toe aan winkelpagina\'s zodat zoekmachines ze kunnen lezen.',
                     ],
                 ],
 
@@ -4585,13 +4822,13 @@ return [
                         'min-qty-allowed-in-cart' => 'Minimale hoeveelheid toegestaan in winkelwagen',
                         'out-of-stock-threshold' => 'Drempel voor uitverkochte producten',
                         'title' => 'Productvoorraadoptie',
-                        'info' => 'Configureer productvoorraadopties om backorders toe te staan, stel minimale en maximale winkelwagenhoeveelheden in en definieer uitverkoopdrempels.',
+                        'info' => 'Bestellingen toestaan als de voorraad op is, en de hoeveelheid instellen waaronder een product als uitverkocht geldt.',
                     ],
                 ],
             ],
 
             'customer' => [
-                'info' => 'Klant',
+                'info' => 'Instellingen voor adressen, captcha en klantaccounts.',
                 'title' => 'Klant',
 
                 'address' => [
@@ -4603,19 +4840,19 @@ return [
                         'country' => 'Land',
                         'state' => 'Provincie',
                         'title' => 'Vereisten',
-                        'title-info' => 'Vereisten zijn de voorwaarden, functies of specificaties die nodig zijn om iets succesvol te vervullen, te bereiken of te voldoen.',
+                        'title-info' => 'Welke adresvelden een klant moet invullen.',
                         'zip' => 'Postcode',
                     ],
 
                     'information' => [
                         'street-lines' => 'Regels in een straatadres',
                         'title' => 'Informatie',
-                        'title-info' => '"Regels in een straatadres" verwijzen naar afzonderlijke segmenten van een adres, vaak gescheiden door komma\'s, die locatie-informatie verstrekken zoals huisnummer, straat, stad en meer.',
+                        'title-info' => 'Hoeveel adresregels het adresformulier toont.',
                     ],
                 ],
 
                 'captcha' => [
-                    'info' => 'Stel site sleutel, geheime sleutel en status in.',
+                    'info' => 'Sleutels en status voor Google reCAPTCHA Enterprise.',
                     'title' => 'Google Captcha',
 
                     'credentials' => [
@@ -4630,7 +4867,7 @@ return [
                         'site-key-info' => 'Nadat het project en de API-sleutel zijn aangemaakt, zoekt u naar de "reCAPTCHA"-service in de bibliotheek en genereert u de "reCAPTCHA"-sleutels.',
                         'status' => 'Status',
                         'title' => 'Inloggegevens',
-                        'title-info' => 'Stel Google reCAPTCHA-inloggegevens in, inclusief API-sleutel, project-ID, sitesleutel, geheime sleutel en schakel de status in of uit.',
+                        'title-info' => 'Inloggegevens voor Google reCAPTCHA Enterprise en de score die een verzoek moet halen om te worden geaccepteerd.',
                     ],
 
                     'validations' => [
@@ -4640,7 +4877,7 @@ return [
                 ],
 
                 'settings' => [
-                    'settings-info' => 'Stel wenslijst, inlogomleiding, nieuwsbriefabonnementen, standaard groepoptie, e-mailverificaties en sociaal inloggen in.',
+                    'settings-info' => 'Stel verlanglijst, doorverwijzing na inloggen, opties voor nieuwe accounts, nieuwsbrief, e-mailverificatie en social login in.',
                     'title' => 'Instellingen',
 
                     'login-as-customer' => [
@@ -4680,19 +4917,20 @@ return [
 
                     'newsletter' => [
                         'subscription' => 'Nieuwsbriefabonnement toestaan',
+                        'subscription-info' => 'Toon een aanmeldformulier in de voettekst van de winkel.',
                         'title' => 'Nieuwsbriefabonnement',
-                        'title-info' => '"Nieuwsbriefinformatie" bevat updates, aanbiedingen of regelmatig gedeelde inhoud via e-mails aan abonnees, om hen op de hoogte te houden en betrokken te houden.',
+                        'title-info' => 'Nieuwsbriefinschrijving in de winkel.',
                     ],
 
                     'email' => [
                         'email-verification' => 'E-mailverificatie toestaan',
                         'title' => 'E-mailverificatie',
-                        'title-info' => '"E-mailverificatie" bevestigt de authenticiteit van een e-mailadres, vaak door het verzenden van een bevestigingslink, waardoor de beveiliging van het account en de betrouwbaarheid van de communicatie worden verbeterd.',
+                        'title-info' => 'Een nieuwe klant vragen zijn e-mailadres te bevestigen voordat hij kan inloggen.',
                     ],
 
                     'social-login' => [
                         'title' => 'Sociale Login',
-                        'info' => '"Sociale login" stelt gebruikers in staat om een website te betreden met hun sociale media-accounts, waardoor registratie en inloggen eenvoudiger worden.',
+                        'info' => 'Klanten laten inloggen met een extern account. Elke aanbieder heeft een eigen client-ID en geheim nodig.',
 
                         'google' => [
                             'enable-google' => 'Google inschakelen',
@@ -4771,21 +5009,21 @@ return [
                         ],
 
                         'twitter' => [
-                            'enable-twitter' => 'Twitter inschakelen',
+                            'enable-twitter' => 'X (Twitter) inschakelen',
 
                             'client-id' => [
                                 'title' => 'Client-ID',
-                                'title-info' => 'Unieke identificatiecode verstrekt door Twitter bij het aanmaken van jouw OAuth-applicatie.',
+                                'title-info' => 'Unieke identificatie die X levert bij het aanmaken van uw OAuth-toepassing.',
                             ],
 
                             'client-secret' => [
                                 'title' => 'Clientgeheim',
-                                'title-info' => 'Geheime sleutel gekoppeld aan je Twitter OAuth-client. Houd deze vertrouwelijk.',
+                                'title-info' => 'Geheime sleutel van uw X OAuth-client. Houd deze vertrouwelijk.',
                             ],
 
                             'redirect' => [
                                 'title' => 'Redirect-URL',
-                                'title-info' => 'Callback-URL waar gebruikers naartoe worden geleid na authenticatie via Twitter. Gebruik het weergegeven placeholder-URL-formaat (wijzig alleen uw domein). Moet overeenkomen met de URL in de Twitter-console.',
+                                'title-info' => 'Callback-URL waarnaar gebruikers worden doorgestuurd na authenticatie bij X. Gebruik het getoonde URL-formaat (wijzig alleen uw domein). Deze moet overeenkomen met de URL in uw X-ontwikkelaarsportaal.',
                             ],
                         ],
                     ],
@@ -4793,18 +5031,25 @@ return [
             ],
 
             'email' => [
-                'info' => 'E-mail',
+                'info' => 'Mailstuurprogramma, afzendergegevens en de meldingen die uw winkel verstuurt.',
                 'title' => 'E-mail',
 
                 'smtp' => [
+                    'brevo-api-key' => 'Brevo API-sleutel',
+                    'brevo-api-key-info' => 'Maak een v3 API-sleutel aan in uw Brevo-account onder SMTP & API.',
+                    'driver' => 'Driver',
+                    'driver-brevo-api' => 'Brevo (API)',
+                    'driver-info' => 'Kies hoe uw winkel e-mail verzendt.',
                     'driver-mismatch-info' => 'Uw maildriver is ingesteld op ":driver" in plaats van "bagisto-dynamic-smtp". Eventuele wijzigingen hier hebben geen effect. Werk MAIL_MAILER=bagisto-dynamic-smtp bij in uw .env-bestand om deze instellingen te activeren.',
                     'driver-mismatch-title' => 'Deze instellingen zijn momenteel inactief.',
+                    'driver-notice' => 'Drivermelding',
+                    'driver-smtp' => 'SMTP',
                     'encryption' => 'Versleuteling',
                     'host' => 'Host',
-                    'info' => 'Configureer SMTP-serverinstellingen voor het verzenden van e-mails vanuit uw winkel.',
+                    'info' => 'Kies hoe uw winkel e-mail verzendt en configureer de gekozen driver.',
                     'password' => 'Wachtwoord',
                     'port' => 'Poort',
-                    'title' => 'SMTP',
+                    'title' => 'Maildriver',
                     'username' => 'Gebruikersnaam',
                 ],
 
@@ -4818,12 +5063,13 @@ return [
                     'contact-email-tip' => 'Dit e-mailadres wordt weergegeven in de voettekst van uw e-mails.',
                     'contact-name' => 'Contact Naam',
                     'contact-name-tip' => 'Deze naam wordt weergegeven in de voettekst van uw e-mails.',
-                    'info' => 'Configureer de naam van de afzender, het e-mailadres van de winkel, de gegevens van de beheerder en de contactgegevens die in alle e-mails worden gebruikt.',
+                    'info' => 'Kies hoe e-mail wordt verzonden en vanaf welke adressen.',
                     'sender-email' => 'Afzender E-mailadres',
                     'sender-email-tip' => 'E-mails aan uw klanten worden van dit adres verzonden.',
                     'sender-name' => 'Afzender Naam',
                     'sender-name-tip' => 'Deze naam wordt weergegeven in de inbox van uw klanten als de e-mailafzender.',
                     'title' => 'E-mailinstellingen',
+                    'title-info' => 'De namen en adressen waarvandaan uw winkel e-mail verstuurt en die in de voettekst verschijnen.',
                 ],
 
                 'notifications' => [
@@ -4831,7 +5077,7 @@ return [
                     'cancel-order-mail-to-admin' => 'Stuur een meldingsmail naar de beheerder na het annuleren van een bestelling',
                     'customer' => 'Stuur de klantaccountgegevens na registratie',
                     'customer-registration-confirmation-mail-to-admin' => 'Stuur een bevestigingsmail naar de beheerder na klantregistratie',
-                    'info' => 'Configureer om e-mails te ontvangen voor accountverificatie, bestelbevestigingen, updates over facturen, terugbetalingen, zendingen en orderannuleringen.',
+                    'info' => 'Kies welke e-mails naar klanten en naar de beheerder worden gestuurd.',
                     'new-inventory-source' => 'Stuur een meldingsmail naar de inventarisbron na het maken van een verzending',
                     'new-invoice' => 'Stuur een meldingsmail naar de klant na het aanmaken van een nieuwe factuur',
                     'new-invoice-mail-to-admin' => 'Stuur een meldingsmail naar de beheerder na het aanmaken van een nieuwe factuur',
@@ -4843,16 +5089,17 @@ return [
                     'new-shipment-mail-to-admin' => 'Stuur een meldingsmail naar de beheerder na het maken van een nieuwe zending',
                     'registration' => 'Stuur een bevestigingsmail na klantregistratie',
                     'title' => 'Meldingen',
+                    'title-info' => 'Afzonderlijke meldingsmails in- of uitschakelen.',
                     'verification' => 'Stuur een verificatiemail na klantregistratie',
                 ],
             ],
 
             'sales' => [
-                'info' => 'Verkoop',
+                'info' => 'Instellingen voor verzending, betalingen, bestellingen, facturen, belasting, afrekenen en retouren.',
                 'title' => 'Verkoop',
 
                 'shipping-setting' => [
-                    'info' => 'Configureer verzendinstellingen, waaronder land, staat, stad, straatnaam, postcode, winkelnaam, BTW-nummer, contactnummer en bankgegevens.',
+                    'info' => 'Het adres waarvandaan bestellingen worden verzonden.',
                     'title' => 'Verzendinstellingen',
 
                     'origin' => [
@@ -4864,14 +5111,14 @@ return [
                         'store-name' => 'Winkelnaam',
                         'street-address' => 'Straatnaam',
                         'title' => 'Herkomst',
-                        'title-info' => 'Verzendherkomst verwijst naar de locatie waar goederen of producten vandaan komen voordat ze naar hun bestemming worden vervoerd.',
+                        'title-info' => 'Het adres waarvandaan bestellingen worden verzonden, en de winkelgegevens op facturen.',
                         'vat-number' => 'BTW-nummer',
                         'zip' => 'Postcode',
                     ],
                 ],
 
                 'shipping-methods' => [
-                    'info' => 'Configureer verzendmethoden, waaronder gratis verzending, vast tarief en aanvullende opties indien nodig.',
+                    'info' => 'De verzendmethoden die bij het afrekenen worden aangeboden.',
                     'title' => 'Verzendmethoden',
 
                     'free-shipping' => [
@@ -4879,7 +5126,7 @@ return [
                         'page-title' => 'Gratis verzending',
                         'status' => 'Status',
                         'title' => 'Titel',
-                        'title-info' => '"Gratis verzending" verwijst naar een verzendmethode waarbij de verzendkosten worden kwijtgescholden en de verkoper de verzendkosten voor het leveren van goederen aan de koper betaalt.',
+                        'title-info' => 'Een verzendmethode zonder kosten.',
                     ],
 
                     'flat-rate-shipping' => [
@@ -4888,7 +5135,7 @@ return [
                         'rate' => 'Tarief',
                         'status' => 'Status',
                         'title' => 'Titel',
-                        'title-info' => 'Verzending tegen vast tarief is een verzendmethode waarbij een vast bedrag in rekening wordt gebracht voor verzending, ongeacht het gewicht, de grootte of de afstand van het pakket. Dit vereenvoudigt de verzendkosten en kan voordelig zijn voor zowel kopers als verkopers.',
+                        'title-info' => 'Een verzendmethode met een vast tarief, per bestelling of per artikel.',
                         'type' => [
                             'per-order' => 'Per bestelling',
                             'per-unit' => 'Per eenheid',
@@ -4909,36 +5156,46 @@ return [
                     'application-fee' => 'Betaler van applicatiekosten',
                     'business-account' => 'Zakelijke Account',
                     'cash-on-delivery' => 'Onder Rembours',
-                    'cash-on-delivery-info' => 'Betaalmethode waarbij klanten contant betalen bij ontvangst van goederen of diensten aan hun deur.',
+                    'cash-on-delivery-info' => 'Klanten contant laten betalen bij levering.',
                     'client-id' => 'Client ID',
-                    'client-id-info' => 'Gebruik "sb" voor het testen.',
+                    'client-id-info' => 'De client-ID van uw PayPal-app. Gebruik die van de sandbox-app zolang Sandbox aanstaat.',
                     'client-secret' => 'Client Geheim',
-                    'client-secret-info' => 'Voeg hier uw geheime sleutel toe',
+                    'client-secret-info' => 'Het clientgeheim van uw PayPal-app.',
                     'create-success-refund' => 'Terugbetaling succesvol aangemaakt.',
                     'description' => 'Beschrijving',
                     'enable' => 'Inschakelen',
                     'generate-invoice' => 'Automatisch een factuur genereren na het plaatsen van een bestelling',
                     'generate-invoice-applicable' => 'Van toepassing als automatisch factuur genereren is ingeschakeld',
-                    'info' => 'Stel betaalmethode-informatie in',
+                    'info' => 'De betaalmethoden instellen die bij het afrekenen worden aangeboden.',
                     'instructions' => 'Instructies',
                     'logo' => 'Logo',
-                    'logo-information' => 'Afbeeldingsresolutie moet ongeveer 55px X 45px zijn',
+                    'logo-information' => 'Aanbevolen formaat: 55 x 45 pixels.',
                     'mailing-address' => 'Stuur cheque naar',
                     'merchant-description' => 'Handelaar Beschrijving',
                     'merchant-id' => 'Handelaar ID',
                     'merchant-key' => 'Handelaar Sleutel',
                     'merchant-name' => 'Handelaar Naam',
+                    'merchant-private-key' => 'Privésleutel van de merchant',
+                    'merchant-private-key-info' => 'Plak de inhoud van het PEM-bestand van de privésleutel die in het PayGlocal-dashboard is gegenereerd. Deze wordt gebruikt om verzoeken te ondertekenen.',
                     'merchant-salt' => 'Handelaar Salt',
                     'money-transfer' => 'Geldoverdracht',
-                    'money-transfer-info' => 'Overdracht van geld van de ene persoon of rekening naar de andere, vaak elektronisch, voor verschillende doeleinden zoals transacties of overmakingen.',
+                    'money-transfer-info' => 'Klanten laten betalen via bankoverschrijving of cheque.',
                     'page-title' => 'Betaalmethoden',
                     'paid' => 'Betaald',
+                    'payglocal' => 'PayGlocal',
+                    'payglocal-info' => 'Accepteer grensoverschrijdende betalingen via PayGlocal. <a href="https://dashboard.payglocal.in/app/mca/h8271x" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline hover:text-blue-700">Meld je hier aan om je inloggegevens te ontvangen.</a>',
+                    'payglocal-merchant-id-info' => 'Beschikbaar in het PayGlocal-dashboard onder My Account.',
+                    'payglocal-private-key-id-info' => 'De ID van uw privésleutel, zoals weergegeven in het PayGlocal-dashboard.',
+                    'payglocal-public-key' => 'Openbare sleutel van PayGlocal',
+                    'payglocal-public-key-id-info' => 'De ID van de openbare PayGlocal-sleutel, zoals weergegeven in het PayGlocal-dashboard.',
+                    'payglocal-public-key-info' => 'Plak de inhoud van het PEM-bestand van de openbare PayGlocal-sleutel. Deze wordt gebruikt om verzoeken te versleutelen en antwoorden te verifiëren.',
+                    'payglocal-sandbox-info' => 'Betalingen naar de testomgeving van PayGlocal sturen.',
                     'paypal-smart-button' => 'PayPal',
-                    'paypal-smart-button-info' => 'PayPal Smart Button: Vereenvoudigt online betalingen met aanpasbare knoppen voor veilige, multi-methode transacties op websites en apps.',
+                    'paypal-smart-button-info' => 'Toon de PayPal-knoppen bij het afrekenen zodat klanten met PayPal of een kaart kunnen betalen.',
                     'paypal-standard' => 'PayPal Standard',
-                    'paypal-standard-info' => 'PayPal Standard is een basis PayPal betalingsoptie voor online bedrijven, waarmee klanten kunnen betalen met hun PayPal-accounts of credit-/debetkaarten.',
+                    'paypal-standard-info' => 'Stuur klanten naar PayPal om met hun PayPal-account of een kaart te betalen.',
                     'payu' => 'PayU',
-                    'payu-info' => 'Configureer PayU betaalgateway-instellingen',
+                    'payu-info' => 'Betalingen via PayU accepteren.',
                     'payu-merchant-key-info' => 'Voer uw PayU Handelaar Sleutel in verkregen van het PayU dashboard',
                     'payu-merchant-salt-info' => 'Voer uw PayU Handelaar Salt in verkregen van het PayU dashboard',
                     'pending' => 'In behandeling',
@@ -4948,10 +5205,12 @@ return [
                     'phonepe-client-id-info' => 'Voer uw PhonePe-client-ID in die u van het PhonePe-dashboard hebt ontvangen',
                     'phonepe-client-secret-info' => 'Voer uw PhonePe-clientgeheim in dat u van het PhonePe-dashboard hebt ontvangen',
                     'phonepe-merchant-info' => 'Voer uw PhonePe-handelaar-ID in die u van het PhonePe-dashboard hebt ontvangen',
+                    'private-key-id' => 'ID van de privésleutel',
                     'processing' => 'Verwerken',
                     'production-mode-info' => 'Alleen voor productiemodus.',
+                    'public-key-id' => 'ID van de openbare sleutel',
                     'razorpay' => 'Razorpay',
-                    'razorpay-info' => 'Razorpay is een financieel technologieplatform dat bedrijven helpt betalingen te accepteren, verwerken en uitkeren.',
+                    'razorpay-info' => 'Betalingen via Razorpay accepteren.',
                     'sandbox' => 'Sandbox',
                     'set-invoice-status' => 'Stel de factuurstatus in na het aanmaken van de factuur op',
                     'set-order-status' => 'Stel de bestellingsstatus in na het aanmaken van de factuur op',
@@ -4959,7 +5218,7 @@ return [
                     'statement-descriptor' => 'Afschrift Beschrijving',
                     'status' => 'Status',
                     'stripe' => 'Stripe',
-                    'stripe-info' => 'Configureer Stripe betaalgateway-instellingen voor veilige online transacties',
+                    'stripe-info' => 'Kaartbetalingen via Stripe accepteren.',
                     'test-client-id' => 'Test Modus Client ID',
                     'test-client-secret' => 'Test Modus Client Geheim',
                     'test-mode-info' => 'Alleen voor test-/sandbox-modus.',
@@ -4967,7 +5226,7 @@ return [
                 ],
 
                 'order-settings' => [
-                    'info' => 'Stel ordernummers, minimale bestellingen en backorders in.',
+                    'info' => 'Nieuwe pogingen bij het aanmaken van bestellingen, bestelnummers, minimumbedrag en opnieuw bestellen.',
                     'title' => 'Bestelinstellingen',
 
                     'order-creation' => [
@@ -4978,7 +5237,7 @@ return [
 
                     'order-number' => [
                         'generator' => 'Ordernummergenerator',
-                        'info' => 'Unieke identificatie toegewezen aan een specifieke klantbestelling, ter ondersteuning van tracking, communicatie en referentie gedurende het aankoopproces.',
+                        'info' => 'Hoe gegenereerde bestelnummers zijn opgebouwd.',
                         'length' => 'Lengte ordernummer',
                         'prefix' => 'Voorvoegsel ordernummer',
                         'suffix' => 'Achtervoegsel ordernummer',
@@ -4990,17 +5249,17 @@ return [
                         'enable' => 'Inschakelen',
                         'include-discount-amount' => 'Inclusief korting',
                         'include-tax-amount' => 'Inclusief belasting',
-                        'info' => 'Geconfigureerde criteria die de laagste vereiste hoeveelheid of waarde specificeren voor een bestelling om te worden verwerkt of in aanmerking te komen voor voordelen.',
+                        'info' => 'Het laagste orderbedrag waarmee een klant kan afrekenen.',
                         'minimum-order-amount' => 'Minimale bestelwaarde',
                         'title' => 'Instellingen minimale bestelling',
                     ],
 
                     'reorder' => [
                         'admin-reorder' => 'Opnieuw bestellen door beheerder',
-                        'admin-reorder-info' => 'Schakel de functie voor opnieuw bestellen in of uit voor beheerdersgebruikers.',
-                        'info' => 'Schakel de functie voor opnieuw bestellen in of uit voor beheerdersgebruikers.',
+                        'admin-reorder-info' => 'Een beheerder een bestelling opnieuw laten plaatsen vanuit het beheerpaneel.',
+                        'info' => 'Een bestelling opnieuw laten plaatsen vanuit het beheerpaneel of de winkel.',
                         'shop-reorder' => 'Opnieuw bestellen door winkel',
-                        'shop-reorder-info' => 'Schakel de functie voor opnieuw bestellen in of uit voor winkelgebruikers.',
+                        'shop-reorder-info' => 'Een klant een bestelling opnieuw laten plaatsen vanuit de winkel.',
                         'title' => 'Opnieuw bestellen toestaan',
                     ],
 
@@ -5012,12 +5271,12 @@ return [
                 ],
 
                 'invoice-settings' => [
-                    'info' => 'Stel factuurnummer, betalingsvoorwaarden, factuurslipontwerp en factuurherinneringen in.',
+                    'info' => 'Factuurnummers, betalingsvoorwaarden, PDF-afdrukken en herinneringen.',
                     'title' => 'Factuurinstellingen',
 
                     'invoice-number' => [
                         'generator' => 'Factuurnummergenerator',
-                        'info' => 'Configuratie van regels of parameters voor het genereren en toewijzen van unieke identificatienummers aan facturen voor organisatorische en trackingdoeleinden.',
+                        'info' => 'Hoe gegenereerde factuurnummers zijn opgebouwd.',
                         'length' => 'Lengte factuurnummer',
                         'prefix' => 'Voorvoegsel factuurnummer',
                         'suffix' => 'Achtervoegsel factuurnummer',
@@ -5028,7 +5287,7 @@ return [
                         'due-duration' => 'Vervaldatum',
                         'due-duration-day' => ':due-duration dag',
                         'due-duration-days' => ':due-duration dagen',
-                        'info' => 'Overeengekomen voorwaarden die bepalen wanneer en hoe betaling voor goederen of diensten door de koper aan de verkoper moet worden gedaan.',
+                        'info' => 'Hoe lang na uitgifte een factuur vervalt.',
                         'title' => 'Betalingsvoorwaarden',
                     ],
 
@@ -5046,7 +5305,7 @@ return [
                     ],
 
                     'invoice-reminders' => [
-                        'info' => 'Geautomatiseerde meldingen of communicatie die naar klanten worden gestuurd om hen te herinneren aan aankomende of achterstallige betalingen voor facturen.',
+                        'info' => 'Hoeveel betalingsherinneringen voor een onbetaalde factuur worden verzonden, en met welke tussenpoos.',
                         'interval-between-reminders' => 'Interval tussen herinneringen',
                         'maximum-limit-of-reminders' => 'Maximale limiet van herinneringen',
                         'title' => 'Factuurherinneringen',
@@ -5055,11 +5314,11 @@ return [
 
                 'taxes' => [
                     'title' => 'Belastingen',
-                    'title-info' => 'Belastingen zijn verplichte heffingen die door overheden worden opgelegd op goederen, diensten of transacties, geïnd door verkopers en afgedragen aan de autoriteiten.',
+                    'title-info' => 'Belastingcategorieën, hoe belasting wordt berekend en hoe deze wordt getoond.',
 
                     'categories' => [
                         'title' => 'Belastingcategorieën',
-                        'title-info' => 'Belastingcategorieën zijn classificaties voor verschillende soorten belastingen, zoals omzetbelasting, toegevoegde waarde belasting of accijns, die worden gebruikt om belastingtarieven te categoriseren en toe te passen op producten of diensten.',
+                        'title-info' => 'De belastingcategorie voor verzending en de standaard voor nieuwe producten.',
                         'product' => 'Standaard belastingcategorie product',
                         'shipping' => 'Belastingcategorie verzending',
                         'none' => 'Geen',
@@ -5079,7 +5338,7 @@ return [
                         'shipping-origin' => 'Verzendherkomst',
                         'shipping-prices' => 'Verzendprijzen',
                         'title' => 'Berekeningsinstellingen',
-                        'title-info' => 'Details over de kosten van goederen of diensten, inclusief basisprijs, kortingen, belastingen en extra kosten.',
+                        'title-info' => 'Waarover belasting wordt berekend, en of ingevoerde prijzen deze al bevatten.',
                     ],
 
                     'default-destination-calculation' => [
@@ -5087,14 +5346,14 @@ return [
                         'default-post-code' => 'Standaardpostcode',
                         'default-state' => 'Standaardstaat',
                         'title' => 'Standaardbestemmingsberekening',
-                        'title-info' => 'Geautomatiseerde bepaling van een standaard- of initiële bestemming op basis van vooraf gedefinieerde factoren of instellingen.',
+                        'title-info' => 'Het adres waartegen belasting wordt berekend voordat de klant zijn eigen adres invoert.',
                     ],
 
                     'shopping-cart' => [
                         'show-tax-breakdown' => 'Belastingspecificatie tonen',
                         'show-tax-breakdown-info' => 'Toont een gedetailleerde belastingspecificatie per product en per tarief in het winkelwagen- en afrekenoverzicht. Bedoeld voor debugging.',
                         'title' => 'Instellingen winkelwagenweergave',
-                        'title-info' => 'Stel de weergave van belastingen in de winkelwagen in',
+                        'title-info' => 'Hoe belasting wordt getoond in de winkelwagen en bij het afrekenen.',
                         'display-prices' => 'Prijzen weergeven',
                         'display-subtotal' => 'Subtotaal weergeven',
                         'display-shipping-amount' => 'Verzendkosten weergeven',
@@ -5105,7 +5364,7 @@ return [
 
                     'sales' => [
                         'title' => 'Instellingen bestellingen, facturen, terugbetalingen',
-                        'title-info' => 'Stel de weergave van belastingen in bij bestellingen, facturen en terugbetalingen',
+                        'title-info' => 'Hoe belasting wordt getoond op bestellingen, facturen en terugbetalingen.',
                         'display-prices' => 'Prijzen weergeven',
                         'display-subtotal' => 'Subtotaal weergeven',
                         'display-shipping-amount' => 'Verzendkosten weergeven',
@@ -5117,7 +5376,7 @@ return [
 
                 'checkout' => [
                     'title' => 'Afrekenen',
-                    'info' => 'Gastafrekenen instellen, mini-winkelwagen inschakelen of uitschakelen, winkelwagensamenvatting.',
+                    'info' => 'Afrekenen als gast, winkelwagenpagina, mini winkelwagen en winkelwagenoverzicht.',
 
                     'shopping-cart' => [
                         'cart-page' => 'Winkelwagenpagina',
@@ -5128,21 +5387,21 @@ return [
                         'estimate-shipping-info' => 'Schakel geschatte verzendkosten in om vooraf verzendkosten weer te geven.',
                         'guest-checkout' => 'Gastafrekening toestaan',
                         'guest-checkout-info' => 'Schakel gastafrekening in voor een sneller, probleemloos aankoopproces.',
-                        'info' => 'Schakel gastafrekening, winkelwagenpagina, cross-sell producten en geschatte verzendkosten in om het gebruikersgemak te verbeteren en het winkelproces te stroomlijnen voor een verhoogde verkoop.',
+                        'info' => 'Afrekenen als gast, winkelwagenpagina, cross-sellproducten en geschatte verzendkosten.',
                         'title' => 'Winkelwagen',
                     ],
 
                     'my-cart' => [
                         'display-item-quantities' => 'Aantal items weergeven',
                         'display-number-in-cart' => 'Aantal items in winkelwagen weergeven',
-                        'info' => 'Schakel instellingen voor Mijn winkelwagen in om een samenvatting van het aantal items weer te geven en het totale aantal items in de winkelwagen voor eenvoudige tracking.',
+                        'info' => 'Of de winkelwagenteller het totale aantal stuks of het aantal artikelen toont.',
                         'summary' => 'Samenvatting',
                         'title' => 'Mijn winkelwagen',
                     ],
 
                     'mini-cart' => [
                         'display-mini-cart' => 'Mini-winkelwagen weergeven',
-                        'info' => 'Schakel instellingen voor de mini-winkelwagen in om de mini-winkelwagen weer te geven en Mini-winkelwagen aanbiedingsinformatie weer te geven voor snelle toegang tot winkelwagendetails en promoties.',
+                        'info' => 'Toon de mini winkelwagen en de aanbiedingstekst die erin verschijnt.',
                         'mini-cart-offer-info' => 'Mini-winkelwagen aanbiedingsinformatie',
                         'title' => 'Mini-winkelwagen',
                     ],
@@ -5172,7 +5431,7 @@ return [
                     'evening' => 'Avond',
                     'exchange' => 'Ruilen',
                     'file-extension-info' => 'De bestandstypen die klanten en beheerders aan een retourverzoek kunnen toevoegen, zoals productfoto\'s of ondersteunende documenten.',
-                    'info' => 'RMA is onderdeel van het proces van het retourneren van een product aan een bedrijf om een terugbetaling, vervanging of reparatie te ontvangen.',
+                    'info' => 'Retouren die klanten kunnen aanvragen nadat een bestelling is geplaatst.',
                     'morning' => 'Ochtend',
                     'new-rma-message-to-customer' => 'Nieuw RMA-bericht aan klant',
                     'no' => 'Nee',
@@ -5225,14 +5484,29 @@ return [
                 'warning-config-closures' => 'config:cache zal mislukken als een configuratiebestand closures retourneert.',
                 'warning-permissions' => 'Bestandssysteemrechten kunnen het genereren of wissen van cache voorkomen.',
                 'invalid-action' => 'Ongeldige cache-actie aangevraagd.',
-                'action-success' => 'Commando ":action" succesvol uitgevoerd.',
-                'action-failed' => 'Commando ":action" mislukt. Controleer de uitvoer hieronder.',
+                'action-success' => ':action is voltooid.',
+                'action-failed' => ':action is mislukt. Bekijk de uitvoer hieronder.',
                 'action-exception' => 'Cache-actie mislukt: :message',
                 'clear-console' => 'Console wissen',
                 'console-title' => 'Uitvoerconsole',
                 'console-entries' => 'vermeldingen',
                 'console-empty' => 'Voer een cache-actie uit om de uitvoer hier te zien...',
                 'console-unknown-error' => 'Er is een onverwachte fout opgetreden.',
+
+                'results' => [
+                    'clear-all' => 'Alle caches zijn geleegd.',
+                    'clear-config' => 'De configuratiecache is geleegd.',
+                    'clear-cache' => 'De applicatiecache is geleegd.',
+                    'clear-compiled' => 'De gecompileerde klassebestanden zijn verwijderd.',
+                    'clear-events' => 'De eventcache is geleegd.',
+                    'clear-routes' => 'De routecache is geleegd.',
+                    'clear-views' => 'De gecompileerde views zijn geleegd.',
+                    'clear-page-cache' => 'De paginacache is geleegd. Elke winkelpagina wordt bij het volgende bezoek opnieuw opgebouwd.',
+                    'build-all' => 'Alle caches zijn opnieuw opgebouwd.',
+                    'build-config' => 'De configuratiecache is aangemaakt.',
+                    'build-routes' => 'De routecache is aangemaakt.',
+                    'build-views' => 'De views zijn gecompileerd.',
+                ],
 
                 'actions' => [
                     'clear-all' => 'Alle cache wissen',
@@ -5242,10 +5516,27 @@ return [
                     'clear-events' => 'Eventcache wissen',
                     'clear-routes' => 'Routecache wissen',
                     'clear-views' => 'Weergavecache wissen',
+                    'clear-page-cache' => 'Paginacache legen',
                     'build-all' => 'Alle cache herbouwen',
                     'build-config' => 'Configuratie cachen',
                     'build-routes' => 'Routes cachen',
                     'build-views' => 'Weergaven cachen',
+                ],
+
+                'full-page-cache' => [
+                    'title' => 'Full Page Cache',
+                    'info' => 'Serve rendered storefront pages from a cache instead of building them for every visitor.',
+
+                    'settings' => [
+                        'title' => 'Settings',
+                        'info' => 'Turn the page cache on or off and choose how long a page stays cached.',
+                        'enabled' => 'Enable Full Page Cache',
+                        'enabled-info' => 'Storefront pages are served from the cache. Turning this off makes every page render again on each visit.',
+                        'lifetime' => 'Cache Lifetime (Minutes)',
+                        'lifetime-info' => 'How long a cached page is kept before it is rendered again. Leave empty to use the application default.',
+                        'flush' => 'Paginacache legen',
+                        'flush-info' => 'Leeg de paginacache zodat elke winkelpagina bij het volgende bezoek opnieuw wordt opgebouwd.',
+                    ],
                 ],
             ],
         ],
@@ -5280,6 +5571,10 @@ return [
             ],
 
             'sidebar' => [
+
+                'appearance' => 'Weergave',
+
+                'sections' => 'Secties',
                 'attribute-families' => 'Attribuut Families',
                 'attributes' => 'Attributen',
                 'booking-product' => 'Boekingen',
@@ -5352,6 +5647,7 @@ return [
 
             'toolbar' => [
                 'length-of' => ':length van',
+                'sort-by' => 'Sorteren op',
                 'of' => 'van',
                 'per-page' => 'Per Pagina',
                 'results' => ':total Resultaten',
@@ -5420,6 +5716,17 @@ return [
                     'today' => 'Vandaag',
                     'yesterday' => 'Gisteren',
                 ],
+
+                'number-options' => [
+                    'between' => 'Between',
+                    'equals' => 'Equals',
+                    'from' => 'From',
+                    'greater-than' => 'Greater Than',
+                    'greater-than-or-equal' => 'Greater Than Or Equal',
+                    'less-than' => 'Less Than',
+                    'less-than-or-equal' => 'Less Than Or Equal',
+                    'to' => 'To',
+                ],
             ],
 
             'table' => [
@@ -5456,6 +5763,7 @@ return [
                 'ai-add-image-btn' => 'Magische AI',
                 'ai-btn-info' => 'Afbeelding genereren',
                 'allowed-types' => 'png, jpeg, jpg',
+                'image' => 'Afbeelding',
                 'not-allowed-error' => 'Alleen afbeeldingsbestanden (.jpeg, .jpg, .png, ..) zijn toegestaan.',
 
                 'ai-generation' => [
@@ -5486,12 +5794,33 @@ return [
                     'use-cases' => 'Gebruiksscenario\'s',
                     'zoom' => 'Inzoomen',
                 ],
+
+                'seo' => [
+                    'alt-text' => 'Alt-tekst',
+                    'alt-text-info' => 'Wordt opgeslagen voor de geselecteerde taal. Bij een leeg veld wordt de productnaam gebruikt.',
+                    'alt-text-placeholder' => 'Beschrijf wat er op de afbeelding te zien is',
+                    'done-btn' => 'Klaar',
+                    'file-name' => 'Bestandsnaam',
+                    'file-name-info' => 'Hernoemen wijzigt de URL van de afbeelding. De oude URL werkt niet meer, wat de positie in afbeeldingszoekresultaten kan beïnvloeden.',
+                    'file-name-placeholder' => 'blue-running-shoe-side',
+                    'info' => 'Verbeter hoe zoekmachines en schermlezers deze afbeelding begrijpen.',
+                    'replace' => 'Afbeelding vervangen',
+                    'replace-btn' => 'Bestand kiezen',
+                    'replace-info' => 'De alt-tekst en bestandsnaam hierboven blijven behouden voor de nieuwe afbeelding.',
+                    'title' => 'Afbeelding-SEO',
+                ],
             ],
 
             'videos' => [
                 'add-video-btn' => 'Video Toevoegen',
                 'allowed-types' => 'mp4, webm, mkv',
                 'not-allowed-error' => 'Alleen videobestanden (.mp4, .mov, .ogg ..) zijn toegestaan.',
+                'video' => 'Video',
+
+                'seo' => [
+                    'info' => 'Geef het videobestand een beschrijvende naam.',
+                    'title' => 'Video-SEO',
+                ],
             ],
         ],
 
@@ -5523,6 +5852,12 @@ return [
     ],
 
     'acl' => [
+
+        'activate' => 'Activeren',
+
+        'appearance' => 'Weergave',
+
+        'sections' => 'Secties',
         'addresses' => 'Adressen',
         'attribute-families' => 'Attribuutfamilies',
         'attributes' => 'Attributen',

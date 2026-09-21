@@ -42,7 +42,7 @@ return [
             'page-title' => '顧客ログイン',
             'password' => 'パスワード',
             'resend-verification' => '確認メールを再送信',
-            'show-password' => 'パスワードを表示',
+            'social-account-exists' => 'このメールアドレスのアカウントは既に存在します。メールアドレスとパスワードでサインインしてください。',
             'title' => 'サインイン',
             'verify-first' => 'まずメールアカウントを確認してください。',
         ],
@@ -373,6 +373,7 @@ return [
                 'remaining-downloads' => '残りのダウンロード回数',
                 'status' => 'ステータス',
                 'title' => 'タイトル',
+                'unlimited' => '無制限',
             ],
 
             'wishlist' => [
@@ -545,6 +546,14 @@ return [
             'default-toggle' => 'デフォルトトグル',
         ],
 
+        'form' => [
+            'control-group' => [
+                'control' => [
+                    'show-password' => 'パスワードを表示',
+                ],
+            ],
+        ],
+
         'media' => [
             'index' => [
                 'add-attachments' => '添付ファイルを追加',
@@ -689,6 +698,17 @@ return [
 
                     'custom-filters' => [
                         'clear-all' => 'すべてクリア',
+                    ],
+
+                    'number-options' => [
+                        'between' => 'Between',
+                        'equals' => 'Equals',
+                        'from' => 'From',
+                        'greater-than' => 'Greater Than',
+                        'greater-than-or-equal' => 'Greater Than Or Equal',
+                        'less-than' => 'Less Than',
+                        'less-than-or-equal' => 'Less Than Or Equal',
+                        'to' => 'To',
                     ],
                 ],
             ],
@@ -1152,6 +1172,9 @@ return [
             'address' => [
                 'add-new' => '新しい住所を追加',
                 'add-new-address' => '新しい住所を追加',
+                'address-updated-payment-info' => '新しい住所に合わせて支払方法と注文合計が更新されます。最新のオプションを確認するには「進む」をクリックしてください。',
+                'address-updated-shipping-info' => '新しい住所に合わせて配送方法と送料が再計算されます。最新のオプションを確認するには「進む」をクリックしてください。',
+                'address-updated-title' => '住所が更新されました',
                 'back' => '戻る',
                 'billing-address' => '請求先住所',
                 'check-billing-address' => '請求先住所がありません。',
@@ -1255,6 +1278,7 @@ return [
             'categories-carousel' => 'カテゴリカルーセル',
             'image-carousel' => '画像カルーセル',
             'offer' => '初回注文で最大40%オフ、今すぐ購入',
+            'preview-banner' => ':channel チャネルで :theme テーマをプレビューしています。プレビューではリンクは無効です。',
             'product-carousel' => '商品カルーセル',
             'resend-verify-email' => '確認メールを再送信',
             'verify-email' => 'メールアカウントを確認してください',
@@ -1760,7 +1784,9 @@ return [
 
         'response' => [
             'already-cancel' => 'RMAステータスはすでにキャンセルされています。',
+            'cancel-not-allowed' => 'このRMAリクエストをキャンセルすることは許可されていません。',
             'cancel-success' => 'RMAステータスが正常にキャンセルされました。',
+            'close-not-allowed' => 'このRMAリクエストを終了することは許可されていません。',
             'create-success' => 'リクエストが正常に作成されました。',
             'creation-error' => 'この注文の請求書が作成されていないため、RMA ステータスを更新できません。',
             'invalid-item' => '選択された注文アイテムは無効です。',

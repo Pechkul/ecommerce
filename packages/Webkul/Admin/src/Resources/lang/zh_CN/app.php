@@ -350,6 +350,9 @@ return [
                         'add-btn' => '添加地址',
                         'add-new' => '添加新地址',
                         'add-new-address' => '添加新地址',
+                        'address-updated-payment-info' => '系统将根据更新后的地址刷新付款方式和订单总额。点击“继续”加载最新选项。',
+                        'address-updated-shipping-info' => '系统将根据更新后的地址重新计算送货方式和运费。点击“继续”加载最新选项。',
+                        'address-updated-title' => '地址已更新',
                         'addresses' => '地址',
                         'back' => '返回',
                         'billing-address' => '账单地址',
@@ -701,6 +704,7 @@ return [
                     'pending' => '待支付',
                     'status' => '状态',
                     'update-status' => '更新状态',
+                    'view' => '查看',
                 ],
             ],
 
@@ -983,6 +987,7 @@ return [
                         'edit' => '编辑',
                         'enabled' => '启用',
                         'id' => 'ID',
+                        'mass-delete-partial' => '已删除所选记录中的 :deleted 条；:skipped 条此前已被删除。',
                         'mass-delete-success' => '所选数据已成功删除。',
                         'reason-error' => '该原因正在被 RMA 使用。',
                         'reason' => '原因',
@@ -1024,6 +1029,7 @@ return [
                         'enabled' => '启用',
                         'id' => 'ID',
                         'label' => '标签',
+                        'mass-delete-partial' => '已删除所选记录中的 :deleted 条；:skipped 条此前已被删除。',
                         'mass-delete-success' => '所选数据已成功删除。',
                         'no' => '否',
                         'required' => '必填',
@@ -1064,6 +1070,7 @@ return [
                         'enabled' => '启用',
                         'exchange-period' => '换货期限（天）',
                         'id' => 'ID',
+                        'mass-delete-partial' => '已删除所选记录中的 :deleted 条；:skipped 条此前已被删除。',
                         'mass-delete-success' => '所选数据已成功删除。',
                         'name' => '名称',
                         'reason' => '规则',
@@ -1155,10 +1162,12 @@ return [
                     'attribute-family-value' => '属性家族 - :attribute_family',
                     'category' => '类别',
                     'channel' => '渠道',
+                    'copy' => '复制z',
                     'copy-of' => '复制 :value',
                     'copy-of-slug' => '复制-:value',
                     'delete' => '删除',
                     'disable' => '禁用',
+                    'edit' => '编辑',
                     'id' => 'ID',
                     'id-value' => 'ID - :id',
                     'image' => '图像',
@@ -1172,6 +1181,7 @@ return [
                     'qty-value' => ':qty 可用',
                     'sku' => 'SKU',
                     'sku-value' => 'SKU - :sku',
+                    'stock-disabled' => '库存管理已禁用',
                     'status' => '状态',
                     'type' => '类型',
                     'update-status' => '更新状态',
@@ -1222,6 +1232,7 @@ return [
                 ],
 
                 'categories' => [
+                    'search' => 'Search categories',
                     'title' => '分类',
                 ],
 
@@ -1809,7 +1820,7 @@ return [
                 'position' => '位置',
                 'price' => '价格',
                 'regex' => '正则表达式',
-                'regex-info' => '表达式应该用双引号括起来。',
+                'regex-info' => '表达式必须用斜杠括起来，例如 /^[0-9]+$/。',
                 'save-btn' => '保存属性',
                 'select' => '选择',
                 'select-type' => '选择属性类型',
@@ -1883,7 +1894,7 @@ return [
                 'position' => '位置',
                 'price' => '价格',
                 'regex' => '正则表达式',
-                'regex-info' => '表达式应该用双引号括起来。',
+                'regex-info' => '表达式必须用斜杠括起来，例如 /^[0-9]+$/。',
                 'save-btn' => '保存属性',
                 'select' => '选择',
                 'select-type' => '选择属性类型',
@@ -1938,6 +1949,7 @@ return [
                     'inactive' => '禁用',
                     'name' => '名称',
                     'no-of-products' => '产品数量',
+                    'parent-category' => '父级分类',
                     'position' => '位置',
                     'status' => '菜单可见',
                     'update-status' => '更新状态',
@@ -2092,10 +2104,10 @@ return [
             'attribute-family' => '属性家族',
             'attribute-product-error' => '家族在产品中使用。',
             'create-success' => '成功创建家族。',
+            'default-delete-error' => '无法删除默认属性族。',
             'delete-failed' => '删除家族时遇到错误。',
             'delete-success' => '成功删除家族。',
             'family' => '属性家族',
-            'last-delete-error' => '至少需要一个家族。',
             'update-success' => '成功更新家族。',
             'user-define-error' => '无法删除系统属性家族。',
         ],
@@ -2120,6 +2132,7 @@ return [
                     'id' => '客户 ID',
                     'id-value' => 'ID - :id',
                     'inactive' => '不活跃',
+                    'login-as-customer' => '以客户身份登录',
                     'method-error' => '错误！检测到错误的方法，请检查大规模操作配置',
                     'name' => '客户姓名',
                     'no-resource' => '提供的资源不足以执行操作',
@@ -2133,6 +2146,7 @@ return [
                     'suspended' => '已暂停',
                     'update-status' => '更新状态',
                     'update-success' => '成功更新所选客户',
+                    'view' => '查看',
                 ],
 
                 'create' => [
@@ -2275,6 +2289,7 @@ return [
                         'rating' => '评分',
                         'status' => '状态',
                         'title' => '标题',
+                        'view' => '查看',
                     ],
                 ],
 
@@ -2479,7 +2494,9 @@ return [
 
                     'datagrid' => [
                         'active' => '激活',
+                        'delete' => '删除',
                         'draft' => '草稿',
+                        'edit' => '编辑',
                         'id' => 'ID',
                         'inactive' => '未激活',
                         'name' => '名称',
@@ -2516,6 +2533,7 @@ return [
                     'update-success' => '更新成功',
                 ],
 
+                'campaign-associate' => '该模板正在一个或多个营销活动中使用。',
                 'delete-failed' => ':name 删除失败',
                 'delete-success' => '模板删除成功',
                 'email-template' => '电子邮件模板',
@@ -2619,6 +2637,7 @@ return [
                     ],
                 ],
 
+                'campaign-associate' => '该事件正在一个或多个营销活动中使用。',
                 'delete-failed' => ':name 删除失败',
                 'delete-success' => '事件删除成功',
                 'edit-error' => '事件无法编辑',
@@ -2983,6 +3002,7 @@ return [
 
                 'create-success' => '目录规则创建成功',
                 'delete-success' => '目录规则删除成功',
+                'queue-note' => '保存此规则会更新其适用的每个商品的价格。如果该规则适用于大量商品，请使用 database 或 redis 队列驱动并保持队列处理进程运行，以便在后台更新价格，而不会拖慢保存。',
                 'update-success' => '目录规则更新成功',
             ],
 
@@ -3223,6 +3243,312 @@ return [
         'update-success' => 'CMS页面更新成功。',
     ],
 
+    'appearance' => [
+        'themes' => [
+            'index' => [
+                'activate-btn' => '启用',
+                'activate-success' => ':theme 已在 :channel 上启用。',
+                'active' => '已启用',
+                'active-on' => '已启用于：',
+                'active-on-all' => '在所有渠道启用',
+                'buy-btn' => '查看并购买',
+                'buy-themes' => '购买主题',
+                'by' => '作者',
+                'customize-btn' => '自定义',
+                'info' => '浏览可用于店铺的主题，并选择每个渠道使用哪一个。',
+                'my-themes' => '我的主题',
+                'not-in-use' => '未使用',
+                'not-installed' => '此主题尚未安装在本店铺。',
+                'preview-btn' => '预览',
+                'title' => '主题',
+
+                'activate' => [
+                    'channels' => '渠道',
+                    'channels-hint' => '按住 Ctrl（Mac 上为 Cmd）可选择多个渠道。',
+                    'confirm-btn' => '启用',
+                    'info' => '选择要开始使用 :theme 的渠道。',
+                    'title' => '启用主题',
+                    'warning' => ':channel 有 :count 项为 :theme 创建的自定义内容。它们会保留，但在新主题启用期间不会显示。',
+                ],
+            ],
+        ],
+        'sections' => [
+            'index' => [
+                'all-filters-used' => '所有可用的筛选条件均已添加。',
+                'channel' => '渠道',
+                'copy-suffix' => '副本',
+                'create-btn' => '创建版块',
+                'delete-confirm' => '确定要删除此板块吗？',
+                'desktop' => '桌面',
+                'discard-btn' => '放弃',
+                'discarded' => '已放弃草稿更改。',
+                'duplicate-btn' => '复制',
+                'empty' => '暂无版块。',
+                'gone' => '该区块已不存在。',
+                'inactive-theme' => '只有在渠道中启用的主题才能自定义。',
+                'locale' => '语言',
+                'mobile' => '手机',
+                'no-fields' => '此板块在该主题中没有可编辑的设置。',
+                'no-types' => '该主题没有可添加的板块类型。',
+                'pinned' => '已固定在页面底部。',
+                'preview-btn' => '预览',
+                'publish-btn' => '发布',
+                'scoped-to' => '正在显示 :channel 渠道中 :theme 主题的板块。',
+                'tablet' => '平板',
+                'title' => '版块',
+                'unsaved' => '未保存的更改',
+
+                'datagrid' => [
+                    'active' => '活动',
+                    'channel_name' => '频道名称',
+                    'change-status' => '更改状态',
+                    'delete' => '删除',
+                    'id' => 'ID',
+                    'inactive' => '非活动',
+                    'name' => '名称',
+                    'sort-order' => '排序顺序',
+                    'status' => '状态',
+                    'theme' => '主题',
+                    'type' => '类型',
+                    'view' => '查看',
+                ],
+            ],
+
+            'create' => [
+                'name' => '名称',
+                'save-btn' => '保存版块',
+                'singleton-exists' => '此渠道仅显示一个 :type 板块。',
+                'title' => '创建版块',
+
+                'type' => [
+                    'category-carousel' => '类别轮播',
+                    'footer-links' => '页脚链接',
+                    'image-carousel' => '图像轮播',
+                    'product-carousel' => '产品轮播',
+                    'services-content' => '服务内容',
+                    'static-content' => '静态内容',
+                    'title' => '类型',
+                ],
+            ],
+
+            'edit' => [
+                'active' => '活动',
+                'add-column' => '添加列',
+                'add-filter-btn' => '添加过滤器',
+                'add-footer-link-btn' => '添加页脚链接',
+                'add-image-btn' => '添加图片',
+                'add-link' => '添加链接',
+                'add-media' => '添加媒体',
+                'asc' => '升序',
+                'back' => '返回',
+                'category-carousel' => '类别轮播',
+                'category-carousel-description' => '使用响应式类别轮播以引人注目的方式展示动态类别。',
+                'category-id' => '类别ID',
+                'channels' => '频道',
+                'column' => '列',
+                'columns' => '列',
+                'create-filter' => '创建过滤器',
+                'css' => 'CSS',
+                'delete' => '删除',
+                'desc' => '降序',
+                'edit' => '编辑',
+                'featured' => '精选',
+                'filter-title' => '标题',
+                'filters' => '过滤器',
+                'footer-link' => '页脚链接',
+                'footer-link-description' => '通过页脚链接无缝浏览网站和获取信息。',
+                'footer-link-form-title' => '页脚链接',
+                'footer-title' => '标题',
+                'general' => '通用',
+                'html' => 'HTML',
+                'image' => '图片',
+                'image-size' => '图片分辨率应为（1920px x 700px）',
+                'image-title' => '图片标题',
+                'image-upload-message' => '仅允许图片（.jpeg、.jpg、.png、.webp 等）。',
+                'inactive' => '非活动',
+                'key' => '键：:key',
+                'key-input' => '键',
+                'limit' => '限制',
+                'link' => '链接',
+                'name' => '名称',
+                'new' => '新',
+                'no' => '不',
+                'parent-id' => '父ID',
+                'preview' => '预览',
+                'product-carousel' => '产品轮播',
+                'product-carousel-description' => '使用动态和响应式产品轮播优雅地展示产品。',
+                'save-btn' => '保存',
+                'select' => '选择',
+                'slider' => '滑块',
+                'slider-add-btn' => '添加滑块',
+                'slider-description' => '与滑块相关的主题自定义。',
+                'slider-image' => '滑块图片',
+                'slider-required' => '滑块字段为必填项。',
+                'sort' => '排序',
+                'sort-order' => '排序顺序',
+                'static-content' => '静态内容',
+                'static-content-description' => '为您的受众提供简洁、信息丰富的静态内容，提高参与度。',
+                'status' => '状态',
+                'themes' => '主题',
+                'title' => '编辑版块',
+                'update-slider' => '更新滑块',
+                'uploading' => '正在上传…',
+                'url' => '网址',
+                'value' => '值：:value',
+                'value-input' => '值',
+
+                'services-content' => [
+                    'add-btn' => '添加服务',
+                    'channels' => '渠道',
+                    'delete' => '删除',
+                    'description' => '描述',
+                    'general' => '通用',
+                    'name' => '名称',
+                    'save-btn' => '保存',
+                    'service-icon' => '服务图标',
+                    'service-icon-class' => '服务图标类',
+                    'service-info' => '与服务相关的主题定制。',
+                    'services' => '服务',
+                    'sort-order' => '排序顺序',
+                    'status' => '状态',
+                    'title' => '标题',
+                    'update-service' => '更新服务',
+                ],
+
+                'yes' => '是',
+            ],
+
+            'create-success' => '版块创建成功',
+            'delete-success' => '版块删除成功',
+            'update-success' => '版块更新成功',
+        ],
+    ],
+
+    'reporting' => [
+        'sales' => [
+            'index' => [
+                'abandoned-carts' => '被遗弃的购物车',
+                'abandoned-products' => '被遗弃的商品',
+                'abandoned-rate' => '被遗弃率',
+                'abandoned-revenue' => '被遗弃的收入',
+                'added-to-cart' => '已添加到购物车',
+                'added-to-cart-info' => '仅 :progress 位访客将产品添加到购物车',
+                'all-channels' => '所有渠道',
+                'average-order-value-over-time' => '随时间的平均订单价值',
+                'average-sales' => '平均订单价值',
+                'count' => '数量',
+                'coupon-code' => '优惠券代码',
+                'date' => '日期',
+                'discount' => '折扣',
+                'email' => '电子邮件',
+                'end-date' => '结束日期',
+                'id' => 'ID',
+                'interval' => '间隔',
+                'name' => '名称',
+                'order-id' => '订单 ID',
+                'orders' => '订单',
+                'orders-over-time' => '随时间的订单数',
+                'payment-method' => '付款方式',
+                'purchase-funnel' => '购买漏斗',
+                'purchased' => '已购买',
+                'purchased-info' => '仅 :progress 位访客进行购买',
+                'refunds' => '退款',
+                'refunds-over-time' => '随时间的退款',
+                'sales-by-coupon' => '按优惠券统计销售',
+                'sales-over-time' => '随时间的销售',
+                'shipping-collected' => '运费收入',
+                'shipping-collected-over-time' => '随时间的运费收入',
+                'start-date' => '开始日期',
+                'tax-collected' => '税金收入',
+                'tax-collected-over-time' => '随时间的税金收入',
+                'title' => '销售',
+                'top-payment-methods' => '热门付款方式',
+                'top-shipping-methods' => '热门配送方式',
+                'top-tax-categories' => '热门税收类别',
+                'total' => '总计',
+                'total-orders' => '总订单数',
+                'total-sales' => '总销售额',
+                'view-details' => '查看详情',
+            ],
+        ],
+
+        'customers' => [
+            'index' => [
+                'all-channels' => '所有渠道',
+                'count' => '数量',
+                'customers' => '客户',
+                'customers-over-time' => '随时间的客户数',
+                'customers-with-most-orders' => '最多订单的客户',
+                'customers-with-most-reviews' => '最多评价的客户',
+                'customers-with-most-sales' => '最多销售的客户',
+                'email' => '电子邮件',
+                'end-date' => '结束日期',
+                'id' => 'ID',
+                'interval' => '间隔',
+                'name' => '名称',
+                'orders' => '订单',
+                'reviews' => '评价',
+                'start-date' => '开始日期',
+                'title' => '客户',
+                'top-customer-groups' => '热门客户群',
+                'total' => '总计',
+                'total-customers' => '总客户数',
+                'view-details' => '查看详情',
+            ],
+        ],
+
+        'products' => [
+            'index' => [
+                'all-channels' => '所有渠道',
+                'channel' => '频道',
+                'end-date' => '结束日期',
+                'id' => 'ID',
+                'interval' => '间隔',
+                'last-search-terms' => '最近的搜索词',
+                'locale' => '区域',
+                'name' => '名称',
+                'orders' => '订单',
+                'price' => '价格',
+                'products-added-over-time' => '随时间的新增商品',
+                'products-with-most-reviews' => '最多评价的商品',
+                'quantities' => '数量',
+                'quantities-sold-over-time' => '随时间的销售数量',
+                'results' => '结果',
+                'revenue' => '收入',
+                'reviews' => '评价',
+                'search-term' => '搜索词',
+                'start-date' => '开始日期',
+                'title' => '商品',
+                'top-search-terms' => '最受欢迎的搜索词',
+                'top-selling-products-by-quantity' => '按数量销售最多的商品',
+                'top-selling-products-by-revenue' => '按收入销售最多的商品',
+                'total' => '总计',
+                'total-products-added-to-wishlist' => '已添加到愿望清单的商品',
+                'total-sold-quantities' => '已售商品数量',
+                'uses' => '用途',
+                'view-details' => '查看详情',
+            ],
+        ],
+
+        'view' => [
+            'all-channels' => '所有渠道',
+            'back-btn' => '返回',
+            'day' => '日',
+            'end-date' => '结束日期',
+            'export-csv' => '导出CSV',
+            'export-xls' => '导出XLS',
+            'month' => '月',
+            'not-available' => '没有可用的记录。',
+            'start-date' => '开始日期',
+            'year' => '年',
+        ],
+
+        'empty' => [
+            'info' => '所选时间段内暂无数据',
+            'title' => '暂无数据',
+        ],
+    ],
+
     'settings' => [
         'locales' => [
             'index' => [
@@ -3329,9 +3655,10 @@ return [
                     'file-info-example' => '例如，在 product-images 的情況下，檔案應放置在 /project-root/storage/app/import/product-images 資料夾中。',
                     'general' => '一般',
                     'images-directory' => '圖片目錄路徑',
+                    'import-confirmation' => '保存后将立即开始导入。是否继续？',
                     'process-in-queue' => '佇列中處理',
                     'results' => '結果',
-                    'save-btn' => '儲存匯入',
+                    'save-btn' => '导入',
                     'settings' => '設定',
                     'skip-errors' => '跳過錯誤',
                     'stop-on-errors' => '在發生錯誤時停止',
@@ -3356,7 +3683,7 @@ return [
                     'images-directory' => '圖片目錄路徑',
                     'process-in-queue' => '佇列中處理',
                     'results' => '結果',
-                    'save-btn' => '儲存匯入',
+                    'save-btn' => '导入',
                     'settings' => '設定',
                     'skip-errors' => '跳過錯誤',
                     'stop-on-errors' => '在發生錯誤時停止',
@@ -3378,24 +3705,38 @@ return [
                         'edit' => '編輯',
                         'error-file' => '錯誤檔案',
                         'id' => 'ID',
+                        'import' => '导入',
                         'started-at' => '已開始於',
                         'state' => '狀態',
                         'summary' => '摘要',
                         'updated' => '已更新',
                         'uploaded-file' => '已上傳的檔案',
+                        'view-progress' => '查看进度',
                     ],
                 ],
 
                 'import' => [
                     'back-btn' => '返回',
                     'completed-batches' => '已完成的批次：',
+                    'deleting-info' => '正在删除',
                     'download-error-report' => '下載完整報告',
+                    'downloading-info' => '正在下载图片',
                     'edit-btn' => '編輯',
+                    'failed-batches' => '有 :count 个批次未完成。请检查错误日志并对这些行重新执行导入。',
+                    'images-downloaded' => '已下载图片：',
+                    'images-progress' => '张图片已下载',
                     'imported-info' => '恭喜！您的匯入已成功完成。',
                     'importing-info' => '匯入處理中',
                     'indexing-info' => '價格、庫存和 Elasticsearch 索引中的資源處理中',
                     'linking-info' => '資源連結中',
                     'progress' => '進度：',
+                    'rows-validated' => '行已验证',
+                    'step-create' => '创建',
+                    'step-delete' => '删除',
+                    'step-download' => '图片',
+                    'step-index' => '索引',
+                    'step-link' => '关联',
+                    'step-validate' => '验证',
                     'title' => '匯入',
                     'total-batches' => '總批次：',
                     'total-created' => '已建立記錄：',
@@ -3408,7 +3749,27 @@ return [
                     'validate-info' => '按一下 „驗證數據“ 以檢查您的匯入。',
                     'validating-info' => '數據開始閱讀和驗證',
                     'validation-failed-info' => '您的匯入無效。請修正以下錯誤並再試一次。',
+                    'validation-partial-info' => '导入可以继续，但部分行将被跳过。请查看下方错误或下载完整报告。',
                     'validation-success-info' => '您的匯入有效。按一下 „匯入“ 以開始匯入過程。',
+                ],
+
+                'images' => [
+                    'current-archive' => '当前已上传：:name — :count 张图片就绪。',
+                    'current-images' => '此导入已上传 :count 张图片。',
+                    'directory-example' => '例如，若为 product-images，文件应放在 /project-root/storage/app/import/product-images 文件夹中。',
+                    'directory-hint' => '使用相对于 /project-root/storage/app/import 的路径，例如 product-images、import-images。',
+                    'directory-info' => '如果你有代码库访问权限，可将图片放在服务器的某个文件夹中，并在下方填写该文件夹。',
+                    'directory-placeholder' => '图片目录路径',
+                    'directory-title' => '图片已在服务器上',
+                    'download-sample-zip' => '下载示例图片',
+                    'info' => '选择在何处查找文件中所列的图片。',
+                    'recommended' => '推荐',
+                    'replace-archive' => '选择新的压缩包将替换它们。',
+                    'title' => '商品图片',
+                    'upload-info' => '上传一个包含所有图片的压缩包。images 列随后填写其中的文件名。',
+                    'upload-title' => '上传图片 ZIP 压缩包',
+                    'url-info' => '在 images 列中填写每张图片的完整 https:// 地址。它们会在导入开始前下载，无需事先在服务器上放置任何文件。',
+                    'url-title' => '文件中的图片链接',
                 ],
 
                 'create-success' => '已成功建立匯入。',
@@ -3416,6 +3777,7 @@ return [
                 'delete-success' => '已成功刪除匯入。',
                 'not-valid' => '匯入無效',
                 'nothing-to-import' => '沒有要匯入的資源。',
+                'processing-failed' => '无法处理此导入。请检查文件后重试。',
                 'setup-queue-error' => '請將您的佇列驅動程序更改為 „database“ 或 „redis“，以開始匯入過程。',
                 'update-success' => '已成功更新匯入。',
             ],
@@ -3793,7 +4155,9 @@ return [
             'incorrect-password' => '密码错误',
             'last-delete-error' => '删除最后一个用户失败。',
             'login-error' => '请检查您的凭据并重试。',
+            'role-not-grantable' => '您不能分配包含您自己没有的权限的角色。',
             'update-success' => '用户成功更新。',
+            'user-not-manageable' => '您不能更改其角色包含您自己没有的权限的用户。',
         ],
 
         'roles' => [
@@ -3822,6 +4186,7 @@ return [
                 'name' => '名称',
                 'permissions' => '权限',
                 'save-btn' => '保存角色',
+                'search-permissions' => '搜索权限',
                 'title' => '创建角色',
             ],
 
@@ -3843,139 +4208,10 @@ return [
             'delete-failed' => '角色删除失败',
             'delete-success' => '角色已成功删除',
             'last-delete-error' => '最后一个角色无法删除',
+            'permissions-not-grantable' => '您不能授予您自己没有的权限。',
             'update-success' => '角色已成功更新',
         ],
 
-        'themes' => [
-            'index' => [
-                'create-btn' => '创建主题',
-                'title' => '主题',
-
-                'datagrid' => [
-                    'active' => '活动',
-                    'channel_name' => '频道名称',
-                    'change-status' => '更改状态',
-                    'delete' => '删除',
-                    'id' => 'ID',
-                    'inactive' => '非活动',
-                    'name' => '名称',
-                    'sort-order' => '排序顺序',
-                    'status' => '状态',
-                    'theme' => '主题',
-                    'type' => '类型',
-                    'view' => '查看',
-                ],
-            ],
-
-            'create' => [
-                'name' => '名称',
-                'save-btn' => '保存主题',
-                'sort-order' => '排序顺序',
-                'themes' => '主题',
-                'title' => '创建主题',
-
-                'type' => [
-                    'category-carousel' => '类别轮播',
-                    'footer-links' => '页脚链接',
-                    'image-carousel' => '图像轮播',
-                    'product-carousel' => '产品轮播',
-                    'services-content' => '服务内容',
-                    'static-content' => '静态内容',
-                    'title' => '类型',
-                ],
-            ],
-
-            'edit' => [
-                'active' => '活动',
-                'add-filter-btn' => '添加过滤器',
-                'add-footer-link-btn' => '添加页脚链接',
-                'add-image-btn' => '添加图片',
-                'add-link' => '添加链接',
-                'asc' => '升序',
-                'back' => '返回',
-                'category-carousel' => '类别轮播',
-                'category-carousel-description' => '使用响应式类别轮播以引人注目的方式展示动态类别。',
-                'category-id' => '类别ID',
-                'channels' => '频道',
-                'column' => '列',
-                'create-filter' => '创建过滤器',
-                'css' => 'CSS',
-                'delete' => '删除',
-                'desc' => '降序',
-                'edit' => '编辑',
-                'featured' => '精选',
-                'filter-title' => '标题',
-                'filters' => '过滤器',
-                'footer-link' => '页脚链接',
-                'footer-link-description' => '通过页脚链接无缝浏览网站和获取信息。',
-                'footer-link-form-title' => '页脚链接',
-                'footer-title' => '标题',
-                'general' => '通用',
-                'html' => 'HTML',
-                'image' => '图片',
-                'image-size' => '图片分辨率应为（1920px x 700px）',
-                'image-title' => '图片标题',
-                'image-upload-message' => '仅允许图片（.jpeg、.jpg、.png、.webp 等）。',
-                'inactive' => '非活动',
-                'key' => '键：:key',
-                'key-input' => '键',
-                'limit' => '限制',
-                'link' => '链接',
-                'name' => '名称',
-                'new' => '新',
-                'no' => '不',
-                'parent-id' => '父ID',
-                'parent-id-hint' => '您可以输入多个父ID作为逗号分隔的值（例如：12,15,34）',
-                'preview' => '预览',
-                'product-carousel' => '产品轮播',
-                'product-carousel-description' => '使用动态和响应式产品轮播优雅地展示产品。',
-                'save-btn' => '保存',
-                'select' => '选择',
-                'slider' => '滑块',
-                'slider-add-btn' => '添加滑块',
-                'slider-description' => '与滑块相关的主题自定义。',
-                'slider-image' => '滑块图片',
-                'slider-required' => '滑块字段为必填项。',
-                'sort' => '排序',
-                'sort-order' => '排序顺序',
-                'static-content' => '静态内容',
-                'static-content-description' => '为您的受众提供简洁、信息丰富的静态内容，提高参与度。',
-                'status' => '状态',
-                'themes' => '主题',
-                'title' => '编辑主题',
-                'update-slider' => '更新滑块',
-                'url' => '网址',
-                'value' => '值：:value',
-                'value-input' => '值',
-
-                'services-content' => [
-                    'add-btn' => '添加服务',
-                    'channels' => '渠道',
-                    'delete' => '删除',
-                    'description' => '描述',
-                    'general' => '通用',
-                    'name' => '名称',
-                    'save-btn' => '保存',
-                    'service-icon' => '服务图标',
-                    'service-icon-class' => '服务图标类',
-                    'service-info' => '与服务相关的主题定制。',
-                    'services' => '服务',
-                    'sort-order' => '排序顺序',
-                    'status' => '状态',
-                    'title' => '标题',
-                    'update-service' => '更新服务',
-                ],
-
-                'yes' => '是',
-            ],
-
-            'create-success' => '成功创建主题',
-            'delete-success' => '成功删除主题',
-            'update-success' => '成功更新主题',
-        ],
-    ],
-
-    'reporting' => [
         'sales' => [
             'index' => [
                 'abandoned-carts' => '被遗弃的购物车',
@@ -4115,11 +4351,11 @@ return [
             'title' => '配置',
 
             'general' => [
-                'info' => '常规',
+                'info' => '单位、内容、设计、汇率、站点地图和 GDPR 的全店设置。',
                 'title' => '常规',
 
                 'general' => [
-                    'info' => '配置单位设置，并可启用或禁用面包屑和访客选项。',
+                    'info' => '单位设置和店铺面包屑导航。',
                     'title' => '常规',
 
                     'unit-options' => [
@@ -4137,7 +4373,7 @@ return [
                 ],
 
                 'content' => [
-                    'info' => '设置页眉优惠标题和自定义脚本。',
+                    'info' => '顶部优惠横幅、版权信息、预测加载规则和自定义脚本。',
                     'title' => '内容',
 
                     'header-offer' => [
@@ -4150,7 +4386,7 @@ return [
 
                     'copyright-content' => [
                         'title' => '版权内容',
-                        'info' => '配置在您网站页脚显示的版权内容，以保护您的知识产权并提升品牌知名度。',
+                        'info' => '店铺页脚显示的版权信息。',
                     ],
 
                     'speculation-rules' => [
@@ -4191,24 +4427,25 @@ return [
                         'custom-css' => '自定义CSS',
                         'custom-javascript' => '自定义Javascript',
                         'title' => '自定义脚本',
-                        'title-info' => '自定义脚本是为软件添加特定功能或特性的个性化代码片段，独特地增强其功能。',
+                        'title-info' => '添加到店铺每个页面的 CSS 和 JavaScript。',
                     ],
                 ],
 
                 'design' => [
-                    'info' => '为管理面板设置标志和网站图标。',
+                    'info' => '后台面板的标志和网站图标，以及店铺菜单分类的展示方式。',
                     'title' => '设计',
 
                     'admin-logo' => [
                         'favicon' => '网站图标',
                         'logo-image' => '标志图像',
                         'title' => '管理标志',
-                        'title-info' => '为您的网站前端配置标志和网站图标图像，以提升品牌形象和识别度。',
+                        'title-info' => '在后台面板和发给管理员的邮件中显示的标志与网站图标。',
                     ],
 
                     'menu-category' => [
                         'default' => '默认菜单',
                         'info' => '此设置控制标题菜单中类别的可见性。您可以选择仅显示父类别或显示所有嵌套类别。',
+                        'preview' => '预览',
                         'preview-default' => '预览默认菜单',
                         'preview-sidebar' => '预览侧边栏菜单',
                         'sidebar' => '侧边栏菜单',
@@ -4218,11 +4455,11 @@ return [
 
                 'gdpr' => [
                     'title' => 'GDPR',
-                    'info' => 'GDPR 合规设置',
+                    'info' => 'Cookie 提示、同意类别以及向客户展示的隐私协议。',
 
                     'settings' => [
                         'title' => 'GDPR 合规设置',
-                        'info' => '管理 GDPR 合规设置，包括隐私政策。根据要求启用或禁用 GDPR 功能。',
+                        'info' => '为该渠道开启或关闭 GDPR 功能。',
                         'enabled' => '启用 GDPR',
                     ],
 
@@ -4296,7 +4533,7 @@ return [
                 ],
 
                 'sitemap' => [
-                    'info' => '设置站点地图选项。',
+                    'info' => '站点地图生成与文件数量上限。',
                     'title' => '站点地图',
 
                     'settings' => [
@@ -4306,7 +4543,7 @@ return [
                     ],
 
                     'file-limits' => [
-                        'info' => '设置文件限制选项。',
+                        'info' => '单个站点地图文件最多写入的 URL 数量，超出后另建新文件。',
                         'max-file-size' => '最大文件大小',
                         'max-url-per-file' => '每个文件的最大 URL 数量',
                         'title' => '文件限制',
@@ -4423,18 +4660,18 @@ return [
             ],
 
             'catalog' => [
-                'info' => '目录',
+                'info' => '商品、丰富网页摘要和库存设置。',
                 'title' => '目录',
 
                 'products' => [
-                    'info' => '产品查看页面，购物车查看页面，店面，评论和属性社交分享。',
+                    'info' => '商品页和购物车页、搜索、图片尺寸、评价、属性和分享。',
                     'title' => '产品',
 
                     'settings' => [
                         'compare-options' => '比较选项',
                         'image-search-option' => '图片搜索选项',
                         'title' => '设置',
-                        'title-info' => '设置是指根据用户的偏好和要求，对系统、应用程序或设备的行为进行可配置的选择。',
+                        'title-info' => '开启或关闭商品对比和图片搜索。',
                         'wishlist-options' => '心愿单选项',
                     ],
 
@@ -4465,13 +4702,13 @@ return [
                         'allow-no-of-related-products' => '允许相关产品的数量',
                         'allow-no-of-up-sells-products' => '允许上销售产品的数量',
                         'title' => '产品查看页面配置',
-                        'title-info' => '产品查看页面配置涉及调整产品显示页面上的布局和元素，提升用户体验和信息呈现。',
+                        'title-info' => '商品页面显示的相关商品和向上销售商品数量。',
                     ],
 
                     'cart-view-page' => [
                         'allow-no-of-cross-sells-products' => '允许交叉销售产品的数量',
                         'title' => '购物车查看页面配置',
-                        'title-info' => '购物车查看页面配置涉及在购物车页面上排列商品、详细信息和选项，提高用户交互和购买流程。',
+                        'title-info' => '购物车页面显示的交叉销售商品数量。',
                     ],
 
                     'storefront' => [
@@ -4489,14 +4726,14 @@ return [
                         'products-per-page' => '每页产品数量',
                         'sort-by' => '排序方式',
                         'title' => '商店前端',
-                        'title-info' => '商店前端是在线商店的面向客户的界面，展示产品、分类和导航，提供无缝的购物体验。',
+                        'title-info' => '商品在分类页和搜索页的展示方式。',
                     ],
 
                     'small-image' => [
                         'height' => '高度',
                         'placeholder' => '小图占位符',
                         'title' => '小图',
-                        'title-info' => '商店前端是在线商店的面向客户的界面，展示产品、分类和导航，提供无缝的购物体验。',
+                        'title-info' => '小尺寸商品图片的缩放尺寸，以及商品无图片时显示的占位图。',
                         'width' => '宽度',
                     ],
 
@@ -4504,7 +4741,7 @@ return [
                         'height' => '高度',
                         'placeholder' => '中图占位符',
                         'title' => '中图',
-                        'title-info' => '中图是指中等大小的图片，提供了详细信息和屏幕空间之间的平衡，通常用于视觉效果。',
+                        'title-info' => '中等尺寸商品图片的缩放尺寸，以及商品无图片时显示的占位图。',
                         'width' => '宽度',
                     ],
 
@@ -4512,7 +4749,7 @@ return [
                         'height' => '高度',
                         'placeholder' => '大图占位符',
                         'title' => '大图',
-                        'title-info' => '大图代表提供增强细节和视觉冲击力的高分辨率图片，通常用于展示产品或图形。',
+                        'title-info' => '大尺寸商品图片的缩放尺寸，以及商品无图片时显示的占位图。',
                         'width' => '宽度',
                     ],
 
@@ -4524,25 +4761,25 @@ return [
                         'display-star-count' => '显示评分中的星级数。',
                         'summary' => '概括',
                         'title' => '评价',
-                        'title-info' => '对某物进行评估或评价，通常涉及意见和反馈。',
+                        'title-info' => '谁可以评价商品，以及评价在商品页面的显示方式。',
                     ],
 
                     'attribute' => [
                         'file-upload-size' => '允许文件上传大小（以KB为单位）',
                         'image-upload-size' => '允许图片上传大小（以KB为单位）',
                         'title' => '属性',
-                        'title-info' => '定义对象的特性或属性，影响其行为、外观或功能。',
+                        'title-info' => '属性值可上传的图片和文件的最大大小。',
                     ],
 
                     'social-share' => [
-                        'title-info' => '配置社交分享设置，以在Instagram、Twitter、WhatsApp、Facebook、Pinterest、LinkedIn和电子邮件中启用产品分享。',
+                        'title-info' => '选择商品页面显示哪些分享按钮，以及它们附带的消息。',
                         'title' => '社交分享',
                         'share-message' => '分享消息',
                         'share' => '分享',
                         'enable-social-share' => '启用社交分享？',
-                        'enable-share-whatsapp-info' => '仅在移动设备上显示WhatsApp分享链接。',
-                        'enable-share-whatsapp' => '在WhatsApp中启用分享？',
-                        'enable-share-twitter' => '在Twitter中启用分享？',
+                        'enable-share-whatsapp-info' => 'WhatsApp 分享链接仅在移动设备上显示。',
+                        'enable-share-whatsapp' => '启用在 WhatsApp 上分享？',
+                        'enable-share-twitter' => '启用在 X（Twitter）上分享？',
                         'enable-share-pinterest' => '在Pinterest中启用分享？',
                         'enable-share-linkedin' => '在Linkedin中启用分享？',
                         'enable-share-facebook' => '在Facebook中启用分享？',
@@ -4551,7 +4788,7 @@ return [
                 ],
 
                 'rich-snippets' => [
-                    'info' => '设置产品和分类。',
+                    'info' => '为搜索引擎添加到店铺页面的结构化数据。',
                     'title' => '富媒体片段',
 
                     'products' => [
@@ -4564,14 +4801,14 @@ return [
                         'show-sku' => '显示SKU',
                         'show-weight' => '显示重量',
                         'title' => '产品',
-                        'title-info' => '配置产品设置，包括SKU、重量、类别、图像、评论、评分、优惠等。',
+                        'title-info' => '选择结构化数据中包含哪些商品信息。',
                     ],
 
                     'categories' => [
                         'enable' => '启用',
                         'show-search-input-field' => '显示搜索输入框',
                         'title' => '分类',
-                        'title-info' => '“分类”是指帮助组织和分组类似产品或物品，以便更轻松地浏览和导航的组或类别。',
+                        'title-info' => '为店铺页面添加分类结构化数据，便于搜索引擎读取。',
                     ],
                 ],
 
@@ -4585,13 +4822,13 @@ return [
                         'min-qty-allowed-in-cart' => '购物车中允许的最小数量',
                         'out-of-stock-threshold' => '缺货阈值',
                         'title' => '产品库存选项',
-                        'info' => '配置产品库存选项，允许缺货订单，设置购物车的最小和最大数量，并定义缺货门槛。',
+                        'info' => '缺货时仍允许下单，并设置商品被视为缺货的数量。',
                     ],
                 ],
             ],
 
             'customer' => [
-                'info' => '顧客',
+                'info' => '地址、验证码和客户账户设置。',
                 'title' => '顧客',
 
                 'address' => [
@@ -4603,19 +4840,19 @@ return [
                         'country' => '国家',
                         'state' => '省/直辖市',
                         'title' => '要求',
-                        'title-info' => '要求是实现某个目标所必需的条件、功能或规格。',
+                        'title-info' => '客户必须填写的地址字段。',
                         'zip' => '邮政编码',
                     ],
 
                     'information' => [
                         'street-lines' => '地址行',
                         'title' => '信息',
-                        'title-info' => '“地址行”指的是地址的各个部分，通常用逗号分隔，提供如门牌号、街道名称、市区等位置信息。',
+                        'title-info' => '地址表单显示的街道地址行数。',
                     ],
                 ],
 
                 'captcha' => [
-                    'info' => '设置站点密钥、密钥和状态。',
+                    'info' => 'Google reCAPTCHA Enterprise 的密钥和状态。',
                     'title' => 'Google 验证码',
 
                     'credentials' => [
@@ -4630,7 +4867,7 @@ return [
                         'site-key-info' => '创建项目和API密钥后，在库中搜索"reCAPTCHA"服务并生成"reCAPTCHA"密钥。',
                         'status' => '状态',
                         'title' => '凭据',
-                        'title-info' => '设置Google reCAPTCHA凭据，包括API密钥、项目ID、站点密钥、密钥，并启用或禁用状态。',
+                        'title-info' => 'Google reCAPTCHA Enterprise 的凭据，以及请求被接受所需达到的分值。',
                     ],
 
                     'validations' => [
@@ -4640,7 +4877,7 @@ return [
                 ],
 
                 'settings' => [
-                    'settings-info' => '设置愿望清单、登录重定向、新闻通讯订阅、默认组选项、电子邮件验证和社交登录。',
+                    'settings-info' => '设置心愿单、登录后跳转、新账户选项、邮件订阅、邮箱验证和社交登录。',
                     'title' => '設定',
 
                     'login-as-customer' => [
@@ -4680,19 +4917,20 @@ return [
 
                     'newsletter' => [
                         'subscription' => '允许订阅通讯信息',
+                        'subscription-info' => '在店铺页脚显示订阅表单。',
                         'title' => '通讯信息',
-                        'title-info' => '“通讯信息”是通过电子邮件定期向订阅者发送的更新、优惠或内容，帮助他们保持了解和参与。',
+                        'title-info' => '店铺的邮件订阅。',
                     ],
 
                     'email' => [
                         'email-verification' => '允许电子邮件验证',
                         'title' => '电子邮件验证',
-                        'title-info' => '“电子邮件验证”通过发送确认链接来验证电子邮件地址的有效性，增强账户安全性和通信可靠性。',
+                        'title-info' => '要求新客户先确认电子邮件地址才能登录。',
                     ],
 
                     'social-login' => [
                         'title' => '社交登录',
-                        'info' => '"社交登录"允许用户通过他们的社交媒体账户访问网站，从而简化注册和登录过程。',
+                        'info' => '允许客户使用外部账户登录。每个提供商都需要各自的客户端 ID 和密钥。',
 
                         'google' => [
                             'enable-google' => '启用Google',
@@ -4771,21 +5009,21 @@ return [
                         ],
 
                         'twitter' => [
-                            'enable-twitter' => '启用Twitter',
+                            'enable-twitter' => '启用 X（Twitter）',
 
                             'client-id' => [
                                 'title' => '客户端ID',
-                                'title-info' => 'Twitter在创建OAuth应用时提供的唯一标识符。',
+                                'title-info' => '创建 OAuth 应用时由 X 提供的唯一标识符。',
                             ],
 
                             'client-secret' => [
                                 'title' => '客户端密钥',
-                                'title-info' => '与您的Twitter OAuth客户端相关联的密钥。请保密。',
+                                'title-info' => '与您的 X OAuth 客户端关联的密钥。请妥善保密。',
                             ],
 
                             'redirect' => [
                                 'title' => '重定向URL',
-                                'title-info' => '用户在通过Twitter认证后被重定向的回调URL。使用显示的占位符URL格式（仅更改您的域名）。必须与您在Twitter控制台中配置的URL匹配。',
+                                'title-info' => '用户在 X 完成认证后跳转的回调 URL。请使用所示的 URL 格式（仅更改您的域名）。它必须与 X 开发者门户中配置的 URL 一致。',
                             ],
                         ],
                     ],
@@ -4793,18 +5031,25 @@ return [
             ],
 
             'email' => [
-                'info' => '电子邮件',
+                'info' => '邮件驱动、发件人信息以及店铺发送的通知。',
                 'title' => '电子邮件',
 
                 'smtp' => [
+                    'brevo-api-key' => 'Brevo API 密钥',
+                    'brevo-api-key-info' => '在您的 Brevo 账户的 SMTP & API 中创建 v3 API 密钥。',
+                    'driver' => '驱动',
+                    'driver-brevo-api' => 'Brevo (API)',
+                    'driver-info' => '选择您的商店发送电子邮件的方式。',
                     'driver-mismatch-info' => '您的邮件驱动已设置为 ":driver" 而不是 "bagisto-dynamic-smtp"。此处所做的任何更改都不会生效。请在 .env 文件中更新 MAIL_MAILER=bagisto-dynamic-smtp 以激活这些设置。',
                     'driver-mismatch-title' => '这些设置目前处于非活动状态。',
+                    'driver-notice' => '驱动提示',
+                    'driver-smtp' => 'SMTP',
                     'encryption' => '加密',
                     'host' => '主机',
-                    'info' => '配置SMTP服务器设置以从您的商店发送电子邮件。',
+                    'info' => '选择您的商店发送电子邮件的方式，并配置所选驱动。',
                     'password' => '密码',
                     'port' => '端口',
-                    'title' => 'SMTP',
+                    'title' => '邮件驱动',
                     'username' => '用户名',
                 ],
 
@@ -4818,12 +5063,13 @@ return [
                     'contact-email-tip' => '此邮箱地址将显示在您邮件的页脚中。',
                     'contact-name' => '联系人姓名',
                     'contact-name-tip' => '此名称将显示在您邮件的页脚中。',
-                    'info' => '配置用于所有电子邮件的发件人姓名、商店邮箱地址、管理员和联系方式。',
+                    'info' => '选择邮件的发送方式和发件地址。',
                     'sender-email' => '发件人邮箱地址',
                     'sender-email-tip' => '向客户发送的邮件将从此地址发出。',
                     'sender-name' => '发件人姓名',
                     'sender-name-tip' => '此名称将显示在客户收件箱中作为邮件发件人。',
                     'title' => '邮件设置',
+                    'title-info' => '店铺发送邮件所用的名称和地址，以及页脚显示的联系方式。',
                 ],
 
                 'notifications' => [
@@ -4831,7 +5077,7 @@ return [
                     'cancel-order-mail-to-admin' => '取消订单后向管理员发送通知邮件',
                     'customer' => '注册后向客户发送账户凭证',
                     'customer-registration-confirmation-mail-to-admin' => '客户注册后向管理员发送确认邮件',
-                    'info' => '配置接收账户验证、订单确认、发票更新、退款、发货和订单取消的邮件。',
+                    'info' => '选择发送给客户和管理员的邮件。',
                     'new-inventory-source' => '创建发货后向库存来源发送通知邮件',
                     'new-invoice' => '创建新发票后向客户发送通知邮件',
                     'new-invoice-mail-to-admin' => '创建新发票后向管理员发送通知邮件',
@@ -4843,16 +5089,17 @@ return [
                     'new-shipment-mail-to-admin' => '创建新发货后向管理员发送通知邮件',
                     'registration' => '客户注册后发送确认邮件',
                     'title' => '通知',
+                    'title-info' => '逐项开启或关闭通知邮件。',
                     'verification' => '客户注册后发送验证邮件',
                 ],
             ],
 
             'sales' => [
-                'info' => '销售',
+                'info' => '配送、支付、订单、发票、税费、结账和退货设置。',
                 'title' => '销售',
 
                 'shipping-setting' => [
-                    'info' => '配置配送设置，包括国家、省、市、地址、邮政编码、商店名称、增值税号和联系方式等。',
+                    'info' => '订单的发货地址。',
                     'title' => '配送设置',
 
                     'origin' => [
@@ -4864,14 +5111,14 @@ return [
                         'store-name' => '商店名称',
                         'street-address' => '街道地址',
                         'title' => '发货来源',
-                        'title-info' => '发货来源指的是商品在运输到目的地之前的起始地点。',
+                        'title-info' => '订单的发货地址，以及发票上显示的店铺信息。',
                         'vat-number' => '增值税号',
                         'zip' => '邮政编码',
                     ],
                 ],
 
                 'shipping-methods' => [
-                    'info' => '根据需要设置配送方式，包括免费配送、固定运费等。',
+                    'info' => '结账时提供的配送方式。',
                     'title' => '配送方式',
 
                     'free-shipping' => [
@@ -4879,7 +5126,7 @@ return [
                         'page-title' => '免费配送',
                         'status' => '状态',
                         'title' => '标题',
-                        'title-info' => '“免费配送”是指免收运费，由卖家承担将商品配送给买家的费用。',
+                        'title-info' => '不收取费用的配送方式。',
                     ],
 
                     'flat-rate-shipping' => [
@@ -4888,7 +5135,7 @@ return [
                         'rate' => '费用',
                         'status' => '状态',
                         'title' => '标题',
-                        'title-info' => '固定运费是指无论包裹的重量、大小或距离如何，始终收取固定金额的运费。这种方式简化了运费计算，对买卖双方都有利。',
+                        'title-info' => '按订单或按件收取固定费用的配送方式。',
                         'type' => [
                             'per-order' => '每订单',
                             'per-unit' => '每单位',
@@ -4909,36 +5156,46 @@ return [
                     'application-fee' => '应用费用支付方',
                     'business-account' => '商业账户',
                     'cash-on-delivery' => '货到付款',
-                    'cash-on-delivery-info' => '客户在收到商品或服务时以现金支付的付款方式。',
+                    'cash-on-delivery-info' => '允许客户在收货时以现金支付。',
                     'client-id' => '客户端 ID',
-                    'client-id-info' => '测试时使用“sb”。',
+                    'client-id-info' => '您 PayPal 应用的客户端 ID。开启沙盒时请使用沙盒应用的客户端 ID。',
                     'client-secret' => '客户端密钥',
-                    'client-secret-info' => '在此处添加密钥。',
+                    'client-secret-info' => '您 PayPal 应用的客户端密钥。',
                     'create-success-refund' => '退款创建成功。',
                     'description' => '描述',
                     'enable' => '启用',
                     'generate-invoice' => '在订单后自动生成发票',
                     'generate-invoice-applicable' => '适用于自动生成发票的情况',
-                    'info' => '设置支付方式的信息',
+                    'info' => '配置结账时提供的支付方式。',
                     'instructions' => '说明',
                     'logo' => '标志',
-                    'logo-information' => '图像分辨率应为 55px × 45px',
+                    'logo-information' => '建议尺寸：55 x 45 像素。',
                     'mailing-address' => '邮寄地址',
                     'merchant-description' => '商户描述',
                     'merchant-id' => '商户ID',
                     'merchant-key' => '商户密钥',
                     'merchant-name' => '商户名称',
+                    'merchant-private-key' => 'Merchant Private Key',
+                    'merchant-private-key-info' => 'Paste the contents of the private key PEM file generated in the PayGlocal dashboard. It is used to sign requests.',
                     'merchant-salt' => '商户盐值',
                     'money-transfer' => '汇款',
-                    'money-transfer-info' => '资金的转移，通常以电子方式进行。可用于交易、支付等多种目的。',
+                    'money-transfer-info' => '允许客户通过银行转账或支票支付。',
                     'page-title' => '支付方式',
                     'paid' => '已支付',
+                    'payglocal' => 'PayGlocal',
+                    'payglocal-info' => 'Accept cross border payments through PayGlocal. <a href="https://dashboard.payglocal.in/app/mca/h8271x" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline hover:text-blue-700">Sign up here to get your credentials.</a>',
+                    'payglocal-merchant-id-info' => 'Available in the PayGlocal dashboard under My Account.',
+                    'payglocal-private-key-id-info' => 'The key ID of your private key, shown in the PayGlocal dashboard.',
+                    'payglocal-public-key' => 'PayGlocal Public Key',
+                    'payglocal-public-key-id-info' => 'The key ID of the PayGlocal public key, shown in the PayGlocal dashboard.',
+                    'payglocal-public-key-info' => 'Paste the contents of the PayGlocal public key PEM file. It is used to encrypt requests and to verify responses.',
+                    'payglocal-sandbox-info' => 'Send payments to the PayGlocal test environment.',
                     'paypal-smart-button' => 'PayPal',
-                    'paypal-smart-button-info' => 'PayPal 智能按钮：一种定制化的按钮，用于简化在线支付，提供多种安全的交易方式。',
+                    'paypal-smart-button-info' => '在结账时显示 PayPal 按钮，让客户使用 PayPal 或银行卡支付。',
                     'paypal-standard' => '标准 PayPal',
-                    'paypal-standard-info' => '标准 PayPal 提供基础支付选项，允许客户使用 PayPal 账户或信用/借记卡支付。',
+                    'paypal-standard-info' => '将客户跳转到 PayPal，使用 PayPal 账户或银行卡支付。',
                     'payu' => 'PayU',
-                    'payu-info' => '配置 PayU 支付网关设置',
+                    'payu-info' => '通过 PayU 接受付款。',
                     'payu-merchant-key-info' => '输入从 PayU 仪表板获取的商户密钥',
                     'payu-merchant-salt-info' => '输入从 PayU 仪表板获取的商户盐值',
                     'pending' => '待处理',
@@ -4948,10 +5205,12 @@ return [
                     'phonepe-client-id-info' => '输入从 PhonePe 仪表板获取的 PhonePe 客户端 ID',
                     'phonepe-client-secret-info' => '输入从 PhonePe 仪表板获取的 PhonePe 客户端机密',
                     'phonepe-merchant-info' => '输入从 PhonePe 仪表板获取的 PhonePe 商家 ID',
+                    'private-key-id' => 'Private Key ID',
                     'processing' => '处理中',
                     'production-mode-info' => '仅限生产模式。',
+                    'public-key-id' => 'Public Key ID',
                     'razorpay' => 'Razorpay',
-                    'razorpay-info' => 'Razorpay 是一个金融技术平台，帮助企业接受、处理和支付款项。',
+                    'razorpay-info' => '通过 Razorpay 接受付款。',
                     'sandbox' => '沙盒',
                     'set-invoice-status' => '设置发票生成后的状态',
                     'set-order-status' => '设置发票生成后的订单状态',
@@ -4959,7 +5218,7 @@ return [
                     'statement-descriptor' => '账单描述',
                     'status' => '状态',
                     'stripe' => 'Stripe',
-                    'stripe-info' => '配置Stripe支付网关设置以进行安全的在线交易',
+                    'stripe-info' => '通过 Stripe 接受银行卡付款。',
                     'test-client-id' => '测试模式客户端 ID',
                     'test-client-secret' => '测试模式客户端密钥',
                     'test-mode-info' => '仅限测试/沙盒模式。',
@@ -4967,7 +5226,7 @@ return [
                 ],
 
                 'order-settings' => [
-                    'info' => '设置订单编号、最低订单量和预购选项。',
+                    'info' => '订单创建重试次数、订单编号、最低订单金额和再次下单。',
                     'title' => '订单设置',
 
                     'order-creation' => [
@@ -4978,7 +5237,7 @@ return [
 
                     'order-number' => [
                         'generator' => '订单编号生成器',
-                        'info' => '为每个订单分配唯一的标识符，用于跟踪和管理整个购买流程。',
+                        'info' => '生成的订单编号的构成方式。',
                         'length' => '订单编号长度',
                         'prefix' => '订单编号前缀',
                         'suffix' => '订单编号后缀',
@@ -4990,17 +5249,17 @@ return [
                         'enable' => '启用',
                         'include-discount-amount' => '包括折扣金额',
                         'include-tax-amount' => '包括税额',
-                        'info' => '设置最低要求的订单数量或金额，以便订单能够被处理或享受优惠。',
+                        'info' => '客户可以结账的最低订单金额。',
                         'minimum-order-amount' => '最低订单金额',
                         'title' => '最低订单设置',
                     ],
 
                     'reorder' => [
                         'admin-reorder' => '管理员重新订购',
-                        'admin-reorder-info' => '启用或禁用管理员用户的重新订购功能。',
-                        'info' => '启用或禁用店铺用户的重新订购功能。',
+                        'admin-reorder-info' => '允许管理员在后台重新提交订单。',
+                        'info' => '允许在后台或店铺中重新提交订单。',
                         'shop-reorder' => '店铺重新订购',
-                        'shop-reorder-info' => '启用或禁用店铺用户的重新订购功能。',
+                        'shop-reorder-info' => '允许客户在店铺中重新提交订单。',
                         'title' => '允许重新订购',
                     ],
 
@@ -5012,12 +5271,12 @@ return [
                 ],
 
                 'invoice-settings' => [
-                    'info' => '设置发票编号、支付条款、发票设计和提醒功能。',
+                    'info' => '发票编号、付款条件、PDF 打印和催款提醒。',
                     'title' => '发票设置',
 
                     'invoice-number' => [
                         'generator' => '发票编号生成器',
-                        'info' => '生成并分配唯一的发票编号，用于组织和跟踪。',
+                        'info' => '生成的发票编号的构成方式。',
                         'length' => '发票编号长度',
                         'prefix' => '发票编号前缀',
                         'suffix' => '发票编号后缀',
@@ -5028,7 +5287,7 @@ return [
                         'due-duration' => '到期时间',
                         'due-duration-day' => ':due-duration 天',
                         'due-duration-days' => ':due-duration 天',
-                        'info' => '定义买方需要支付卖方的时间和方式。',
+                        'info' => '发票开具后多久到期。',
                         'title' => '支付条款',
                     ],
 
@@ -5046,7 +5305,7 @@ return [
                     ],
 
                     'invoice-reminders' => [
-                        'info' => '自动通知客户有关发票即将到期、接近付款期限或已逾期的信息。',
+                        'info' => '未付发票发送多少次付款提醒，以及提醒间隔。',
                         'interval-between-reminders' => '提醒间隔',
                         'maximum-limit-of-reminders' => '提醒的最大次数',
                         'title' => '发票提醒',
@@ -5055,11 +5314,11 @@ return [
 
                 'taxes' => [
                     'title' => '税费',
-                    'title-info' => '税费是政府对商品、服务或交易征收的强制性费用，由卖方代为收取并上缴税务机关。',
+                    'title-info' => '税种、税费的计算方式和显示方式。',
 
                     'categories' => [
                         'title' => '税费类别',
-                        'title-info' => '税费类别是对不同税种（如销售税、增值税、消费税等）的分类，用于对产品或服务进行税率分类和应用。',
+                        'title-info' => '应用于配送的税种，以及新商品默认的税种。',
                         'product' => '产品默认税费类别',
                         'shipping' => '运费税费类别',
                         'none' => '无',
@@ -5079,7 +5338,7 @@ return [
                         'shipping-origin' => '发货地',
                         'shipping-prices' => '运费',
                         'title' => '计算设置',
-                        'title-info' => '与商品或服务的价格、折扣、税费、附加费用等相关的详细信息。',
+                        'title-info' => '税费的计算基础，以及所填价格是否已含税。',
                     ],
 
                     'default-destination-calculation' => [
@@ -5087,14 +5346,14 @@ return [
                         'default-post-code' => '默认邮政编码',
                         'default-state' => '默认省/州',
                         'title' => '默认目的地计算',
-                        'title-info' => '根据预定义的元素或设置，自动确定标准或初始目的地。',
+                        'title-info' => '客户填写自己的地址前，用于计算税费的地址。',
                     ],
 
                     'shopping-cart' => [
                         'show-tax-breakdown' => '显示税费明细',
                         'show-tax-breakdown-info' => '在购物车和结账摘要中显示按商品、按税率的详细税费明细。用于调试。',
                         'title' => '购物车显示设置',
-                        'title-info' => '设置购物车中税费的显示方式。',
+                        'title-info' => '税费在购物车和结账时的显示方式。',
                         'display-prices' => '显示价格',
                         'display-subtotal' => '显示小计',
                         'display-shipping-amount' => '显示运费',
@@ -5105,7 +5364,7 @@ return [
 
                     'sales' => [
                         'title' => '订单、发票和退款显示设置',
-                        'title-info' => '设置订单、发票和退款中税费的显示方式。',
+                        'title-info' => '税费在订单、发票和退款中的显示方式。',
                         'display-prices' => '显示价格',
                         'display-subtotal' => '显示小计',
                         'display-shipping-amount' => '显示运费',
@@ -5117,7 +5376,7 @@ return [
 
                 'checkout' => [
                     'title' => '结账',
-                    'info' => '设置访客结账功能，启用或禁用迷你购物车和购物车摘要。',
+                    'info' => '访客结账、购物车页面、迷你购物车和购物车汇总。',
 
                     'shopping-cart' => [
                         'cart-page' => '购物车页面',
@@ -5128,21 +5387,21 @@ return [
                         'estimate-shipping-info' => '启用运费估算功能，提前提供运费信息。',
                         'guest-checkout' => '允许访客结账',
                         'guest-checkout-info' => '启用访客结账功能，实现快捷和无障碍的购买流程。',
-                        'info' => '通过启用访客结账、购物车页面、交叉销售商品和运费估算，提升用户便利性，简化购物流程并提高销售额。',
+                        'info' => '访客结账、购物车页面、交叉销售商品和预估运费。',
                         'title' => '购物车',
                     ],
 
                     'my-cart' => [
                         'display-item-quantities' => '显示商品数量',
                         'display-number-in-cart' => '显示购物车中的商品数量',
-                        'info' => '启用“我的购物车”设置以显示商品数量概览，并显示购物车中商品总数，方便追踪。',
+                        'info' => '购物车计数显示商品总数量还是商品条目数。',
                         'summary' => '概要',
                         'title' => '我的购物车',
                     ],
 
                     'mini-cart' => [
                         'display-mini-cart' => '显示迷你购物车',
-                        'info' => '启用迷你购物车设置以显示迷你购物车，并显示迷你购物车优惠信息，便于快速访问购物车详情和促销活动。',
+                        'info' => '显示迷你购物车，以及其中展示的优惠文案。',
                         'mini-cart-offer-info' => '迷你购物车优惠信息',
                         'title' => '迷你购物车',
                     ],
@@ -5172,7 +5431,7 @@ return [
                     'evening' => '晚上',
                     'exchange' => '换货',
                     'file-extension-info' => '客户和管理员可在退货请求中附加的文件类型，例如产品照片或佐证文件。',
-                    'info' => 'RMA是将产品退还给企业以获得退款、替换或修理的过程的一部分。',
+                    'info' => '客户下单后可申请的退货。',
                     'morning' => '早上',
                     'new-rma-message-to-customer' => '给客户的新RMA消息',
                     'no' => '否',
@@ -5225,14 +5484,29 @@ return [
                 'warning-config-closures' => '如果任何配置文件返回闭包，config:cache 将失败。',
                 'warning-permissions' => '文件系统权限问题可能会阻止缓存生成或清除。',
                 'invalid-action' => '请求了无效的缓存操作。',
-                'action-success' => '命令 ":action" 执行成功。',
-                'action-failed' => '命令 ":action" 失败。请检查下方输出。',
+                'action-success' => '“:action”已成功完成。',
+                'action-failed' => '“:action”失败。请查看下方输出。',
                 'action-exception' => '缓存操作失败：:message',
                 'clear-console' => '清除控制台',
                 'console-title' => '输出控制台',
                 'console-entries' => '条记录',
                 'console-empty' => '运行缓存操作以在此处查看输出...',
                 'console-unknown-error' => '发生意外错误。',
+
+                'results' => [
+                    'clear-all' => '所有缓存已清除。',
+                    'clear-config' => '配置缓存已清除。',
+                    'clear-cache' => '应用缓存已清除。',
+                    'clear-compiled' => '已删除编译的类文件。',
+                    'clear-events' => '事件缓存已清除。',
+                    'clear-routes' => '路由缓存已清除。',
+                    'clear-views' => '已清除编译的视图。',
+                    'clear-page-cache' => '页面缓存已清除。每个店面页面将在下次访问时重新生成。',
+                    'build-all' => '所有缓存已重建。',
+                    'build-config' => '配置缓存已生成。',
+                    'build-routes' => '路由缓存已生成。',
+                    'build-views' => '视图已编译。',
+                ],
 
                 'actions' => [
                     'clear-all' => '清除所有缓存',
@@ -5242,10 +5516,27 @@ return [
                     'clear-events' => '清除事件缓存',
                     'clear-routes' => '清除路由缓存',
                     'clear-views' => '清除视图缓存',
+                    'clear-page-cache' => '清除页面缓存',
                     'build-all' => '重建所有缓存',
                     'build-config' => '缓存配置',
                     'build-routes' => '缓存路由',
                     'build-views' => '缓存视图',
+                ],
+
+                'full-page-cache' => [
+                    'title' => 'Full Page Cache',
+                    'info' => 'Serve rendered storefront pages from a cache instead of building them for every visitor.',
+
+                    'settings' => [
+                        'title' => 'Settings',
+                        'info' => 'Turn the page cache on or off and choose how long a page stays cached.',
+                        'enabled' => 'Enable Full Page Cache',
+                        'enabled-info' => 'Storefront pages are served from the cache. Turning this off makes every page render again on each visit.',
+                        'lifetime' => 'Cache Lifetime (Minutes)',
+                        'lifetime-info' => 'How long a cached page is kept before it is rendered again. Leave empty to use the application default.',
+                        'flush' => '清除页面缓存',
+                        'flush-info' => '清空页面缓存，使每个店面页面在下次访问时重新生成。',
+                    ],
                 ],
             ],
         ],
@@ -5280,6 +5571,10 @@ return [
             ],
 
             'sidebar' => [
+
+                'appearance' => '外观',
+
+                'sections' => '版块',
                 'attribute-families' => '属性族',
                 'attributes' => '属性',
                 'booking-product' => '预订',
@@ -5352,6 +5647,7 @@ return [
 
             'toolbar' => [
                 'length-of' => ':length 的',
+                'sort-by' => '排序方式',
                 'of' => '的',
                 'per-page' => '每页',
                 'results' => ':total 结果',
@@ -5420,6 +5716,17 @@ return [
                     'today' => '今天',
                     'yesterday' => '昨天',
                 ],
+
+                'number-options' => [
+                    'between' => 'Between',
+                    'equals' => 'Equals',
+                    'from' => 'From',
+                    'greater-than' => 'Greater Than',
+                    'greater-than-or-equal' => 'Greater Than Or Equal',
+                    'less-than' => 'Less Than',
+                    'less-than-or-equal' => 'Less Than Or Equal',
+                    'to' => 'To',
+                ],
             ],
 
             'table' => [
@@ -5456,6 +5763,7 @@ return [
                 'ai-add-image-btn' => '魔法 AI',
                 'ai-btn-info' => '生成图像',
                 'allowed-types' => 'png, jpeg, jpg',
+                'image' => '图片',
                 'not-allowed-error' => '仅允许图像文件（.jpeg、.jpg、.png 等）。',
 
                 'ai-generation' => [
@@ -5486,12 +5794,33 @@ return [
                     'use-cases' => '用途',
                     'zoom' => '缩放',
                 ],
+
+                'seo' => [
+                    'alt-text' => '替代文本',
+                    'alt-text-info' => '保存到当前所选语言。留空时使用商品名称。',
+                    'alt-text-placeholder' => '描述图片中显示的内容',
+                    'done-btn' => '完成',
+                    'file-name' => '文件名',
+                    'file-name-info' => '重命名会改变图片的 URL。旧的 URL 将失效，可能影响图片搜索排名。',
+                    'file-name-placeholder' => 'blue-running-shoe-side',
+                    'info' => '改善搜索引擎和屏幕阅读器对这张图片的理解。',
+                    'replace' => '替换图片',
+                    'replace-btn' => '选择文件',
+                    'replace-info' => '上方的替代文本和文件名将保留给新图片。',
+                    'title' => '图片 SEO',
+                ],
             ],
 
             'videos' => [
                 'add-video-btn' => '添加视频',
                 'allowed-types' => 'mp4, webm, mkv',
                 'not-allowed-error' => '仅允许视频文件（.mp4、.mov、.ogg 等）。',
+                'video' => '视频',
+
+                'seo' => [
+                    'info' => '为视频文件取一个描述性的名称。',
+                    'title' => '视频 SEO',
+                ],
             ],
         ],
 
@@ -5523,6 +5852,12 @@ return [
     ],
 
     'acl' => [
+
+        'activate' => '启用',
+
+        'appearance' => '外观',
+
+        'sections' => '版块',
         'addresses' => '地址',
         'attribute-families' => '属性家族',
         'attributes' => '属性',

@@ -42,7 +42,7 @@ return [
             'page-title' => 'Masuk Pelanggan',
             'password' => 'Kata Sandi',
             'resend-verification' => 'Kirim Ulang Email Verifikasi',
-            'show-password' => 'Tampilkan Kata Sandi',
+            'social-account-exists' => 'Akun dengan email ini sudah ada. Silakan masuk dengan email dan kata sandi Anda.',
             'title' => 'Masuk',
             'verify-first' => 'Harap verifikasi akun email Anda terlebih dahulu.',
         ],
@@ -373,6 +373,7 @@ return [
                 'remaining-downloads' => 'Sisa Unduhan',
                 'status' => 'Status',
                 'title' => 'Judul',
+                'unlimited' => 'Tidak terbatas',
             ],
 
             'wishlist' => [
@@ -545,6 +546,14 @@ return [
             'default-toggle' => 'Toggel Default',
         ],
 
+        'form' => [
+            'control-group' => [
+                'control' => [
+                    'show-password' => 'Tampilkan Kata Sandi',
+                ],
+            ],
+        ],
+
         'media' => [
             'index' => [
                 'add-attachments' => 'Tambahkan Lampiran',
@@ -689,6 +698,17 @@ return [
 
                     'custom-filters' => [
                         'clear-all' => 'Hapus Semua',
+                    ],
+
+                    'number-options' => [
+                        'between' => 'Between',
+                        'equals' => 'Equals',
+                        'from' => 'From',
+                        'greater-than' => 'Greater Than',
+                        'greater-than-or-equal' => 'Greater Than Or Equal',
+                        'less-than' => 'Less Than',
+                        'less-than-or-equal' => 'Less Than Or Equal',
+                        'to' => 'To',
                     ],
                 ],
             ],
@@ -1152,6 +1172,9 @@ return [
             'address' => [
                 'add-new' => 'Tambah alamat baru',
                 'add-new-address' => 'Tambah alamat baru',
+                'address-updated-payment-info' => 'Metode pembayaran dan total pesanan akan diperbarui untuk alamat baru Anda. Klik Lanjut untuk melihat opsi terbaru.',
+                'address-updated-shipping-info' => 'Metode pengiriman dan tarif akan dihitung ulang untuk alamat baru Anda. Klik Lanjut untuk melihat opsi terbaru.',
+                'address-updated-title' => 'Alamat Anda telah diperbarui',
                 'back' => 'Kembali',
                 'billing-address' => 'Alamat Tagihan',
                 'check-billing-address' => 'Alamat tagihan belum diisi.',
@@ -1255,6 +1278,7 @@ return [
             'categories-carousel' => 'Carousel Kategori',
             'image-carousel' => 'Carousel Gambar',
             'offer' => 'Dapatkan DISKON HINGGA 40% untuk pesanan pertama Anda BELI SEKARANG',
+            'preview-banner' => 'Pratinjau tema :theme pada saluran :channel. Tautan dinonaktifkan dalam pratinjau.',
             'product-carousel' => 'Carousel Produk',
             'resend-verify-email' => 'Kirim Ulang Email Verifikasi',
             'verify-email' => 'Verifikasi akun email Anda',
@@ -1760,7 +1784,9 @@ return [
 
         'response' => [
             'already-cancel' => 'Status RMA sudah dibatalkan.',
+            'cancel-not-allowed' => 'Membatalkan permintaan RMA ini tidak diizinkan.',
             'cancel-success' => 'Status RMA berhasil dibatalkan.',
+            'close-not-allowed' => 'Menutup permintaan RMA ini tidak diizinkan.',
             'create-success' => 'Permintaan berhasil dibuat.',
             'creation-error' => 'Status RMA tidak dapat diperbarui karena faktur untuk pesanan ini belum dibuat.',
             'invalid-item' => 'Item pesanan yang dipilih tidak valid.',

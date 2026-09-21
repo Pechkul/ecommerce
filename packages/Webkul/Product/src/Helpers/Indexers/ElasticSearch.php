@@ -4,6 +4,7 @@ namespace Webkul\Product\Helpers\Indexers;
 
 use Elastic\Elasticsearch\Exception\ClientResponseException;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\DB;
 use Webkul\Attribute\Contracts\Attribute;
 use Webkul\Attribute\Enums\AttributeTypeEnum;
 use Webkul\Attribute\Repositories\AttributeRepository;
@@ -18,6 +19,11 @@ use Webkul\Product\Repositories\ProductRepository;
 
 class ElasticSearch extends AbstractIndexer
 {
+    /**
+     * How long a scroll of an index stays open between batches.
+     */
+    protected const SCROLL_TIMEOUT = '1m';
+
     /**
      * Batch size.
      *
@@ -127,37 +133,29 @@ class ElasticSearch extends AbstractIndexer
      */
     public function reindexFull()
     {
-        while (true) {
-            $paginator = $this->productRepository
-                ->select('products.*')
-                ->with([
-                    'channels',
-                    'categories',
-                    'inventories',
-                    'super_attributes',
-                    'variants',
-                    'variants.channels',
-                    'attribute_family',
-                    'attribute_values',
-                    'variants.attribute_family',
-                    'variants.attribute_values',
-                    'price_indices',
-                    'variants.price_indices',
-                    'inventory_indices',
-                    'variants.inventory_indices',
-                ])
-                ->cursorPaginate($this->batchSize);
+        $this->productRepository
+            ->select('products.*')
+            ->with([
+                'channels',
+                'categories',
+                'inventories',
+                'super_attributes',
+                'variants',
+                'variants.channels',
+                'attribute_family',
+                'attribute_values',
+                'variants.attribute_family',
+                'variants.attribute_values',
+                'price_indices',
+                'variants.price_indices',
+                'inventory_indices',
+                'variants.inventory_indices',
+            ])
+            ->chunkById($this->batchSize, function ($products) {
+                $this->reindexBatch($products->all());
+            }, 'products.id', 'id');
 
-            $this->reindexBatch($paginator->items());
-
-            if (! $cursor = $paginator->nextCursor()) {
-                break;
-            }
-
-            request()->query->add(['cursor' => $cursor->encode()]);
-        }
-
-        request()->query->remove('cursor');
+        $this->purgeOrphanedIndices();
     }
 
     /**
@@ -231,6 +229,29 @@ class ElasticSearch extends AbstractIndexer
     }
 
     /**
+     * Drop documents whose product is no longer in the catalog.
+     *
+     * A document is otherwise only dropped when the product it describes fires its delete event,
+     * so an index outlives a catalog that was wiped and re-seeded. The admin grid pages on the
+     * count Elasticsearch reports while reading its rows out of `product_flat`, so a document
+     * with no product behind it inflates the total and leaves a blank row in its place.
+     *
+     * @return void
+     */
+    public function purgeOrphanedIndices()
+    {
+        foreach ($this->getChannels() as $channel) {
+            $this->setChannel($channel);
+
+            foreach ($channel->locales as $locale) {
+                $this->setLocale($locale);
+
+                $this->purgeOrphanedIndex($this->getIndexName());
+            }
+        }
+    }
+
+    /**
      * Refresh product indices.
      *
      * @return string
@@ -254,6 +275,9 @@ class ElasticSearch extends AbstractIndexer
             'attribute_family_id' => $this->product->attribute_family_id,
             'category_ids' => $this->product->categories->pluck('id')->toArray(),
             'created_at' => $this->product->created_at,
+            'quantity' => $this->product->inventories->isEmpty()
+                ? null
+                : (int) $this->product->inventories->sum('qty'),
         ], $this->product->additional ?? []);
 
         $attributes = $this->getAttributes();
@@ -395,5 +419,53 @@ class ElasticSearch extends AbstractIndexer
         }
 
         return $this->customerGroups = $this->customerGroupRepository->all();
+    }
+
+    /**
+     * Drop the documents of one index whose product is no longer in the catalog.
+     *
+     * Walked with a scroll and checked in batches, so an index far larger than the catalog costs
+     * no more memory than one batch of ids.
+     *
+     * @param  string  $indexName
+     * @return void
+     */
+    protected function purgeOrphanedIndex($indexName)
+    {
+        try {
+            $response = ElasticSearchClient::search([
+                'index' => $indexName,
+                'scroll' => self::SCROLL_TIMEOUT,
+                'body' => [
+                    'size' => $this->batchSize,
+                    'stored_fields' => [],
+                    'query' => [
+                        'match_all' => new \stdClass,
+                    ],
+                ],
+            ]);
+        } catch (ClientResponseException $e) {
+            return;
+        }
+
+        while (! empty($response['hits']['hits'])) {
+            $indexedIds = array_map('intval', array_column($response['hits']['hits'], '_id'));
+
+            $orphanedIds = array_diff(
+                $indexedIds,
+                DB::table('products')->whereIn('id', $indexedIds)->pluck('id')->all()
+            );
+
+            if (! empty($orphanedIds)) {
+                $this->deleteIndices([$indexName => $orphanedIds]);
+            }
+
+            $response = ElasticSearchClient::scroll([
+                'scroll_id' => $response['_scroll_id'],
+                'scroll' => self::SCROLL_TIMEOUT,
+            ]);
+        }
+
+        ElasticSearchClient::clearScroll(['scroll_id' => $response['_scroll_id']]);
     }
 }

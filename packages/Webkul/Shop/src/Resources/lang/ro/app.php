@@ -42,7 +42,7 @@ return [
             'page-title' => 'Autentificare client',
             'password' => 'Parolă',
             'resend-verification' => 'Retrimite emailul de verificare',
-            'show-password' => 'Afișează parola',
+            'social-account-exists' => 'Există deja un cont cu acest e-mail. Vă rugăm să vă autentificați cu e-mailul și parola.',
             'title' => 'Autentificare',
             'verify-first' => 'Verificați mai întâi contul de e-mail.',
         ],
@@ -373,6 +373,7 @@ return [
                 'remaining-downloads' => 'Descărcări rămase',
                 'status' => 'Stare',
                 'title' => 'Titlu',
+                'unlimited' => 'Nelimitat',
             ],
 
             'wishlist' => [
@@ -545,6 +546,14 @@ return [
             'default-toggle' => 'Comutare implicită',
         ],
 
+        'form' => [
+            'control-group' => [
+                'control' => [
+                    'show-password' => 'Afișează parola',
+                ],
+            ],
+        ],
+
         'media' => [
             'index' => [
                 'add-attachments' => 'Adaugă atașamente',
@@ -689,6 +698,17 @@ return [
 
                     'custom-filters' => [
                         'clear-all' => 'Șterge tot',
+                    ],
+
+                    'number-options' => [
+                        'between' => 'Between',
+                        'equals' => 'Equals',
+                        'from' => 'From',
+                        'greater-than' => 'Greater Than',
+                        'greater-than-or-equal' => 'Greater Than Or Equal',
+                        'less-than' => 'Less Than',
+                        'less-than-or-equal' => 'Less Than Or Equal',
+                        'to' => 'To',
                     ],
                 ],
             ],
@@ -1152,6 +1172,9 @@ return [
             'address' => [
                 'add-new' => 'Adaugă adresă nouă',
                 'add-new-address' => 'Adaugă adresă nouă',
+                'address-updated-payment-info' => 'Metodele de plată și totalurile comenzii vor fi actualizate pentru noua dumneavoastră adresă. Faceți clic pe Continuă pentru a vedea cele mai recente opțiuni.',
+                'address-updated-shipping-info' => 'Metodele de expediere și tarifele vor fi recalculate pentru noua dumneavoastră adresă. Faceți clic pe Continuă pentru a vedea cele mai recente opțiuni.',
+                'address-updated-title' => 'Adresa dumneavoastră a fost actualizată',
                 'back' => 'Înapoi',
                 'billing-address' => 'Adresa de facturare',
                 'check-billing-address' => 'Adresa de facturare lipsește.',
@@ -1255,6 +1278,7 @@ return [
             'categories-carousel' => 'Carusel categorii',
             'image-carousel' => 'Carusel imagini',
             'offer' => 'Obțineți până la 40% REDUCERE la prima comandă CUMPĂRĂ ACUM',
+            'preview-banner' => 'Previzualizarea temei :theme pe canalul :channel. Linkurile sunt dezactivate în previzualizare.',
             'product-carousel' => 'Carusel produse',
             'resend-verify-email' => 'Retrimite e-mailul de verificare',
             'verify-email' => 'Verificați contul de e-mail',
@@ -1760,7 +1784,9 @@ return [
 
         'response' => [
             'already-cancel' => 'RMA status already canceled.',
+            'cancel-not-allowed' => 'Anularea acestei solicitări RMA nu este permisă.',
             'cancel-success' => 'RMA status canceled successfully.',
+            'close-not-allowed' => 'Închiderea acestei solicitări RMA nu este permisă.',
             'create-success' => 'Request created successfully.',
             'creation-error' => 'RMA status cannot be updated as the invoice for this order has not been created.',
             'invalid-item' => 'Articolul de comandă selectat nu este valid.',

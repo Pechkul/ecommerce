@@ -42,7 +42,7 @@ return [
             'page-title' => 'ප්‍රමාණවත් වීම',
             'password' => 'මුරපදය',
             'resend-verification' => 'තහවුරු කිරීමේ විද්‍යුත් තැපෑල නැවත යවන්න',
-            'show-password' => 'මුරපදය පෙන්වන්න',
+            'social-account-exists' => 'මෙම ඊමේල් ලිපිනය සහිත ගිණුමක් දැනටමත් පවතී. කරුණාකර ඔබේ ඊමේල් ලිපිනය සහ මුරපදය භාවිතයෙන් පුරනය වන්න.',
             'title' => 'සන්නියයෙන් ඇතුලත් වන්න',
             'verify-first' => 'කරුණාකර ඔබගේ ඊමේල් ගිණුමක් පෙනෙන පෙනුමට පිළිගනිමු.',
         ],
@@ -373,6 +373,7 @@ return [
                 'remaining-downloads' => 'සිංහල බාගතු කිරීම්',
                 'status' => 'තත්ත්වය',
                 'title' => 'බාගත කිරීම්',
+                'unlimited' => 'අසීමිත',
             ],
 
             'wishlist' => [
@@ -545,6 +546,14 @@ return [
             'default-toggle' => 'පෙරනි එකක් සැකසෙමින්',
         ],
 
+        'form' => [
+            'control-group' => [
+                'control' => [
+                    'show-password' => 'මුරපදය පෙන්වන්න',
+                ],
+            ],
+        ],
+
         'media' => [
             'index' => [
                 'add-attachments' => 'ඇඩෙක්මෙන්ට් එකක් එක්කරන්න',
@@ -689,6 +698,17 @@ return [
 
                     'custom-filters' => [
                         'clear-all' => 'සියල්ල මකන්න',
+                    ],
+
+                    'number-options' => [
+                        'between' => 'Between',
+                        'equals' => 'Equals',
+                        'from' => 'From',
+                        'greater-than' => 'Greater Than',
+                        'greater-than-or-equal' => 'Greater Than Or Equal',
+                        'less-than' => 'Less Than',
+                        'less-than-or-equal' => 'Less Than Or Equal',
+                        'to' => 'To',
                     ],
                 ],
             ],
@@ -1152,6 +1172,9 @@ return [
             'address' => [
                 'add-new' => 'නව ලිපිනයක් එක් කරන්න',
                 'add-new-address' => 'නව ලිපිනයක් එක් කරන්න',
+                'address-updated-payment-info' => 'ඔබගේ නව ලිපිනය සඳහා ගෙවීම් ක්‍රම සහ ඇණවුම් එකතුව යාවත්කාලීන කෙරේ. නවතම විකල්ප බැලීමට "ඉදිරිපත් වන්න" ක්ලික් කරන්න.',
+                'address-updated-shipping-info' => 'ඔබගේ නව ලිපිනය සඳහා භාණ්ඩ ප්‍රවාහන ක්‍රම සහ ගාස්තු නැවත ගණනය කෙරේ. නවතම විකල්ප බැලීමට "ඉදිරිපත් වන්න" ක්ලික් කරන්න.',
+                'address-updated-title' => 'ඔබගේ ලිපිනය යාවත්කාලීන කරන ලදී',
                 'back' => 'ආපසු',
                 'billing-address' => 'බිල්පොය ලිපිනය',
                 'check-billing-address' => 'බිල්පත් ලිපිනය අසාර්ථකයි.',
@@ -1255,6 +1278,7 @@ return [
             'categories-carousel' => 'කාණ්ඩ කාරසෙල්',
             'image-carousel' => 'රූප කාරසෙල්',
             'offer' => 'ඔබේ පළමු ඇනවුමට 40% ක විශේෂ වට්ටම් ලබා ගන්න, දැන් සෙවීම',
+            'preview-banner' => ':channel නාලිකාවේ :theme තේමාව පෙරදසුන් කරයි. පෙරදසුනේ සබැඳි අක්‍රිය කර ඇත.',
             'product-carousel' => 'නිෂ්පාදන කාරසෙල්',
             'resend-verify-email' => 'තහවුරු කිරීමේ විද්‍යුත් තැපැල් නැවත යවන්න',
             'verify-email' => 'ඔබේ විද්‍යුත් තැපෑල තහවුරු කරන්න',
@@ -1760,7 +1784,9 @@ return [
 
         'response' => [
             'already-cancel' => 'RMA තත්ත්වය දැනටමත් අවලංගු වී ඇත.',
+            'cancel-not-allowed' => 'මෙම RMA ඉල්ලීම අවලංගු කිරීමට අවසර නැත.',
             'cancel-success' => 'RMA තත්ත්වය සාර්ථකව අවලංගු කෙරිණි.',
+            'close-not-allowed' => 'මෙම RMA ඉල්ලීම වැසීමට අවසර නැත.',
             'create-success' => 'ඉල්ලීම සාර්ථකව සාදන ලදී.',
             'creation-error' => 'RMA තත්ත්වය යාවත්කාලීන කළ නොහැක क्योंकि මෙම ඇණවුම සඳහා අයපත්‍රය තාපයට සකසා නැත.',
             'invalid-item' => 'තෝරාගත් ඇණවුම් අයිතමය වලංගු නොවේ.',

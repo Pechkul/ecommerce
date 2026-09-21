@@ -42,7 +42,7 @@ return [
             'page-title' => 'ورود مشتری',
             'password' => 'رمز عبور',
             'resend-verification' => 'ارسال مجدد ایمیل تأیید',
-            'show-password' => 'نمایش رمز عبور',
+            'social-account-exists' => 'حسابی با این ایمیل از قبل وجود دارد. لطفاً با ایمیل و رمز عبور خود وارد شوید.',
             'title' => 'ورود',
             'verify-first' => 'ابتدا حساب ایمیل خود را تأیید کنید.',
         ],
@@ -373,6 +373,7 @@ return [
                 'remaining-downloads' => 'دانلودهای باقیمانده',
                 'status' => 'وضعیت',
                 'title' => 'عنوان',
+                'unlimited' => 'نامحدود',
             ],
 
             'wishlist' => [
@@ -545,6 +546,14 @@ return [
             'default-toggle' => 'کلیک کردن پیش‌فرض',
         ],
 
+        'form' => [
+            'control-group' => [
+                'control' => [
+                    'show-password' => 'نمایش رمز عبور',
+                ],
+            ],
+        ],
+
         'media' => [
             'index' => [
                 'add-attachments' => 'افزودن پیوست',
@@ -689,6 +698,17 @@ return [
 
                     'custom-filters' => [
                         'clear-all' => 'پاک کردن همه',
+                    ],
+
+                    'number-options' => [
+                        'between' => 'Between',
+                        'equals' => 'Equals',
+                        'from' => 'From',
+                        'greater-than' => 'Greater Than',
+                        'greater-than-or-equal' => 'Greater Than Or Equal',
+                        'less-than' => 'Less Than',
+                        'less-than-or-equal' => 'Less Than Or Equal',
+                        'to' => 'To',
                     ],
                 ],
             ],
@@ -1152,6 +1172,9 @@ return [
             'address' => [
                 'add-new' => 'افزودن آدرس جدید',
                 'add-new-address' => 'افزودن آدرس جدید',
+                'address-updated-payment-info' => 'روش‌های پرداخت و مبلغ کل سفارش برای آدرس جدید شما به‌روزرسانی می‌شوند. برای مشاهده جدیدترین گزینه‌ها روی «ادامه» کلیک کنید.',
+                'address-updated-shipping-info' => 'روش‌ها و هزینه‌های ارسال برای آدرس جدید شما دوباره محاسبه می‌شوند. برای مشاهده جدیدترین گزینه‌ها روی «ادامه» کلیک کنید.',
+                'address-updated-title' => 'آدرس شما به‌روزرسانی شد',
                 'back' => 'بازگشت',
                 'billing-address' => 'آدرس صورتحساب',
                 'check-billing-address' => 'آدرس صورتحساب از دست رفته است.',
@@ -1255,6 +1278,7 @@ return [
             'categories-carousel' => 'چرخ فلک دسته‌ها',
             'image-carousel' => 'چرخ فلک تصاویر',
             'offer' => 'تا ۴۰% تخفیف برای سفارش اول شما، اکنون خرید کنید',
+            'preview-banner' => 'پیش‌نمایش قالب :theme در کانال :channel. پیوندها در پیش‌نمایش غیرفعال هستند.',
             'product-carousel' => 'چرخ فلک محصولات',
             'resend-verify-email' => 'ارسال دوباره ایمیل تایید',
             'verify-email' => 'ایمیل خود را تأیید کنید',
@@ -1760,7 +1784,9 @@ return [
 
         'response' => [
             'already-cancel' => 'وضعیت RMA قبلاً لغو شده است.',
+            'cancel-not-allowed' => 'لغو این درخواست RMA مجاز نیست.',
             'cancel-success' => 'وضعیت RMA با موفقیت لغو شد.',
+            'close-not-allowed' => 'بستن این درخواست RMA مجاز نیست.',
             'create-success' => 'درخواست با موفقیت ایجاد شد.',
             'creation-error' => 'وضعیت RMA نمی‌تواند به‌روزرسانی شود زیرا فاکتور برای این سفارش ایجاد نشده است.',
             'invalid-item' => 'مورد سفارش انتخاب‌شده نامعتبر است.',

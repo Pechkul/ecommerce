@@ -8,7 +8,9 @@ use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 use Webkul\Admin\Validations\ProductCategoryUniqueSlug;
 use Webkul\Attribute\Enums\AttributeTypeEnum;
+use Webkul\Core\Helpers\MediaFileName;
 use Webkul\Core\Rules\Decimal;
+use Webkul\Core\Rules\Regex;
 use Webkul\Core\Rules\Slug;
 use Webkul\Product\Contracts\Product;
 use Webkul\Product\Repositories\ProductAttributeValueRepository;
@@ -82,8 +84,11 @@ class ProductForm extends FormRequest
             'url_key' => ['required', new ProductCategoryUniqueSlug('products', $this->id)],
             'images.files.*' => ['nullable', 'mimes:bmp,jpeg,jpg,png,webp'],
             'images.positions.*' => ['nullable', 'integer'],
+            'images.meta.*.alt_text' => ['nullable', 'string', 'max:255'],
+            'images.meta.*.file_name' => ['nullable', 'string', 'max:'.MediaFileName::MAX_LENGTH],
             'videos.files.*' => ['nullable', 'mimetypes:application/octet-stream,video/mp4,video/webm,video/quicktime', 'max:'.$this->maxVideoFileSize],
             'videos.positions.*' => ['nullable', 'integer'],
+            'videos.meta.*.file_name' => ['nullable', 'string', 'max:'.MediaFileName::MAX_LENGTH],
             'special_price_from' => ['nullable', 'date'],
             'special_price_to' => ['nullable', 'date', 'after_or_equal:special_price_from'],
             'special_price' => ['nullable', new Decimal, 'lt:price'],
@@ -141,7 +146,9 @@ class ProductForm extends FormRequest
                 if ($attribute->validation === 'decimal') {
                     $validations[] = new Decimal;
                 } elseif ($attribute->validation === 'regex') {
-                    $validations[] = 'regex:'.$attribute->regex;
+                    if (Regex::isUsable($attribute->regex)) {
+                        $validations[] = 'regex:'.$attribute->regex;
+                    }
                 } else {
                     $validations[] = $attribute->validation;
                 }
@@ -193,10 +200,35 @@ class ProductForm extends FormRequest
     public function attributes()
     {
         return [
-            'images.files.*' => 'image',
-            'videos.files.*' => 'video',
-            'variants.*.sku' => 'sku',
+            'images.files.*' => trans('admin::app.components.media.images.image'),
+            'images.meta.*.alt_text' => trans('admin::app.components.media.images.seo.alt-text'),
+            'images.meta.*.file_name' => trans('admin::app.components.media.images.seo.file-name'),
+            'videos.files.*' => trans('admin::app.components.media.videos.video'),
+            'videos.meta.*.file_name' => trans('admin::app.components.media.images.seo.file-name'),
+            'variants.*.sku' => trans('admin::app.catalog.products.index.datagrid.sku'),
         ];
+    }
+
+    /**
+     * Keep locale-scoped values in a locale the channel being edited has, which is where the product
+     * is read from.
+     *
+     * @return void
+     */
+    protected function prepareForValidation()
+    {
+        $channel = core()->getAllChannels()->firstWhere('code', $this->input('channel') ?: core()->getDefaultChannelCode());
+
+        if (
+            ! $channel
+            || ! $this->filled('locale')
+        ) {
+            return;
+        }
+
+        $this->merge([
+            'locale' => $channel->resolveLocaleCode($this->input('locale')),
+        ]);
     }
 
     /**

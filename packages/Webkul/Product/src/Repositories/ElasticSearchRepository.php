@@ -50,6 +50,7 @@ class ElasticSearchRepository
 
         $results = ElasticSearch::search([
             'index' => $params['index'] ?? $this->getIndexName(),
+            'ignore_unavailable' => true,
             'body' => [
                 'from' => $options['from'],
                 'size' => $options['limit'],
@@ -68,6 +69,31 @@ class ElasticSearchRepository
     }
 
     /**
+     * Get the id of the product whose url key is exactly the given one, matched on the unanalyzed field
+     * so a key never matches another that merely contains it, such as a copy's.
+     */
+    public function findIdByUrlKey(string $urlKey): ?int
+    {
+        $results = ElasticSearch::search([
+            'index' => $this->getIndexName(),
+            'ignore_unavailable' => true,
+            'body' => [
+                'size' => 1,
+                'stored_fields' => [],
+                'query' => [
+                    'term' => [
+                        'url_key.keyword' => $urlKey,
+                    ],
+                ],
+            ],
+        ]);
+
+        $id = $results['hits']['hits'][0]['_id'] ?? null;
+
+        return $id ? (int) $id : null;
+    }
+
+    /**
      * Get suggestions based on the query text.
      */
     public function getSuggestions(?string $queryText): ?string
@@ -78,6 +104,7 @@ class ElasticSearchRepository
 
         $results = ElasticSearch::search([
             'index' => $this->getIndexName(),
+            'ignore_unavailable' => true,
             'body' => [
                 'suggest' => [
                     'name_suggest' => [
@@ -134,8 +161,6 @@ class ElasticSearchRepository
             case AttributeTypeEnum::BOOLEAN->value:
                 $values = array_map('intval', explode(',', $params[$attribute->code]));
 
-                $values = array_map('intval', explode(',', $params[$attribute->code]));
-
                 return [
                     'terms' => [
                         $attribute->code => $values,
@@ -159,18 +184,17 @@ class ElasticSearchRepository
                 ];
 
             case AttributeTypeEnum::TEXT->value:
-                $synonyms = $this->searchSynonymRepository->getSynonymsByQuery($params[$attribute->code]);
+                $filter = [];
 
-                $synonyms = array_map(function ($synonym) {
-                    return '"'.$synonym.'"';
-                }, $synonyms);
+                foreach ($this->searchSynonymRepository->getSynonymsByQuery($params[$attribute->code]) as $synonym) {
+                    $filter['bool']['should'][] = [
+                        'match_phrase_prefix' => [
+                            $attribute->code => $synonym,
+                        ],
+                    ];
+                }
 
-                return [
-                    'query_string' => [
-                        'query' => implode(' OR ', $synonyms),
-                        'default_field' => $attribute->code,
-                    ],
-                ];
+                return $filter;
 
             case AttributeTypeEnum::SELECT->value:
                 $filter[]['terms'][$attribute->code] = explode(',', $params[$attribute->code]);
@@ -253,6 +277,7 @@ class ElasticSearchRepository
 
         $results = ElasticSearch::search([
             'index' => $params['index'] ?? $this->getIndexName(),
+            'ignore_unavailable' => true,
             'body' => [
                 'size' => 0,
                 'query' => [
@@ -290,6 +315,7 @@ class ElasticSearchRepository
 
         $results = ElasticSearch::search([
             'index' => $params['index'] ?? $this->getIndexName(),
+            'ignore_unavailable' => true,
             'body' => [
                 'size' => 0,
                 'query' => [

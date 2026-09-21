@@ -42,7 +42,7 @@ return [
             'page-title' => 'গ্রাহক লগইন',
             'password' => 'পাসওয়ার্ড',
             'resend-verification' => 'ভেরিফিকেশন ইমেইল পুনরায় পাঠান',
-            'show-password' => 'পাসওয়ার্ড দেখুন',
+            'social-account-exists' => 'এই ইমেল দিয়ে ইতিমধ্যে একটি অ্যাকাউন্ট আছে। অনুগ্রহ করে আপনার ইমেল ও পাসওয়ার্ড দিয়ে সাইন ইন করুন।',
             'title' => 'সাইন ইন করুন',
             'verify-first' => 'প্রথমে আপনার ইমেইল অ্যাকাউন্ট যাচাই করুন।',
         ],
@@ -373,6 +373,7 @@ return [
                 'remaining-downloads' => 'অবশিষ্ট ডাউনলোড',
                 'status' => 'স্থিতি',
                 'title' => 'শিরোনাম',
+                'unlimited' => 'সীমাহীন',
             ],
 
             'wishlist' => [
@@ -545,6 +546,14 @@ return [
             'default-toggle' => 'ডিফল্ট টগল',
         ],
 
+        'form' => [
+            'control-group' => [
+                'control' => [
+                    'show-password' => 'পাসওয়ার্ড দেখুন',
+                ],
+            ],
+        ],
+
         'media' => [
             'index' => [
                 'add-attachments' => 'সংযুক্তি যোগ করুন',
@@ -689,6 +698,17 @@ return [
 
                     'custom-filters' => [
                         'clear-all' => 'সব মুছুন',
+                    ],
+
+                    'number-options' => [
+                        'between' => 'Between',
+                        'equals' => 'Equals',
+                        'from' => 'From',
+                        'greater-than' => 'Greater Than',
+                        'greater-than-or-equal' => 'Greater Than Or Equal',
+                        'less-than' => 'Less Than',
+                        'less-than-or-equal' => 'Less Than Or Equal',
+                        'to' => 'To',
                     ],
                 ],
             ],
@@ -1152,6 +1172,9 @@ return [
             'address' => [
                 'add-new' => 'নতুন ঠিকানা যোগ করুন',
                 'add-new-address' => 'নতুন ঠিকানা যোগ করুন',
+                'address-updated-payment-info' => 'আপনার নতুন ঠিকানার জন্য পেমেন্ট মেথড ও অর্ডারের মোট পরিমাণ রিফ্রেশ করা হবে। সর্বশেষ বিকল্পগুলো দেখতে "এগিয়ে যান"-এ ক্লিক করুন।',
+                'address-updated-shipping-info' => 'আপনার নতুন ঠিকানার জন্য শিপিং মেথড ও রেট পুনরায় হিসাব করা হবে। সর্বশেষ বিকল্পগুলো দেখতে "এগিয়ে যান"-এ ক্লিক করুন।',
+                'address-updated-title' => 'আপনার ঠিকানা আপডেট করা হয়েছে',
                 'back' => 'পৃষ্ঠায় ফিরুন',
                 'billing-address' => 'বিলিং ঠিকানা',
                 'check-billing-address' => 'বিলিং ঠিকানা অনুপস্থিত।',
@@ -1255,6 +1278,7 @@ return [
             'categories-carousel' => 'ক্যাটাগরি ক্যারোসেল',
             'image-carousel' => 'ইমেজ ক্যারোসেল',
             'offer' => 'আপনার প্রথম অর্ডারে ৪০% পর্যন্ত ছাড় পান, এখনই কেনাকাটা করুন',
+            'preview-banner' => ':channel চ্যানেলে :theme থিমের প্রিভিউ দেখানো হচ্ছে। প্রিভিউতে লিঙ্কগুলি বন্ধ থাকে।',
             'product-carousel' => 'প্রোডাক্ট ক্যারোসেল',
             'resend-verify-email' => 'যাচাইকরণ ইমেল পুনরায় পাঠান',
             'verify-email' => 'আপনার ইমেল অ্যাকাউন্ট যাচাই করুন',
@@ -1760,7 +1784,9 @@ return [
 
         'response' => [
             'already-cancel' => 'RMA স্ট্যাটাস ইতিমধ্যেই বাতিল করা হয়েছে।',
+            'cancel-not-allowed' => 'এই RMA অনুরোধ বাতিল করার অনুমতি নেই।',
             'cancel-success' => 'RMA স্থিতি সফলভাবে বাতিল করা হয়েছে।',
+            'close-not-allowed' => 'এই RMA অনুরোধ বন্ধ করার অনুমতি নেই।',
             'create-success' => 'অনুরোধ সফলভাবে তৈরি করা হয়েছে।',
             'creation-error' => 'RMA স্ট্যাটাস আপডেট করা সম্ভব নয় কারণ এই অর্ডারের জন্য চালান তৈরি করা হয়নি।',
             'invalid-item' => 'নির্বাচিত অর্ডার আইটেমটি অবৈধ।',

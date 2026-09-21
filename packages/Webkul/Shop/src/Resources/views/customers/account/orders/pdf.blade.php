@@ -15,79 +15,110 @@
         />
 
         @php
-            $fontPath = [
-                'thin'     => public_path('fonts/NotoSansThai-Thin.ttf'),
-                'light'    => public_path('fonts/NotoSansThai-Light.ttf'),
-                'regular'  => public_path('fonts/NotoSansThai-Regular.ttf'),
-                'medium'   => public_path('fonts/NotoSansThai-Medium.ttf'),
-                'semibold' => public_path('fonts/NotoSansThai-SemiBold.ttf'),
-                'bold'     => public_path('fonts/NotoSansThai-Bold.ttf'),
-            ];
+            $fontPath = [];
 
-            $fontFamily = 'Noto Sans Thai';
+            if (app()->getLocale() == 'en' && $orderCurrencyCode == 'INR') {
+                $fontFamily = [
+                    'regular' => 'DejaVu Sans',
+                    'bold'    => 'DejaVu Sans',
+                ];
+            }  else {
+                $fontFamily = [
+                    'regular' => 'Arial, sans-serif',
+                    'bold'    => 'Arial, sans-serif',
+                ];
+            }
+
+            if (in_array(app()->getLocale(), ['ar', 'he', 'fa', 'tr', 'ru', 'uk'])) {
+                $fontFamily = [
+                    'regular' => 'DejaVu Sans',
+                    'bold'    => 'DejaVu Sans',
+                ];
+            } elseif (app()->getLocale() == 'zh_CN') {
+                $fontPath = [
+                    'regular' => asset('fonts/NotoSansSC-Regular.ttf'),
+                    'bold'    => asset('fonts/NotoSansSC-Bold.ttf'),
+                ];
+
+                $fontFamily = [
+                    'regular' => 'Noto Sans SC',
+                    'bold'    => 'Noto Sans SC Bold',
+                ];
+            } elseif (app()->getLocale() == 'ja') {
+                $fontPath = [
+                    'regular' => asset('fonts/NotoSansJP-Regular.ttf'),
+                    'bold'    => asset('fonts/NotoSansJP-Bold.ttf'),
+                ];
+
+                $fontFamily = [
+                    'regular' => 'Noto Sans JP',
+                    'bold'    => 'Noto Sans JP Bold',
+                ];
+            } elseif (app()->getLocale() == 'hi_IN') {
+                $fontPath = [
+                    'regular' => asset('fonts/Hind-Regular.ttf'),
+                    'bold'    => asset('fonts/Hind-Bold.ttf'),
+                ];
+
+                $fontFamily = [
+                    'regular' => 'Hind',
+                    'bold'    => 'Hind Bold',
+                ];
+            } elseif (app()->getLocale() == 'bn') {
+                $fontPath = [
+                    'regular' => asset('fonts/NotoSansBengali-Regular.ttf'),
+                    'bold'    => asset('fonts/NotoSansBengali-Bold.ttf'),
+                ];
+
+                $fontFamily = [
+                    'regular' => 'Noto Sans Bengali',
+                    'bold'    => 'Noto Sans Bengali Bold',
+                ];
+            } elseif (app()->getLocale() == 'sin') {
+                $fontPath = [
+                    'regular' => asset('fonts/NotoSansSinhala-Regular.ttf'),
+                    'bold'    => asset('fonts/NotoSansSinhala-Bold.ttf'),
+                ];
+
+                $fontFamily = [
+                    'regular' => 'Noto Sans Sinhala',
+                    'bold'    => 'Noto Sans Sinhala Bold',
+                ];
+            }
         @endphp
 
         <!-- lang supports inclusion -->
         <style type="text/css">
-            @font-face {
-                font-family: "{{ $fontFamily }}";
-                src: url("{{ $fontPath['thin'] }}") format('truetype');
-                font-weight: 100;
-                font-style: normal;
-            }
+            @if (! empty($fontPath['regular']))
+                @font-face {
+                    src: url({{ $fontPath['regular'] }}) format('truetype');
+                    font-family: {{ $fontFamily['regular'] }};
+                }
+            @endif
 
-            @font-face {
-                font-family: "{{ $fontFamily }}";
-                src: url("{{ $fontPath['light'] }}") format('truetype');
-                font-weight: 300;
-                font-style: normal;
-            }
-
-            @font-face {
-                font-family: "{{ $fontFamily }}";
-                src: url("{{ $fontPath['regular'] }}") format('truetype');
-                font-weight: normal; /* หรือ 400 */
-                font-style: normal;
-            }
-
-            @font-face {
-                font-family: "{{ $fontFamily }}";
-                src: url("{{ $fontPath['medium'] }}") format('truetype');
-                font-weight: 500;
-                font-style: normal;
-            }
-
-            @font-face {
-                font-family: "{{ $fontFamily }}";
-                src: url("{{ $fontPath['semibold'] }}") format('truetype');
-                font-weight: 600;
-                font-style: normal;
-            }
-
-            @font-face {
-                font-family: "{{ $fontFamily }}";
-                src: url("{{ $fontPath['bold'] }}") format('truetype');
-                font-weight: bold; /* 700 */
-                font-style: normal;
-            }
+            @if (! empty($fontPath['bold']))
+                @font-face {
+                    src: url({{ $fontPath['bold'] }}) format('truetype');
+                    font-family: {{ $fontFamily['bold'] }};
+                    font-style: bold;
+                }
+            @endif
 
             * {
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
-                font-family: "{{ $fontFamily }}", sans-serif;
+                font-family: {{ $fontFamily['regular'] }};
             }
 
             body {
                 font-size: 10px;
                 color: #091341;
-                font-family: "{{ $fontFamily }}", sans-serif;
-                font-weight: normal;
+                font-family: "{{ $fontFamily['regular'] }}";
             }
 
-            b, strong, th, h1, h2, h3, h4, h5, h6 {
-                font-family: "{{ $fontFamily }}", sans-serif;
-                font-weight: bold;
+            b, th {
+                font-family: "{{ $fontFamily['bold'] }}";
             }
 
             .page-content {
@@ -481,9 +512,9 @@
 
                                     <td>
                                         @if (core()->getConfigData('sales.taxes.sales.display_prices') == 'including_tax')
-                                            {!! core()->formatPrice($item->price_incl_tax, $orderCurrencyCode) !!}
+                                            {{ core()->formatPrice($item->price_incl_tax, $orderCurrencyCode) }}
                                         @elseif (core()->getConfigData('sales.taxes.sales.display_prices') == 'both')
-                                            {!! core()->formatPrice($item->price_incl_tax, $orderCurrencyCode) !!}
+                                            {{ core()->formatPrice($item->price_incl_tax, $orderCurrencyCode) }}
 
                                             <div class="small-text">
                                                 @lang('shop::app.customers.account.orders.invoice-pdf.excl-tax')
@@ -493,7 +524,7 @@
                                                 </span>
                                             </div>
                                         @else
-                                            {!! core()->formatPrice($item->price, $orderCurrencyCode) !!}
+                                            {{ core()->formatPrice($item->price, $orderCurrencyCode) }}
                                         @endif
                                     </td>
 
@@ -503,9 +534,9 @@
 
                                     <td>
                                         @if (core()->getConfigData('sales.taxes.sales.display_subtotal') == 'including_tax')
-                                            {!! core()->formatPrice($item->total_incl_tax, $orderCurrencyCode) !!}
+                                            {{ core()->formatPrice($item->total_incl_tax, $orderCurrencyCode) }}
                                         @elseif (core()->getConfigData('sales.taxes.sales.display_subtotal') == 'both')
-                                            {!! core()->formatPrice($item->total_incl_tax, $orderCurrencyCode) !!}
+                                            {{ core()->formatPrice($item->total_incl_tax, $orderCurrencyCode) }}
 
                                             <div class="small-text">
                                                 @lang('shop::app.customers.account.orders.invoice-pdf.excl-tax')
@@ -515,7 +546,7 @@
                                                 </span>
                                             </div>
                                         @else
-                                            {!! core()->formatPrice($item->total, $orderCurrencyCode) !!}
+                                            {{ core()->formatPrice($item->total, $orderCurrencyCode) }}
                                         @endif
                                     </td>
                                 </tr>
@@ -532,25 +563,25 @@
                                 <tr>
                                     <td>@lang('shop::app.customers.account.orders.invoice-pdf.subtotal')</td>
                                     <td>-</td>
-                                    <td>{!! core()->formatPrice($invoice->sub_total_incl_tax, $orderCurrencyCode) !!}</td>
+                                    <td>{{ core()->formatPrice($invoice->sub_total_incl_tax, $orderCurrencyCode) }}</td>
                                 </tr>
                             @elseif (core()->getConfigData('sales.taxes.sales.display_subtotal') == 'both')
                                 <tr>
                                     <td>@lang('shop::app.customers.account.orders.invoice-pdf.subtotal-incl-tax')</td>
                                     <td>-</td>
-                                    <td>{!! core()->formatPrice($invoice->sub_total_incl_tax, $orderCurrencyCode) !!}</td>
+                                    <td>{{ core()->formatPrice($invoice->sub_total_incl_tax, $orderCurrencyCode) }}</td>
                                 </tr>
 
                                 <tr>
                                     <td>@lang('shop::app.customers.account.orders.invoice-pdf.subtotal-excl-tax')</td>
                                     <td>-</td>
-                                    <td>{!! core()->formatPrice($invoice->sub_total, $orderCurrencyCode) !!}</td>
+                                    <td>{{ core()->formatPrice($invoice->sub_total, $orderCurrencyCode) }}</td>
                                 </tr>
                             @else
                                 <tr>
                                     <td>@lang('shop::app.customers.account.orders.invoice-pdf.subtotal')</td>
                                     <td>-</td>
-                                    <td>{!! core()->formatPrice($invoice->sub_total, $orderCurrencyCode) !!}</td>
+                                    <td>{{ core()->formatPrice($invoice->sub_total, $orderCurrencyCode) }}</td>
                                 </tr>
                             @endif
 
@@ -558,38 +589,38 @@
                                 <tr>
                                     <td>@lang('shop::app.customers.account.orders.invoice-pdf.shipping-handling')</td>
                                     <td>-</td>
-                                    <td>{!! core()->formatPrice($invoice->shipping_amount_incl_tax, $orderCurrencyCode) !!}</td>
+                                    <td>{{ core()->formatPrice($invoice->shipping_amount_incl_tax, $orderCurrencyCode) }}</td>
                                 </tr>
                             @elseif (core()->getConfigData('sales.taxes.sales.display_shipping_amount') == 'both')
                                 <tr>
                                     <td>@lang('shop::app.customers.account.orders.invoice-pdf.shipping-handling-incl-tax')</td>
                                     <td>-</td>
-                                    <td>{!! core()->formatPrice($invoice->shipping_amount_incl_tax, $orderCurrencyCode) !!}</td>
+                                    <td>{{ core()->formatPrice($invoice->shipping_amount_incl_tax, $orderCurrencyCode) }}</td>
                                 </tr>
 
                                 <tr>
                                     <td>@lang('shop::app.customers.account.orders.invoice-pdf.shipping-handling-excl-tax')</td>
                                     <td>-</td>
-                                    <td>{!! core()->formatPrice($invoice->shipping_amount, $orderCurrencyCode) !!}</td>
+                                    <td>{{ core()->formatPrice($invoice->shipping_amount, $orderCurrencyCode) }}</td>
                                 </tr>
                             @else
                                 <tr>
                                     <td>@lang('shop::app.customers.account.orders.invoice-pdf.shipping-handling')</td>
                                     <td>-</td>
-                                    <td>{!! core()->formatPrice($invoice->shipping_amount, $orderCurrencyCode) !!}</td>
+                                    <td>{{ core()->formatPrice($invoice->shipping_amount, $orderCurrencyCode) }}</td>
                                 </tr>
                             @endif
 
                             <tr>
                                 <td>@lang('shop::app.customers.account.orders.invoice-pdf.tax')</td>
                                 <td>-</td>
-                                <td>{!! core()->formatPrice($invoice->tax_amount, $orderCurrencyCode) !!}</td>
+                                <td>{{ core()->formatPrice($invoice->tax_amount, $orderCurrencyCode) }}</td>
                             </tr>
 
                             <tr>
                                 <td>@lang('shop::app.customers.account.orders.invoice-pdf.discount')</td>
                                 <td>-</td>
-                                <td>{!! core()->formatPrice($invoice->discount_amount, $orderCurrencyCode) !!}</td>
+                                <td>{{ core()->formatPrice($invoice->discount_amount, $orderCurrencyCode) }}</td>
                             </tr>
 
                             <tr>
@@ -598,7 +629,7 @@
                                 </td>
                                 <td style="border-top: 1px solid #FFFFFF;">-</td>
                                 <td style="border-top: 1px solid #FFFFFF;">
-                                    <b>{!! core()->formatPrice($invoice->grand_total, $orderCurrencyCode) !!}</b>
+                                    <b>{{ core()->formatPrice($invoice->grand_total, $orderCurrencyCode) }}</b>
                                 </td>
                             </tr>
                         </tbody>

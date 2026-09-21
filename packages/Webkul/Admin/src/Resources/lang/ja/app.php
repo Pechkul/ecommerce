@@ -350,6 +350,9 @@ return [
                         'add-btn' => '住所を追加',
                         'add-new' => '新しい住所を追加',
                         'add-new-address' => '新しい住所を追加',
+                        'address-updated-payment-info' => '変更された住所に合わせて支払方法と注文合計が更新されます。最新のオプションを読み込むには「進む」をクリックしてください。',
+                        'address-updated-shipping-info' => '変更された住所に合わせて配送方法と送料が再計算されます。最新のオプションを読み込むには「進む」をクリックしてください。',
+                        'address-updated-title' => '住所を更新しました',
                         'addresses' => '住所',
                         'back' => '戻る',
                         'billing-address' => '請求先住所',
@@ -701,6 +704,7 @@ return [
                     'pending' => '保留中',
                     'status' => 'ステータス',
                     'update-status' => 'ステータスを更新',
+                    'view' => '表示',
                 ],
             ],
 
@@ -983,6 +987,7 @@ return [
                         'edit' => '編集',
                         'enabled' => '有効',
                         'id' => 'ID',
+                        'mass-delete-partial' => '選択したレコードのうち :deleted 件を削除しました。:skipped 件はすでに削除されていました。',
                         'mass-delete-success' => '選択されたデータが正常に削除されました。',
                         'reason-error' => '理由はRMAで使用されています。',
                         'reason' => '理由',
@@ -1024,6 +1029,7 @@ return [
                         'enabled' => '有効',
                         'id' => 'ID',
                         'label' => 'ラベル',
+                        'mass-delete-partial' => '選択したレコードのうち :deleted 件を削除しました。:skipped 件はすでに削除されていました。',
                         'mass-delete-success' => '選択されたデータが正常に削除されました。',
                         'no' => 'いいえ',
                         'required' => '必須',
@@ -1064,6 +1070,7 @@ return [
                         'enabled' => '有効',
                         'exchange-period' => '交換期間（日）',
                         'id' => 'ID',
+                        'mass-delete-partial' => '選択したレコードのうち :deleted 件を削除しました。:skipped 件はすでに削除されていました。',
                         'mass-delete-success' => '選択したデータが正常に削除されました。',
                         'name' => '名前',
                         'reason' => 'ルール',
@@ -1155,10 +1162,12 @@ return [
                     'attribute-family-value' => '属性ファミリー - :attribute_family',
                     'category' => 'カテゴリー',
                     'channel' => 'チャンネル',
+                    'copy' => 'コピー',
                     'copy-of' => 'コピー :value',
                     'copy-of-slug' => 'コピー-:value',
                     'delete' => '削除',
                     'disable' => '無効',
+                    'edit' => '編集',
                     'id' => 'ID',
                     'id-value' => 'ID - :id',
                     'image' => '画像',
@@ -1172,6 +1181,7 @@ return [
                     'qty-value' => ':qty 個の利用可能',
                     'sku' => 'SKU',
                     'sku-value' => 'SKU - :sku',
+                    'stock-disabled' => '在庫管理なし',
                     'status' => 'ステータス',
                     'type' => 'タイプ',
                     'update-status' => 'ステータスを更新',
@@ -1222,6 +1232,7 @@ return [
                 ],
 
                 'categories' => [
+                    'search' => 'Search categories',
                     'title' => 'カテゴリー',
                 ],
 
@@ -1809,7 +1820,7 @@ return [
                 'position' => '位置',
                 'price' => '価格',
                 'regex' => '正規表現',
-                'regex-info' => '式はダブルクォートで囲む必要があります。',
+                'regex-info' => '式はスラッシュで囲む必要があります。例: /^[0-9]+$/',
                 'save-btn' => '属性を保存',
                 'select' => '選択',
                 'select-type' => '属性タイプを選択',
@@ -1883,7 +1894,7 @@ return [
                 'position' => '位置',
                 'price' => '価格',
                 'regex' => '正規表現',
-                'regex-info' => '式はダブルクォートで囲む必要があります。',
+                'regex-info' => '式はスラッシュで囲む必要があります。例: /^[0-9]+$/',
                 'save-btn' => '属性を保存',
                 'select' => '選択',
                 'select-type' => '属性タイプを選択',
@@ -1938,6 +1949,7 @@ return [
                     'inactive' => '非アクティブ',
                     'name' => '名前',
                     'no-of-products' => '製品数',
+                    'parent-category' => '親カテゴリ',
                     'position' => '位置',
                     'status' => 'メニューで表示',
                     'update-status' => 'ステータスを更新',
@@ -2092,10 +2104,10 @@ return [
             'attribute-family' => '属性ファミリー',
             'attribute-product-error' => 'ファミリーは製品で使用されています。',
             'create-success' => 'ファミリーが正常に作成されました。',
+            'default-delete-error' => '既定の属性ファミリーは削除できません。',
             'delete-failed' => 'ファミリーの削除中にエラーが発生しました。',
             'delete-success' => 'ファミリーが正常に削除されました。',
             'family' => 'ファミリー',
-            'last-delete-error' => '少なくとも1つのファミリーが必要です。',
             'update-success' => 'ファミリーが正常に更新されました。',
             'user-define-error' => 'システム属性ファミリーを削除できません',
         ],
@@ -2120,6 +2132,7 @@ return [
                     'id' => '顧客ID',
                     'id-value' => 'ID - :id',
                     'inactive' => '非アクティブ',
+                    'login-as-customer' => '顧客としてログイン',
                     'method-error' => 'エラー！誤ったメソッドが検出されました。マスアクションの構成を確認してください',
                     'name' => '顧客名',
                     'no-resource' => '提供されたリソースは、アクションには不十分です',
@@ -2133,6 +2146,7 @@ return [
                     'suspended' => '停止中',
                     'update-status' => 'ステータスの更新',
                     'update-success' => '選択した顧客が正常に更新されました',
+                    'view' => '表示',
                 ],
 
                 'create' => [
@@ -2275,6 +2289,7 @@ return [
                         'rating' => '評価',
                         'status' => 'ステータス',
                         'title' => 'タイトル',
+                        'view' => '表示',
                     ],
                 ],
 
@@ -2479,7 +2494,9 @@ return [
 
                     'datagrid' => [
                         'active' => 'アクティブ',
+                        'delete' => '削除',
                         'draft' => '下書き',
+                        'edit' => '編集',
                         'id' => 'ID',
                         'inactive' => '非アクティブ',
                         'name' => '名前',
@@ -2516,6 +2533,7 @@ return [
                     'update-success' => '正常に更新されました',
                 ],
 
+                'campaign-associate' => 'このテンプレートは 1 つ以上のキャンペーンで使用されています。',
                 'delete-failed' => ':name 削除に失敗しました',
                 'delete-success' => 'テンプレートが正常に削除されました',
                 'email-template' => 'メールテンプレート',
@@ -2619,6 +2637,7 @@ return [
                     ],
                 ],
 
+                'campaign-associate' => 'このイベントは 1 つ以上のキャンペーンで使用されています。',
                 'delete-failed' => ':name の削除に失敗しました',
                 'delete-success' => 'イベントが正常に削除されました',
                 'edit-error' => 'イベントは編集できません',
@@ -2983,6 +3002,7 @@ return [
 
                 'create-success' => 'カタログルールが正常に作成されました',
                 'delete-success' => 'カタログルールが正常に削除されました',
+                'queue-note' => 'このルールを保存すると、適用されるすべての商品の価格が更新されます。多くの商品に適用される場合は、保存を遅らせずにバックグラウンドで価格を更新できるよう、database または redis のキュー ドライバーを使用し、キュー ワーカーを実行してください。',
                 'update-success' => 'カタログルールが正常に更新されました',
             ],
 
@@ -3223,6 +3243,312 @@ return [
         'update-success' => 'CMSが正常に更新されました。',
     ],
 
+    'appearance' => [
+        'themes' => [
+            'index' => [
+                'activate-btn' => '有効化',
+                'activate-success' => ':channel で :theme が有効になりました。',
+                'active' => '有効',
+                'active-on' => '有効なチャネル:',
+                'active-on-all' => 'すべてのチャネルで有効',
+                'buy-btn' => '詳細・購入',
+                'buy-themes' => 'テーマを購入',
+                'by' => '提供',
+                'customize-btn' => 'カスタマイズ',
+                'info' => 'ストアで利用できるテーマを見て、各チャネルが使用するテーマを選びます。',
+                'my-themes' => 'マイテーマ',
+                'not-in-use' => '未使用',
+                'not-installed' => 'このテーマはこのストアにインストールされていません。',
+                'preview-btn' => 'プレビュー',
+                'title' => 'テーマ',
+
+                'activate' => [
+                    'channels' => 'チャネル',
+                    'channels-hint' => '複数のチャネルを選ぶには Ctrl（Mac は Cmd）を押しながら選択してください。',
+                    'confirm-btn' => '有効化',
+                    'info' => ':theme を使用するチャネルを選択してください。',
+                    'title' => 'テーマを有効化',
+                    'warning' => ':channel には :theme 用に作成されたカスタマイズが :count 件あります。保存されたままですが、新しいテーマが有効な間は表示されません。',
+                ],
+            ],
+        ],
+        'sections' => [
+            'index' => [
+                'all-filters-used' => '利用可能なフィルターはすべて追加済みです。',
+                'channel' => 'チャネル',
+                'copy-suffix' => 'コピー',
+                'create-btn' => 'セクションを作成',
+                'delete-confirm' => 'このセクションを削除してもよろしいですか？',
+                'desktop' => 'デスクトップ',
+                'discard-btn' => '破棄',
+                'discarded' => '下書きの変更を破棄しました。',
+                'duplicate-btn' => '複製',
+                'empty' => 'セクションはまだありません。',
+                'gone' => 'このセクションは存在しません。',
+                'inactive-theme' => 'カスタマイズできるのは、チャネルで有効なテーマのみです。',
+                'locale' => 'ロケール',
+                'mobile' => 'モバイル',
+                'no-fields' => 'このテーマでは、このセクションに編集できる設定はありません。',
+                'no-types' => 'このテーマには追加できるセクションタイプがありません。',
+                'pinned' => 'ページ下部に固定されています。',
+                'preview-btn' => 'プレビュー',
+                'publish-btn' => '公開',
+                'scoped-to' => ':channel チャネルの :theme テーマのセクションを表示しています。',
+                'tablet' => 'タブレット',
+                'title' => 'セクション',
+                'unsaved' => '未保存の変更',
+
+                'datagrid' => [
+                    'active' => 'アクティブ',
+                    'channel_name' => 'チャンネル名',
+                    'change-status' => 'ステータスを変更',
+                    'delete' => '削除',
+                    'id' => 'ID',
+                    'inactive' => '非アクティブ',
+                    'name' => '名前',
+                    'sort-order' => '並び替え順',
+                    'status' => 'ステータス',
+                    'theme' => 'テーマ',
+                    'type' => 'タイプ',
+                    'view' => '表示',
+                ],
+            ],
+
+            'create' => [
+                'name' => '名前',
+                'save-btn' => 'セクションを保存',
+                'singleton-exists' => 'このチャネルでは :type のセクションは 1 つだけ表示されます。',
+                'title' => 'セクションを作成',
+
+                'type' => [
+                    'category-carousel' => 'カテゴリーカルーセル',
+                    'footer-links' => 'フッターリンク',
+                    'image-carousel' => '画像カルーセル',
+                    'product-carousel' => '商品カルーセル',
+                    'services-content' => 'サービス内容',
+                    'static-content' => '静的コンテンツ',
+                    'title' => 'タイプ',
+                ],
+            ],
+
+            'edit' => [
+                'active' => 'アクティブ',
+                'add-column' => 'カラムを追加',
+                'add-filter-btn' => 'フィルターを追加',
+                'add-footer-link-btn' => 'フッターリンクを追加',
+                'add-image-btn' => '画像を追加',
+                'add-link' => 'リンクを追加',
+                'add-media' => 'メディアを追加',
+                'asc' => '昇順',
+                'back' => '戻る',
+                'category-carousel' => 'カテゴリーカルーセル',
+                'category-carousel-description' => 'レスポンシブなカテゴリーカルーセルを使用して、動的なカテゴリーを魅力的に表示します。',
+                'category-id' => 'カテゴリID',
+                'channels' => 'チャンネル',
+                'column' => 'カラム',
+                'columns' => 'カラム',
+                'create-filter' => 'フィルターを作成',
+                'css' => 'CSS',
+                'delete' => '削除',
+                'desc' => '降順',
+                'edit' => '編集',
+                'featured' => '注目',
+                'filter-title' => 'タイトル',
+                'filters' => 'フィルター',
+                'footer-link' => 'フッターリンク',
+                'footer-link-description' => 'ウェブサイトのシームレスな探索と情報取得のために、フッターリンクを介してナビゲートします。',
+                'footer-link-form-title' => 'フッターリンク',
+                'footer-title' => 'タイトル',
+                'general' => '一般',
+                'html' => 'HTML',
+                'image' => '画像',
+                'image-size' => '画像の解像度は（1920px X 700px）である必要があります',
+                'image-title' => '画像のタイトル',
+                'image-upload-message' => '画像のみ（.jpeg、.jpg、.png、.webp、..）が許可されています。',
+                'inactive' => '非アクティブ',
+                'key' => 'キー：:key',
+                'key-input' => 'キー',
+                'limit' => '制限',
+                'link' => 'リンク',
+                'name' => '名前',
+                'new' => '新しい',
+                'no' => 'いいえ',
+                'parent-id' => '親ID',
+                'preview' => 'プレビュー',
+                'product-carousel' => '商品カルーセル',
+                'product-carousel-description' => '動的でレスポンシブな商品カルーセルを使用して、製品をエレガントにショーケースします。',
+                'save-btn' => '保存',
+                'select' => '選択',
+                'slider' => 'スライダー',
+                'slider-add-btn' => 'スライダーを追加',
+                'slider-description' => 'スライダー関連のテーマのカスタマイズ。',
+                'slider-image' => 'スライダー画像',
+                'slider-required' => 'スライダーフィールドは必須です。',
+                'sort' => '並び替え',
+                'sort-order' => '並び替え順',
+                'static-content' => '静的コンテンツ',
+                'static-content-description' => '観客に向けて簡潔で情報豊かな静的コンテンツでエンゲージメントを向上させます。',
+                'status' => 'ステータス',
+                'themes' => 'テーマ',
+                'title' => 'セクションを編集',
+                'update-slider' => 'スライダーを更新',
+                'uploading' => 'アップロード中…',
+                'url' => 'URL',
+                'value' => '値：:value',
+                'value-input' => '値',
+
+                'services-content' => [
+                    'add-btn' => 'サービスを追加',
+                    'channels' => 'チャンネル',
+                    'delete' => '削除',
+                    'description' => '説明',
+                    'general' => '一般',
+                    'name' => '名前',
+                    'save-btn' => '保存',
+                    'service-icon' => 'サービスアイコン',
+                    'service-icon-class' => 'サービスアイコンクラス',
+                    'service-info' => 'サービス関連のテーマのカスタマイズ。',
+                    'services' => 'サービス',
+                    'sort-order' => '並べ替え順序',
+                    'status' => 'ステータス',
+                    'title' => 'タイトル',
+                    'update-service' => 'サービスを更新',
+                ],
+
+                'yes' => 'はい',
+            ],
+
+            'create-success' => 'セクションを作成しました',
+            'delete-success' => 'セクションを削除しました',
+            'update-success' => 'セクションを更新しました',
+        ],
+    ],
+
+    'reporting' => [
+        'sales' => [
+            'index' => [
+                'abandoned-carts' => '放棄されたカート',
+                'abandoned-products' => '放棄された商品',
+                'abandoned-rate' => '放棄率',
+                'abandoned-revenue' => '放棄された売上',
+                'added-to-cart' => 'カートに追加',
+                'added-to-cart-info' => '進捗中の訪問者のみがカートに商品を追加',
+                'all-channels' => 'すべてのチャンネル',
+                'average-order-value-over-time' => '平均注文金額の推移',
+                'average-sales' => '平均注文金額',
+                'count' => 'カウント',
+                'coupon-code' => 'クーポンコード',
+                'date' => '日付',
+                'discount' => '割引',
+                'email' => 'メール',
+                'end-date' => '終了日',
+                'id' => 'ID',
+                'interval' => 'インターバル',
+                'name' => '名前',
+                'order-id' => '注文ID',
+                'orders' => '注文',
+                'orders-over-time' => '注文の推移',
+                'payment-method' => '支払い方法',
+                'purchase-funnel' => '購入ファネル',
+                'purchased' => '購入済み',
+                'purchased-info' => '進捗中の訪問者のみが購入',
+                'refunds' => '払い戻し',
+                'refunds-over-time' => '払い戻しの推移',
+                'sales-by-coupon' => 'クーポン別売上',
+                'sales-over-time' => '売上の推移',
+                'shipping-collected' => '送料収集',
+                'shipping-collected-over-time' => '送料収集の推移',
+                'start-date' => '開始日',
+                'tax-collected' => '税金収集',
+                'tax-collected-over-time' => '税金収集の推移',
+                'title' => '売上',
+                'top-payment-methods' => 'トップ支払い方法',
+                'top-shipping-methods' => 'トップ配送方法',
+                'top-tax-categories' => 'トップ税カテゴリー',
+                'total' => '合計',
+                'total-orders' => '合計注文数',
+                'total-sales' => '合計売上',
+                'view-details' => '詳細を表示',
+            ],
+        ],
+
+        'customers' => [
+            'index' => [
+                'all-channels' => 'すべてのチャンネル',
+                'count' => 'カウント',
+                'customers' => '顧客',
+                'customers-over-time' => '顧客の推移',
+                'customers-with-most-orders' => '最も多くの注文をした顧客',
+                'customers-with-most-reviews' => '最も多くのレビューをした顧客',
+                'customers-with-most-sales' => '最も多くの売上をした顧客',
+                'email' => 'メールアドレス',
+                'end-date' => '終了日',
+                'id' => 'ID',
+                'interval' => 'インターバル',
+                'name' => '名前',
+                'orders' => '注文',
+                'reviews' => 'レビュー',
+                'start-date' => '開始日',
+                'title' => '顧客',
+                'top-customer-groups' => 'トップ顧客グループ',
+                'total' => '合計',
+                'total-customers' => '合計顧客数',
+                'view-details' => '詳細を表示',
+            ],
+        ],
+
+        'products' => [
+            'index' => [
+                'all-channels' => 'すべてのチャンネル',
+                'channel' => 'チャンネル',
+                'end-date' => '終了日',
+                'id' => 'ID',
+                'interval' => 'インターバル',
+                'last-search-terms' => '直近の検索語',
+                'locale' => 'ロケール',
+                'name' => '名前',
+                'orders' => '注文',
+                'price' => '価格',
+                'products-added-over-time' => '時間別商品追加数',
+                'products-with-most-reviews' => '最多レビュー商品',
+                'quantities' => '数量',
+                'quantities-sold-over-time' => '時間別販売数量',
+                'results' => '検索結果',
+                'revenue' => '売上',
+                'reviews' => 'レビュー',
+                'search-term' => '検索語',
+                'start-date' => '開始日',
+                'title' => '商品',
+                'top-search-terms' => '人気検索語',
+                'top-selling-products-by-quantity' => '数量別最売商品',
+                'top-selling-products-by-revenue' => '売上別最売商品',
+                'total' => '合計',
+                'total-products-added-to-wishlist' => 'ウィッシュリストへの商品追加数',
+                'total-sold-quantities' => '販売済商品数量',
+                'uses' => '利用',
+                'view-details' => '詳細を表示',
+            ],
+        ],
+
+        'view' => [
+            'all-channels' => 'すべてのチャンネル',
+            'back-btn' => '戻る',
+            'day' => '日',
+            'end-date' => '終了日',
+            'export-csv' => 'CSVエクスポート',
+            'export-xls' => 'XLSエクスポート',
+            'month' => '月',
+            'not-available' => '利用可能なレコードはありません。',
+            'start-date' => '開始日',
+            'year' => '年',
+        ],
+
+        'empty' => [
+            'info' => '選択した期間のデータはありません',
+            'title' => 'データは利用できません',
+        ],
+    ],
+
     'settings' => [
         'locales' => [
             'index' => [
@@ -3329,9 +3655,10 @@ return [
                     'file-info-example' => '例: 製品イメージの場合、ファイルは/project-root/storage/app/import/product-imagesフォルダーに配置する必要があります。',
                     'general' => '一般',
                     'images-directory' => '画像ディレクトリーパス',
+                    'import-confirmation' => '保存すると同時にインポートが開始されます。続行しますか？',
                     'process-in-queue' => 'キューで処理',
                     'results' => '結果',
-                    'save-btn' => 'インポートを保存',
+                    'save-btn' => 'インポート',
                     'settings' => '設定',
                     'skip-errors' => 'エラーをスキップ',
                     'stop-on-errors' => 'エラーで停止',
@@ -3356,7 +3683,7 @@ return [
                     'images-directory' => '画像ディレクトリーパス',
                     'process-in-queue' => 'キューで処理',
                     'results' => '結果',
-                    'save-btn' => 'インポートを保存',
+                    'save-btn' => 'インポート',
                     'settings' => '設定',
                     'skip-errors' => 'エラーをスキップ',
                     'stop-on-errors' => 'エラーで停止',
@@ -3378,24 +3705,38 @@ return [
                         'edit' => '編集',
                         'error-file' => 'エラーファイル',
                         'id' => 'ID',
+                        'import' => 'インポート',
                         'started-at' => '開始日',
                         'state' => '州',
                         'summary' => 'まとめ',
                         'updated' => '更新しました',
                         'uploaded-file' => 'アップロードされたファイル',
+                        'view-progress' => '進捗を表示',
                     ],
                 ],
 
                 'import' => [
                     'back-btn' => '戻る',
                     'completed-batches' => '完了したバッチの合計:',
+                    'deleting-info' => '削除を実行中',
                     'download-error-report' => '完全なレポートをダウンロード',
+                    'downloading-info' => '画像をダウンロード中',
                     'edit-btn' => '編集',
+                    'failed-batches' => ':count 件のバッチが完了しませんでした。エラーログを確認し、該当行のインポートをやり直してください。',
+                    'images-downloaded' => 'ダウンロードした画像:',
+                    'images-progress' => '件の画像をダウンロード',
                     'imported-info' => 'おめでとう！インポートは成功しました。',
                     'importing-info' => 'インポート中',
                     'indexing-info' => 'リソースのインデックス作成 (価格、在庫、エラスティック検索) が進行中です',
                     'linking-info' => 'リソースのリンクが進行中です',
                     'progress' => '進捗：',
+                    'rows-validated' => '行を検証済み',
+                    'step-create' => '作成',
+                    'step-delete' => '削除',
+                    'step-download' => '画像',
+                    'step-index' => 'インデックス',
+                    'step-link' => 'リンク',
+                    'step-validate' => '検証',
                     'title' => '輸入',
                     'total-batches' => '合計バッチ数:',
                     'total-created' => '作成された合計レコード数:',
@@ -3408,7 +3749,27 @@ return [
                     'validate-info' => '「データの検証」をクリックしてインポートを確認します。',
                     'validating-info' => 'データの読み取りと検証が開始されました',
                     'validation-failed-info' => 'インポートは無効です。次のエラーを修正して再試行してください。',
+                    'validation-partial-info' => 'インポートは続行できますが、一部の行はスキップされます。以下のエラーを確認するか、完全なレポートをダウンロードしてください。',
                     'validation-success-info' => 'インポートは有効です。 「インポート」をクリックしてインポートプロセスを開始します。',
+                ],
+
+                'images' => [
+                    'current-archive' => '現在アップロード済み: :name — 画像 :count 件が利用可能です。',
+                    'current-images' => 'このインポートには既に :count 件の画像がアップロードされています。',
+                    'directory-example' => 'たとえば product-images の場合、ファイルは /project-root/storage/app/import/product-images フォルダーに配置します。',
+                    'directory-hint' => '/project-root/storage/app/import からの相対パスを使用します（例: product-images、import-images）。',
+                    'directory-info' => 'コードベースにアクセスできる場合は、サーバー上のフォルダーに画像を配置し、そのフォルダーを以下に指定してください。',
+                    'directory-placeholder' => '画像ディレクトリのパス',
+                    'directory-title' => '画像はすでにサーバー上にある',
+                    'download-sample-zip' => 'サンプル画像をダウンロード',
+                    'info' => 'ファイルに記載された画像をどこから取得するかを選択します。',
+                    'recommended' => '推奨',
+                    'replace-archive' => '新しいアーカイブを選ぶと置き換わります。',
+                    'title' => '商品画像',
+                    'upload-info' => 'すべての画像を含む 1 つのアーカイブをアップロードします。「images」列にはその中のファイル名を記載します。',
+                    'upload-title' => '画像の ZIP をアップロード',
+                    'url-info' => '各画像の完全な https:// アドレスを「images」列に記載します。インポート開始前にダウンロードされるため、事前にサーバーへ配置する必要はありません。',
+                    'url-title' => 'ファイル内の画像リンク',
                 ],
 
                 'create-success' => 'インポートが正常に作成されました。',
@@ -3416,6 +3777,7 @@ return [
                 'delete-success' => 'インポートは正常に削除されました。',
                 'not-valid' => 'インポートが無効です',
                 'nothing-to-import' => 'インポートするリソースがありません。',
+                'processing-failed' => 'インポートを処理できませんでした。ファイルを確認してもう一度お試しください。',
                 'setup-queue-error' => 'インポート プロセスを開始するには、キュー ドライバーを「データベース」または「redis」に変更してください。',
                 'update-success' => 'インポートは正常に更新されました。',
             ],
@@ -3793,7 +4155,9 @@ return [
             'incorrect-password' => 'パスワードが正しくありません',
             'last-delete-error' => '最後のユーザーの削除に失敗しました。',
             'login-error' => '資格情報を確認して、もう一度試してください。',
+            'role-not-grantable' => '自分が持っていない権限を含むロールは割り当てられません。',
             'update-success' => 'ユーザーが正常に更新されました。',
+            'user-not-manageable' => '自分が持っていない権限を含むロールのユーザーは変更できません。',
         ],
 
         'roles' => [
@@ -3822,6 +4186,7 @@ return [
                 'name' => '名前',
                 'permissions' => '権限',
                 'save-btn' => '役割を保存',
+                'search-permissions' => '権限を検索',
                 'title' => '役割を作成',
             ],
 
@@ -3843,139 +4208,10 @@ return [
             'delete-failed' => '役割の削除に失敗しました',
             'delete-success' => '役割が正常に削除されました',
             'last-delete-error' => '最後の役割は削除できません',
+            'permissions-not-grantable' => '自分が持っていない権限は付与できません。',
             'update-success' => '役割が正常に更新されました',
         ],
 
-        'themes' => [
-            'index' => [
-                'create-btn' => 'テーマを作成',
-                'title' => 'テーマ',
-
-                'datagrid' => [
-                    'active' => 'アクティブ',
-                    'channel_name' => 'チャンネル名',
-                    'change-status' => 'ステータスを変更',
-                    'delete' => '削除',
-                    'id' => 'ID',
-                    'inactive' => '非アクティブ',
-                    'name' => '名前',
-                    'sort-order' => '並び替え順',
-                    'status' => 'ステータス',
-                    'theme' => 'テーマ',
-                    'type' => 'タイプ',
-                    'view' => '表示',
-                ],
-            ],
-
-            'create' => [
-                'name' => '名前',
-                'save-btn' => 'テーマを保存する',
-                'sort-order' => '並び替え順',
-                'themes' => 'テーマ',
-                'title' => 'テーマを作成',
-
-                'type' => [
-                    'category-carousel' => 'カテゴリーカルーセル',
-                    'footer-links' => 'フッターリンク',
-                    'image-carousel' => '画像カルーセル',
-                    'product-carousel' => '商品カルーセル',
-                    'services-content' => 'サービス内容',
-                    'static-content' => '静的コンテンツ',
-                    'title' => 'タイプ',
-                ],
-            ],
-
-            'edit' => [
-                'active' => 'アクティブ',
-                'add-filter-btn' => 'フィルターを追加',
-                'add-footer-link-btn' => 'フッターリンクを追加',
-                'add-image-btn' => '画像を追加',
-                'add-link' => 'リンクを追加',
-                'asc' => '昇順',
-                'back' => '戻る',
-                'category-carousel' => 'カテゴリーカルーセル',
-                'category-carousel-description' => 'レスポンシブなカテゴリーカルーセルを使用して、動的なカテゴリーを魅力的に表示します。',
-                'category-id' => 'カテゴリID',
-                'channels' => 'チャンネル',
-                'column' => 'カラム',
-                'create-filter' => 'フィルターを作成',
-                'css' => 'CSS',
-                'delete' => '削除',
-                'desc' => '降順',
-                'edit' => '編集',
-                'featured' => '注目',
-                'filter-title' => 'タイトル',
-                'filters' => 'フィルター',
-                'footer-link' => 'フッターリンク',
-                'footer-link-description' => 'ウェブサイトのシームレスな探索と情報取得のために、フッターリンクを介してナビゲートします。',
-                'footer-link-form-title' => 'フッターリンク',
-                'footer-title' => 'タイトル',
-                'general' => '一般',
-                'html' => 'HTML',
-                'image' => '画像',
-                'image-size' => '画像の解像度は（1920px X 700px）である必要があります',
-                'image-title' => '画像のタイトル',
-                'image-upload-message' => '画像のみ（.jpeg、.jpg、.png、.webp、..）が許可されています。',
-                'inactive' => '非アクティブ',
-                'key' => 'キー：:key',
-                'key-input' => 'キー',
-                'limit' => '制限',
-                'link' => 'リンク',
-                'name' => '名前',
-                'new' => '新しい',
-                'no' => 'いいえ',
-                'parent-id' => '親ID',
-                'parent-id-hint' => '複数の親IDをカンマ区切りの値として入力できます（例：12,15,34）',
-                'preview' => 'プレビュー',
-                'product-carousel' => '商品カルーセル',
-                'product-carousel-description' => '動的でレスポンシブな商品カルーセルを使用して、製品をエレガントにショーケースします。',
-                'save-btn' => '保存',
-                'select' => '選択',
-                'slider' => 'スライダー',
-                'slider-add-btn' => 'スライダーを追加',
-                'slider-description' => 'スライダー関連のテーマのカスタマイズ。',
-                'slider-image' => 'スライダー画像',
-                'slider-required' => 'スライダーフィールドは必須です。',
-                'sort' => '並び替え',
-                'sort-order' => '並び替え順',
-                'static-content' => '静的コンテンツ',
-                'static-content-description' => '観客に向けて簡潔で情報豊かな静的コンテンツでエンゲージメントを向上させます。',
-                'status' => 'ステータス',
-                'themes' => 'テーマ',
-                'title' => 'テーマを編集',
-                'update-slider' => 'スライダーを更新',
-                'url' => 'URL',
-                'value' => '値：:value',
-                'value-input' => '値',
-
-                'services-content' => [
-                    'add-btn' => 'サービスを追加',
-                    'channels' => 'チャンネル',
-                    'delete' => '削除',
-                    'description' => '説明',
-                    'general' => '一般',
-                    'name' => '名前',
-                    'save-btn' => '保存',
-                    'service-icon' => 'サービスアイコン',
-                    'service-icon-class' => 'サービスアイコンクラス',
-                    'service-info' => 'サービス関連のテーマのカスタマイズ。',
-                    'services' => 'サービス',
-                    'sort-order' => '並べ替え順序',
-                    'status' => 'ステータス',
-                    'title' => 'タイトル',
-                    'update-service' => 'サービスを更新',
-                ],
-
-                'yes' => 'はい',
-            ],
-
-            'create-success' => 'テーマが正常に作成されました',
-            'delete-success' => 'テーマが正常に削除されました',
-            'update-success' => 'テーマが正常に更新されました',
-        ],
-    ],
-
-    'reporting' => [
         'sales' => [
             'index' => [
                 'abandoned-carts' => '放棄されたカート',
@@ -4115,11 +4351,11 @@ return [
             'title' => '設定',
 
             'general' => [
-                'info' => '一般',
+                'info' => '単位、コンテンツ、デザイン、為替レート、サイトマップ、GDPRのストア全体の設定。',
                 'title' => '一般',
 
                 'general' => [
-                    'info' => 'ユニット設定を構成し、パンくずリストと訪問者オプションのオン/オフを切り替えます。',
+                    'info' => '単位設定とストアフロントのパンくずリスト。',
                     'title' => '一般',
 
                     'unit-options' => [
@@ -4137,7 +4373,7 @@ return [
                 ],
 
                 'content' => [
-                    'info' => 'ヘッダーオファータイトルとカスタムスクリプトを設定します。',
+                    'info' => 'ヘッダーオファー、著作権表示、投機的読み込みルール、カスタムスクリプト。',
                     'title' => 'コンテンツ',
 
                     'header-offer' => [
@@ -4150,7 +4386,7 @@ return [
 
                     'copyright-content' => [
                         'title' => '著作権コンテンツ',
-                        'info' => '知的財産を保護し、ブランド認知を高めるために、ウェブサイトのフッターに表示される著作権コンテンツを設定してください。',
+                        'info' => 'ストアのフッターに表示される著作権表示。',
                     ],
 
                     'speculation-rules' => [
@@ -4191,24 +4427,25 @@ return [
                         'custom-css' => 'カスタムCSS',
                         'custom-javascript' => 'カスタムJavascript',
                         'title' => 'カスタムスクリプト',
-                        'title-info' => 'カスタムスクリプトは、特定の機能や機能をソフトウェアに追加するために作成された個別のコードのことであり、その機能をユニークに強化します。',
+                        'title-info' => 'ストアの全ページに追加されるCSSとJavaScript。',
                     ],
                 ],
 
                 'design' => [
-                    'info' => '管理パネルのロゴとファビコンアイコンを設定します。',
+                    'info' => '管理パネルのロゴとファビコン、およびストアフロントのメニューカテゴリの表示方法。',
                     'title' => 'デザイン',
 
                     'admin-logo' => [
                         'favicon' => 'ファビコン',
                         'logo-image' => 'ロゴ画像',
                         'title' => '管理者ロゴ',
-                        'title-info' => 'ブランディングと認識のために、ウェブサイトのフロントエンドのロゴとファビコン画像を設定します。',
+                        'title-info' => '管理パネルと管理者宛メールに表示されるロゴとファビコン。',
                     ],
 
                     'menu-category' => [
                         'default' => 'デフォルトメニュー',
                         'info' => 'この設定はヘッダーメニュー内のカテゴリの表示を制御します。親カテゴリのみを表示するか、すべてのネストされたカテゴリを表示するかを選択できます。',
+                        'preview' => 'プレビュー',
                         'preview-default' => 'デフォルトメニューのプレビュー',
                         'preview-sidebar' => 'サイドバーメニューのプレビュー',
                         'sidebar' => 'サイドバーメニュー',
@@ -4218,11 +4455,11 @@ return [
 
                 'gdpr' => [
                     'title' => 'GDPR',
-                    'info' => 'GDPRコンプライアンス設定',
+                    'info' => 'Cookie通知、同意カテゴリ、顧客に表示するプライバシー同意書。',
 
                     'settings' => [
                         'title' => 'GDPRコンプライアンス設定',
-                        'info' => 'プライバシーポリシーを含むGDPRコンプライアンス設定を管理します。必要に応じてGDPR機能を有効または無効にします。',
+                        'info' => 'このチャネルのGDPR機能を有効・無効にします。',
                         'enabled' => 'GDPRを有効にする',
                     ],
 
@@ -4296,7 +4533,7 @@ return [
                 ],
 
                 'sitemap' => [
-                    'info' => 'サイトマップのオプションを設定します。',
+                    'info' => 'サイトマップの生成とファイル上限。',
                     'title' => 'サイトマップ',
 
                     'settings' => [
@@ -4306,7 +4543,7 @@ return [
                     ],
 
                     'file-limits' => [
-                        'info' => 'ファイル制限オプションを設定します。',
+                        'info' => '1つのサイトマップファイルに書き込むURLの上限。これを超えると次のファイルが作成されます。',
                         'max-file-size' => '最大ファイルサイズ',
                         'max-url-per-file' => 'ファイルあたりの最大URL数',
                         'title' => 'ファイル制限',
@@ -4423,18 +4660,18 @@ return [
             ],
 
             'catalog' => [
-                'info' => 'カタログ',
+                'info' => '商品、リッチスニペット、在庫の設定。',
                 'title' => 'カタログ',
 
                 'products' => [
-                    'info' => '製品表示ページ、カート表示ページ、店舗フロント、レビューおよび属性のソーシャル共有。',
+                    'info' => '商品ページとカートページ、検索、画像サイズ、レビュー、属性、共有。',
                     'title' => '製品',
 
                     'settings' => [
                         'compare-options' => '比較オプション',
                         'image-search-option' => '画像検索オプション',
                         'title' => '設定',
-                        'title-info' => '設定は、ユーザーの好みや要件に合わせてシステム、アプリケーション、またはデバイスの動作を制御する設定可能な選択肢を指します。',
+                        'title-info' => '商品比較と画像検索の有効・無効を切り替えます。',
                         'wishlist-options' => 'ウィッシュリストオプション',
                     ],
 
@@ -4465,13 +4702,13 @@ return [
                         'allow-no-of-related-products' => '関連製品の許可数',
                         'allow-no-of-up-sells-products' => 'アップセル製品の許可数',
                         'title' => '製品ビューページの設定',
-                        'title-info' => '製品ビューページの設定では、製品の表示ページのレイアウトと要素を調整し、ユーザーエクスペリエンスと情報の表示を向上させます。',
+                        'title-info' => '商品ページに表示する関連商品とアップセル商品の数。',
                     ],
 
                     'cart-view-page' => [
                         'allow-no-of-cross-sells-products' => 'クロスセル製品の許可数',
                         'title' => 'カートビューページの設定',
-                        'title-info' => 'カートビューページの設定では、ショッピングカートページのアイテム、詳細、オプションを配置し、ユーザーの対話と購入フローを改善します。',
+                        'title-info' => 'カートページに表示するクロスセル商品の数。',
                     ],
 
                     'storefront' => [
@@ -4489,14 +4726,14 @@ return [
                         'products-per-page' => 'ページごとの製品数',
                         'sort-by' => '並び替え',
                         'title' => 'ストアフロント',
-                        'title-info' => 'ストアフロントは、オンラインショップの顧客向けインターフェースであり、シームレスなショッピング体験のために製品、カテゴリ、ナビゲーションを展示します。',
+                        'title-info' => 'カテゴリページと検索ページでの商品の表示方法。',
                     ],
 
                     'small-image' => [
                         'height' => '高さ',
                         'placeholder' => '小さい画像のプレースホルダ',
                         'title' => '小さい画像',
-                        'title-info' => 'ストアフロントは、オンラインショップの顧客向けインターフェースであり、製品、カテゴリ、ナビゲーションを展示します。',
+                        'title-info' => '小サイズの商品画像をリサイズする寸法と、画像がない商品に表示するプレースホルダー。',
                         'width' => '幅',
                     ],
 
@@ -4504,7 +4741,7 @@ return [
                         'height' => '高さ',
                         'placeholder' => '中サイズの画像プレースホルダ',
                         'title' => '中サイズの画像',
-                        'title-info' => '中サイズの画像は、詳細と画面スペースのバランスをとり、一般的にビジュアルに使用されます。',
+                        'title-info' => '中サイズの商品画像をリサイズする寸法と、画像がない商品に表示するプレースホルダー。',
                         'width' => '幅',
                     ],
 
@@ -4512,7 +4749,7 @@ return [
                         'height' => '高さ',
                         'placeholder' => '大きな画像のプレースホルダ',
                         'title' => '大きな画像',
-                        'title-info' => '大きな画像は、製品やグラフィックを展示するために使用される、詳細と視覚的なインパクトを提供する高解像度の画像です。',
+                        'title-info' => '大サイズの商品画像をリサイズする寸法と、画像がない商品に表示するプレースホルダー。',
                         'width' => '幅',
                     ],
 
@@ -4524,25 +4761,25 @@ return [
                         'display-star-count' => '評価に星の数を表示します。',
                         'summary' => 'まとめ',
                         'title' => 'レビュー',
-                        'title-info' => '何かを評価または評価することで、しばしば意見やフィードバックが含まれます。',
+                        'title-info' => '商品をレビューできる対象と、商品ページでのレビューの表示方法。',
                     ],
 
                     'attribute' => [
                         'file-upload-size' => '許可されるファイルのアップロードサイズ（KB単位）',
                         'image-upload-size' => '許可される画像のアップロードサイズ（KB単位）',
                         'title' => '属性',
-                        'title-info' => 'オブジェクトを定義し、その動作、外観、または機能に影響を与える特性またはプロパティ。',
+                        'title-info' => '属性値にアップロードできる画像とファイルの最大サイズ。',
                     ],
 
                     'social-share' => [
-                        'title-info' => 'Instagram、Twitter、WhatsApp、Facebook、Pinterest、LinkedIn、およびメールを介して製品の共有を有効にするために、ソーシャルシェア設定を構成します。',
+                        'title-info' => '商品ページに表示する共有ボタンと、そこに含めるメッセージを選択します。',
                         'title' => 'ソーシャルシェア',
                         'share-message' => '共有メッセージ',
                         'share' => '共有',
                         'enable-social-share' => 'ソーシャルシェアを有効にする？',
-                        'enable-share-whatsapp-info' => 'モバイルデバイスでのみWhatsapp共有リンクが表示されます。',
-                        'enable-share-whatsapp' => 'Whatsappでの共有を有効にする？',
-                        'enable-share-twitter' => 'Twitterでの共有を有効にする？',
+                        'enable-share-whatsapp-info' => 'WhatsAppの共有リンクはモバイル端末にのみ表示されます。',
+                        'enable-share-whatsapp' => 'WhatsAppでの共有を有効にしますか？',
+                        'enable-share-twitter' => 'X（Twitter）での共有を有効にしますか？',
                         'enable-share-pinterest' => 'Pinterestでの共有を有効にする？',
                         'enable-share-linkedin' => 'Linkedinでの共有を有効にする？',
                         'enable-share-facebook' => 'Facebookでの共有を有効にする？',
@@ -4551,7 +4788,7 @@ return [
                 ],
 
                 'rich-snippets' => [
-                    'info' => '製品とカテゴリを設定します。',
+                    'info' => '検索エンジン向けにストアページへ追加される構造化データ。',
                     'title' => 'リッチスニペット',
 
                     'products' => [
@@ -4564,14 +4801,14 @@ return [
                         'show-sku' => 'SKUを表示する',
                         'show-weight' => '重量を表示する',
                         'title' => '製品',
-                        'title-info' => 'SKU、重量、カテゴリ、画像、レビュー、評価、オファーなどを含む製品設定を構成する。',
+                        'title-info' => '構造化データに含める商品情報を選択します。',
                     ],
 
                     'categories' => [
                         'enable' => '有効にする',
                         'show-search-input-field' => '検索入力フィールドを表示する',
                         'title' => 'カテゴリ',
-                        'title-info' => '「カテゴリ」とは、似たような製品やアイテムを簡単にブラウズやナビゲーションするためにグループ化し、分類するためのグループまたは分類です。',
+                        'title-info' => '検索エンジンが読み取れるよう、ストアページにカテゴリの構造化データを追加します。',
                     ],
                 ],
 
@@ -4585,13 +4822,13 @@ return [
                         'min-qty-allowed-in-cart' => 'ショッピングカートで許可される最小数量',
                         'out-of-stock-threshold' => '在庫切れのしきい値',
                         'title' => '製品の在庫オプション',
-                        'info' => '製品在庫オプションを設定して、バックオーダーを許可し、カートの最小および最大数量を設定し、在庫不足のしきい値を定義します。',
+                        'info' => '在庫切れでも注文を許可し、商品を在庫切れとみなす数量を設定します。',
                     ],
                 ],
             ],
 
             'customer' => [
-                'info' => '顧客',
+                'info' => '住所、キャプチャ、顧客アカウントの設定。',
                 'title' => '顧客',
 
                 'address' => [
@@ -4603,19 +4840,19 @@ return [
                         'country' => '国',
                         'state' => '都道府県',
                         'title' => '要件',
-                        'title-info' => '要件は、何かを達成するために必要な条件、機能、または仕様です。',
+                        'title-info' => '顧客が入力必須となる住所項目。',
                         'zip' => '郵便番号',
                     ],
 
                     'information' => [
                         'street-lines' => '住所の行',
                         'title' => '情報',
-                        'title-info' => '「住所の行」とは、住所の個々のセグメントを指し、通常はコンマで区切られており、家番号、通り名、市区町村などの位置情報を提供します。',
+                        'title-info' => '住所フォームに表示する住所行の数。',
                     ],
                 ],
 
                 'captcha' => [
-                    'info' => 'サイトキー、シークレットキー、ステータスを設定します。',
+                    'info' => 'Google reCAPTCHA Enterprise のキーと状態。',
                     'title' => 'Google キャプチャ',
 
                     'credentials' => [
@@ -4630,7 +4867,7 @@ return [
                         'site-key-info' => 'プロジェクトとAPIキーが作成されたら、ライブラリで「reCAPTCHA」サービスを検索し、「reCAPTCHA」キーを生成します。',
                         'status' => 'ステータス',
                         'title' => '認証情報',
-                        'title-info' => 'APIキー、プロジェクトID、サイトキー、シークレットキーを含むGoogle reCAPTCHA認証情報を設定し、ステータスを有効または無効にします。',
+                        'title-info' => 'Google reCAPTCHA Enterprise の認証情報と、リクエストが受理されるために必要なスコア。',
                     ],
 
                     'validations' => [
@@ -4640,7 +4877,7 @@ return [
                 ],
 
                 'settings' => [
-                    'settings-info' => 'ウィッシュリスト、ログインリダイレクト、ニュースレター購読、デフォルトグループオプション、メール確認、およびソーシャルログインを設定します。',
+                    'settings-info' => 'ウィッシュリスト、ログイン後のリダイレクト、新規アカウントの設定、ニュースレター、メール認証、ソーシャルログインを設定します。',
                     'title' => '設定',
 
                     'login-as-customer' => [
@@ -4680,19 +4917,20 @@ return [
 
                     'newsletter' => [
                         'subscription' => 'ニュースレターの購読を許可する',
+                        'subscription-info' => 'ストアのフッターに登録フォームを表示します。',
                         'title' => 'ニュースレターの購読',
-                        'title-info' => '「ニュースレター情報」は、定期的に購読者にメールで共有される更新情報、オファー、またはコンテンツを含み、彼らを情報提供と関与に保ちます。',
+                        'title-info' => 'ストアでのニュースレター登録。',
                     ],
 
                     'email' => [
                         'email-verification' => 'メールの確認を許可する',
                         'title' => 'メールの確認',
-                        'title-info' => '「メールの確認」は、メールアドレスの真正性を確認するものであり、確認リンクを送信することが一般的です。アカウントのセキュリティと通信の信頼性を向上させます。',
+                        'title-info' => '新規顧客がサインインする前にメールアドレスの確認を求めます。',
                     ],
 
                     'social-login' => [
                         'title' => 'ソーシャルログイン',
-                        'info' => '「ソーシャルログイン」とは、ユーザーがソーシャルメディアアカウントを使ってウェブサイトにアクセスできる機能で、登録やログインのプロセスを簡略化します。',
+                        'info' => '外部アカウントでのサインインを許可します。プロバイダーごとに固有のクライアントIDとシークレットが必要です。',
 
                         'google' => [
                             'enable-google' => 'Googleを有効にする',
@@ -4771,21 +5009,21 @@ return [
                         ],
 
                         'twitter' => [
-                            'enable-twitter' => 'Twitterを有効にする',
+                            'enable-twitter' => 'X（Twitter）を有効にする',
 
                             'client-id' => [
                                 'title' => 'クライアントID',
-                                'title-info' => 'TwitterでOAuthアプリケーションを作成する際に提供される一意の識別子です。',
+                                'title-info' => 'OAuthアプリケーション作成時にXから発行される一意の識別子。',
                             ],
 
                             'client-secret' => [
                                 'title' => 'クライアントシークレット',
-                                'title-info' => 'Twitter OAuthクライアントに関連付けられた秘密鍵。安全に保管してください。',
+                                'title-info' => 'XのOAuthクライアントに紐づくシークレットキー。第三者に開示しないでください。',
                             ],
 
                             'redirect' => [
                                 'title' => 'リダイレクトURL',
-                                'title-info' => 'Twitter認証後にユーザーがリダイレクトされるコールバックURL。表示されているプレースホルダーURL形式を使用してください（ドメインのみを変更）。Twitterコンソールに設定されたURLと一致する必要があります。',
+                                'title-info' => 'Xでの認証後にユーザーがリダイレクトされるコールバックURL。表示されている形式を使用してください（ドメインのみ変更）。X開発者ポータルに設定したURLと一致している必要があります。',
                             ],
                         ],
                     ],
@@ -4793,18 +5031,25 @@ return [
             ],
 
             'email' => [
-                'info' => 'メール',
+                'info' => 'メールドライバー、差出人情報、ストアが送信する通知。',
                 'title' => 'メール',
 
                 'smtp' => [
+                    'brevo-api-key' => 'Brevo APIキー',
+                    'brevo-api-key-info' => 'Brevoアカウントの SMTP & API で v3 APIキーを作成してください。',
+                    'driver' => 'ドライバー',
+                    'driver-brevo-api' => 'Brevo (API)',
+                    'driver-info' => 'ストアがメールを送信する方法を選択します。',
                     'driver-mismatch-info' => 'メールドライバーは "bagisto-dynamic-smtp" ではなく ":driver" に設定されていますここで行った変更は有効になりません。.envファイルでMAIL_MAILER=bagisto-dynamic-smtpを更新して、これらの設定をアクティブにしてください。',
                     'driver-mismatch-title' => 'これらの設定は現在無効です。',
+                    'driver-notice' => 'ドライバーに関する通知',
+                    'driver-smtp' => 'SMTP',
                     'encryption' => '暗号化',
                     'host' => 'ホスト',
-                    'info' => 'ストアからメールを送信するためのSMTPサーバー設定を構成します。',
+                    'info' => 'ストアがメールを送信する方法を選択し、選んだドライバーを設定します。',
                     'password' => 'パスワード',
                     'port' => 'ポート',
-                    'title' => 'SMTP',
+                    'title' => 'メールドライバー',
                     'username' => 'ユーザー名',
                 ],
 
@@ -4818,12 +5063,13 @@ return [
                     'contact-email-tip' => 'このメールアドレスはメールのフッターに表示されます。',
                     'contact-name' => '連絡先名',
                     'contact-name-tip' => 'この名前はメールのフッターに表示されます。',
-                    'info' => 'すべてのメールで使用される送信者名、ショップのメールアドレス、管理者連絡先詳細を設定します。',
+                    'info' => 'メールの送信方法と送信元アドレスを選択します。',
                     'sender-email' => '送信者メールアドレス',
                     'sender-email-tip' => '顧客へのメールはこのアドレスから送信されます。',
                     'sender-name' => '送信者名',
                     'sender-name-tip' => 'この名前は顧客の受信トレイにメールの送信者として表示されます。',
                     'title' => 'メール設定',
+                    'title-info' => 'ストアがメールを送信する差出人名・アドレスと、フッターに表示される連絡先。',
                 ],
 
                 'notifications' => [
@@ -4831,7 +5077,7 @@ return [
                     'cancel-order-mail-to-admin' => '注文キャンセル後に管理者へ通知メールを送信する',
                     'customer' => '登録後に顧客のアカウント情報を送信する',
                     'customer-registration-confirmation-mail-to-admin' => '顧客登録後に管理者へ確認メールを送信する',
-                    'info' => 'アカウント確認、注文確認、請求書、払い戻し、出荷、注文キャンセルのメールを受信するように設定します。',
+                    'info' => '顧客と管理者に送信するメールを選択します。',
                     'new-inventory-source' => '出荷作成後に在庫ソースに通知メールを送信する',
                     'new-invoice' => '新しい請求書作成後に顧客へ通知メールを送信する',
                     'new-invoice-mail-to-admin' => '新しい請求書作成後に管理者へ通知メールを送信する',
@@ -4843,16 +5089,17 @@ return [
                     'new-shipment-mail-to-admin' => '出荷作成後に管理者へ通知メールを送信する',
                     'registration' => '顧客登録後に確認メールを送信する',
                     'title' => '通知',
+                    'title-info' => '通知メールを個別に有効・無効にします。',
                     'verification' => '顧客登録後に確認メールを送信する',
                 ],
             ],
 
             'sales' => [
-                'info' => '売上',
+                'info' => '配送、支払い、注文、請求書、税、チェックアウト、返品の設定。',
                 'title' => '売上',
 
                 'shipping-setting' => [
-                    'info' => '国、州、市、住所、郵便番号、店舗名、VAT番号、連絡先番号、および銀行の詳細など、配送設定を構成します。',
+                    'info' => '注文の発送元住所。',
                     'title' => '配送設定',
 
                     'origin' => [
@@ -4864,14 +5111,14 @@ return [
                         'store-name' => '店舗名',
                         'street-address' => '住所',
                         'title' => '出荷元',
-                        'title-info' => '出荷元は、商品や製品が目的地に輸送される前に起源する場所を指します。',
+                        'title-info' => '注文の発送元住所と、請求書に表示するストア情報。',
                         'vat-number' => 'VAT番号',
                         'zip' => '郵便番号',
                     ],
                 ],
 
                 'shipping-methods' => [
-                    'info' => '無料配送、一律料金などの配送方法を設定します。',
+                    'info' => 'チェックアウトで提供する配送方法。',
                     'title' => '配送方法',
 
                     'free-shipping' => [
@@ -4879,7 +5126,7 @@ return [
                         'page-title' => '無料配送',
                         'status' => 'ステータス',
                         'title' => 'タイトル',
-                        'title-info' => '「無料配送」とは、送料が免除され、販売者が買い手に商品を配送するための送料を負担する配送方法を指します。',
+                        'title-info' => '送料が無料の配送方法。',
                     ],
 
                     'flat-rate-shipping' => [
@@ -4888,7 +5135,7 @@ return [
                         'rate' => '料金',
                         'status' => 'ステータス',
                         'title' => 'タイトル',
-                        'title-info' => '一律料金配送は、パッケージの重量、サイズ、または距離に関係なく、一定の料金が請求される配送方法です。これにより、送料が簡素化され、買い手と販売者の両方にとって有利になります。',
+                        'title-info' => '注文ごと、または商品ごとに定額を課す配送方法。',
                         'type' => [
                             'per-order' => '注文ごと',
                             'per-unit' => '単位ごと',
@@ -4909,36 +5156,46 @@ return [
                     'application-fee' => 'アプリケーション手数料の支払者',
                     'business-account' => 'ビジネスアカウント',
                     'cash-on-delivery' => '代金引換',
-                    'cash-on-delivery-info' => '代金引換は、商品やサービスを受け取った後に現金で支払う支払い方法です。',
+                    'cash-on-delivery-info' => '配達時に現金で支払えるようにします。',
                     'client-id' => 'クライアントID',
-                    'client-id-info' => 'テストには「sb」を使用してください。',
+                    'client-id-info' => 'PayPalアプリのクライアントID。サンドボックスが有効な間はサンドボックスアプリのクライアントIDを使用してください。',
                     'client-secret' => 'クライアントシークレット',
-                    'client-secret-info' => 'ここに秘密キーを追加してください',
+                    'client-secret-info' => 'PayPalアプリのクライアントシークレット。',
                     'create-success-refund' => '返金が正常に作成されました。',
                     'description' => '説明',
                     'enable' => '有効にする',
                     'generate-invoice' => '注文後に自動的に請求書を生成する',
                     'generate-invoice-applicable' => '自動請求書生成が有効な場合に適用されます',
-                    'info' => '支払い方法の情報を設定します',
+                    'info' => 'チェックアウトで提供する支払い方法を設定します。',
                     'instructions' => '指示',
                     'logo' => 'ロゴ',
-                    'logo-information' => '画像の解像度は55px X 45pxのようにする必要があります',
+                    'logo-information' => '推奨サイズ：55 x 45 ピクセル。',
                     'mailing-address' => '送付先',
                     'merchant-description' => 'マーチャントの説明',
                     'merchant-id' => 'マーチャントID',
                     'merchant-key' => 'マーチャントキー',
                     'merchant-name' => 'マーチャント名',
+                    'merchant-private-key' => 'マーチャント秘密鍵',
+                    'merchant-private-key-info' => 'PayGlocal ダッシュボードで生成した秘密鍵 PEM ファイルの内容を貼り付けてください。リクエストの署名に使用されます。',
                     'merchant-salt' => 'マーチャントソルト',
                     'money-transfer' => '送金',
-                    'money-transfer-info' => '送金は、取引や送金などのさまざまな目的で、しばしば電子的に行われる、1人またはアカウントから別の人またはアカウントへの資金の移動です。',
+                    'money-transfer-info' => '銀行振込または小切手で支払えるようにします。',
                     'page-title' => '支払い方法',
                     'paid' => '支払済み',
+                    'payglocal' => 'PayGlocal',
+                    'payglocal-info' => 'PayGlocal を通じて国際決済を受け付けます。 <a href="https://dashboard.payglocal.in/app/mca/h8271x" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline hover:text-blue-700">認証情報を取得するには、こちらからサインアップしてください。</a>',
+                    'payglocal-merchant-id-info' => 'PayGlocal ダッシュボードの My Account で確認できます。',
+                    'payglocal-private-key-id-info' => 'PayGlocal ダッシュボードに表示される秘密鍵の ID です。',
+                    'payglocal-public-key' => 'PayGlocal 公開鍵',
+                    'payglocal-public-key-id-info' => 'PayGlocal ダッシュボードに表示される PayGlocal 公開鍵の ID です。',
+                    'payglocal-public-key-info' => 'PayGlocal 公開鍵 PEM ファイルの内容を貼り付けてください。リクエストの暗号化とレスポンスの検証に使用されます。',
+                    'payglocal-sandbox-info' => '支払いを PayGlocal のテスト環境に送信します。',
                     'paypal-smart-button' => 'PayPal',
-                    'paypal-smart-button-info' => 'PayPal Smart Button：ウェブサイトやアプリでのセキュアなマルチメソッドトランザクションのためのカスタマイズ可能なボタンを使用して、オンライン支払いを簡素化します。',
+                    'paypal-smart-button-info' => 'チェックアウトにPayPalのボタンを表示し、PayPalまたはカードで支払えるようにします。',
                     'paypal-standard' => 'PayPal Standard',
-                    'paypal-standard-info' => 'PayPal Standardは、オンラインビジネス向けの基本的なPayPal支払いオプションであり、顧客がPayPalアカウントまたはクレジット/デビットカードを使用して支払いを行うことができます。',
+                    'paypal-standard-info' => '顧客をPayPalに移動させ、PayPalアカウントまたはカードで支払わせます。',
                     'payu' => 'PayU',
-                    'payu-info' => 'PayU決済ゲートウェイの設定を構成する',
+                    'payu-info' => 'PayUで支払いを受け付けます。',
                     'payu-merchant-key-info' => 'PayUダッシュボードから取得したマーチャントキーを入力してください',
                     'payu-merchant-salt-info' => 'PayUダッシュボードから取得したマーチャントソルトを入力してください',
                     'pending' => '保留中',
@@ -4948,10 +5205,12 @@ return [
                     'phonepe-client-id-info' => 'PhonePeダッシュボードから取得したPhonePeクライアントIDを入力してください',
                     'phonepe-client-secret-info' => 'PhonePeダッシュボードから取得したPhonePeクライアントシークレットを入力してください',
                     'phonepe-merchant-info' => 'PhonePeダッシュボードから取得したPhonePeマーチャントIDを入力してください',
+                    'private-key-id' => '秘密鍵 ID',
                     'processing' => '処理中',
                     'production-mode-info' => '本番モードのみ。',
+                    'public-key-id' => '公開鍵 ID',
                     'razorpay' => 'Razorpay',
-                    'razorpay-info' => 'Razorpayは、企業が支払いを受け入れ、処理し、支払いを行うのを支援する金融技術プラットフォームです。',
+                    'razorpay-info' => 'Razorpayで支払いを受け付けます。',
                     'sandbox' => 'サンドボックス',
                     'set-invoice-status' => '請求書作成後の請求書ステータスを設定する',
                     'set-order-status' => '請求書作成後の注文ステータスを設定する',
@@ -4959,7 +5218,7 @@ return [
                     'statement-descriptor' => '明細書記述子',
                     'status' => 'ステータス',
                     'stripe' => 'Stripe',
-                    'stripe-info' => '安全なオンライン取引のためのStripe決済ゲートウェイ設定を構成します',
+                    'stripe-info' => 'Stripeでカード決済を受け付けます。',
                     'test-client-id' => 'テストモードクライアントID',
                     'test-client-secret' => 'テストモードクライアントシークレット',
                     'test-mode-info' => 'テスト/サンドボックスモードのみ。',
@@ -4967,7 +5226,7 @@ return [
                 ],
 
                 'order-settings' => [
-                    'info' => '注文番号、最小注文数、バックオーダーを設定します。',
+                    'info' => '注文作成の再試行回数、注文番号、最小注文金額、再注文。',
                     'title' => '注文設定',
 
                     'order-creation' => [
@@ -4978,7 +5237,7 @@ return [
 
                     'order-number' => [
                         'generator' => '注文番号ジェネレータ',
-                        'info' => '特定の顧客注文に割り当てられた一意の識別子で、購入プロセス全体での追跡、コミュニケーション、参照を支援します。',
+                        'info' => '生成される注文番号の構成。',
                         'length' => '注文番号の長さ',
                         'prefix' => '注文番号のプレフィックス',
                         'suffix' => '注文番号のサフィックス',
@@ -4990,17 +5249,17 @@ return [
                         'enable' => '有効にする',
                         'include-discount-amount' => '割引額を含む',
                         'include-tax-amount' => '税額を含む',
-                        'info' => '注文が処理されるための最低必要数量または金額を指定する基準を設定します。',
+                        'info' => '顧客がチェックアウトできる最小注文金額。',
                         'minimum-order-amount' => '最低注文金額',
                         'title' => '最小注文設定',
                     ],
 
                     'reorder' => [
                         'admin-reorder' => '管理者の再注文',
-                        'admin-reorder-info' => '管理者ユーザーの再注文機能を有効または無効にします。',
-                        'info' => 'ショップユーザーの再注文機能を有効または無効にします。',
+                        'admin-reorder-info' => '管理者が管理パネルから注文をやり直せるようにします。',
+                        'info' => '管理パネルまたはストアフロントから注文をやり直せるようにします。',
                         'shop-reorder' => 'ショップの再注文',
-                        'shop-reorder-info' => 'ショップユーザーの再注文機能を有効または無効にします。',
+                        'shop-reorder-info' => '顧客がストアフロントから注文をやり直せるようにします。',
                         'title' => '再注文を許可する',
                     ],
 
@@ -5012,12 +5271,12 @@ return [
                 ],
 
                 'invoice-settings' => [
-                    'info' => '請求書番号、支払条件、請求書スリップのデザイン、請求書リマインダーを設定します。',
+                    'info' => '請求書番号、支払条件、PDF出力、リマインダー。',
                     'title' => '請求書設定',
 
                     'invoice-number' => [
                         'generator' => '請求書番号ジェネレータ',
-                        'info' => '組織や追跡の目的で請求書に一意の識別番号を生成および割り当てるためのルールやパラメータの設定。',
+                        'info' => '生成される請求書番号の構成。',
                         'length' => '請求書番号の長さ',
                         'prefix' => '請求書番号のプレフィックス',
                         'suffix' => '請求書番号のサフィックス',
@@ -5028,7 +5287,7 @@ return [
                         'due-duration' => '支払期限',
                         'due-duration-day' => ':due-duration 日',
                         'due-duration-days' => ':due-duration 日',
-                        'info' => '買い手が売り手に対して商品やサービスの支払いを行うべき時期や方法を定めた合意条件。',
+                        'info' => '請求書の発行から支払期限までの日数。',
                         'title' => '支払条件',
                     ],
 
@@ -5046,7 +5305,7 @@ return [
                     ],
 
                     'invoice-reminders' => [
-                        'info' => '請求書の支払いの予定または延滞を顧客に通知するために自動的に送信される通知やコミュニケーション。',
+                        'info' => '未払い請求書に送る支払いリマインダーの回数と間隔。',
                         'interval-between-reminders' => 'リマインダー間隔',
                         'maximum-limit-of-reminders' => 'リマインダーの最大制限',
                         'title' => '請求書リマインダー',
@@ -5055,11 +5314,11 @@ return [
 
                 'taxes' => [
                     'title' => '税金',
-                    'title-info' => '税金は、政府が商品、サービス、または取引に課す義務的な料金であり、販売者が徴収し当局に納付するものです。',
+                    'title-info' => '税カテゴリ、税の計算方法、税の表示方法。',
 
                     'categories' => [
                         'title' => '税金カテゴリ',
-                        'title-info' => '税金カテゴリは、商品やサービスに税率を適用するための分類であり、消費税、付加価値税、消費税などの異なる種類の税金を分類および適用するために使用されます。',
+                        'title-info' => '配送に適用する税カテゴリと、新規商品の既定の税カテゴリ。',
                         'product' => '製品のデフォルト税金カテゴリ',
                         'shipping' => '配送料税金カテゴリ',
                         'none' => 'なし',
@@ -5079,7 +5338,7 @@ return [
                         'shipping-origin' => '出荷元',
                         'shipping-prices' => '配送料',
                         'title' => '計算設定',
-                        'title-info' => '基本価格、割引、税金、および追加料金など、商品やサービスの費用に関する詳細情報。',
+                        'title-info' => '税の計算対象と、入力した価格に税が含まれているかどうか。',
                     ],
 
                     'default-destination-calculation' => [
@@ -5087,14 +5346,14 @@ return [
                         'default-post-code' => 'デフォルトの郵便番号',
                         'default-state' => 'デフォルトの州',
                         'title' => 'デフォルトの宛先計算',
-                        'title-info' => '事前定義された要因や設定に基づいて、標準または初期の宛先を自動的に決定します。',
+                        'title-info' => '顧客が住所を入力する前に税計算の基準となる住所。',
                     ],
 
                     'shopping-cart' => [
                         'show-tax-breakdown' => '税の内訳を表示',
                         'show-tax-breakdown-info' => 'カートおよびチェックアウトの概要に、商品ごと・税率ごとの詳細な税内訳を表示します。デバッグ用です。',
                         'title' => 'ショッピングカートの表示設定',
-                        'title-info' => 'ショッピングカートでの税金の表示を設定します',
+                        'title-info' => 'カートとチェックアウトでの税の表示方法。',
                         'display-prices' => '価格の表示',
                         'display-subtotal' => '小計の表示',
                         'display-shipping-amount' => '配送料の表示',
@@ -5105,7 +5364,7 @@ return [
 
                     'sales' => [
                         'title' => '注文、請求書、返金の表示設定',
-                        'title-info' => '注文、請求書、返金での税金の表示を設定します',
+                        'title-info' => '注文、請求書、返金での税の表示方法。',
                         'display-prices' => '価格の表示',
                         'display-subtotal' => '小計の表示',
                         'display-shipping-amount' => '配送料の表示',
@@ -5117,7 +5376,7 @@ return [
 
                 'checkout' => [
                     'title' => 'チェックアウト',
-                    'info' => 'ゲストチェックアウトを設定、ミニカートを有効または無効にする、カートの概要。',
+                    'info' => 'ゲスト購入、カートページ、ミニカート、カートの集計。',
 
                     'shopping-cart' => [
                         'cart-page' => 'カートページ',
@@ -5128,21 +5387,21 @@ return [
                         'estimate-shipping-info' => '見積もり配送料を有効にして、事前に配送料を提供します。',
                         'guest-checkout' => 'ゲストチェックアウトを許可する',
                         'guest-checkout-info' => '迅速で手間のかからない購入プロセスのために、ゲストチェックアウトを有効にします。',
-                        'info' => 'ゲストチェックアウト、カートページ、クロスセル商品、および見積もり配送料を有効にして、ユーザーの利便性を向上させ、販売を促進します。',
+                        'info' => 'ゲスト購入、カートページ、クロスセル商品、配送料の見積もり。',
                         'title' => 'ショッピングカート',
                     ],
 
                     'my-cart' => [
                         'display-item-quantities' => 'アイテムの数量を表示',
                         'display-number-in-cart' => 'カート内のアイテム数を表示',
-                        'info' => 'マイカートの設定を有効にして、アイテムの数量の概要を表示し、カート内の総アイテム数を表示して追跡を容易にします。',
+                        'info' => 'カートの件数表示を合計数量にするか商品点数にするか。',
                         'summary' => '概要',
                         'title' => 'マイカート',
                     ],
 
                     'mini-cart' => [
                         'display-mini-cart' => 'ミニカートの表示',
-                        'info' => 'ミニカートの設定を有効にして、ミニカートを表示し、ミニカートのオファー情報を表示してカートの詳細とプロモーションに簡単にアクセスできるようにします。',
+                        'info' => 'ミニカートと、その中に表示するオファー文を設定します。',
                         'mini-cart-offer-info' => 'ミニカートのオファー情報',
                         'title' => 'ミニカート',
                     ],
@@ -5172,7 +5431,7 @@ return [
                     'evening' => '夕方',
                     'exchange' => '交換',
                     'file-extension-info' => '商品の写真や補足書類など、顧客および管理者が返品リクエストに添付できるファイルの種類です。',
-                    'info' => 'RMAは、返金、交換、または修理を受けるために製品をビジネスに返品するプロセスの一部です。',
+                    'info' => '注文後に顧客が申請できる返品。',
                     'morning' => '朝',
                     'new-rma-message-to-customer' => '顧客への新しいRMAメッセージ',
                     'no' => 'いいえ',
@@ -5225,14 +5484,29 @@ return [
                 'warning-config-closures' => 'config:cacheは、設定ファイルがクロージャを返す場合に失敗します。',
                 'warning-permissions' => 'ファイルシステムの権限の問題により、キャッシュの生成またはクリアが妨げられる場合があります。',
                 'invalid-action' => '無効なキャッシュアクションがリクエストされました。',
-                'action-success' => 'コマンド「:action」が正常に実行されました。',
-                'action-failed' => 'コマンド「:action」が失敗しました。以下の出力を確認してください。',
+                'action-success' => '「:action」が正常に完了しました。',
+                'action-failed' => '「:action」が失敗しました。以下の出力を確認してください。',
                 'action-exception' => 'キャッシュアクションが失敗しました: :message',
                 'clear-console' => 'コンソールをクリア',
                 'console-title' => '出力コンソール',
                 'console-entries' => 'エントリ',
                 'console-empty' => 'キャッシュアクションを実行して出力をここに表示...',
                 'console-unknown-error' => '予期しないエラーが発生しました。',
+
+                'results' => [
+                    'clear-all' => 'すべてのキャッシュを消去しました。',
+                    'clear-config' => '設定キャッシュを消去しました。',
+                    'clear-cache' => 'アプリケーションキャッシュを消去しました。',
+                    'clear-compiled' => 'コンパイル済みクラスファイルを削除しました。',
+                    'clear-events' => 'イベントキャッシュを消去しました。',
+                    'clear-routes' => 'ルートキャッシュを消去しました。',
+                    'clear-views' => 'コンパイル済みビューを消去しました。',
+                    'clear-page-cache' => 'ページキャッシュを消去しました。各ストアページは次回アクセス時に再生成されます。',
+                    'build-all' => 'すべてのキャッシュを再構築しました。',
+                    'build-config' => '設定キャッシュを作成しました。',
+                    'build-routes' => 'ルートキャッシュを作成しました。',
+                    'build-views' => 'ビューをコンパイルしました。',
+                ],
 
                 'actions' => [
                     'clear-all' => 'すべてのキャッシュをクリア',
@@ -5242,10 +5516,27 @@ return [
                     'clear-events' => 'イベントキャッシュをクリア',
                     'clear-routes' => 'ルートキャッシュをクリア',
                     'clear-views' => 'ビューキャッシュをクリア',
+                    'clear-page-cache' => 'ページキャッシュを消去',
                     'build-all' => 'すべてのキャッシュを再構築',
                     'build-config' => '設定をキャッシュ',
                     'build-routes' => 'ルートをキャッシュ',
                     'build-views' => 'ビューをキャッシュ',
+                ],
+
+                'full-page-cache' => [
+                    'title' => 'Full Page Cache',
+                    'info' => 'Serve rendered storefront pages from a cache instead of building them for every visitor.',
+
+                    'settings' => [
+                        'title' => 'Settings',
+                        'info' => 'Turn the page cache on or off and choose how long a page stays cached.',
+                        'enabled' => 'Enable Full Page Cache',
+                        'enabled-info' => 'Storefront pages are served from the cache. Turning this off makes every page render again on each visit.',
+                        'lifetime' => 'Cache Lifetime (Minutes)',
+                        'lifetime-info' => 'How long a cached page is kept before it is rendered again. Leave empty to use the application default.',
+                        'flush' => 'ページキャッシュを消去',
+                        'flush-info' => 'ページキャッシュを空にして、次回アクセス時に各ストアページを再生成します。',
+                    ],
                 ],
             ],
         ],
@@ -5280,6 +5571,10 @@ return [
             ],
 
             'sidebar' => [
+
+                'appearance' => '外観',
+
+                'sections' => 'セクション',
                 'attribute-families' => '属性ファミリー',
                 'attributes' => '属性',
                 'booking-product' => '予約',
@@ -5352,6 +5647,7 @@ return [
 
             'toolbar' => [
                 'length-of' => ':length の',
+                'sort-by' => '並び替え',
                 'of' => 'の',
                 'per-page' => 'ページあたり',
                 'results' => ':total 結果',
@@ -5420,6 +5716,17 @@ return [
                     'today' => '今日',
                     'yesterday' => '昨日',
                 ],
+
+                'number-options' => [
+                    'between' => 'Between',
+                    'equals' => 'Equals',
+                    'from' => 'From',
+                    'greater-than' => 'Greater Than',
+                    'greater-than-or-equal' => 'Greater Than Or Equal',
+                    'less-than' => 'Less Than',
+                    'less-than-or-equal' => 'Less Than Or Equal',
+                    'to' => 'To',
+                ],
             ],
 
             'table' => [
@@ -5456,6 +5763,7 @@ return [
                 'ai-add-image-btn' => 'マジックAI',
                 'ai-btn-info' => '画像生成',
                 'allowed-types' => 'png、jpeg、jpg',
+                'image' => '画像',
                 'not-allowed-error' => '画像ファイル（.jpeg、.jpg、.png、..）のみ許可されています。',
 
                 'ai-generation' => [
@@ -5486,12 +5794,33 @@ return [
                     'use-cases' => '用途',
                     'zoom' => 'ズーム',
                 ],
+
+                'seo' => [
+                    'alt-text' => '代替テキスト',
+                    'alt-text-info' => '現在選択中のロケールに保存されます。空欄の場合は商品名が使用されます。',
+                    'alt-text-placeholder' => '画像に写っている内容を説明してください',
+                    'done-btn' => '完了',
+                    'file-name' => 'ファイル名',
+                    'file-name-info' => '名前を変更すると画像の URL が変わります。以前の URL は無効になり、画像検索の順位に影響する場合があります。',
+                    'file-name-placeholder' => 'blue-running-shoe-side',
+                    'info' => '検索エンジンとスクリーンリーダーがこの画像を理解しやすくします。',
+                    'replace' => '画像を差し替える',
+                    'replace-btn' => 'ファイルを選択',
+                    'replace-info' => '上記の代替テキストとファイル名は新しい画像にも引き継がれます。',
+                    'title' => '画像 SEO',
+                ],
             ],
 
             'videos' => [
                 'add-video-btn' => 'ビデオを追加',
                 'allowed-types' => 'mp4、webm、mkv',
                 'not-allowed-error' => 'ビデオファイルのみ許可されています（.mp4、.mov、.ogg ..）。',
+                'video' => '動画',
+
+                'seo' => [
+                    'info' => '動画ファイルに内容が分かる名前を付けます。',
+                    'title' => '動画 SEO',
+                ],
             ],
         ],
 
@@ -5523,6 +5852,12 @@ return [
     ],
 
     'acl' => [
+
+        'activate' => '有効化',
+
+        'appearance' => '外観',
+
+        'sections' => 'セクション',
         'addresses' => '住所',
         'attribute-families' => '属性ファミリー',
         'attributes' => '属性',

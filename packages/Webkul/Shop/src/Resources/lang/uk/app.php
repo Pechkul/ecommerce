@@ -42,7 +42,7 @@ return [
             'page-title' => 'Вхід користувача',
             'password' => 'Пароль',
             'resend-verification' => 'Надіслати лист підтвердження повторно',
-            'show-password' => 'Показати пароль',
+            'social-account-exists' => 'Обліковий запис із цією електронною поштою вже існує. Увійдіть, використовуючи електронну пошту та пароль.',
             'title' => 'Увійти',
             'verify-first' => 'Спершу перевірте свою електронну пошту.',
         ],
@@ -373,6 +373,7 @@ return [
                 'remaining-downloads' => 'Оставшиеся загрузки',
                 'status' => 'Статус',
                 'title' => 'Заголовок',
+                'unlimited' => 'Необмежено',
             ],
 
             'wishlist' => [
@@ -545,6 +546,14 @@ return [
             'default-toggle' => 'Перемикач за замовчуванням',
         ],
 
+        'form' => [
+            'control-group' => [
+                'control' => [
+                    'show-password' => 'Показати пароль',
+                ],
+            ],
+        ],
+
         'media' => [
             'index' => [
                 'add-attachments' => 'Додати вкладення',
@@ -689,6 +698,17 @@ return [
 
                     'custom-filters' => [
                         'clear-all' => 'Очистити все',
+                    ],
+
+                    'number-options' => [
+                        'between' => 'Between',
+                        'equals' => 'Equals',
+                        'from' => 'From',
+                        'greater-than' => 'Greater Than',
+                        'greater-than-or-equal' => 'Greater Than Or Equal',
+                        'less-than' => 'Less Than',
+                        'less-than-or-equal' => 'Less Than Or Equal',
+                        'to' => 'To',
                     ],
                 ],
             ],
@@ -1152,6 +1172,9 @@ return [
             'address' => [
                 'add-new' => 'Додати нову адресу',
                 'add-new-address' => 'Додати нову адресу',
+                'address-updated-payment-info' => 'Способи оплати та підсумки замовлення буде оновлено для вашої нової адреси. Натисніть «Продовжити», щоб побачити актуальні варіанти.',
+                'address-updated-shipping-info' => 'Способи та вартість доставки буде перераховано для вашої нової адреси. Натисніть «Продовжити», щоб побачити актуальні варіанти.',
+                'address-updated-title' => 'Вашу адресу оновлено',
                 'back' => 'Назад',
                 'billing-address' => 'Платіжна адреса',
                 'check-billing-address' => 'Відсутня адреса виставлення рахунку.',
@@ -1255,6 +1278,7 @@ return [
             'categories-carousel' => 'Карусель категорій',
             'image-carousel' => 'Карусель зображень',
             'offer' => 'Отримайте ДО 40% ЗНИЖКИ на перше замовлення, КУПИТИ ЗАРАЗ',
+            'preview-banner' => 'Попередній перегляд теми :theme для каналу :channel. Посилання в попередньому перегляді вимкнено.',
             'product-carousel' => 'Карусель продуктів',
             'resend-verify-email' => 'Повторно надіслати лист з підтвердженням',
             'verify-email' => 'Підтвердіть свою електронну пошту',
@@ -1760,7 +1784,9 @@ return [
 
         'response' => [
             'already-cancel' => 'Статус RMA вже скасовано.',
+            'cancel-not-allowed' => 'Скасування цього запиту RMA не дозволено.',
             'cancel-success' => 'Статус RMA було успішно скасовано.',
+            'close-not-allowed' => 'Закриття цього запиту RMA не дозволено.',
             'create-success' => 'Запит успішно створено.',
             'creation-error' => 'Статус RMA не може бути оновлено, оскільки рахунок для цього замовлення не створено.',
             'invalid-item' => 'Вибраний елемент замовлення недійсний.',

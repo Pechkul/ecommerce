@@ -42,7 +42,7 @@ return [
             'page-title' => 'Accesso Cliente',
             'password' => 'Password',
             'resend-verification' => 'Reinvia email di verifica',
-            'show-password' => 'Mostra Password',
+            'social-account-exists' => 'Esiste già un account con questa email. Accedi con la tua email e la tua password.',
             'title' => 'Accedi',
             'verify-first' => 'Verifica prima il tuo account email.',
         ],
@@ -373,6 +373,7 @@ return [
                 'remaining-downloads' => 'Download Rimasti',
                 'status' => 'Stato',
                 'title' => 'Titolo',
+                'unlimited' => 'Illimitato',
             ],
 
             'wishlist' => [
@@ -545,6 +546,14 @@ return [
             'default-toggle' => 'Attivazione predefinita',
         ],
 
+        'form' => [
+            'control-group' => [
+                'control' => [
+                    'show-password' => 'Mostra Password',
+                ],
+            ],
+        ],
+
         'media' => [
             'index' => [
                 'add-attachments' => 'Aggiungi allegati',
@@ -689,6 +698,17 @@ return [
 
                     'custom-filters' => [
                         'clear-all' => 'Cancella Tutto',
+                    ],
+
+                    'number-options' => [
+                        'between' => 'Between',
+                        'equals' => 'Equals',
+                        'from' => 'From',
+                        'greater-than' => 'Greater Than',
+                        'greater-than-or-equal' => 'Greater Than Or Equal',
+                        'less-than' => 'Less Than',
+                        'less-than-or-equal' => 'Less Than Or Equal',
+                        'to' => 'To',
                     ],
                 ],
             ],
@@ -1152,6 +1172,9 @@ return [
             'address' => [
                 'add-new' => 'Aggiungi nuovo indirizzo',
                 'add-new-address' => 'Aggiungi nuovo indirizzo',
+                'address-updated-payment-info' => 'I metodi di pagamento e i totali dell\'ordine verranno aggiornati per il tuo nuovo indirizzo. Clicca su Procedi per vedere le opzioni più recenti.',
+                'address-updated-shipping-info' => 'I metodi di spedizione e le tariffe verranno ricalcolati per il tuo nuovo indirizzo. Clicca su Procedi per vedere le opzioni più recenti.',
+                'address-updated-title' => 'Il tuo indirizzo è stato aggiornato',
                 'back' => 'Indietro',
                 'billing-address' => 'Indirizzo di fatturazione',
                 'check-billing-address' => 'Indirizzo di fatturazione mancante.',
@@ -1255,6 +1278,7 @@ return [
             'categories-carousel' => 'Carosello delle categorie',
             'image-carousel' => 'Carosello delle immagini',
             'offer' => 'Ottieni fino al 40% di sconto sul tuo primo ordine, ACQUISTA ORA',
+            'preview-banner' => 'Anteprima del tema :theme sul canale :channel. I link sono disattivati nell\'anteprima.',
             'product-carousel' => 'Carosello dei prodotti',
             'resend-verify-email' => 'Reinvia l\'email di verifica',
             'verify-email' => 'Verifica il tuo account email',
@@ -1760,7 +1784,9 @@ return [
 
         'response' => [
             'already-cancel' => 'Lo stato RMA è già stato annullato.',
+            'cancel-not-allowed' => 'Non è consentito annullare questa richiesta RMA.',
             'cancel-success' => 'Lo stato RMA è stato annullato con successo.',
+            'close-not-allowed' => 'Non è consentito chiudere questa richiesta RMA.',
             'create-success' => 'Richiesta creata con successo.',
             'creation-error' => 'Lo stato RMA non può essere aggiornato perché la fattura per questo ordine non è stata creata.',
             'invalid-item' => "L'articolo dell'ordine selezionato non è valido.",

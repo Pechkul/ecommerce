@@ -350,6 +350,9 @@ return [
                         'add-btn' => 'Add Address',
                         'add-new' => 'Add new address',
                         'add-new-address' => 'Add new address',
+                        'address-updated-payment-info' => 'Payment methods and order totals will be refreshed for the updated address. Click Proceed to load the latest options.',
+                        'address-updated-shipping-info' => 'Shipping methods and rates will be recalculated for the updated address. Click Proceed to load the latest options.',
+                        'address-updated-title' => 'Address updated',
                         'addresses' => 'Addresses',
                         'back' => 'Back',
                         'billing-address' => 'Billing Address',
@@ -701,6 +704,7 @@ return [
                     'pending' => 'Pending',
                     'status' => 'Status',
                     'update-status' => 'Update Status',
+                    'view' => 'View',
                 ],
             ],
 
@@ -983,6 +987,7 @@ return [
                         'edit' => 'Edit',
                         'enabled' => 'Active',
                         'id' => 'ID',
+                        'mass-delete-partial' => 'Deleted :deleted of the selected records; :skipped had already been removed.',
                         'mass-delete-success' => 'Selected data successfully deleted',
                         'reason-error' => 'Reason is used in RMA.',
                         'reason' => 'Reason',
@@ -1024,6 +1029,7 @@ return [
                         'enabled' => 'Active',
                         'id' => 'ID',
                         'label' => 'Label',
+                        'mass-delete-partial' => 'Deleted :deleted of the selected records; :skipped had already been removed.',
                         'mass-delete-success' => 'Selected data successfully deleted',
                         'no' => 'No',
                         'required' => 'Required',
@@ -1064,6 +1070,7 @@ return [
                         'enabled' => 'Active',
                         'exchange-period' => 'Exchange Period (Days)',
                         'id' => 'ID',
+                        'mass-delete-partial' => 'Deleted :deleted of the selected records; :skipped had already been removed.',
                         'mass-delete-success' => 'Selected data successfully deleted.',
                         'name' => 'Name',
                         'reason' => 'Rules',
@@ -1155,10 +1162,12 @@ return [
                     'attribute-family-value' => 'Attribute Family - :attribute_family',
                     'category' => 'Category',
                     'channel' => 'Channel',
+                    'copy' => 'Copy',
                     'copy-of' => 'Copy Of :value',
                     'copy-of-slug' => 'copy-of-:value',
                     'delete' => 'Delete',
                     'disable' => 'Disable',
+                    'edit' => 'Edit',
                     'id' => 'ID',
                     'id-value' => 'ID - :id',
                     'image' => 'Image',
@@ -1172,6 +1181,7 @@ return [
                     'qty-value' => ':qty Available',
                     'sku' => 'SKU',
                     'sku-value' => 'SKU - :sku',
+                    'stock-disabled' => 'Stock Disabled',
                     'status' => 'Status',
                     'type' => 'Type',
                     'update-status' => 'Update Status',
@@ -1222,6 +1232,7 @@ return [
                 ],
 
                 'categories' => [
+                    'search' => 'Search categories',
                     'title' => 'Categories',
                 ],
 
@@ -1809,7 +1820,7 @@ return [
                 'position' => 'Position',
                 'price' => 'Price',
                 'regex' => 'Regex',
-                'regex-info' => 'Expression should be in double quotes.',
+                'regex-info' => 'Expression must be delimited by slashes, for example /^[0-9]+$/.',
                 'save-btn' => 'Save Attribute',
                 'select' => 'Select',
                 'select-type' => 'Select Attribute Type',
@@ -1883,7 +1894,7 @@ return [
                 'position' => 'Position',
                 'price' => 'Price',
                 'regex' => 'Regex',
-                'regex-info' => 'Expression should be in double quotes.',
+                'regex-info' => 'Expression must be delimited by slashes, for example /^[0-9]+$/.',
                 'save-btn' => 'Save Attribute',
                 'select' => 'Select',
                 'select-type' => 'Select Attribute Type',
@@ -1938,6 +1949,7 @@ return [
                     'inactive' => 'Inactive',
                     'name' => 'Name',
                     'no-of-products' => 'Number of Products',
+                    'parent-category' => 'Parent Category',
                     'position' => 'Position',
                     'status' => 'Visible In Menu',
                     'update-status' => 'Update Status',
@@ -2092,10 +2104,10 @@ return [
             'attribute-family' => 'Attribute Family',
             'attribute-product-error' => 'family is used in products.',
             'create-success' => 'Family created successfully.',
+            'default-delete-error' => 'The default attribute family can not be deleted.',
             'delete-failed' => 'Error encountered while deleting Family.',
             'delete-success' => 'Family deleted successfully.',
             'family' => 'Family',
-            'last-delete-error' => 'At least one family is required.',
             'update-success' => 'Family updated successfully.',
             'user-define-error' => 'Can not delete system Attribute family',
         ],
@@ -2120,6 +2132,7 @@ return [
                     'id' => 'Customer ID',
                     'id-value' => 'ID - :id',
                     'inactive' => 'Inactive',
+                    'login-as-customer' => 'Login as customer',
                     'method-error' => 'Error! Wrong method detected, please check mass action configuration',
                     'name' => 'Customer Name',
                     'no-resource' => 'The resource provided for insufficient for the action',
@@ -2133,6 +2146,7 @@ return [
                     'suspended' => 'Suspended',
                     'update-status' => 'Update Status',
                     'update-success' => 'Selected Customers successfully updated',
+                    'view' => 'View',
                 ],
 
                 'create' => [
@@ -2275,6 +2289,7 @@ return [
                         'rating' => 'Rating',
                         'status' => 'Status',
                         'title' => 'Title',
+                        'view' => 'View',
                     ],
                 ],
 
@@ -2479,7 +2494,9 @@ return [
 
                     'datagrid' => [
                         'active' => 'Active',
+                        'delete' => 'Delete',
                         'draft' => 'Draft',
+                        'edit' => 'Edit',
                         'id' => 'ID',
                         'inactive' => 'Inactive',
                         'name' => 'Name',
@@ -2516,6 +2533,7 @@ return [
                     'update-success' => 'Updated successfully',
                 ],
 
+                'campaign-associate' => 'This template is used in one or more campaigns.',
                 'delete-failed' => ':name Deleted Failed',
                 'delete-success' => 'Template Deleted successfully',
                 'email-template' => 'Email Template',
@@ -2619,6 +2637,7 @@ return [
                     ],
                 ],
 
+                'campaign-associate' => 'This event is used in one or more campaigns.',
                 'delete-failed' => ':name Delete Failed',
                 'delete-success' => 'Events Deleted Successfully',
                 'edit-error' => 'Event can not be Edit',
@@ -2983,6 +3002,7 @@ return [
 
                 'create-success' => 'Catalog rule created successfully',
                 'delete-success' => 'Catalog rule deleted successfully',
+                'queue-note' => 'Saving this rule updates the price of every product it applies to. When it applies to many products, use the database or redis queue driver with a queue worker running, so prices are updated in the background instead of slowing down the save.',
                 'update-success' => 'Catalog rule updated successfully',
             ],
 
@@ -3223,6 +3243,312 @@ return [
         'update-success' => 'CMS updated successfully.',
     ],
 
+    'appearance' => [
+        'themes' => [
+            'index' => [
+                'activate-btn' => 'Activate',
+                'activate-success' => ':theme is now active on :channel.',
+                'active' => 'Active',
+                'active-on' => 'Active on:',
+                'active-on-all' => 'Active on every channel',
+                'buy-btn' => 'View & Buy',
+                'buy-themes' => 'Buy Themes',
+                'by' => 'by',
+                'customize-btn' => 'Customize',
+                'info' => 'Browse the themes available for your storefront and choose which one each channel uses.',
+                'my-themes' => 'My Themes',
+                'not-in-use' => 'Not in use',
+                'not-installed' => 'This theme is not installed on this store.',
+                'preview-btn' => 'Preview',
+                'title' => 'Themes',
+
+                'activate' => [
+                    'channels' => 'Channels',
+                    'channels-hint' => 'Hold Ctrl (Cmd on Mac) to pick more than one channel.',
+                    'confirm-btn' => 'Activate',
+                    'info' => 'Choose the channels that should start using :theme.',
+                    'title' => 'Activate Theme',
+                    'warning' => ':channel has :count customizations built for :theme. They stay saved, but will not appear while the new theme is active.',
+                ],
+            ],
+        ],
+        'sections' => [
+            'index' => [
+                'all-filters-used' => 'Every available filter has already been added.',
+                'channel' => 'Channel',
+                'copy-suffix' => 'Copy',
+                'create-btn' => 'Create Section',
+                'delete-confirm' => 'Are you sure you want to delete this section?',
+                'desktop' => 'Desktop',
+                'discard-btn' => 'Discard',
+                'discarded' => 'Draft changes discarded.',
+                'duplicate-btn' => 'Duplicate',
+                'empty' => 'No sections yet.',
+                'gone' => 'This section no longer exists.',
+                'inactive-theme' => 'Only a theme that is active on a channel can be customized.',
+                'locale' => 'Locale',
+                'mobile' => 'Mobile',
+                'no-fields' => 'This section has no settings to edit in this theme.',
+                'no-types' => 'This theme offers no section types to add.',
+                'pinned' => 'Pinned to the bottom of the page.',
+                'preview-btn' => 'Preview',
+                'publish-btn' => 'Publish',
+                'scoped-to' => 'Showing sections for the :theme theme on the :channel channel.',
+                'tablet' => 'Tablet',
+                'title' => 'Sections',
+                'unsaved' => 'Unsaved changes',
+
+                'datagrid' => [
+                    'active' => 'Active',
+                    'channel_name' => 'Channel Name',
+                    'change-status' => 'Change Request Status',
+                    'delete' => 'Delete',
+                    'id' => 'Id',
+                    'inactive' => 'Inactive',
+                    'name' => 'Name',
+                    'sort-order' => 'Sort Order',
+                    'status' => 'Status',
+                    'theme' => 'Theme',
+                    'type' => 'Type',
+                    'view' => 'View',
+                ],
+            ],
+
+            'create' => [
+                'name' => 'Name',
+                'save-btn' => 'Save Section',
+                'singleton-exists' => 'This channel shows only one :type section.',
+                'title' => 'Create Section',
+
+                'type' => [
+                    'category-carousel' => 'Category Carousel',
+                    'footer-links' => 'Footer Links',
+                    'image-carousel' => 'Image Carousel',
+                    'product-carousel' => 'Product Carousel',
+                    'services-content' => 'Services Content',
+                    'static-content' => 'Static Content',
+                    'title' => 'Type',
+                ],
+            ],
+
+            'edit' => [
+                'active' => 'Active',
+                'add-column' => 'Add Column',
+                'add-filter-btn' => 'Add Filter',
+                'add-footer-link-btn' => 'Add Footer Link',
+                'add-image-btn' => 'Add Image',
+                'add-link' => 'Add Link',
+                'add-media' => 'Add Media',
+                'asc' => 'Asc',
+                'back' => 'Back',
+                'category-carousel' => 'Category Carousel',
+                'category-carousel-description' => 'Display dynamic categories attractively using a responsive category carousel.',
+                'category-id' => 'Category ID',
+                'channels' => 'Channels',
+                'column' => 'Column',
+                'columns' => 'Columns',
+                'create-filter' => 'Create Filter',
+                'css' => 'CSS',
+                'delete' => 'Delete',
+                'desc' => 'Desc',
+                'edit' => 'Edit',
+                'featured' => 'Featured',
+                'filter-title' => 'Title',
+                'filters' => 'Filters',
+                'footer-link' => 'Footer Links',
+                'footer-link-description' => 'Navigate via footer links for seamless website exploration and information.',
+                'footer-link-form-title' => 'Footer Link',
+                'footer-title' => 'Title',
+                'general' => 'General',
+                'html' => 'HTML',
+                'image' => 'Image',
+                'image-size' => 'Image resolution should be (1920px X 700px)',
+                'image-title' => 'Image Title',
+                'image-upload-message' => 'Only images (.jpeg, .jpg, .png, .webp, ..) are allowed.',
+                'inactive' => 'Inactive',
+                'key' => 'Key: :key',
+                'key-input' => 'Key',
+                'limit' => 'Limit',
+                'link' => 'Link',
+                'name' => 'Name',
+                'new' => 'New',
+                'no' => 'No',
+                'parent-id' => 'Parent ID',
+                'preview' => 'Preview',
+                'product-carousel' => 'Product Carousel',
+                'product-carousel-description' => 'Showcase products elegantly with a dynamic and responsive product carousel.',
+                'save-btn' => 'Save',
+                'select' => 'Select',
+                'slider' => 'Slider',
+                'slider-add-btn' => 'Add Slider',
+                'slider-description' => 'Slider related theme customization.',
+                'slider-image' => 'Slider Image',
+                'slider-required' => 'Slider field is Required.',
+                'sort' => 'Sort',
+                'sort-order' => 'Sort Order',
+                'static-content' => 'Static Content',
+                'static-content-description' => 'Improve engagement with concise, informative static content for your audience.',
+                'status' => 'Status',
+                'themes' => 'Themes',
+                'title' => 'Edit Section',
+                'update-slider' => 'Update Slider',
+                'uploading' => 'Uploading…',
+                'url' => 'URL',
+                'value' => 'Value: :value',
+                'value-input' => 'Value',
+
+                'services-content' => [
+                    'add-btn' => 'Add Services',
+                    'channels' => 'Channels',
+                    'delete' => 'Delete',
+                    'description' => 'Description',
+                    'general' => 'General',
+                    'name' => 'Name',
+                    'save-btn' => 'Save',
+                    'service-icon' => 'Service Icon',
+                    'service-icon-class' => 'Service Icon Class',
+                    'service-info' => 'Service related theme customization.',
+                    'services' => 'Services',
+                    'sort-order' => 'Sort Order',
+                    'status' => 'Status',
+                    'title' => 'Title',
+                    'update-service' => 'Update Services',
+                ],
+
+                'yes' => 'Yes',
+            ],
+
+            'create-success' => 'Section created successfully',
+            'delete-success' => 'Section deleted successfully',
+            'update-success' => 'Section updated successfully',
+        ],
+    ],
+
+    'reporting' => [
+        'sales' => [
+            'index' => [
+                'abandoned-carts' => 'Abandoned Carts',
+                'abandoned-products' => 'Abandoned Products',
+                'abandoned-rate' => 'Abandoned Rate',
+                'abandoned-revenue' => 'Abandoned Revenue',
+                'added-to-cart' => 'Added to Cart',
+                'added-to-cart-info' => 'Only :progress visitors added products to cart',
+                'all-channels' => 'All Channels',
+                'average-order-value-over-time' => 'Average Order Value Over Time',
+                'average-sales' => 'Average Order Value',
+                'count' => 'Count',
+                'coupon-code' => 'Coupon Code',
+                'date' => 'Date',
+                'discount' => 'Discount',
+                'email' => 'Email',
+                'end-date' => 'End Date',
+                'id' => 'Id',
+                'interval' => 'Interval',
+                'name' => 'Name',
+                'order-id' => 'Order ID',
+                'orders' => 'Orders',
+                'orders-over-time' => 'Orders Over Time',
+                'payment-method' => 'Payment Method',
+                'purchase-funnel' => 'Purchase Funnel',
+                'purchased' => 'Purchased',
+                'purchased-info' => 'Only :progress visitors do the purchasing',
+                'refunds' => 'Refunds',
+                'refunds-over-time' => 'Refunds Over Time',
+                'sales-by-coupon' => 'Sales By Coupon',
+                'sales-over-time' => 'Sales Over Time',
+                'shipping-collected' => 'Shipping Collected',
+                'shipping-collected-over-time' => 'Shipping Collected Over Time',
+                'start-date' => 'Start Date',
+                'tax-collected' => 'Tax Collected',
+                'tax-collected-over-time' => 'Tax Collected Over Time',
+                'title' => 'Sales',
+                'top-payment-methods' => 'Top Payment Methods',
+                'top-shipping-methods' => 'Top Shipping Methods',
+                'top-tax-categories' => 'Top Tax Categories',
+                'total' => 'Total',
+                'total-orders' => 'Total Orders',
+                'total-sales' => 'Total Sales',
+                'view-details' => 'View Details',
+            ],
+        ],
+
+        'customers' => [
+            'index' => [
+                'all-channels' => 'All Channels',
+                'count' => 'Count',
+                'customers' => 'Customers',
+                'customers-over-time' => 'Customers Over Time',
+                'customers-with-most-orders' => 'Customers With Most Orders',
+                'customers-with-most-reviews' => 'Customers With Most Reviews',
+                'customers-with-most-sales' => 'Customers With Most Sales',
+                'email' => 'Email',
+                'end-date' => 'End Date',
+                'id' => 'Id',
+                'interval' => 'Interval',
+                'name' => 'Name',
+                'orders' => 'Orders',
+                'reviews' => 'Reviews',
+                'start-date' => 'Start Date',
+                'title' => 'Customers',
+                'top-customer-groups' => 'Top Customer Groups',
+                'total' => 'Total',
+                'total-customers' => 'Total Customers',
+                'view-details' => 'View Details',
+            ],
+        ],
+
+        'products' => [
+            'index' => [
+                'all-channels' => 'All Channels',
+                'channel' => 'Channel',
+                'end-date' => 'End Date',
+                'id' => 'Id',
+                'interval' => 'Interval',
+                'last-search-terms' => 'Last Search Terms',
+                'locale' => 'Locale',
+                'name' => 'Name',
+                'orders' => 'Orders',
+                'price' => 'Price',
+                'products-added-over-time' => 'Products Added Over Time',
+                'products-with-most-reviews' => 'Products With Most Reviews',
+                'quantities' => 'Quantities',
+                'quantities-sold-over-time' => 'Quantities Sold Over Time',
+                'results' => 'Results',
+                'revenue' => 'Revenue',
+                'reviews' => 'Reviews',
+                'search-term' => 'Search Term',
+                'start-date' => 'Start Date',
+                'title' => 'Products',
+                'top-search-terms' => 'Top Search Terms',
+                'top-selling-products-by-quantity' => 'Top Selling Products By Quantity',
+                'top-selling-products-by-revenue' => 'Top Selling Products By Revenue',
+                'total' => 'Total',
+                'total-products-added-to-wishlist' => 'Products Added To Wishlist',
+                'total-sold-quantities' => 'Sold Products Quantity',
+                'uses' => 'Uses',
+                'view-details' => 'View Details',
+            ],
+        ],
+
+        'view' => [
+            'all-channels' => 'All Channels',
+            'back-btn' => 'Back',
+            'day' => 'Day',
+            'end-date' => 'End Date',
+            'export-csv' => 'Export CSV',
+            'export-xls' => 'Export XLS',
+            'month' => 'Month',
+            'not-available' => 'No Records Available.',
+            'start-date' => 'Start Date',
+            'year' => 'Year',
+        ],
+
+        'empty' => [
+            'info' => 'No data available for selected interval',
+            'title' => 'No Data Available',
+        ],
+    ],
+
     'settings' => [
         'locales' => [
             'index' => [
@@ -3329,9 +3655,10 @@ return [
                     'file-info-example' => 'For example, in case product-images, files should be placed into /project-root/storage/app/import/product-images folder.',
                     'general' => 'General',
                     'images-directory' => 'Images Directory Path',
+                    'import-confirmation' => 'The import will start as soon as this is saved. Do you want to continue?',
                     'process-in-queue' => 'Process In Queue',
                     'results' => 'Results',
-                    'save-btn' => 'Save Import',
+                    'save-btn' => 'Import',
                     'settings' => 'Settings',
                     'skip-errors' => 'Skip Errors',
                     'stop-on-errors' => 'Stop on Errors',
@@ -3356,7 +3683,7 @@ return [
                     'images-directory' => 'Images Directory Path',
                     'process-in-queue' => 'Process In Queue',
                     'results' => 'Results',
-                    'save-btn' => 'Save Import',
+                    'save-btn' => 'Import',
                     'settings' => 'Settings',
                     'skip-errors' => 'Skip Errors',
                     'stop-on-errors' => 'Stop on Errors',
@@ -3378,24 +3705,38 @@ return [
                         'edit' => 'Edit',
                         'error-file' => 'Error File',
                         'id' => 'ID',
+                        'import' => 'Import',
                         'started-at' => 'Started At',
                         'state' => 'State',
                         'summary' => 'Summary',
                         'updated' => 'Updated',
                         'uploaded-file' => 'Uploaded File',
+                        'view-progress' => 'View Progress',
                     ],
                 ],
 
                 'import' => [
                     'back-btn' => 'Back',
                     'completed-batches' => 'Total Batches Completed:',
+                    'deleting-info' => 'Deletion In Process',
                     'download-error-report' => 'Download Full Report',
+                    'downloading-info' => 'Downloading Images',
                     'edit-btn' => 'Edit',
+                    'failed-batches' => ':count batches did not complete. Check the error log and run the import again for those rows.',
+                    'images-downloaded' => 'Images Downloaded:',
+                    'images-progress' => 'images downloaded',
                     'imported-info' => 'Congratulations! Your import was successful.',
                     'importing-info' => 'Import In Process',
                     'indexing-info' => 'Resources Indexing (Price, Inventory and Elastic Search) In Progress',
                     'linking-info' => 'Resources Linking In Progress',
                     'progress' => 'Progress:',
+                    'rows-validated' => 'rows validated',
+                    'step-create' => 'Create',
+                    'step-delete' => 'Delete',
+                    'step-download' => 'Images',
+                    'step-index' => 'Index',
+                    'step-link' => 'Link',
+                    'step-validate' => 'Validate',
                     'title' => 'Import',
                     'total-batches' => 'Total Batches:',
                     'total-created' => 'Total Records Created:',
@@ -3408,7 +3749,27 @@ return [
                     'validate-info' => 'Click on Validate Data to check your import.',
                     'validating-info' => 'The data started reading and Validating',
                     'validation-failed-info' => 'Your import is invalid. Please fix the following errors and try again.',
+                    'validation-partial-info' => 'Your import can proceed, but some rows will be skipped. Review the errors below or download the full report.',
                     'validation-success-info' => 'Your import is valid. Click on Import to start the import process.',
+                ],
+
+                'images' => [
+                    'current-archive' => 'Currently uploaded: :name — :count image(s) ready.',
+                    'current-images' => ':count image(s) are already uploaded for this import.',
+                    'directory-example' => 'For example, in case product-images, files should be placed into /project-root/storage/app/import/product-images folder.',
+                    'directory-hint' => 'Use relative path to /project-root/storage/app/import, e.g. product-images, import-images.',
+                    'directory-info' => 'If you have code-base access, place the images in a folder on the server and name that folder below.',
+                    'directory-placeholder' => 'Images Directory Path',
+                    'directory-title' => 'Images already on the server',
+                    'download-sample-zip' => 'Download sample images',
+                    'info' => 'Choose where the images named in your file should be found.',
+                    'recommended' => 'Recommended',
+                    'replace-archive' => 'Choosing a new archive replaces them.',
+                    'title' => 'Product Images',
+                    'upload-info' => 'Upload a single archive containing every image. The images column then names the files inside it.',
+                    'upload-title' => 'Upload a ZIP of images',
+                    'url-info' => 'Put the full https:// address of each image in the images column. They are downloaded before the import runs, so nothing has to be placed on the server first.',
+                    'url-title' => 'Image links in the file',
                 ],
 
                 'create-success' => 'Import created successfully.',
@@ -3416,6 +3777,7 @@ return [
                 'delete-success' => 'Import deleted successfully.',
                 'not-valid' => 'Import is invalid',
                 'nothing-to-import' => 'There are no resources to import.',
+                'processing-failed' => 'The import could not be processed. Please check the file and try again.',
                 'setup-queue-error' => 'Please change your queue driver to "database" or "redis" to start the import process.',
                 'update-success' => 'Import updated successfully.',
             ],
@@ -3793,7 +4155,9 @@ return [
             'incorrect-password' => 'Incorrect password',
             'last-delete-error' => 'At least one admin is required.',
             'login-error' => 'Please check your credentials and try again.',
+            'role-not-grantable' => 'You cannot assign a role with permissions you do not have.',
             'update-success' => 'User updated successfully.',
+            'user-not-manageable' => 'You cannot change a user whose role has permissions you do not have.',
         ],
 
         'roles' => [
@@ -3822,6 +4186,7 @@ return [
                 'name' => 'Name',
                 'permissions' => 'Permissions',
                 'save-btn' => 'Save Role',
+                'search-permissions' => 'Search permissions',
                 'title' => 'Create Role',
             ],
 
@@ -3843,139 +4208,10 @@ return [
             'delete-failed' => 'Roles is deleted failed',
             'delete-success' => 'Roles is deleted successfully',
             'last-delete-error' => 'Last Roles can not be deleted',
+            'permissions-not-grantable' => 'You cannot grant permissions you do not have.',
             'update-success' => 'Roles is updated successfully',
         ],
 
-        'themes' => [
-            'index' => [
-                'create-btn' => 'Create Theme',
-                'title' => 'Themes',
-
-                'datagrid' => [
-                    'active' => 'Active',
-                    'channel_name' => 'Channel Name',
-                    'change-status' => 'Change Request Status',
-                    'delete' => 'Delete',
-                    'id' => 'Id',
-                    'inactive' => 'Inactive',
-                    'name' => 'Name',
-                    'sort-order' => 'Sort Order',
-                    'status' => 'Status',
-                    'theme' => 'Theme',
-                    'type' => 'Type',
-                    'view' => 'View',
-                ],
-            ],
-
-            'create' => [
-                'name' => 'Name',
-                'save-btn' => 'Save Theme',
-                'sort-order' => 'Sort Order',
-                'themes' => 'Themes',
-                'title' => 'Create Theme',
-
-                'type' => [
-                    'category-carousel' => 'Category Carousel',
-                    'footer-links' => 'Footer Links',
-                    'image-carousel' => 'Image Carousel',
-                    'product-carousel' => 'Product Carousel',
-                    'services-content' => 'Services Content',
-                    'static-content' => 'Static Content',
-                    'title' => 'Type',
-                ],
-            ],
-
-            'edit' => [
-                'active' => 'Active',
-                'add-filter-btn' => 'Add Filter',
-                'add-footer-link-btn' => 'Add Footer Link',
-                'add-image-btn' => 'Add Image',
-                'add-link' => 'Add Link',
-                'asc' => 'Asc',
-                'back' => 'Back',
-                'category-carousel' => 'Category Carousel',
-                'category-carousel-description' => 'Display dynamic categories attractively using a responsive category carousel.',
-                'category-id' => 'Category ID',
-                'channels' => 'Channels',
-                'column' => 'Column',
-                'create-filter' => 'Create Filter',
-                'css' => 'CSS',
-                'delete' => 'Delete',
-                'desc' => 'Desc',
-                'edit' => 'Edit',
-                'featured' => 'Featured',
-                'filter-title' => 'Title',
-                'filters' => 'Filters',
-                'footer-link' => 'Footer Links',
-                'footer-link-description' => 'Navigate via footer links for seamless website exploration and information.',
-                'footer-link-form-title' => 'Footer Link',
-                'footer-title' => 'Title',
-                'general' => 'General',
-                'html' => 'HTML',
-                'image' => 'Image',
-                'image-size' => 'Image resolution should be (1920px X 700px)',
-                'image-title' => 'Image Title',
-                'image-upload-message' => 'Only images (.jpeg, .jpg, .png, .webp, ..) are allowed.',
-                'inactive' => 'Inactive',
-                'key' => 'Key: :key',
-                'key-input' => 'Key',
-                'limit' => 'Limit',
-                'link' => 'Link',
-                'name' => 'Name',
-                'new' => 'New',
-                'no' => 'No',
-                'parent-id' => 'Parent ID',
-                'parent-id-hint' => 'You can enter multiple parent IDs as comma-separated values (e.g., 12,15,34)',
-                'preview' => 'Preview',
-                'product-carousel' => 'Product Carousel',
-                'product-carousel-description' => 'Showcase products elegantly with a dynamic and responsive product carousel.',
-                'save-btn' => 'Save',
-                'select' => 'Select',
-                'slider' => 'Slider',
-                'slider-add-btn' => 'Add Slider',
-                'slider-description' => 'Slider related theme customization.',
-                'slider-image' => 'Slider Image',
-                'slider-required' => 'Slider field is Required.',
-                'sort' => 'Sort',
-                'sort-order' => 'Sort Order',
-                'static-content' => 'Static Content',
-                'static-content-description' => 'Improve engagement with concise, informative static content for your audience.',
-                'status' => 'Status',
-                'themes' => 'Themes',
-                'title' => 'Edit Theme',
-                'update-slider' => 'Update Slider',
-                'url' => 'URL',
-                'value' => 'Value: :value',
-                'value-input' => 'Value',
-
-                'services-content' => [
-                    'add-btn' => 'Add Services',
-                    'channels' => 'Channels',
-                    'delete' => 'Delete',
-                    'description' => 'Description',
-                    'general' => 'General',
-                    'name' => 'Name',
-                    'save-btn' => 'Save',
-                    'service-icon' => 'Service Icon',
-                    'service-icon-class' => 'Service Icon Class',
-                    'service-info' => 'Service related theme customization.',
-                    'services' => 'Services',
-                    'sort-order' => 'Sort Order',
-                    'status' => 'Status',
-                    'title' => 'Title',
-                    'update-service' => 'Update Services',
-                ],
-
-                'yes' => 'Yes',
-            ],
-
-            'create-success' => 'Theme created successfully',
-            'delete-success' => 'Theme deleted successfully',
-            'update-success' => 'Theme updated successfully',
-        ],
-    ],
-
-    'reporting' => [
         'sales' => [
             'index' => [
                 'abandoned-carts' => 'Abandoned Carts',
@@ -4115,11 +4351,11 @@ return [
             'title' => 'Configuration',
 
             'general' => [
-                'info' => 'General',
+                'info' => 'Store-wide settings for units, content, design, exchange rates, sitemap and GDPR.',
                 'title' => 'General',
 
                 'general' => [
-                    'info' => 'Configure unit settings and toggle the Breadcrumbs and Visitor options on or off.',
+                    'info' => 'Unit settings and storefront breadcrumbs.',
                     'title' => 'General',
 
                     'unit-options' => [
@@ -4137,7 +4373,7 @@ return [
                 ],
 
                 'content' => [
-                    'info' => 'Set header offer title and custom scripts.',
+                    'info' => 'Header offer, copyright line, speculation rules and custom scripts.',
                     'title' => 'Content',
 
                     'header-offer' => [
@@ -4150,7 +4386,7 @@ return [
 
                     'copyright-content' => [
                         'title' => 'Copyright Content',
-                        'info' => 'Configure the copyright content displayed in the footer of your website to protect your intellectual property and enhance brand recognition.',
+                        'info' => 'The copyright line shown in the storefront footer.',
                     ],
 
                     'speculation-rules' => [
@@ -4191,24 +4427,25 @@ return [
                         'custom-css' => 'Custom CSS',
                         'custom-javascript' => 'Custom Javascript',
                         'title' => 'Custom Scripts',
-                        'title-info' => 'Custom scripts are personalized pieces of code created to add specific functions or features to software, enhancing its capabilities uniquely.',
+                        'title-info' => 'CSS and JavaScript added to every page of the storefront.',
                     ],
                 ],
 
                 'design' => [
-                    'info' => 'Set logo and favicon icon for admin panel.',
+                    'info' => 'The admin panel logo and favicon, and how storefront menu categories are shown.',
                     'title' => 'Design',
 
                     'admin-logo' => [
                         'favicon' => 'Favicon',
                         'logo-image' => 'Logo Image',
                         'title' => 'Admin Logo',
-                        'title-info' => 'Configure logo and favicon images for your website\'s front end for better branding and recognition.',
+                        'title-info' => 'The logo and favicon shown in the admin panel and in emails sent to the admin.',
                     ],
 
                     'menu-category' => [
                         'default' => 'Default Menu',
                         'info' => 'This setting controls the visibility of categories in the header menu. You can choose to display only parent categories or all nested categories.',
+                        'preview' => 'Preview',
                         'preview-default' => 'Preview Default Menu',
                         'preview-sidebar' => 'Preview Sidebar Menu',
                         'sidebar' => 'Sidebar Menu',
@@ -4218,11 +4455,11 @@ return [
 
                 'gdpr' => [
                     'title' => 'GDPR',
-                    'info' => 'GDPR Compliance Settings',
+                    'info' => 'Cookie notice, consent categories and the privacy agreement shown to customers.',
 
                     'settings' => [
                         'title' => 'GDPR Compliance Settings',
-                        'info' => 'Manage GDPR compliance settings, including data privacy agreement. Enable or disable GDPR features as required',
+                        'info' => 'Turn GDPR features on or off for this channel.',
                         'enabled' => 'Enable GDPR',
                     ],
 
@@ -4296,7 +4533,7 @@ return [
                 ],
 
                 'sitemap' => [
-                    'info' => 'Set sitemap options.',
+                    'info' => 'Sitemap generation and file limits.',
                     'title' => 'Sitemap',
 
                     'settings' => [
@@ -4306,7 +4543,7 @@ return [
                     ],
 
                     'file-limits' => [
-                        'info' => 'Set file limits options.',
+                        'info' => 'The largest number of URLs written to one sitemap file before another is started.',
                         'max-file-size' => 'Maximum file size',
                         'max-url-per-file' => 'Maximum no. of URLs per file',
                         'title' => 'File Limits',
@@ -4423,18 +4660,18 @@ return [
             ],
 
             'catalog' => [
-                'info' => 'Catalog',
+                'info' => 'Settings for products, rich snippets and inventory.',
                 'title' => 'Catalog',
 
                 'products' => [
-                    'info' => 'Product view page, cart view page, store front, review and attribute social share.',
+                    'info' => 'Product and cart pages, search, image sizes, reviews, attributes and sharing.',
                     'title' => 'Products',
 
                     'settings' => [
                         'compare-options' => 'Compare options',
                         'image-search-option' => 'Image Search Option',
                         'title' => 'Settings',
-                        'title-info' => 'Settings refer to configurable choices that control how a system, application, or device behaves, tailored to user preferences and requirements.',
+                        'title-info' => 'Turn product comparison and image search on or off.',
                         'wishlist-options' => 'Wishlist options',
                     ],
 
@@ -4465,13 +4702,13 @@ return [
                         'allow-no-of-related-products' => 'Allowed number of Related Products',
                         'allow-no-of-up-sells-products' => 'Allowed number of Up-Sell Products',
                         'title' => 'Product view page configuration',
-                        'title-info' => 'Product view page configuration entails adjusting the layout and elements on a product\'s display page, enhancing user experience and information presentation.',
+                        'title-info' => 'How many related and up-sell products are shown on the product page.',
                     ],
 
                     'cart-view-page' => [
                         'allow-no-of-cross-sells-products' => 'Allowed number of Cross-Sell Products',
                         'title' => 'Cart view page configuration',
-                        'title-info' => 'Cart view page configuration involves arranging items, details, and options on the shopping cart page, improving user interaction and purchase flow.',
+                        'title-info' => 'How many cross-sell products are shown on the cart page.',
                     ],
 
                     'storefront' => [
@@ -4489,14 +4726,14 @@ return [
                         'products-per-page' => 'Products Per Page',
                         'sort-by' => 'Sort By',
                         'title' => 'Storefront',
-                        'title-info' => 'Storefront is the customer-facing interface of an online shop, showcasing products, categories, and navigation for a seamless shopping experience.',
+                        'title-info' => 'How products are listed on category and search pages.',
                     ],
 
                     'small-image' => [
                         'height' => 'Height',
                         'placeholder' => 'Small Image Placeholder',
                         'title' => 'Small Image',
-                        'title-info' => 'Storefront is the customer-facing interface of an online shop, showcasing products, categories, and navigation for a seamless shopping experience.',
+                        'title-info' => 'The size small product images are resized to, and the placeholder shown when a product has no image.',
                         'width' => 'Width',
                     ],
 
@@ -4504,7 +4741,7 @@ return [
                         'height' => 'Height',
                         'placeholder' => 'Medium Image Placeholder',
                         'title' => 'Medium Image',
-                        'title-info' => 'Medium image refers to a moderate-sized picture that offers a balance between detail and screen space, commonly used for visuals.',
+                        'title-info' => 'The size medium product images are resized to, and the placeholder shown when a product has no image.',
                         'width' => 'Width',
                     ],
 
@@ -4512,7 +4749,7 @@ return [
                         'height' => 'Height',
                         'placeholder' => 'Large Image Placeholder',
                         'title' => 'Large image',
-                        'title-info' => 'Large image represents a high-resolution picture providing enhanced detail and visual impact, often used for showcasing products or graphics.',
+                        'title-info' => 'The size large product images are resized to, and the placeholder shown when a product has no image.',
                         'width' => 'Width',
                     ],
 
@@ -4524,25 +4761,25 @@ return [
                         'display-star-count' => 'Display the star count in ratings.',
                         'summary' => 'Summary',
                         'title' => 'Review',
-                        'title-info' => 'Evaluation or assessment of something, often involving opinions and feedback.',
+                        'title-info' => 'Who may review a product, and how reviews are shown on the product page.',
                     ],
 
                     'attribute' => [
                         'file-upload-size' => 'Allowed File Upload Size (in Kb)',
                         'image-upload-size' => 'Allowed Image Upload Size (in Kb)',
                         'title' => 'Attribute',
-                        'title-info' => 'Characteristic or property that defines an object, influencing its behavior, appearance, or function.',
+                        'title-info' => 'The largest image and file that may be uploaded for an attribute value.',
                     ],
 
                     'social-share' => [
-                        'title-info' => 'Configure social sharing settings to enable product sharing on Instagram, Twitter, WhatsApp, Facebook, Pinterest, LinkedIn, and via email.',
+                        'title-info' => 'Choose which share buttons appear on the product page, and the message they carry.',
                         'title' => 'Social Share',
                         'share-message' => 'Share Message',
                         'share' => 'Share',
                         'enable-social-share' => 'Enable Social Share?',
-                        'enable-share-whatsapp-info' => 'What\'s App share link just will appear to mobile devices.',
-                        'enable-share-whatsapp' => 'Enable Share in What\'s App?',
-                        'enable-share-twitter' => 'Enable Share in Twitter?',
+                        'enable-share-whatsapp-info' => 'The WhatsApp share link only appears on mobile devices.',
+                        'enable-share-whatsapp' => 'Enable Share on WhatsApp?',
+                        'enable-share-twitter' => 'Enable Share on X (Twitter)?',
                         'enable-share-pinterest' => 'Enable Share in Pinterest?',
                         'enable-share-linkedin' => 'Enable Share in Linkedin?',
                         'enable-share-facebook' => 'Enable Share in Facebook?',
@@ -4551,7 +4788,7 @@ return [
                 ],
 
                 'rich-snippets' => [
-                    'info' => 'Set products and categories.',
+                    'info' => 'Structured data added to storefront pages for search engines.',
                     'title' => 'Rich Snippets',
 
                     'products' => [
@@ -4564,14 +4801,14 @@ return [
                         'show-sku' => 'Show SKU',
                         'show-weight' => 'Show Weight',
                         'title' => 'Products',
-                        'title-info' => 'Configure product settings including with SKU, weight, Categories, Images, Reviews, Ratings, Offers and etc.',
+                        'title-info' => 'Choose which product details are included in the structured data.',
                     ],
 
                     'categories' => [
                         'enable' => 'Enable',
                         'show-search-input-field' => 'Show Search Input Field',
                         'title' => 'Categories',
-                        'title-info' => '"Categories" refer to groups or classifications that help organize and group similar products or items together for easier browsing and navigation.',
+                        'title-info' => 'Add category structured data to storefront pages so search engines can read it.',
                     ],
                 ],
 
@@ -4585,13 +4822,13 @@ return [
                         'min-qty-allowed-in-cart' => 'Minimum Qty Allowed in Shopping Cart',
                         'out-of-stock-threshold' => 'Out-of-Stock Threshold',
                         'title' => 'Product Stock Option',
-                        'info' => 'Configure product stock options to allow back orders, set minimum and maximum cart quantities, and define out-of-stock thresholds.',
+                        'info' => 'Allow orders when stock runs out, and set the quantity at which a product counts as out of stock.',
                     ],
                 ],
             ],
 
             'customer' => [
-                'info' => 'Customer',
+                'info' => 'Settings for addresses, captcha and customer accounts.',
                 'title' => 'Customer',
 
                 'address' => [
@@ -4603,19 +4840,19 @@ return [
                         'country' => 'Country',
                         'state' => 'State',
                         'title' => 'Requirements',
-                        'title-info' => 'Requirements are the conditions, features, or specifications necessary for something to be fulfilled, achieved, or met successfully.',
+                        'title-info' => 'Which address fields a customer must fill in.',
                         'zip' => 'Zip',
                     ],
 
                     'information' => [
                         'street-lines' => 'Lines in a Street Address',
                         'title' => 'Information',
-                        'title-info' => '"Lines in a street address" refer to individual segments of an address, often separated by commas, providing location information such as house number, street, city, and more.',
+                        'title-info' => 'How many street address lines the address form shows.',
                     ],
                 ],
 
                 'captcha' => [
-                    'info' => 'Set site key, secret key and status.',
+                    'info' => 'Google reCAPTCHA Enterprise keys and status.',
                     'title' => 'Google Captcha',
 
                     'credentials' => [
@@ -4630,7 +4867,7 @@ return [
                         'site-key-info' => 'Once the project and API key have been created, search for the "reCAPTCHA" service in the library and generate the "reCAPTCHA" keys.',
                         'status' => 'Status',
                         'title' => 'Credentials',
-                        'title-info' => 'Set Google reCAPTCHA credentials including API key, Project ID, Site Key, Secret Key, and enable or disable the status.',
+                        'title-info' => 'Credentials for Google reCAPTCHA Enterprise, and the score a request must reach to be accepted.',
                     ],
 
                     'validations' => [
@@ -4640,7 +4877,7 @@ return [
                 ],
 
                 'settings' => [
-                    'settings-info' => 'Set wishlist, login redirection, newsletter subscriptions, default group option , email verifications and social login.',
+                    'settings-info' => 'Set the wishlist, login redirect, new account options, newsletter, email verification and social login.',
                     'title' => 'Settings',
 
                     'login-as-customer' => [
@@ -4680,19 +4917,20 @@ return [
 
                     'newsletter' => [
                         'subscription' => 'Allow Newsletter Subscription',
+                        'subscription-info' => 'Show a subscription form in the storefront footer.',
                         'title' => 'Newsletter Subscription',
-                        'title-info' => '"Newsletter information" contains updates, offers, or content shared regularly through emails to subscribers, keeping them informed and engaged.',
+                        'title-info' => 'Newsletter sign-up on the storefront.',
                     ],
 
                     'email' => [
                         'email-verification' => 'Allow Email Verification',
                         'title' => 'Email Verification',
-                        'title-info' => '"Email verification" confirms the authenticity of an email address, often by sending a confirmation link, enhancing account security and communication reliability.',
+                        'title-info' => 'Ask a new customer to confirm their email address before they can sign in.',
                     ],
 
                     'social-login' => [
                         'title' => 'Social Login',
-                        'info' => '"Social login" allows users to access a website using their social media accounts, simplifying registration and login processes.',
+                        'info' => 'Let customers sign in with an external account. Each provider needs its own client ID and secret.',
 
                         'google' => [
                             'enable-google' => 'Enable Google',
@@ -4771,21 +5009,21 @@ return [
                         ],
 
                         'twitter' => [
-                            'enable-twitter' => 'Enable Twitter',
+                            'enable-twitter' => 'Enable X (Twitter)',
 
                             'client-id' => [
                                 'title' => 'Client ID',
-                                'title-info' => 'Unique identifier provided by Twitter when creating your OAuth application.',
+                                'title-info' => 'Unique identifier provided by X when creating your OAuth application.',
                             ],
 
                             'client-secret' => [
                                 'title' => 'Client Secret',
-                                'title-info' => 'Secret key associated with your Twitter OAuth client. Keep it confidential.',
+                                'title-info' => 'Secret key associated with your X OAuth client. Keep it confidential.',
                             ],
 
                             'redirect' => [
                                 'title' => 'Redirect URL',
-                                'title-info' => 'Callback URL where users are redirected after authenticating with Twitter. Use the placeholder URL format shown (only change your domain). This must match the URL configured in your Twitter console.',
+                                'title-info' => 'Callback URL where users are redirected after authenticating with X. Use the placeholder URL format shown (only change your domain). This must match the URL configured in your X developer portal.',
                             ],
                         ],
                     ],
@@ -4793,18 +5031,25 @@ return [
             ],
 
             'email' => [
-                'info' => 'Email',
+                'info' => 'Mail driver, sender details and the notifications your store sends.',
                 'title' => 'Email',
 
                 'smtp' => [
+                    'brevo-api-key' => 'Brevo API Key',
+                    'brevo-api-key-info' => 'Create a v3 API key in your Brevo account under SMTP & API.',
+                    'driver' => 'Driver',
+                    'driver-brevo-api' => 'Brevo (API)',
+                    'driver-info' => 'Choose how your store sends email.',
                     'driver-mismatch-info' => 'Your mail driver is set to ":driver" instead of "bagisto-dynamic-smtp". Any changes made here will have no effect. Please update MAIL_MAILER=bagisto-dynamic-smtp in your .env file to activate these settings.',
                     'driver-mismatch-title' => 'These settings are currently inactive.',
+                    'driver-notice' => 'Driver Notice',
+                    'driver-smtp' => 'SMTP',
                     'encryption' => 'Encryption',
                     'host' => 'Host',
-                    'info' => 'Configure SMTP server settings for sending emails from your store.',
+                    'info' => 'Choose how your store sends email and configure the selected driver.',
                     'password' => 'Password',
                     'port' => 'Port',
-                    'title' => 'SMTP',
+                    'title' => 'Mail Driver',
                     'username' => 'Username',
                 ],
 
@@ -4818,12 +5063,13 @@ return [
                     'contact-email-tip' => 'This email address will appear in the footer of your emails.',
                     'contact-name' => 'Contact Name',
                     'contact-name-tip' => 'This name will appear in the footer of your emails.',
-                    'info' => 'Configure the sender name, shop email address, admin, and contact details used across all emails.',
+                    'info' => 'Choose how email is sent and the addresses it is sent from.',
                     'sender-email' => 'Sender Email Address',
                     'sender-email-tip' => 'Emails to your customers will be sent from this address.',
                     'sender-name' => 'Sender Name',
                     'sender-name-tip' => 'This name will appear in your customers\' inbox as the email sender.',
                     'title' => 'Email Settings',
+                    'title-info' => 'The names and addresses your store sends email from and shows in the footer.',
                 ],
 
                 'notifications' => [
@@ -4831,7 +5077,7 @@ return [
                     'cancel-order-mail-to-admin' => 'Send a notification e-mail to admin after canceling an order',
                     'customer' => 'Send the customer account credentials after registration',
                     'customer-registration-confirmation-mail-to-admin' => 'Send a confirmation e-mail to admin after customer registration',
-                    'info' => 'To configure, receive emails for account verification, order confirmations, updates on invoices, refunds, shipments, and order cancellations.',
+                    'info' => 'Choose which emails are sent to customers and to the admin.',
                     'new-inventory-source' => 'Send a notification e-mail to the inventory source after creating a shipment',
                     'new-invoice' => 'Send a notification e-mail to the customer after creating a new invoice',
                     'new-invoice-mail-to-admin' => 'Send a notification e-mail to the admin after creating a new invoice',
@@ -4843,16 +5089,17 @@ return [
                     'new-shipment-mail-to-admin' => 'Send a notification e-mail to the admin after creating a new shipment',
                     'registration' => 'Send a confirmation e-mail after customer registration',
                     'title' => 'Notifications',
+                    'title-info' => 'Turn individual notification emails on or off.',
                     'verification' => 'Send a verification e-mail after customer registration',
                 ],
             ],
 
             'sales' => [
-                'info' => 'Sales',
+                'info' => 'Settings for shipping, payments, orders, invoices, taxes, checkout and returns.',
                 'title' => 'Sales',
 
                 'shipping-setting' => [
-                    'info' => 'Configure shipping settings including Country, State, City, Street Address, Zip Code, Store Name, VAT Number, Contact Number, and Bank Details.',
+                    'info' => 'The address orders are shipped from.',
                     'title' => 'Shipping Settings',
 
                     'origin' => [
@@ -4864,14 +5111,14 @@ return [
                         'store-name' => 'Store Name',
                         'street-address' => 'Street Address',
                         'title' => 'Origin',
-                        'title-info' => 'Shipping origin refers to the location where goods or products originate before being transported to their destination.',
+                        'title-info' => 'The address orders are shipped from, and the store details shown on invoices.',
                         'vat-number' => 'Vat Number',
                         'zip' => 'Zip',
                     ],
                 ],
 
                 'shipping-methods' => [
-                    'info' => 'Configure shipping methods, including Free Shipping, Flat Rate, and additional options as needed.',
+                    'info' => 'The shipping methods offered at checkout.',
                     'title' => 'Shipping Methods',
 
                     'free-shipping' => [
@@ -4879,7 +5126,7 @@ return [
                         'page-title' => 'Free Shipping',
                         'status' => 'Status',
                         'title' => 'Title',
-                        'title-info' => '"Free shipping" refers to a shipping method where the cost of shipping is waived, and the seller covers the shipping expenses for delivering goods to the buyer.',
+                        'title-info' => 'A shipping method with no charge.',
                     ],
 
                     'flat-rate-shipping' => [
@@ -4888,7 +5135,7 @@ return [
                         'rate' => 'Rate',
                         'status' => 'Status',
                         'title' => 'Title',
-                        'title-info' => 'Flat rate shipping is a shipping method where a fixed fee is charged for shipping, regardless of the weight, size, or distance of the package. This simplifies shipping costs and can be advantageous for both buyers and sellers.',
+                        'title-info' => 'A shipping method charging a fixed rate, either once per order or for each item.',
                         'type' => [
                             'per-order' => 'Per Order',
                             'per-unit' => 'Per Unit',
@@ -4909,36 +5156,46 @@ return [
                     'application-fee' => 'Application Fee Payer',
                     'business-account' => 'Business Account',
                     'cash-on-delivery' => 'Cash On Delivery',
-                    'cash-on-delivery-info' => 'Payment method where customers pay in cash upon receiving goods or services at their doorstep.',
+                    'cash-on-delivery-info' => 'Let customers pay in cash when the order is delivered.',
                     'client-id' => 'Client ID',
-                    'client-id-info' => 'Use "sb" for testing.',
+                    'client-id-info' => 'The client ID of your PayPal app. Use the sandbox app\'s client ID while Sandbox is on.',
                     'client-secret' => 'Client Secret',
-                    'client-secret-info' => 'Add your secret key here',
+                    'client-secret-info' => 'The client secret of your PayPal app.',
                     'create-success-refund' => 'Refund created successfully.',
                     'description' => 'Description',
                     'enable' => 'Enable',
                     'generate-invoice' => 'Automatically generate the invoice after placing an order',
                     'generate-invoice-applicable' => 'Applicable if automatic generate invoice is enabled',
-                    'info' => 'Set payment methods information',
+                    'info' => 'Configure the payment methods offered at checkout.',
                     'instructions' => 'Instructions',
                     'logo' => 'Logo',
-                    'logo-information' => 'Image resolution should be like 55px X 45px',
+                    'logo-information' => 'Recommended size: 55 x 45 pixels.',
                     'mailing-address' => 'Send Check to',
                     'merchant-description' => 'Merchant Description',
                     'merchant-id' => 'Merchant ID',
                     'merchant-key' => 'Merchant Key',
                     'merchant-name' => 'Merchant Name',
+                    'merchant-private-key' => 'Merchant Private Key',
+                    'merchant-private-key-info' => 'Paste the contents of the private key PEM file generated in the PayGlocal dashboard. It is used to sign requests.',
                     'merchant-salt' => 'Merchant Salt',
                     'money-transfer' => 'Money Transfer',
-                    'money-transfer-info' => 'Transfer of funds from one person or account to another, often electronically, for various purposes such as transactions or remittances.',
+                    'money-transfer-info' => 'Let customers pay by bank transfer or cheque.',
                     'page-title' => 'Payment Methods',
                     'paid' => 'Paid',
+                    'payglocal' => 'PayGlocal',
+                    'payglocal-info' => 'Accept cross border payments through PayGlocal. <a href="https://dashboard.payglocal.in/app/mca/h8271x" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline hover:text-blue-700">Sign up here to get your credentials.</a>',
+                    'payglocal-merchant-id-info' => 'Available in the PayGlocal dashboard under My Account.',
+                    'payglocal-private-key-id-info' => 'The key ID of your private key, shown in the PayGlocal dashboard.',
+                    'payglocal-public-key' => 'PayGlocal Public Key',
+                    'payglocal-public-key-id-info' => 'The key ID of the PayGlocal public key, shown in the PayGlocal dashboard.',
+                    'payglocal-public-key-info' => 'Paste the contents of the PayGlocal public key PEM file. It is used to encrypt requests and to verify responses.',
+                    'payglocal-sandbox-info' => 'Send payments to the PayGlocal test environment.',
                     'paypal-smart-button' => 'PayPal',
-                    'paypal-smart-button-info' => 'PayPal Smart Button: Simplifies online payments with customizable buttons for secure, multi-method transactions on websites and apps.',
+                    'paypal-smart-button-info' => 'Show PayPal\'s buttons at checkout so customers can pay with PayPal or a card.',
                     'paypal-standard' => 'PayPal Standard',
-                    'paypal-standard-info' => 'PayPal Standard is a basic PayPal payment option for online businesses, enabling customers to pay using their PayPal accounts or credit/debit cards.',
+                    'paypal-standard-info' => 'Send customers to PayPal to pay with their PayPal account or a card.',
                     'payu' => 'PayU',
-                    'payu-info' => 'Configure PayU payment gateway settings',
+                    'payu-info' => 'Accept payments through PayU.',
                     'payu-merchant-key-info' => 'Enter your PayU Merchant Key obtained from PayU dashboard',
                     'payu-merchant-salt-info' => 'Enter your PayU Merchant Salt obtained from PayU dashboard',
                     'pending' => 'Pending',
@@ -4948,10 +5205,12 @@ return [
                     'phonepe-client-id-info' => 'Enter your PhonePe Client ID obtained from PhonePe dashboard',
                     'phonepe-client-secret-info' => 'Enter your PhonePe Client Secret obtained from PhonePe dashboard',
                     'phonepe-merchant-info' => 'Enter your PhonePe Merchant ID obtained from PhonePe dashboard',
+                    'private-key-id' => 'Private Key ID',
                     'processing' => 'Processing',
                     'production-mode-info' => 'For production mode only.',
+                    'public-key-id' => 'Public Key ID',
                     'razorpay' => 'Razorpay',
-                    'razorpay-info' => 'Razorpay is a financial technology platform that helps businesses accept, process, and disburse payments.',
+                    'razorpay-info' => 'Accept payments through Razorpay.',
                     'sandbox' => 'Sandbox',
                     'set-invoice-status' => 'Set the invoice status after creating the invoice to',
                     'set-order-status' => 'Set the order status after creating the invoice to',
@@ -4959,7 +5218,7 @@ return [
                     'statement-descriptor' => 'Statement Descriptor',
                     'status' => 'Status',
                     'stripe' => 'Stripe',
-                    'stripe-info' => 'Configure Stripe payment gateway settings for secure online transactions',
+                    'stripe-info' => 'Accept card payments through Stripe.',
                     'test-client-id' => 'Test Mode Client ID',
                     'test-client-secret' => 'Test Mode Client Secret',
                     'test-mode-info' => 'For test/sandbox mode only.',
@@ -4967,7 +5226,7 @@ return [
                 ],
 
                 'order-settings' => [
-                    'info' => 'Set order numbers, minimum orders and back orders.',
+                    'info' => 'Order creation retries, order numbers, minimum order value and reordering.',
                     'title' => 'Order Settings',
 
                     'order-creation' => [
@@ -4978,7 +5237,7 @@ return [
 
                     'order-number' => [
                         'generator' => 'Order Number Generator',
-                        'info' => 'Unique identifier assigned to a specific customer order, aiding tracking, communication, and reference throughout the purchasing process.',
+                        'info' => 'How generated order numbers are built.',
                         'length' => 'Order Number Length',
                         'prefix' => 'Order Number Prefix',
                         'suffix' => 'Order Number Suffix',
@@ -4990,17 +5249,17 @@ return [
                         'enable' => 'Enable',
                         'include-discount-amount' => 'Include Discount Amount',
                         'include-tax-amount' => 'Include Tax to Amount',
-                        'info' => 'Configured criteria specifying the lowest required quantity or value for an order to be processed or qualify for benefits.',
+                        'info' => 'The smallest order total a customer may check out with.',
                         'minimum-order-amount' => 'Minimum Order Amount',
                         'title' => 'Minimum Order Settings',
                     ],
 
                     'reorder' => [
                         'admin-reorder' => 'Admin Reorder',
-                        'admin-reorder-info' => 'Enable or disable the reordering feature for admin users.',
-                        'info' => 'Enable or disable the reordering feature for admin users.',
+                        'admin-reorder-info' => 'Allow an admin to place an order again from the admin panel.',
+                        'info' => 'Allow an order to be placed again from the admin panel or the storefront.',
                         'shop-reorder' => 'Shop Reorder',
-                        'shop-reorder-info' => 'Enable or disable the reordering feature for shop users.',
+                        'shop-reorder-info' => 'Allow a customer to place an order again from the storefront.',
                         'title' => 'Allow Reorder',
                     ],
 
@@ -5012,12 +5271,12 @@ return [
                 ],
 
                 'invoice-settings' => [
-                    'info' => 'Set invoice number, payment terms, invoice slip design and invoice reminders.',
+                    'info' => 'Invoice numbers, payment terms, PDF print outs and reminders.',
                     'title' => 'Invoice Settings',
 
                     'invoice-number' => [
                         'generator' => 'Invoice Number Generator',
-                        'info' => 'Configuration of rules or parameters for generating and assigning unique identification numbers to invoices for organizational and tracking purposes.',
+                        'info' => 'How generated invoice numbers are built.',
                         'length' => 'Invoice Number Length',
                         'prefix' => 'Invoice Number Prefix',
                         'suffix' => 'Invoice Number Suffix',
@@ -5028,7 +5287,7 @@ return [
                         'due-duration' => 'Due Duration',
                         'due-duration-day' => ':due-duration Day',
                         'due-duration-days' => ':due-duration Days',
-                        'info' => 'Agreed-upon conditions dictating when and how payment for goods or services should be made by the buyer to the seller.',
+                        'info' => 'How long after it is issued an invoice is due.',
                         'title' => 'Payment Terms',
                     ],
 
@@ -5046,7 +5305,7 @@ return [
                     ],
 
                     'invoice-reminders' => [
-                        'info' => 'Automated notifications or communications sent to customers to remind them of upcoming or overdue payments for invoices.',
+                        'info' => 'How many payment reminders are sent for an unpaid invoice, and how far apart.',
                         'interval-between-reminders' => 'Interval between reminders',
                         'maximum-limit-of-reminders' => 'Maximum limit of reminders',
                         'title' => 'Invoice Reminders',
@@ -5055,11 +5314,11 @@ return [
 
                 'taxes' => [
                     'title' => 'Taxes',
-                    'title-info' => 'Taxes are mandatory fees imposed by governments on goods, services, or transactions, collected by sellers and remitted to the authorities.',
+                    'title-info' => 'Tax categories, how tax is calculated, and how it is displayed.',
 
                     'categories' => [
                         'title' => 'Tax Categories',
-                        'title-info' => 'Tax categories are classifications for different types of taxes, such as sales tax, value-added tax, or excise tax, used to categorize and apply tax rates to products or services.',
+                        'title-info' => 'The tax category applied to shipping, and the one new products default to.',
                         'product' => 'Product Default Tax Category',
                         'shipping' => 'Shipping Tax Category',
                         'none' => 'None',
@@ -5079,7 +5338,7 @@ return [
                         'shipping-origin' => 'Shipping Origin',
                         'shipping-prices' => 'Shipping Prices',
                         'title' => 'Calculation Settings',
-                        'title-info' => 'Details about the cost of goods or services, including base price, discounts, taxes, and additional charges.information',
+                        'title-info' => 'What tax is calculated on, and whether entered prices already include it.',
                     ],
 
                     'default-destination-calculation' => [
@@ -5087,14 +5346,14 @@ return [
                         'default-post-code' => 'Default Post Code',
                         'default-state' => 'Default State',
                         'title' => 'Default Destination Calculation',
-                        'title-info' => 'Automated determination of a standard or initial destination based on predefined factors or settings.',
+                        'title-info' => 'The address tax is calculated against before the customer enters their own.',
                     ],
 
                     'shopping-cart' => [
                         'show-tax-breakdown' => 'Show Tax Breakdown',
                         'show-tax-breakdown-info' => 'Display a detailed per-product, per-rate tax breakdown in the cart and checkout summary. Intended for debugging.',
                         'title' => 'Shopping Cart Display Settings',
-                        'title-info' => 'Set the display of taxes in the shopping cart',
+                        'title-info' => 'How tax is shown in the cart and at checkout.',
                         'display-prices' => 'Display Prices',
                         'display-subtotal' => 'Display Subtotal',
                         'display-shipping-amount' => 'Display Shipping Amount',
@@ -5105,7 +5364,7 @@ return [
 
                     'sales' => [
                         'title' => 'Orders, Invoices, Refunds Display Settings',
-                        'title-info' => 'Set the display of taxes in the orders, invoices, and refunds',
+                        'title-info' => 'How tax is shown on orders, invoices and refunds.',
                         'display-prices' => 'Display Prices',
                         'display-subtotal' => 'Display Subtotal',
                         'display-shipping-amount' => 'Display Shipping Amount',
@@ -5117,7 +5376,7 @@ return [
 
                 'checkout' => [
                     'title' => 'Checkout',
-                    'info' => 'Set guest checkout, Enable or Disable Mini Cart, cart Summary.',
+                    'info' => 'Guest checkout, the cart page, the mini cart and the cart summary.',
 
                     'shopping-cart' => [
                         'cart-page' => 'Cart Page',
@@ -5128,21 +5387,21 @@ return [
                         'estimate-shipping-info' => 'Enable estimated shipping to provide upfront shipping costs.',
                         'guest-checkout' => 'Allow guest checkout',
                         'guest-checkout-info' => 'Enable guest checkout for a faster, hassle-free purchase process.',
-                        'info' => 'Enable guest checkout, cart page, cross-sell products, and estimated shipping to enhance user convenience and streamline the shopping process for increased sales.',
+                        'info' => 'Guest checkout, the cart page, cross-sell products and estimated shipping.',
                         'title' => 'Shopping Cart',
                     ],
 
                     'my-cart' => [
                         'display-item-quantities' => 'Display item quantities',
                         'display-number-in-cart' => 'Display number of items in cart',
-                        'info' => 'Enable settings for My Cart to show a summary of item quantities and display the total number of items in the cart for easy tracking.',
+                        'info' => 'Whether the cart count shows the total item quantity or the number of items.',
                         'summary' => 'Summary',
                         'title' => 'My Cart',
                     ],
 
                     'mini-cart' => [
                         'display-mini-cart' => 'Display Mini Cart',
-                        'info' => 'Enable Mini Cart settings to display the mini cart and show Mini Cart Offer Information for quick access to cart details and promotions.',
+                        'info' => 'Show the mini cart, and the offer text displayed inside it.',
                         'mini-cart-offer-info' => 'Mini Cart Offer Information',
                         'title' => 'Mini Cart',
                     ],
@@ -5172,7 +5431,7 @@ return [
                     'evening' => 'Evening',
                     'exchange' => 'Exchange',
                     'file-extension-info' => 'The file types customers and admins may attach to a return request, such as product photos or supporting documents.',
-                    'info' => 'RMA is part of the process of returning a product to a business to receive a refund, replacement, or repair.',
+                    'info' => 'Returns customers can request after an order is placed.',
                     'morning' => 'Morning',
                     'new-rma-message-to-customer' => 'New RMA Message to Customer',
                     'no' => 'No',
@@ -5225,14 +5484,29 @@ return [
                 'warning-config-closures' => 'config:cache will fail if any configuration file returns closures.',
                 'warning-permissions' => 'Filesystem permission issues may prevent cache generation or clearing.',
                 'invalid-action' => 'Invalid cache action requested.',
-                'action-success' => 'Command ":action" executed successfully.',
-                'action-failed' => 'Command ":action" failed. Check the output below.',
+                'action-success' => ':action completed successfully.',
+                'action-failed' => ':action failed. Check the output below.',
                 'action-exception' => 'Cache action failed: :message',
                 'clear-console' => 'Clear Console',
                 'console-title' => 'Output Console',
                 'console-entries' => 'entries',
                 'console-empty' => 'Run a cache action to see output here...',
                 'console-unknown-error' => 'An unexpected error occurred.',
+
+                'results' => [
+                    'clear-all' => 'All caches have been cleared.',
+                    'clear-config' => 'The configuration cache has been cleared.',
+                    'clear-cache' => 'The application cache has been cleared.',
+                    'clear-compiled' => 'The compiled class files have been removed.',
+                    'clear-events' => 'The event cache has been cleared.',
+                    'clear-routes' => 'The route cache has been cleared.',
+                    'clear-views' => 'The compiled views have been cleared.',
+                    'clear-page-cache' => 'The page cache has been cleared. Every storefront page will be built again on its next visit.',
+                    'build-all' => 'All caches have been rebuilt.',
+                    'build-config' => 'The configuration cache has been built.',
+                    'build-routes' => 'The route cache has been built.',
+                    'build-views' => 'The views have been compiled.',
+                ],
 
                 'actions' => [
                     'clear-all' => 'Clear All Cache',
@@ -5242,10 +5516,27 @@ return [
                     'clear-events' => 'Clear Event Cache',
                     'clear-routes' => 'Clear Route Cache',
                     'clear-views' => 'Clear View Cache',
+                    'clear-page-cache' => 'Clear Page Cache',
                     'build-all' => 'Rebuild All Cache',
                     'build-config' => 'Cache Config',
                     'build-routes' => 'Cache Routes',
                     'build-views' => 'Cache Views',
+                ],
+
+                'full-page-cache' => [
+                    'title' => 'Full Page Cache',
+                    'info' => 'Serve rendered storefront pages from a cache instead of building them for every visitor.',
+
+                    'settings' => [
+                        'title' => 'Settings',
+                        'info' => 'Turn the page cache on or off and choose how long a page stays cached.',
+                        'enabled' => 'Enable Full Page Cache',
+                        'enabled-info' => 'Storefront pages are served from the cache. Turning this off makes every page render again on each visit.',
+                        'lifetime' => 'Cache Lifetime (Minutes)',
+                        'lifetime-info' => 'How long a cached page is kept before it is rendered again. Leave empty to use the application default.',
+                        'flush' => 'Flush Page Cache',
+                        'flush-info' => 'Empty the page cache so every storefront page is rendered again on its next visit.',
+                    ],
                 ],
             ],
         ],
@@ -5280,6 +5571,10 @@ return [
             ],
 
             'sidebar' => [
+
+                'appearance' => 'Appearance',
+
+                'sections' => 'Sections',
                 'attribute-families' => 'Attribute Families',
                 'attributes' => 'Attributes',
                 'booking-product' => 'Bookings',
@@ -5352,6 +5647,7 @@ return [
 
             'toolbar' => [
                 'length-of' => ':length of',
+                'sort-by' => 'Sort By',
                 'of' => 'of',
                 'per-page' => 'Per Page',
                 'results' => ':total Results',
@@ -5420,6 +5716,17 @@ return [
                     'today' => 'Today',
                     'yesterday' => 'Yesterday',
                 ],
+
+                'number-options' => [
+                    'between' => 'Between',
+                    'equals' => 'Equals',
+                    'from' => 'From',
+                    'greater-than' => 'Greater Than',
+                    'greater-than-or-equal' => 'Greater Than Or Equal',
+                    'less-than' => 'Less Than',
+                    'less-than-or-equal' => 'Less Than Or Equal',
+                    'to' => 'To',
+                ],
             ],
 
             'table' => [
@@ -5456,6 +5763,7 @@ return [
                 'ai-add-image-btn' => 'Magic AI',
                 'ai-btn-info' => 'Generate Image',
                 'allowed-types' => 'png, jpeg, jpg',
+                'image' => 'Image',
                 'not-allowed-error' => 'Only images files (.jpeg, .jpg, .png, ..) are allowed.',
 
                 'ai-generation' => [
@@ -5486,12 +5794,33 @@ return [
                     'use-cases' => 'Use Cases',
                     'zoom' => 'Zoom',
                 ],
+
+                'seo' => [
+                    'alt-text' => 'Alt Text',
+                    'alt-text-info' => 'Saved for the currently selected locale. Falls back to the product name when left empty.',
+                    'alt-text-placeholder' => 'Describe what is shown in the image',
+                    'done-btn' => 'Done',
+                    'file-name' => 'File Name',
+                    'file-name-info' => 'Renaming changes the image URL. The old URL stops working, which can affect image search rankings.',
+                    'file-name-placeholder' => 'blue-running-shoe-side',
+                    'info' => 'Improve how search engines and screen readers understand this image.',
+                    'replace' => 'Replace Image',
+                    'replace-btn' => 'Choose File',
+                    'replace-info' => 'The alt text and file name above are kept for the new image.',
+                    'title' => 'Image SEO',
+                ],
             ],
 
             'videos' => [
                 'add-video-btn' => 'Add Video',
                 'allowed-types' => 'mp4, webm, mkv',
                 'not-allowed-error' => 'Only videos files (.mp4, .mov, .ogg ..) are allowed.',
+                'video' => 'Video',
+
+                'seo' => [
+                    'info' => 'Give the video file a descriptive name.',
+                    'title' => 'Video SEO',
+                ],
             ],
         ],
 
@@ -5523,6 +5852,12 @@ return [
     ],
 
     'acl' => [
+
+        'activate' => 'Activate',
+
+        'appearance' => 'Appearance',
+
+        'sections' => 'Sections',
         'addresses' => 'Addresses',
         'attribute-families' => 'Attribute Families',
         'attributes' => 'Attributes',

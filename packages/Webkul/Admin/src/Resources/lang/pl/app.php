@@ -350,6 +350,9 @@ return [
                         'add-btn' => 'Dodaj adres',
                         'add-new' => 'Dodaj nowy adres',
                         'add-new-address' => 'Dodaj nowy adres',
+                        'address-updated-payment-info' => 'Metody płatności i sumy zamówienia zostaną odświeżone dla zmienionego adresu. Kliknij „Kontynuuj”, aby wczytać najnowsze opcje.',
+                        'address-updated-shipping-info' => 'Metody dostawy i stawki zostaną ponownie obliczone dla zmienionego adresu. Kliknij „Kontynuuj”, aby wczytać najnowsze opcje.',
+                        'address-updated-title' => 'Adres zaktualizowany',
                         'addresses' => 'Adresy',
                         'back' => 'Powrót',
                         'billing-address' => 'Adres rozliczeniowy',
@@ -701,6 +704,7 @@ return [
                     'pending' => 'Oczekujące',
                     'status' => 'Status',
                     'update-status' => 'Zaktualizuj status',
+                    'view' => 'Podgląd',
                 ],
             ],
 
@@ -983,6 +987,7 @@ return [
                         'edit' => 'Edytuj',
                         'enabled' => 'Aktywny',
                         'id' => 'ID',
+                        'mass-delete-partial' => 'Usunięto :deleted z wybranych rekordów; :skipped zostało już wcześniej usuniętych.',
                         'mass-delete-success' => 'Wybrane dane zostały pomyślnie usunięte.',
                         'reason-error' => 'Powód jest używany w RMA.',
                         'reason' => 'Powód',
@@ -1024,6 +1029,7 @@ return [
                         'enabled' => 'Aktywny',
                         'id' => 'ID',
                         'label' => 'Etykieta',
+                        'mass-delete-partial' => 'Usunięto :deleted z wybranych rekordów; :skipped zostało już wcześniej usuniętych.',
                         'mass-delete-success' => 'Wybrane dane zostały pomyślnie usunięte.',
                         'no' => 'Nie',
                         'required' => 'Wymagane',
@@ -1064,6 +1070,7 @@ return [
                         'enabled' => 'Aktywny',
                         'exchange-period' => 'Okres wymiany (dni)',
                         'id' => 'ID',
+                        'mass-delete-partial' => 'Usunięto :deleted z wybranych rekordów; :skipped zostało już wcześniej usuniętych.',
                         'mass-delete-success' => 'Wybrane dane zostały pomyślnie usunięte.',
                         'name' => 'Nazwa',
                         'reason' => 'Zasady',
@@ -1155,10 +1162,12 @@ return [
                     'attribute-family-value' => 'Rodzina atrybutów - :attribute_family',
                     'category' => 'Kategoria',
                     'channel' => 'Kanał',
+                    'copy' => 'Kopiuj',
                     'copy-of' => 'Kopia :value',
                     'copy-of-slug' => 'kopia-:value',
                     'delete' => 'Usuń',
                     'disable' => 'Wyłącz',
+                    'edit' => 'Edytuj',
                     'id' => 'Identyfikator',
                     'id-value' => 'Identyfikator - :id',
                     'image' => 'Obraz',
@@ -1172,6 +1181,7 @@ return [
                     'qty-value' => ':qty dostępny',
                     'sku' => 'SKU',
                     'sku-value' => 'SKU - :sku',
+                    'stock-disabled' => 'Magazyn wyłączony',
                     'status' => 'Status',
                     'type' => 'Typ',
                     'update-status' => 'Zaktualizuj status',
@@ -1222,6 +1232,7 @@ return [
                 ],
 
                 'categories' => [
+                    'search' => 'Search categories',
                     'title' => 'Kategorie',
                 ],
 
@@ -1809,7 +1820,7 @@ return [
                 'position' => 'Pozycja',
                 'price' => 'Cena',
                 'regex' => 'Wyrażenie regularne (Regex)',
-                'regex-info' => 'Wprowadź poprawne wyrażenie regularne, aby zwalidować to pole.',
+                'regex-info' => 'Wyrażenie musi być ujęte w ukośniki, na przykład /^[0-9]+$/.',
                 'save-btn' => 'Zapisz atrybut',
                 'select' => 'Lista rozwijana',
                 'select-type' => 'Wybierz typ pola',
@@ -1883,7 +1894,7 @@ return [
                 'position' => 'Pozycja',
                 'price' => 'Cena',
                 'regex' => 'Wyrażenie regularne (Regex)',
-                'regex-info' => 'Wprowadź poprawne wyrażenie regularne, aby zwalidować to pole.',
+                'regex-info' => 'Wyrażenie musi być ujęte w ukośniki, na przykład /^[0-9]+$/.',
                 'save-btn' => 'Zapisz atrybut',
                 'select' => 'Lista rozwijana',
                 'select-type' => 'Wybierz typ pola',
@@ -1938,6 +1949,7 @@ return [
                     'inactive' => 'Nieaktywna',
                     'name' => 'Nazwa',
                     'no-of-products' => 'Liczba produktów',
+                    'parent-category' => 'Kategoria nadrzędna',
                     'position' => 'Pozycja',
                     'status' => 'Widoczna w menu',
                     'update-status' => 'Aktualizuj status',
@@ -2092,10 +2104,10 @@ return [
             'attribute-family' => 'Zestaw atrybutów',
             'attribute-product-error' => 'Operacja niedozwolona. Ten zestaw atrybutów jest przypisany do istniejących produktów.',
             'create-success' => 'Pomyślnie utworzono zestaw atrybutów.',
+            'default-delete-error' => 'Domyślnej rodziny atrybutów nie można usunąć.',
             'delete-failed' => 'Wystąpił błąd podczas usuwania zestawu atrybutów.',
             'delete-success' => 'Pomyślnie usunięto zestaw atrybutów.',
             'family' => 'Zestaw atrybutów',
-            'last-delete-error' => 'Operacja niedozwolona. Sklep musi posiadać co najmniej jeden aktywny zestaw atrybutów.',
             'update-success' => 'Pomyślnie zaktualizowano zestaw atrybutów.',
             'user-define-error' => 'Operacja niedozwolona. Nie można usunąć systemowego zestawu atrybutów.',
         ],
@@ -2120,6 +2132,7 @@ return [
                     'id' => 'ID klienta',
                     'id-value' => 'Identyfikator - :id',
                     'inactive' => 'Nieaktywny',
+                    'login-as-customer' => 'Zaloguj się jako klient',
                     'method-error' => 'Błąd! Wykryto błędną metodę, sprawdź konfigurację masowej akcji',
                     'name' => 'Nazwa klienta',
                     'no-resource' => 'Dostarczone zasoby są niewystarczające dla tej akcji',
@@ -2133,6 +2146,7 @@ return [
                     'suspended' => 'Zawieszony',
                     'update-status' => 'Aktualizuj status',
                     'update-success' => 'Wybrane dane klientów zostały pomyślnie zaktualizowane',
+                    'view' => 'Podgląd',
                 ],
 
                 'create' => [
@@ -2275,6 +2289,7 @@ return [
                         'rating' => 'Ocena',
                         'status' => 'Status',
                         'title' => 'Tytuł',
+                        'view' => 'Podgląd',
                     ],
                 ],
 
@@ -2479,7 +2494,9 @@ return [
 
                     'datagrid' => [
                         'active' => 'Aktywny',
+                        'delete' => 'Usuń',
                         'draft' => 'Wersja robocza',
+                        'edit' => 'Edytuj',
                         'id' => 'ID',
                         'inactive' => 'Nieaktywny',
                         'name' => 'Nazwa',
@@ -2516,6 +2533,7 @@ return [
                     'update-success' => 'Zaktualizowano pomyślnie',
                 ],
 
+                'campaign-associate' => 'Ten szablon jest używany w co najmniej jednej kampanii.',
                 'delete-failed' => ':name Usunięcie nie powiodło się',
                 'delete-success' => 'Szablon usunięty pomyślnie',
                 'email-template' => 'Szablon emaila',
@@ -2619,6 +2637,7 @@ return [
                     ],
                 ],
 
+                'campaign-associate' => 'To wydarzenie jest używane w co najmniej jednej kampanii.',
                 'delete-failed' => 'Usuwanie :name nie powiodło się',
                 'delete-success' => 'Wydarzenia usunięte pomyślnie',
                 'edit-error' => 'Nie można edytować wydarzenia',
@@ -2983,6 +3002,7 @@ return [
 
                 'create-success' => 'Zasada katalogu utworzona pomyślnie',
                 'delete-success' => 'Zasada katalogu usunięta pomyślnie',
+                'queue-note' => 'Zapisanie tej reguły aktualizuje cenę każdego produktu, którego dotyczy. Jeśli dotyczy wielu produktów, użyj sterownika kolejki database lub redis z uruchomionym workerem kolejki, aby ceny były aktualizowane w tle, zamiast spowalniać zapisywanie.',
                 'update-success' => 'Zasada katalogu zaktualizowana pomyślnie',
             ],
 
@@ -3223,6 +3243,312 @@ return [
         'update-success' => 'CMS został pomyślnie zaktualizowany.',
     ],
 
+    'appearance' => [
+        'themes' => [
+            'index' => [
+                'activate-btn' => 'Aktywuj',
+                'activate-success' => ':theme jest teraz aktywny w :channel.',
+                'active' => 'Aktywny',
+                'active-on' => 'Aktywny w:',
+                'active-on-all' => 'Aktywny we wszystkich kanałach',
+                'buy-btn' => 'Zobacz i kup',
+                'buy-themes' => 'Kup motywy',
+                'by' => 'autor',
+                'customize-btn' => 'Dostosuj',
+                'info' => 'Przeglądaj motywy dostępne dla Twojego sklepu i wybierz, którego używa każdy kanał.',
+                'my-themes' => 'Moje motywy',
+                'not-in-use' => 'Nieużywany',
+                'not-installed' => 'Ten motyw nie jest zainstalowany w tym sklepie.',
+                'preview-btn' => 'Podgląd',
+                'title' => 'Motywy',
+
+                'activate' => [
+                    'channels' => 'Kanały',
+                    'channels-hint' => 'Przytrzymaj Ctrl (Cmd na Macu), aby wybrać więcej niż jeden kanał.',
+                    'confirm-btn' => 'Aktywuj',
+                    'info' => 'Wybierz kanały, które mają zacząć używać :theme.',
+                    'title' => 'Aktywuj motyw',
+                    'warning' => ':channel ma :count dostosowań utworzonych dla :theme. Pozostaną zapisane, ale nie pojawią się, dopóki nowy motyw jest aktywny.',
+                ],
+            ],
+        ],
+        'sections' => [
+            'index' => [
+                'all-filters-used' => 'Wszystkie dostępne filtry zostały już dodane.',
+                'channel' => 'Kanał',
+                'copy-suffix' => 'Kopia',
+                'create-btn' => 'Utwórz sekcję',
+                'delete-confirm' => 'Czy na pewno chcesz usunąć tę sekcję?',
+                'desktop' => 'Komputer',
+                'discard-btn' => 'Odrzuć',
+                'discarded' => 'Odrzucono zmiany w wersji roboczej.',
+                'duplicate-btn' => 'Duplikuj',
+                'empty' => 'Brak sekcji.',
+                'gone' => 'Ta sekcja już nie istnieje.',
+                'inactive-theme' => 'Dostosować można tylko motyw aktywny w kanale.',
+                'locale' => 'Język',
+                'mobile' => 'Telefon',
+                'no-fields' => 'Ta sekcja nie ma w tym motywie ustawień do edycji.',
+                'no-types' => 'Ten motyw nie oferuje typów sekcji do dodania.',
+                'pinned' => 'Przypięte do dołu strony.',
+                'preview-btn' => 'Podgląd',
+                'publish-btn' => 'Opublikuj',
+                'scoped-to' => 'Wyświetlanie sekcji motywu :theme w kanale :channel.',
+                'tablet' => 'Tablet',
+                'title' => 'Sekcje',
+                'unsaved' => 'Niezapisane zmiany',
+
+                'datagrid' => [
+                    'active' => 'Aktywny',
+                    'channel_name' => 'Nazwa kanału',
+                    'change-status' => 'Zmień status',
+                    'delete' => 'Usuń',
+                    'id' => 'ID',
+                    'inactive' => 'Nieaktywny',
+                    'name' => 'Nazwa',
+                    'sort-order' => 'Kolejność sortowania',
+                    'status' => 'Status',
+                    'theme' => 'Temat',
+                    'type' => 'Typ',
+                    'view' => 'Widok',
+                ],
+            ],
+
+            'create' => [
+                'name' => 'Nazwa',
+                'save-btn' => 'Zapisz sekcję',
+                'singleton-exists' => 'Ten kanał wyświetla tylko jedną sekcję typu :type.',
+                'title' => 'Utwórz sekcję',
+
+                'type' => [
+                    'category-carousel' => 'Karuzela kategorii',
+                    'footer-links' => 'Linki stopki',
+                    'image-carousel' => 'Karuzela obrazów',
+                    'product-carousel' => 'Karuzela produktów',
+                    'services-content' => 'Treść usług',
+                    'static-content' => 'Treść statyczna',
+                    'title' => 'Typ',
+                ],
+            ],
+
+            'edit' => [
+                'active' => 'Aktywny',
+                'add-column' => 'Dodaj kolumnę',
+                'add-filter-btn' => 'Dodaj filtr',
+                'add-footer-link-btn' => 'Dodaj link stopki',
+                'add-image-btn' => 'Dodaj obraz',
+                'add-link' => 'Dodaj link',
+                'add-media' => 'Dodaj multimedia',
+                'asc' => 'rosnąco',
+                'back' => 'Powrót',
+                'category-carousel' => 'Karuzela kategorii',
+                'category-carousel-description' => 'Wyświetl dynamiczne kategorie w atrakcyjny sposób za pomocą responsywnej karuzeli kategorii.',
+                'category-id' => 'ID kategorii',
+                'channels' => 'Kanały',
+                'column' => 'Kolumna',
+                'columns' => 'Kolumny',
+                'create-filter' => 'Utwórz filtr',
+                'css' => 'CSS',
+                'delete' => 'Usuń',
+                'desc' => 'malejąco',
+                'edit' => 'Edytuj',
+                'featured' => 'Wyróżnione',
+                'filter-title' => 'Tytuł',
+                'filters' => 'Filtry',
+                'footer-link' => 'Linki stopki',
+                'footer-link-description' => 'Nawiguj za pomocą linków stopki, aby swobodnie przeglądać witrynę i uzyskiwać informacje.',
+                'footer-link-form-title' => 'Link stopki',
+                'footer-title' => 'Tytuł',
+                'general' => 'Ogólne',
+                'html' => 'HTML',
+                'image' => 'Obraz',
+                'image-size' => 'Rozmiar obrazu powinien wynosić (1920px X 700px)',
+                'image-title' => 'Tytuł obrazu',
+                'image-upload-message' => 'Dozwolone są tylko obrazy (.jpeg, .jpg, .png, .webp, ..).',
+                'inactive' => 'Nieaktywny',
+                'key' => 'Klucz: :key',
+                'key-input' => 'Klucz',
+                'limit' => 'Limit',
+                'link' => 'Link',
+                'name' => 'Nazwa',
+                'new' => 'Nowy',
+                'no' => 'Nie',
+                'parent-id' => 'Identyfikator nadrzędny',
+                'preview' => 'Podgląd',
+                'product-carousel' => 'Karuzela produktów',
+                'product-carousel-description' => 'Elegancko prezentuj produkty za pomocą dynamicznej i responsywnej karuzeli produktów.',
+                'save-btn' => 'Zapisz',
+                'select' => 'Wybierz',
+                'slider' => 'Suwak',
+                'slider-add-btn' => 'Dodaj suwak',
+                'slider-description' => 'Dostosowania związane z motywem dotyczące suwaka.',
+                'slider-image' => 'Obraz suwaka',
+                'slider-required' => 'Pole suwaka jest wymagane.',
+                'sort' => 'Sortuj',
+                'sort-order' => 'Kolejność sortowania',
+                'static-content' => 'Treść statyczna',
+                'static-content-description' => 'Zwiększ zaangażowanie za pomocą zwięzłej, informacyjnej treści statycznej dla swojej publiczności.',
+                'status' => 'Status',
+                'themes' => 'Motywy',
+                'title' => 'Edytuj sekcję',
+                'update-slider' => 'Aktualizuj suwak',
+                'uploading' => 'Przesyłanie…',
+                'url' => 'URL',
+                'value' => 'Wartość: :value',
+                'value-input' => 'Wartość',
+
+                'services-content' => [
+                    'add-btn' => 'Dodaj usługi',
+                    'channels' => 'Kanały',
+                    'delete' => 'Usuń',
+                    'description' => 'Opis',
+                    'general' => 'Ogólne',
+                    'name' => 'Nazwa',
+                    'save-btn' => 'Zapisz',
+                    'service-icon' => 'Ikona usługi',
+                    'service-icon-class' => 'Klasa ikony usługi',
+                    'service-info' => 'Dostosowanie motywów związanych z usługą.',
+                    'services' => 'Usługi',
+                    'sort-order' => 'Kolejność sortowania',
+                    'status' => 'Status',
+                    'title' => 'Tytuł',
+                    'update-service' => 'Aktualizuj usługi',
+                ],
+
+                'yes' => 'Tak',
+            ],
+
+            'create-success' => 'Sekcja została utworzona',
+            'delete-success' => 'Sekcja została usunięta',
+            'update-success' => 'Sekcja została zaktualizowana',
+        ],
+    ],
+
+    'reporting' => [
+        'sales' => [
+            'index' => [
+                'abandoned-carts' => 'Porzucone koszyki',
+                'abandoned-products' => 'Porzucone produkty',
+                'abandoned-rate' => 'Wskaźnik porzucenia',
+                'abandoned-revenue' => 'Przychód z porzuceń',
+                'added-to-cart' => 'Dodane do koszyka',
+                'added-to-cart-info' => 'Tylko :progress odwiedzających dodało produkty do koszyka',
+                'all-channels' => 'Wszystkie kanały',
+                'average-order-value-over-time' => 'Średnia wartość zamówienia w czasie',
+                'average-sales' => 'Średnia wartość zamówienia',
+                'count' => 'Liczba',
+                'coupon-code' => 'Kod Kuponu',
+                'date' => 'Data',
+                'discount' => 'Rabat',
+                'email' => 'Email',
+                'end-date' => 'Data zakończenia',
+                'id' => 'ID',
+                'interval' => 'Okres',
+                'name' => 'Nazwa',
+                'order-id' => 'ID Zamówienia',
+                'orders' => 'Zamówienia',
+                'orders-over-time' => 'Zamówienia w czasie',
+                'payment-method' => 'Metoda płatności',
+                'purchase-funnel' => 'Lejek zakupowy',
+                'purchased' => 'Kupione',
+                'purchased-info' => 'Tylko :progress odwiedzających dokonało zakupów',
+                'refunds' => 'Zwroty',
+                'refunds-over-time' => 'Zwroty w czasie',
+                'sales-by-coupon' => 'Sprzedaż według Kuponu',
+                'sales-over-time' => 'Sprzedaż w czasie',
+                'shipping-collected' => 'Opłaty za dostawę',
+                'shipping-collected-over-time' => 'Opłaty za dostawę w czasie',
+                'start-date' => 'Data rozpoczęcia',
+                'tax-collected' => 'Opłaty podatkowe',
+                'tax-collected-over-time' => 'Opłaty podatkowe w czasie',
+                'title' => 'Sprzedaż',
+                'top-payment-methods' => 'Najpopularniejsze metody płatności',
+                'top-shipping-methods' => 'Najpopularniejsze metody dostawy',
+                'top-tax-categories' => 'Najpopularniejsze kategorie podatkowe',
+                'total' => 'Razem',
+                'total-orders' => 'Łącznie zamówień',
+                'total-sales' => 'Łącznie sprzedaży',
+                'view-details' => 'Zobacz szczegóły',
+            ],
+        ],
+
+        'customers' => [
+            'index' => [
+                'all-channels' => 'Wszystkie kanały',
+                'count' => 'Liczba',
+                'customers' => 'Klienci',
+                'customers-over-time' => 'Klienci w czasie',
+                'customers-with-most-orders' => 'Klienci z największą liczbą zamówień',
+                'customers-with-most-reviews' => 'Klienci z największą liczbą opinii',
+                'customers-with-most-sales' => 'Klienci z największą liczbą sprzedaży',
+                'email' => 'E-mail',
+                'end-date' => 'Data zakończenia',
+                'id' => 'ID',
+                'interval' => 'Okres',
+                'name' => 'Nazwa',
+                'orders' => 'Zamówienia',
+                'reviews' => 'Opinie',
+                'start-date' => 'Data rozpoczęcia',
+                'title' => 'Klienci',
+                'top-customer-groups' => 'Najpopularniejsze grupy klientów',
+                'total' => 'Razem',
+                'total-customers' => 'Łącznie klientów',
+                'view-details' => 'Zobacz szczegóły',
+            ],
+        ],
+
+        'products' => [
+            'index' => [
+                'all-channels' => 'Wszystkie kanały',
+                'channel' => 'Kanał',
+                'end-date' => 'Data zakończenia',
+                'id' => 'ID',
+                'interval' => 'Okres',
+                'last-search-terms' => 'Ostatnio wyszukiwane słowa',
+                'locale' => 'Lokalizacja',
+                'name' => 'Nazwa',
+                'orders' => 'Zamówienia',
+                'price' => 'Cena',
+                'products-added-over-time' => 'Produkty dodane w czasie',
+                'products-with-most-reviews' => 'Produkty z największą liczbą opinii',
+                'quantities' => 'Ilości',
+                'quantities-sold-over-time' => 'Ilości sprzedane w czasie',
+                'results' => 'Wyniki',
+                'revenue' => 'Przychód',
+                'reviews' => 'Opinie',
+                'search-term' => 'Słowo kluczowe',
+                'start-date' => 'Data rozpoczęcia',
+                'title' => 'Produkty',
+                'top-search-terms' => 'Najczęściej wyszukiwane słowa',
+                'top-selling-products-by-quantity' => 'Najpopularniejsze produkty pod względem ilości',
+                'top-selling-products-by-revenue' => 'Najpopularniejsze produkty pod względem przychodu',
+                'total' => 'Razem',
+                'total-products-added-to-wishlist' => 'Produkty dodane do listy życzeń',
+                'total-sold-quantities' => 'Łączna liczba sprzedanych produktów',
+                'uses' => 'Zastosowania',
+                'view-details' => 'Zobacz szczegóły',
+            ],
+        ],
+
+        'view' => [
+            'all-channels' => 'Wszystkie kanały',
+            'back-btn' => 'Wstecz',
+            'day' => 'Dzień',
+            'end-date' => 'Data zakończenia',
+            'export-csv' => 'Eksportuj do formatu CSV',
+            'export-xls' => 'Eksportuj do formatu XLS',
+            'month' => 'Miesiąc',
+            'not-available' => 'Brak dostępnych rekordów.',
+            'start-date' => 'Data rozpoczęcia',
+            'year' => 'Rok',
+        ],
+
+        'empty' => [
+            'info' => 'Brak danych dla wybranego okresu',
+            'title' => 'Brak dostępnych danych',
+        ],
+    ],
+
     'settings' => [
         'locales' => [
             'index' => [
@@ -3329,9 +3655,10 @@ return [
                     'file-info-example' => 'Na przykład, jeśli to produkt-obrazy, pliki powinny być umieszczone w folderze /project-root/storage/app/import/product-images.',
                     'general' => 'Ogólne',
                     'images-directory' => 'Ścieżka katalogu obrazów',
+                    'import-confirmation' => 'Import rozpocznie się zaraz po zapisaniu. Czy chcesz kontynuować?',
                     'process-in-queue' => 'Przetwarzanie w kolejce',
                     'results' => 'Wyniki',
-                    'save-btn' => 'Zapisz import',
+                    'save-btn' => 'Importuj',
                     'settings' => 'Ustawienia',
                     'skip-errors' => 'Pomiń błędy',
                     'stop-on-errors' => 'Zatrzymaj przy błędach',
@@ -3356,7 +3683,7 @@ return [
                     'images-directory' => 'Ścieżka do katalogu obrazów',
                     'process-in-queue' => 'Przetwarzanie w kolejce',
                     'results' => 'Wyniki',
-                    'save-btn' => 'Zapisz Import',
+                    'save-btn' => 'Importuj',
                     'settings' => 'Ustawienia',
                     'skip-errors' => 'Pomiń błędy',
                     'stop-on-errors' => 'Zatrzymaj na błędach',
@@ -3378,24 +3705,38 @@ return [
                         'edit' => 'Edytuj',
                         'error-file' => 'Plik błędu',
                         'id' => 'ID',
+                        'import' => 'Importuj',
                         'started-at' => 'Rozpoczęto o',
                         'state' => 'Stan',
                         'summary' => 'Podsumowanie',
                         'updated' => 'Zaktualizowano',
                         'uploaded-file' => 'Załadowany plik',
+                        'view-progress' => 'Zobacz postęp',
                     ],
                 ],
 
                 'import' => [
                     'back-btn' => 'Powrót',
                     'completed-batches' => 'Łączna liczba zakończonych partii:',
+                    'deleting-info' => 'Trwa usuwanie',
                     'download-error-report' => 'Pobierz Pełne Sprawozdanie',
+                    'downloading-info' => 'Pobieranie obrazów',
                     'edit-btn' => 'Edytuj',
+                    'failed-batches' => 'Nie ukończono :count partii. Sprawdź dziennik błędów i uruchom import ponownie dla tych wierszy.',
+                    'images-downloaded' => 'Pobrane obrazy:',
+                    'images-progress' => 'obrazów pobrano',
                     'imported-info' => 'Gratulacje! Import został pomyślnie zakończony.',
                     'importing-info' => 'Trwa proces importu',
                     'indexing-info' => 'Trwa indeksowanie zasobów (cennik, stan magazynowy i Elastic Search)',
                     'linking-info' => 'Trwa łączenie zasobów',
                     'progress' => 'Postęp:',
+                    'rows-validated' => 'wierszy zweryfikowano',
+                    'step-create' => 'Utwórz',
+                    'step-delete' => 'Usuń',
+                    'step-download' => 'Obrazy',
+                    'step-index' => 'Indeksuj',
+                    'step-link' => 'Połącz',
+                    'step-validate' => 'Weryfikuj',
                     'title' => 'Import',
                     'total-batches' => 'Łączna liczba partii:',
                     'total-created' => 'Łączna liczba utworzonych rekordów:',
@@ -3408,7 +3749,27 @@ return [
                     'validate-info' => 'Kliknij aby sprawdzić dane importu.',
                     'validating-info' => 'Dane rozpoczęto odczytywanie i sprawdzanie',
                     'validation-failed-info' => 'Twoje import jest nieprawidłowy. Proszę popraw następujące błędy i spróbuj ponownie.',
+                    'validation-partial-info' => 'Import może być kontynuowany, ale niektóre wiersze zostaną pominięte. Sprawdź błędy poniżej lub pobierz pełny raport.',
                     'validation-success-info' => 'Twoje import jest poprawny. Kliknij aby rozpocząć proces importu.',
+                ],
+
+                'images' => [
+                    'current-archive' => 'Obecnie przesłano: :name — :count obraz(ów) gotowych.',
+                    'current-images' => 'Dla tego importu przesłano już :count obraz(ów).',
+                    'directory-example' => 'Na przykład w przypadku product-images pliki należy umieścić w folderze /project-root/storage/app/import/product-images.',
+                    'directory-hint' => 'Użyj ścieżki względnej do /project-root/storage/app/import, np. product-images, import-images.',
+                    'directory-info' => 'Jeśli masz dostęp do kodu, umieść zdjęcia w folderze na serwerze i podaj ten folder poniżej.',
+                    'directory-placeholder' => 'Ścieżka katalogu ze zdjęciami',
+                    'directory-title' => 'Zdjęcia są już na serwerze',
+                    'download-sample-zip' => 'Pobierz przykładowe obrazy',
+                    'info' => 'Wybierz, gdzie mają zostać znalezione zdjęcia wskazane w pliku.',
+                    'recommended' => 'Zalecane',
+                    'replace-archive' => 'Wybranie nowego archiwum je zastąpi.',
+                    'title' => 'Zdjęcia produktów',
+                    'upload-info' => 'Prześlij jedno archiwum zawierające wszystkie zdjęcia. Kolumna „images” wskazuje wtedy pliki w jego wnętrzu.',
+                    'upload-title' => 'Prześlij archiwum ZIP ze zdjęciami',
+                    'url-info' => 'Podaj pełny adres https:// każdego zdjęcia w kolumnie „images”. Zostaną pobrane przed importem, więc nic nie trzeba wcześniej umieszczać na serwerze.',
+                    'url-title' => 'Odnośniki do zdjęć w pliku',
                 ],
 
                 'create-success' => 'Import pomyślnie utworzony.',
@@ -3416,6 +3777,7 @@ return [
                 'delete-success' => 'Import pomyślnie usunięty.',
                 'not-valid' => 'Import jest nieprawidłowy',
                 'nothing-to-import' => 'Nie ma zasobów do zaimportowania.',
+                'processing-failed' => 'Nie udało się przetworzyć importu. Sprawdź plik i spróbuj ponownie.',
                 'setup-queue-error' => 'Zmień sterownik koleki na "baza danych" lub "redis", aby rozpząć proces importu.',
                 'update-success' => 'Import pomyślnie zaktualizowany.',
             ],
@@ -3793,7 +4155,9 @@ return [
             'incorrect-password' => 'Niepoprawne hasło',
             'last-delete-error' => 'Usuwanie ostatniego użytkownika nie powiodło się.',
             'login-error' => 'Sprawdź swoje dane logowania i spróbuj ponownie.',
+            'role-not-grantable' => 'Nie możesz przypisać roli z uprawnieniami, których sam nie posiadasz.',
             'update-success' => 'Użytkownik został pomyślnie zaktualizowany.',
+            'user-not-manageable' => 'Nie możesz zmienić użytkownika, którego rola ma uprawnienia, których sam nie posiadasz.',
         ],
 
         'roles' => [
@@ -3822,6 +4186,7 @@ return [
                 'name' => 'Nazwa',
                 'permissions' => 'Uprawnienia',
                 'save-btn' => 'Zapisz rolę',
+                'search-permissions' => 'Szukaj uprawnień',
                 'title' => 'Utwórz rolę',
             ],
 
@@ -3843,139 +4208,10 @@ return [
             'delete-failed' => 'Usunięcie roli nie powiodło się',
             'delete-success' => 'Rola usunięta pomyślnie',
             'last-delete-error' => 'Ostatnia rola nie może być usunięta',
+            'permissions-not-grantable' => 'Nie możesz nadać uprawnień, których sam nie posiadasz.',
             'update-success' => 'Rola zaktualizowana pomyślnie',
         ],
 
-        'themes' => [
-            'index' => [
-                'create-btn' => 'Utwórz motyw',
-                'title' => 'Motywy',
-
-                'datagrid' => [
-                    'active' => 'Aktywny',
-                    'channel_name' => 'Nazwa kanału',
-                    'change-status' => 'Zmień status',
-                    'delete' => 'Usuń',
-                    'id' => 'ID',
-                    'inactive' => 'Nieaktywny',
-                    'name' => 'Nazwa',
-                    'sort-order' => 'Kolejność sortowania',
-                    'status' => 'Status',
-                    'theme' => 'Temat',
-                    'type' => 'Typ',
-                    'view' => 'Widok',
-                ],
-            ],
-
-            'create' => [
-                'name' => 'Nazwa',
-                'save-btn' => 'Zapisz motyw',
-                'sort-order' => 'Kolejność sortowania',
-                'themes' => 'Motywy',
-                'title' => 'Utwórz motyw',
-
-                'type' => [
-                    'category-carousel' => 'Karuzela kategorii',
-                    'footer-links' => 'Linki stopki',
-                    'image-carousel' => 'Karuzela obrazów',
-                    'product-carousel' => 'Karuzela produktów',
-                    'services-content' => 'Treść usług',
-                    'static-content' => 'Treść statyczna',
-                    'title' => 'Typ',
-                ],
-            ],
-
-            'edit' => [
-                'active' => 'Aktywny',
-                'add-filter-btn' => 'Dodaj filtr',
-                'add-footer-link-btn' => 'Dodaj link stopki',
-                'add-image-btn' => 'Dodaj obraz',
-                'add-link' => 'Dodaj link',
-                'asc' => 'rosnąco',
-                'back' => 'Powrót',
-                'category-carousel' => 'Karuzela kategorii',
-                'category-carousel-description' => 'Wyświetl dynamiczne kategorie w atrakcyjny sposób za pomocą responsywnej karuzeli kategorii.',
-                'category-id' => 'ID kategorii',
-                'channels' => 'Kanały',
-                'column' => 'Kolumna',
-                'create-filter' => 'Utwórz filtr',
-                'css' => 'CSS',
-                'delete' => 'Usuń',
-                'desc' => 'malejąco',
-                'edit' => 'Edytuj',
-                'featured' => 'Wyróżnione',
-                'filter-title' => 'Tytuł',
-                'filters' => 'Filtry',
-                'footer-link' => 'Linki stopki',
-                'footer-link-description' => 'Nawiguj za pomocą linków stopki, aby swobodnie przeglądać witrynę i uzyskiwać informacje.',
-                'footer-link-form-title' => 'Link stopki',
-                'footer-title' => 'Tytuł',
-                'general' => 'Ogólne',
-                'html' => 'HTML',
-                'image' => 'Obraz',
-                'image-size' => 'Rozmiar obrazu powinien wynosić (1920px X 700px)',
-                'image-title' => 'Tytuł obrazu',
-                'image-upload-message' => 'Dozwolone są tylko obrazy (.jpeg, .jpg, .png, .webp, ..).',
-                'inactive' => 'Nieaktywny',
-                'key' => 'Klucz: :key',
-                'key-input' => 'Klucz',
-                'limit' => 'Limit',
-                'link' => 'Link',
-                'name' => 'Nazwa',
-                'new' => 'Nowy',
-                'no' => 'Nie',
-                'parent-id' => 'Identyfikator nadrzędny',
-                'parent-id-hint' => 'Możesz wprowadzić wiele identyfikatorów nadrzędnych jako wartości oddzielone przecinkami (np. 12,15,34)',
-                'preview' => 'Podgląd',
-                'product-carousel' => 'Karuzela produktów',
-                'product-carousel-description' => 'Elegancko prezentuj produkty za pomocą dynamicznej i responsywnej karuzeli produktów.',
-                'save-btn' => 'Zapisz',
-                'select' => 'Wybierz',
-                'slider' => 'Suwak',
-                'slider-add-btn' => 'Dodaj suwak',
-                'slider-description' => 'Dostosowania związane z motywem dotyczące suwaka.',
-                'slider-image' => 'Obraz suwaka',
-                'slider-required' => 'Pole suwaka jest wymagane.',
-                'sort' => 'Sortuj',
-                'sort-order' => 'Kolejność sortowania',
-                'static-content' => 'Treść statyczna',
-                'static-content-description' => 'Zwiększ zaangażowanie za pomocą zwięzłej, informacyjnej treści statycznej dla swojej publiczności.',
-                'status' => 'Status',
-                'themes' => 'Motywy',
-                'title' => 'Edytuj motyw',
-                'update-slider' => 'Aktualizuj suwak',
-                'url' => 'URL',
-                'value' => 'Wartość: :value',
-                'value-input' => 'Wartość',
-
-                'services-content' => [
-                    'add-btn' => 'Dodaj usługi',
-                    'channels' => 'Kanały',
-                    'delete' => 'Usuń',
-                    'description' => 'Opis',
-                    'general' => 'Ogólne',
-                    'name' => 'Nazwa',
-                    'save-btn' => 'Zapisz',
-                    'service-icon' => 'Ikona usługi',
-                    'service-icon-class' => 'Klasa ikony usługi',
-                    'service-info' => 'Dostosowanie motywów związanych z usługą.',
-                    'services' => 'Usługi',
-                    'sort-order' => 'Kolejność sortowania',
-                    'status' => 'Status',
-                    'title' => 'Tytuł',
-                    'update-service' => 'Aktualizuj usługi',
-                ],
-
-                'yes' => 'Tak',
-            ],
-
-            'create-success' => 'Motyw został pomyślnie utworzony',
-            'delete-success' => 'Motyw został pomyślnie usunięty',
-            'update-success' => 'Motyw został pomyślnie zaktualizowany',
-        ],
-    ],
-
-    'reporting' => [
         'sales' => [
             'index' => [
                 'abandoned-carts' => 'Porzucone koszyki',
@@ -4115,11 +4351,11 @@ return [
             'title' => 'Konfiguracja',
 
             'general' => [
-                'info' => 'Ogólne',
+                'info' => 'Ustawienia całego sklepu: jednostki, treść, wygląd, kursy walut, mapa witryny i RODO.',
                 'title' => 'Ogólne',
 
                 'general' => [
-                    'info' => 'Skonfiguruj ustawienia jednostek oraz włącz lub wyłącz opcje ścieżki nawigacyjnej i odwiedzających.',
+                    'info' => 'Ustawienia jednostek i okruszki nawigacyjne sklepu.',
                     'title' => 'Ogólne',
 
                     'unit-options' => [
@@ -4137,7 +4373,7 @@ return [
                 ],
 
                 'content' => [
-                    'info' => 'Ustaw pasek informacyjny i niestandardowe skrypty.',
+                    'info' => 'Pasek oferty, wiersz praw autorskich, reguły spekulacji i skrypty własne.',
                     'title' => 'Zawartość',
 
                     'header-offer' => [
@@ -4150,7 +4386,7 @@ return [
 
                     'copyright-content' => [
                         'title' => 'Treść praw autorskich',
-                        'info' => 'Skonfiguruj treść praw autorskich wyświetlaną w stopce swojej witryny, aby chronić swoją własność intelektualną i zwiększyć rozpoznawalność marki.',
+                        'info' => 'Wiersz z prawami autorskimi w stopce sklepu.',
                     ],
 
                     'speculation-rules' => [
@@ -4191,24 +4427,25 @@ return [
                         'custom-css' => 'Niestandardowy CSS',
                         'custom-javascript' => 'Niestandardowy JavaScript',
                         'title' => 'Niestandardowe skrypty',
-                        'title-info' => 'Niestandardowe skrypty to spersonalizowane fragmenty kodu stworzone w celu dodania określonych funkcji lub cech do oprogramowania, zwiększając jego możliwości w unikalny sposób.',
+                        'title-info' => 'CSS i JavaScript dodawane do każdej strony sklepu.',
                     ],
                 ],
 
                 'design' => [
-                    'info' => 'Ustaw logo i ikonę favicon dla sklepu.',
+                    'info' => 'Logo i favicon panelu administracyjnego oraz sposób wyświetlania kategorii menu sklepu.',
                     'title' => 'Wygląd',
 
                     'admin-logo' => [
                         'favicon' => 'Favicon',
                         'logo-image' => 'Obraz logo',
                         'title' => 'Logo sklepu',
-                        'title-info' => 'Skonfiguruj obrazy logo i favicon dla front-endu Twojej witryny, aby poprawić rozpoznawalność i branding.',
+                        'title-info' => 'Logo i favicon widoczne w panelu administracyjnym oraz w wiadomościach do administratora.',
                     ],
 
                     'menu-category' => [
                         'default' => 'Domyślne menu',
                         'info' => 'To ustawienie kontroluje sposobu wyświetlania kategorii w menu. Możesz wybrać wyświetlanie w pasku nagwiacyjny lub menu bocznym',
+                        'preview' => 'Podgląd',
                         'preview-default' => 'Podgląd domyślnego menu',
                         'preview-sidebar' => 'Podgląd menu bocznego',
                         'sidebar' => 'Menu boczne',
@@ -4218,11 +4455,11 @@ return [
 
                 'gdpr' => [
                     'title' => 'GDPR',
-                    'info' => 'Ustawienia zgodności z GDPR',
+                    'info' => 'Informacja o plikach cookie, kategorie zgód i umowa o ochronie prywatności pokazywana klientom.',
 
                     'settings' => [
                         'title' => 'Ustawienia zgodności z GDPR',
-                        'info' => 'Zarządzaj ustawieniami zgodności z GDPR, w tym polityką prywatności. Włącz lub wyłącz funkcje GDPR w razie potrzeby.',
+                        'info' => 'Włącz lub wyłącz funkcje RODO dla tego kanału.',
                         'enabled' => 'Włącz GDPR',
                     ],
 
@@ -4296,7 +4533,7 @@ return [
                 ],
 
                 'sitemap' => [
-                    'info' => 'Ustaw opcje mapy witryny.',
+                    'info' => 'Generowanie mapy witryny i limity plików.',
                     'title' => 'Mapa witryny',
 
                     'settings' => [
@@ -4306,7 +4543,7 @@ return [
                     ],
 
                     'file-limits' => [
-                        'info' => 'Ustaw opcje limitów plików.',
+                        'info' => 'Największa liczba adresów URL zapisywanych w jednym pliku mapy witryny, zanim rozpocznie się kolejny.',
                         'max-file-size' => 'Maksymalny rozmiar pliku',
                         'max-url-per-file' => 'Maksymalna liczba URL na plik',
                         'title' => 'Limity plików',
@@ -4423,18 +4660,18 @@ return [
             ],
 
             'catalog' => [
-                'info' => 'Katalog',
+                'info' => 'Ustawienia produktów, danych strukturalnych i stanów magazynowych.',
                 'title' => 'Katalog',
 
                 'products' => [
-                    'info' => 'Strona widoku produktu, strona widoku koszyka, strona główna sklepu, recenzja i społecznościowe udostępnianie atrybutów.',
+                    'info' => 'Strony produktu i koszyka, wyszukiwanie, rozmiary obrazów, opinie, atrybuty i udostępnianie.',
                     'title' => 'Produkty',
 
                     'settings' => [
                         'compare-options' => 'Włącz porównywanie produktów',
                         'image-search-option' => 'Włącz wyszukiwanie obrazem',
                         'title' => 'Ustawienia',
-                        'title-info' => 'Ustawienia odnoszą się do konfigurowalnych wyborów, które kontrolują zachowanie systemu, aplikacji lub urządzenia, dostosowane do preferencji i wymagań użytkownika.',
+                        'title-info' => 'Włącz lub wyłącz porównywanie produktów i wyszukiwanie obrazem.',
                         'wishlist-options' => 'Włącz listę życzeń',
                     ],
 
@@ -4465,13 +4702,13 @@ return [
                         'allow-no-of-related-products' => 'Limit produktów powiązanych',
                         'allow-no-of-up-sells-products' => 'Limit produktów Up-Sell',
                         'title' => 'Karta produktu',
-                        'title-info' => 'Dostosuj układ i elementy widoczne na stronie produktu. Określ limity wyświetlania sekcji produktów powiązanych oraz droższych alternatyw (Up-Sell).',
+                        'title-info' => 'Ile produktów powiązanych i droższych zamienników jest pokazywanych na stronie produktu.',
                     ],
 
                     'cart-view-page' => [
                         'allow-no-of-cross-sells-products' => 'Limit produktów Cross-Sell',
                         'title' => 'Strona koszyka',
-                        'title-info' => 'Zarządzaj elementami wyświetlanymi w koszyku. Skonfiguruj m.in. maksymalną liczbę proponowanych produktów komplementarnych (Cross-Sell), aby zwiększyć wartość zamówienia.',
+                        'title-info' => 'Ile produktów sprzedaży krzyżowej jest pokazywanych na stronie koszyka.',
                     ],
 
                     'storefront' => [
@@ -4489,14 +4726,14 @@ return [
                         'products-per-page' => 'Domyślna liczba produktów na stronę',
                         'sort-by' => 'Sortuj według',
                         'title' => 'Witryna sklepu',
-                        'title-info' => 'Witryna sklepu to interfejs skierowany do klienta sklepu internetowego, prezentujący produkty, kategorie i nawigację dla płynnego doświadczenia zakupowego.',
+                        'title-info' => 'Jak produkty są prezentowane na stronach kategorii i wyszukiwania.',
                     ],
 
                     'small-image' => [
                         'height' => 'Wysokość',
                         'placeholder' => 'Zdjęcie zastępcze (małe)',
                         'title' => 'Małe zdjęcia (miniaturki)',
-                        'title-info' => 'Skonfiguruj wymiary dla najmniejszych zdjęć produktów (np. widocznych w koszyku lub na liście polecanych). Możesz też wgrać domyślne zdjęcie zastępcze.',
+                        'title-info' => 'Rozmiar, do którego skalowane są małe zdjęcia produktów, oraz obraz zastępczy, gdy produkt nie ma zdjęcia.',
                         'width' => 'Szerokość',
                     ],
 
@@ -4504,7 +4741,7 @@ return [
                         'height' => 'Wysokość',
                         'placeholder' => 'Zdjęcie zastępcze (średnie)',
                         'title' => 'Średnie zdjęcia (katalog produktów)',
-                        'title-info' => 'Określ wymiary dla zdjęć średniej wielkości, używanych zazwyczaj na stronach kategorii i w siatkach produktów.',
+                        'title-info' => 'Rozmiar, do którego skalowane są średnie zdjęcia produktów, oraz obraz zastępczy, gdy produkt nie ma zdjęcia.',
                         'width' => 'Szerokość',
                     ],
 
@@ -4512,7 +4749,7 @@ return [
                         'height' => 'Wysokość',
                         'placeholder' => 'Zdjęcie zastępcze (duże)',
                         'title' => 'Duże zdjęcia (karta produktu)',
-                        'title-info' => 'Ustaw wymiary dla głównych zdjęć w wysokiej rozdzielczości, wyświetlanych bezpośrednio na karcie produktu.',
+                        'title-info' => 'Rozmiar, do którego skalowane są duże zdjęcia produktów, oraz obraz zastępczy, gdy produkt nie ma zdjęcia.',
                         'width' => 'Szerokość',
                     ],
 
@@ -4524,25 +4761,25 @@ return [
                         'display-star-count' => 'Wyświetl liczbę gwiazdek w ocenach.',
                         'summary' => 'Streszczenie',
                         'title' => 'Recenzje',
-                        'title-info' => 'Ocena lub ocena czegoś, często obejmująca opinie i informacje zwrotne.',
+                        'title-info' => 'Kto może wystawić opinię o produkcie i jak opinie są pokazywane na stronie produktu.',
                     ],
 
                     'attribute' => [
                         'file-upload-size' => 'Maksymalny rozmiar pliku (KB)',
                         'image-upload-size' => 'Maksymalny rozmiar zdjęcia (KB)',
                         'title' => 'Limity dla atrybutów (Pliki i Obrazy)',
-                        'title-info' => 'Określ maksymalną wagę plików oraz zdjęć, które mogą być wgrywane w ramach niestandardowych atrybutów.',
+                        'title-info' => 'Maksymalny rozmiar obrazu i pliku, który można przesłać dla wartości atrybutu.',
                     ],
 
                     'social-share' => [
-                        'title-info' => 'Zarządzaj przyciskami udostępniania widocznymi na karcie produktu. Pozwól klientom łatwo przesyłać linki do produktów na popularnych platformach.',
+                        'title-info' => 'Wybierz, które przyciski udostępniania pojawiają się na stronie produktu i jaką wiadomość niosą.',
                         'title' => 'Udostępnianie w social mediach',
                         'share-message' => 'Domyślna treść wiadomości przy udostępnianiu',
                         'share' => 'Udostępnij',
                         'enable-social-share' => 'Włącz przyciski udostępniania',
-                        'enable-share-whatsapp-info' => 'Przycisk udostępniania przez WhatsApp będzie widoczny tylko dla użytkowników na urządzeniach mobilnych.',
-                        'enable-share-whatsapp' => 'Udostępnianie: WhatsApp',
-                        'enable-share-twitter' => 'Udostępnianie: X (Twitter)',
+                        'enable-share-whatsapp-info' => 'Link udostępniania WhatsApp pojawia się tylko na urządzeniach mobilnych.',
+                        'enable-share-whatsapp' => 'Włączyć udostępnianie na WhatsApp?',
+                        'enable-share-twitter' => 'Włączyć udostępnianie na X (Twitter)?',
                         'enable-share-pinterest' => 'Udostępnianie: Pinterest',
                         'enable-share-linkedin' => 'Udostępnianie: LinkedIn',
                         'enable-share-facebook' => 'Udostępnianie: Facebook',
@@ -4551,7 +4788,7 @@ return [
                 ],
 
                 'rich-snippets' => [
-                    'info' => 'Skonfiguruj mikrodane SEO (Schema.org), aby poprawić wygląd linków do sklepu w wynikach wyszukiwania Google.',
+                    'info' => 'Dane strukturalne dodawane do stron sklepu dla wyszukiwarek.',
                     'title' => 'Dane strukturalne (Rich Snippets)',
 
                     'products' => [
@@ -4564,14 +4801,14 @@ return [
                         'show-sku' => 'Przekazuj SKU',
                         'show-weight' => 'Przekazuj wagę',
                         'title' => 'Produkty (Mikrodane)',
-                        'title-info' => 'Wybierz, które parametry produktu mają być wysyłane do wyszukiwarek w celu generowania rozszerzonych wyników wyszukiwania.',
+                        'title-info' => 'Wybierz, które szczegóły produktu są zawarte w danych strukturalnych.',
                     ],
 
                     'categories' => [
                         'enable' => 'Włącz',
                         'show-search-input-field' => 'Przekazuj pole wyszukiwania',
                         'title' => 'Kategorie (Mikrodane)',
-                        'title-info' => 'Skonfiguruj dane strukturalne dla stron kategorii (np. aby wyświetlić wyszukiwarkę Sitelinks Search Box bezpośrednio w Google).',
+                        'title-info' => 'Dodaj dane strukturalne kategorii do stron sklepu, aby wyszukiwarki mogły je odczytać.',
                     ],
                 ],
 
@@ -4585,13 +4822,13 @@ return [
                         'min-qty-allowed-in-cart' => 'Minimalna ilość dozwolona w koszyku',
                         'out-of-stock-threshold' => 'Próg braku towaru',
                         'title' => 'Opcja zapasów produktów',
-                        'info' => 'Skonfiguruj opcje zapasów produktu, aby umożliwić zamówienia wsteczne, ustawić minimalne i maksymalne ilości w koszyku oraz zdefiniować progi braku towaru.',
+                        'info' => 'Zezwalaj na zamówienia przy braku towaru i ustaw ilość, poniżej której produkt jest uznawany za niedostępny.',
                     ],
                 ],
             ],
 
             'customer' => [
-                'info' => 'Klient',
+                'info' => 'Ustawienia adresów, captcha i kont klientów.',
                 'title' => 'Klient',
 
                 'address' => [
@@ -4603,19 +4840,19 @@ return [
                         'country' => 'Kraj',
                         'state' => 'Stan',
                         'title' => 'Wymagania',
-                        'title-info' => 'Wymagania to warunki, cechy lub specyfikacje niezbędne do spełnienia, osiągnięcia lub pomyślnego spełnienia czegoś.',
+                        'title-info' => 'Które pola adresu klient musi wypełnić.',
                         'zip' => 'Kod pocztowy',
                     ],
 
                     'information' => [
                         'street-lines' => 'Linie w adresie ulicy',
                         'title' => 'Informacje',
-                        'title-info' => '"Linie w adresie ulicy" odnoszą się do poszczególnych segmentów adresu, często oddzielonych przecinkami, dostarczających informacje o lokalizacji, takie jak numer domu, ulica, miasto i inne.',
+                        'title-info' => 'Ile wierszy adresu pokazuje formularz adresu.',
                     ],
                 ],
 
                 'captcha' => [
-                    'info' => 'Ustaw klucz witryny, klucz tajny i status.',
+                    'info' => 'Klucze i status Google reCAPTCHA Enterprise.',
                     'title' => 'Google Captcha',
 
                     'credentials' => [
@@ -4630,7 +4867,7 @@ return [
                         'site-key-info' => 'Po utworzeniu projektu i klucza API wyszukaj usługę "reCAPTCHA" w bibliotece i wygeneruj klucze "reCAPTCHA".',
                         'status' => 'Status',
                         'title' => 'Dane logowania',
-                        'title-info' => 'Ustaw dane logowania Google reCAPTCHA, w tym klucz API, ID projektu, klucz witryny, klucz tajny oraz włącz lub wyłącz status.',
+                        'title-info' => 'Dane uwierzytelniające Google reCAPTCHA Enterprise oraz wynik, jaki musi osiągnąć żądanie, by zostało przyjęte.',
                     ],
 
                     'validations' => [
@@ -4640,7 +4877,7 @@ return [
                 ],
 
                 'settings' => [
-                    'settings-info' => 'Skonfiguruj zachowanie kont klientów: listę życzeń, newsletter, domyślne grupy, weryfikację e-mail oraz logowanie przez zewnętrzne platformy.',
+                    'settings-info' => 'Ustaw listę życzeń, przekierowanie po zalogowaniu, opcje nowego konta, newsletter, weryfikację e-mail i logowanie społecznościowe.',
                     'title' => 'Ustawienia klienta',
 
                     'login-as-customer' => [
@@ -4680,19 +4917,20 @@ return [
 
                     'newsletter' => [
                         'subscription' => 'Włącz subskrypcję newslettera',
+                        'subscription-info' => 'Pokaż formularz zapisu w stopce sklepu.',
                         'title' => 'Newsletter',
-                        'title-info' => 'Zezwól klientom na zapisywanie się do bazy mailingowej, aby mogli otrzymywać informacje o nowościach i promocjach.',
+                        'title-info' => 'Zapis do newslettera w sklepie.',
                     ],
 
                     'email' => [
                         'email-verification' => 'Wymagaj weryfikacji e-mail',
                         'title' => 'Weryfikacja adresu e-mail',
-                        'title-info' => 'Wymuś na nowych użytkownikach potwierdzenie adresu e-mail (kliknięcie w link aktywacyjny) przed pełnym odblokowaniem konta.',
+                        'title-info' => 'Poproś nowego klienta o potwierdzenie adresu e-mail, zanim będzie mógł się zalogować.',
                     ],
 
                     'social-login' => [
                         'title' => 'Logowanie przez social media',
-                        'info' => 'Zezwól użytkownikom na szybkie logowanie i rejestrację przy użyciu ich kont w zewnętrznych serwisach społecznościowych.',
+                        'info' => 'Pozwól klientom logować się kontem zewnętrznym. Każdy dostawca wymaga własnego identyfikatora i klucza klienta.',
 
                         'google' => [
                             'enable-google' => 'Logowanie: Google',
@@ -4771,21 +5009,21 @@ return [
                         ],
 
                         'twitter' => [
-                            'enable-twitter' => 'Logowanie: X (Twitter)',
+                            'enable-twitter' => 'Włącz X (Twitter)',
 
                             'client-id' => [
                                 'title' => 'Identyfikator klienta (Client ID)',
-                                'title-info' => 'Identyfikator przyznany podczas tworzenia aplikacji w panelu deweloperskim X (Twitter).',
+                                'title-info' => 'Unikalny identyfikator nadany przez X podczas tworzenia aplikacji OAuth.',
                             ],
 
                             'client-secret' => [
                                 'title' => 'Klucz tajny (Client Secret)',
-                                'title-info' => 'Tajny klucz powiązany z Twoją aplikacją X (Twitter). Nie udostępniaj go osobom trzecim.',
+                                'title-info' => 'Klucz tajny powiązany z klientem OAuth X. Zachowaj go w poufności.',
                             ],
 
                             'redirect' => [
                                 'title' => 'Adres URL przekierowania',
-                                'title-info' => 'Skopiuj ten adres i wklej w ustawieniach aplikacji X (Twitter). Upewnij się, że domena sklepu jest poprawna.',
+                                'title-info' => 'Adres zwrotny, na który użytkownicy są przekierowywani po uwierzytelnieniu w X. Użyj pokazanego formatu adresu (zmień tylko swoją domenę). Musi odpowiadać adresowi skonfigurowanemu w portalu dla deweloperów X.',
                             ],
                         ],
                     ],
@@ -4793,18 +5031,25 @@ return [
             ],
 
             'email' => [
-                'info' => 'E-mail',
+                'info' => 'Sterownik poczty, dane nadawcy i powiadomienia wysyłane przez sklep.',
                 'title' => 'E-mail',
 
                 'smtp' => [
+                    'brevo-api-key' => 'Klucz API Brevo',
+                    'brevo-api-key-info' => 'Utwórz klucz API v3 na koncie Brevo w sekcji SMTP & API.',
+                    'driver' => 'Sterownik',
+                    'driver-brevo-api' => 'Brevo (API)',
+                    'driver-info' => 'Wybierz, w jaki sposób Twój sklep wysyła e-maile.',
                     'driver-mismatch-info' => 'Twój sterownik poczty jest ustawiony na ":driver" zamiast "bagisto-dynamic-smtp". Wszelkie zmiany wprowadzone tutaj nie będą miały żadnego efektu. Zaktualizuj MAIL_MAILER=bagisto-dynamic-smtp w pliku .env, aby aktywować te ustawienia.',
                     'driver-mismatch-title' => 'Te ustawienia są obecnie nieaktywne.',
+                    'driver-notice' => 'Powiadomienie sterownika',
+                    'driver-smtp' => 'SMTP',
                     'encryption' => 'Szyfrowanie',
                     'host' => 'Host',
-                    'info' => 'Skonfiguruj ustawienia serwera SMTP do wysyłania e-maili ze sklepu.',
+                    'info' => 'Wybierz, w jaki sposób Twój sklep wysyła e-maile, i skonfiguruj wybrany sterownik.',
                     'password' => 'Hasło',
                     'port' => 'Port',
-                    'title' => 'SMTP',
+                    'title' => 'Sterownik poczty',
                     'username' => 'Nazwa użytkownika',
                 ],
 
@@ -4818,12 +5063,13 @@ return [
                     'contact-email-tip' => 'Ten adres e-mail będzie wyświetlany w stopce Twoich wiadomości e-mail.',
                     'contact-name' => 'Nazwa kontaktowa',
                     'contact-name-tip' => 'Ta nazwa będzie wyświetlana w stopce Twoich wiadomości e-mail.',
-                    'info' => 'Skonfiguruj nazwę nadawcy, adres e-mail sklepu, dane administratora i dane kontaktowe używane we wszystkich wiadomościach e-mail.',
+                    'info' => 'Wybierz, jak wysyłane są wiadomości e-mail i z jakich adresów.',
                     'sender-email' => 'Adres e-mail nadawcy',
                     'sender-email-tip' => 'Wiadomości e-mail do Twoich klientów będą wysyłane z tego adresu.',
                     'sender-name' => 'Nazwa nadawcy',
                     'sender-name-tip' => 'Ta nazwa będzie wyświetlana w skrzynce odbiorczej Twoich klientów jako nadawca wiadomości e-mail.',
                     'title' => 'Ustawienia e-mail',
+                    'title-info' => 'Nazwy i adresy, z których sklep wysyła wiadomości i które pojawiają się w stopce.',
                 ],
 
                 'notifications' => [
@@ -4831,7 +5077,7 @@ return [
                     'cancel-order-mail-to-admin' => 'Wyślij powiadomienie e-mail do administratora po anulowaniu zamówienia',
                     'customer' => 'Wyślij dane konta klienta po rejestracji',
                     'customer-registration-confirmation-mail-to-admin' => 'Wyślij e-mail potwierdzający do administratora po rejestracji klienta',
-                    'info' => 'Skonfiguruj odbieranie wiadomości e-mail w celu weryfikacji konta, potwierdzenia zamówień, aktualizacji faktur, zwrotów, wysyłek i anulowania zamówień.',
+                    'info' => 'Wybierz, które wiadomości są wysyłane do klientów i do administratora.',
                     'new-inventory-source' => 'Wyślij e-mail powiadomienia do magazynu po utworzeniu wysyłki',
                     'new-invoice' => 'Wyślij e-mail powiadomienia do klienta po wystawieniu nowej faktury',
                     'new-invoice-mail-to-admin' => 'Wyślij e-mail powiadomienia do administratora po wystawieniu nowej faktury',
@@ -4843,16 +5089,17 @@ return [
                     'new-shipment-mail-to-admin' => 'Wyślij e-mail powiadomienia do administratora po utworzeniu nowej wysyłki',
                     'registration' => 'Wyślij e-mail potwierdzający po rejestracji klienta',
                     'title' => 'Powiadomienia',
+                    'title-info' => 'Włącz lub wyłącz poszczególne wiadomości z powiadomieniami.',
                     'verification' => 'Wyślij e-mail weryfikacyjny po rejestracji klienta',
                 ],
             ],
 
             'sales' => [
-                'info' => 'Sprzedaż',
+                'info' => 'Ustawienia wysyłki, płatności, zamówień, faktur, podatków, zamawiania i zwrotów.',
                 'title' => 'Sprzedaż',
 
                 'shipping-setting' => [
-                    'info' => 'Skonfiguruj domyślne dane nadawcy, w tym adres fizyczny, numer NIP, dane kontaktowe oraz numer konta bankowego.',
+                    'info' => 'Adres, z którego wysyłane są zamówienia.',
                     'title' => 'Ustawienia wysyłki',
 
                     'origin' => [
@@ -4864,14 +5111,14 @@ return [
                         'store-name' => 'Nazwa sklepu (Nadawca)',
                         'street-address' => 'Ulica i numer',
                         'title' => 'Adres nadawcy',
-                        'title-info' => 'Skonfiguruj główny adres, z którego wysyłane są zamówienia. Dane te mogą być wykorzystywane m.in. na listach przewozowych i fakturach.',
+                        'title-info' => 'Adres, z którego wysyłane są zamówienia, oraz dane sklepu pokazywane na fakturach.',
                         'vat-number' => 'Numer NIP (VAT)',
                         'zip' => 'Kod pocztowy',
                     ],
                 ],
 
                 'shipping-methods' => [
-                    'info' => 'Skonfiguruj metody wysyłki, w tym Darmowa wysyłka, Stała stawka i dodatkowe opcje według potrzeb.',
+                    'info' => 'Metody wysyłki oferowane przy składaniu zamówienia.',
                     'title' => 'Metody wysyłki',
 
                     'free-shipping' => [
@@ -4879,7 +5126,7 @@ return [
                         'page-title' => 'Darmowa wysyłka',
                         'status' => 'Status',
                         'title' => 'Tytuł',
-                        'title-info' => '"Darmowa wysyłka" odnosi się do metody wysyłki, w której koszt wysyłki jest zwolniony, a sprzedawca pokrywa koszty wysyłki dla dostarczenia towarów do kupującego.',
+                        'title-info' => 'Metoda wysyłki bez opłat.',
                     ],
 
                     'flat-rate-shipping' => [
@@ -4888,7 +5135,7 @@ return [
                         'rate' => 'Stawka',
                         'status' => 'Status',
                         'title' => 'Tytuł',
-                        'title-info' => 'Wysyłka z stałą stawką to metoda wysyłki, w której pobierana jest stała opłata za wysyłkę, niezależnie od wagi, rozmiaru lub odległości paczki. Uproszcza to koszty wysyłki i może być korzystne zarówno dla kupujących, jak i sprzedawców.',
+                        'title-info' => 'Metoda wysyłki o stałej stawce, naliczanej za zamówienie lub za sztukę.',
                         'type' => [
                             'per-order' => 'Na zamówienie',
                             'per-unit' => 'Na jednostkę',
@@ -4909,36 +5156,46 @@ return [
                     'application-fee' => 'Betaler van toepassingskosten',
                     'business-account' => 'Konto biznesowe',
                     'cash-on-delivery' => 'Płatność przy odbiorze',
-                    'cash-on-delivery-info' => 'Metoda płatności, w której klienci płacą gotówką po otrzymaniu towarów lub usług pod drzwiami.',
+                    'cash-on-delivery-info' => 'Pozwól klientom płacić gotówką przy odbiorze.',
                     'client-id' => 'ID klienta',
-                    'client-id-info' => 'Użyj "sb" do testowania.',
+                    'client-id-info' => 'Identyfikator klienta aplikacji PayPal. Użyj identyfikatora aplikacji piaskownicy, gdy tryb Sandbox jest włączony.',
                     'client-secret' => 'Sekret klienta',
-                    'client-secret-info' => 'Dodaj tutaj swój klucz tajny',
+                    'client-secret-info' => 'Klucz tajny klienta aplikacji PayPal.',
                     'create-success-refund' => 'Terugbetaling succesvol aangemaakt.',
                     'description' => 'Opis',
                     'enable' => 'Inschakelen',
                     'generate-invoice' => 'Automatycznie generuj fakturę po złożeniu zamówienia',
                     'generate-invoice-applicable' => 'Dotyczy, jeśli włączono automatyczne generowanie faktury',
-                    'info' => 'Ustaw informacje o metodach płatności',
+                    'info' => 'Skonfiguruj metody płatności oferowane przy składaniu zamówienia.',
                     'instructions' => 'Instrukcje',
                     'logo' => 'Logo',
-                    'logo-information' => 'Rozdzielczość obrazu powinna wynosić 55px X 45px',
+                    'logo-information' => 'Zalecany rozmiar: 55 x 45 pikseli.',
                     'mailing-address' => 'Wyślij czek na adres',
                     'merchant-description' => 'Opis sprzedawcy',
                     'merchant-id' => 'ID sprzedawcy',
                     'merchant-key' => 'Klucz sprzedawcy',
                     'merchant-name' => 'Nazwa sprzedawcy',
+                    'merchant-private-key' => 'Klucz prywatny sprzedawcy',
+                    'merchant-private-key-info' => 'Wklej zawartość pliku PEM klucza prywatnego wygenerowanego w panelu PayGlocal. Służy do podpisywania żądań.',
                     'merchant-salt' => 'Sól sprzedawcy',
                     'money-transfer' => 'Przelew tradycyjny',
-                    'money-transfer-info' => 'Umożliwia klientom opłacenie zamówienia klasycznym przelewem bezpośrednio na rachunek bankowy sklepu.',
+                    'money-transfer-info' => 'Pozwól klientom płacić przelewem bankowym lub czekiem.',
                     'page-title' => 'Metody płatności',
                     'paid' => 'Opłacone',
+                    'payglocal' => 'PayGlocal',
+                    'payglocal-info' => 'Akceptuj płatności transgraniczne za pośrednictwem PayGlocal. <a href="https://dashboard.payglocal.in/app/mca/h8271x" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline hover:text-blue-700">Zarejestruj się tutaj, aby uzyskać swoje dane uwierzytelniające.</a>',
+                    'payglocal-merchant-id-info' => 'Dostępny w panelu PayGlocal w sekcji My Account.',
+                    'payglocal-private-key-id-info' => 'Identyfikator Twojego klucza prywatnego, widoczny w panelu PayGlocal.',
+                    'payglocal-public-key' => 'Klucz publiczny PayGlocal',
+                    'payglocal-public-key-id-info' => 'Identyfikator klucza publicznego PayGlocal, widoczny w panelu PayGlocal.',
+                    'payglocal-public-key-info' => 'Wklej zawartość pliku PEM klucza publicznego PayGlocal. Służy do szyfrowania żądań i weryfikowania odpowiedzi.',
+                    'payglocal-sandbox-info' => 'Wysyłaj płatności do środowiska testowego PayGlocal.',
                     'paypal-smart-button' => 'PayPal',
-                    'paypal-smart-button-info' => 'Przycisk PayPal Smart: Ułatwia płatności online za pomocą dostosowywalnych przycisków do bezpiecznych transakcji wielometodowych na stronach internetowych i aplikacjach.',
+                    'paypal-smart-button-info' => 'Pokaż przyciski PayPal przy składaniu zamówienia, aby klienci mogli zapłacić PayPal lub kartą.',
                     'paypal-standard' => 'PayPal Standard',
-                    'paypal-standard-info' => 'PayPal Standard to podstawowa opcja płatności PayPal dla firm internetowych, umożliwiająca klientom płacenie za pomocą kont PayPal lub kart kredytowych/debetowych.',
+                    'paypal-standard-info' => 'Przekieruj klientów do PayPal, aby zapłacili kontem PayPal lub kartą.',
                     'payu' => 'PayU',
-                    'payu-info' => 'Skonfiguruj ustawienia bramy płatności PayU',
+                    'payu-info' => 'Przyjmuj płatności przez PayU.',
                     'payu-merchant-key-info' => 'Wprowadź klucz sprzedawcy PayU uzyskany z panelu PayU',
                     'payu-merchant-salt-info' => 'Wprowadź sól sprzedawcy PayU uzyskaną z panelu PayU',
                     'pending' => 'Oczekujące',
@@ -4948,10 +5205,12 @@ return [
                     'phonepe-client-id-info' => 'Wpisz swój identyfikator klienta PhonePe uzyskany z pulpitu nawigacyjnego PhonePe',
                     'phonepe-client-secret-info' => 'Wpisz swoją tajemnicę klienta PhonePe uzyskaną z pulpitu nawigacyjnego PhonePe',
                     'phonepe-merchant-info' => 'Wpisz swój identyfikator sprzedawcy PhonePe uzyskany z pulpitu nawigacyjnego PhonePe',
+                    'private-key-id' => 'Identyfikator klucza prywatnego',
                     'processing' => 'Przetwarzanie',
                     'production-mode-info' => 'Tylko dla trybu produkcyjnego.',
+                    'public-key-id' => 'Identyfikator klucza publicznego',
                     'razorpay' => 'Razorpay',
-                    'razorpay-info' => 'Razorpay to platforma technologii finansowej, która pomaga firmom akceptować, przetwarzać i wypłacać płatności.',
+                    'razorpay-info' => 'Przyjmuj płatności przez Razorpay.',
                     'sandbox' => 'Piaskownica',
                     'set-invoice-status' => 'Ustaw status faktury po utworzeniu faktury na',
                     'set-order-status' => 'Ustaw status zamówienia po utworzeniu faktury na',
@@ -4959,7 +5218,7 @@ return [
                     'statement-descriptor' => 'Afschriftaanduiding',
                     'status' => 'Status',
                     'stripe' => 'Stripe',
-                    'stripe-info' => 'Skonfiguruj ustawienia bramy płatności Stripe dla bezpiecznych transakcji online',
+                    'stripe-info' => 'Przyjmuj płatności kartą przez Stripe.',
                     'test-client-id' => 'ID klienta w trybie testowym',
                     'test-client-secret' => 'Sekret klienta w trybie testowym',
                     'test-mode-info' => 'Tylko dla trybu testowego/piaskownicy.',
@@ -4967,7 +5226,7 @@ return [
                 ],
 
                 'order-settings' => [
-                    'info' => 'Ustaw numery zamówień, minimalne zamówienia i zamówienia oczekujące.',
+                    'info' => 'Ponowne próby tworzenia zamówienia, numery zamówień, kwota minimalna i ponawianie zamówień.',
                     'title' => 'Ustawienia zamówienia',
 
                     'order-creation' => [
@@ -4978,7 +5237,7 @@ return [
 
                     'order-number' => [
                         'generator' => 'Generator numerów zamówień',
-                        'info' => 'Unikalny identyfikator przypisany do konkretnego zamówienia klienta, ułatwiający śledzenie, komunikację i odniesienie w całym procesie zakupowym.',
+                        'info' => 'Jak budowane są generowane numery zamówień.',
                         'length' => 'Długość numeru zamówienia',
                         'prefix' => 'Prefiks numeru zamówienia',
                         'suffix' => 'Sufiks numeru zamówienia',
@@ -4990,17 +5249,17 @@ return [
                         'enable' => 'Włącz',
                         'include-discount-amount' => 'Uwzględnij kwotę rabatu',
                         'include-tax-amount' => 'Uwzględnij podatek w kwocie',
-                        'info' => 'Skonfigurowane kryteria określające minimalną wymaganą ilość lub wartość zamówienia, aby mogło być przetworzone lub kwalifikować się do korzyści.',
+                        'info' => 'Najniższa wartość zamówienia, przy której klient może złożyć zamówienie.',
                         'minimum-order-amount' => 'Minimalna kwota zamówienia',
                         'title' => 'Ustawienia minimalnego zamówienia',
                     ],
 
                     'reorder' => [
                         'admin-reorder' => 'Ponowne zamówienie przez administratora',
-                        'admin-reorder-info' => 'Włącz lub wyłącz funkcję ponownego zamawiania dla użytkowników administratora.',
-                        'info' => 'Włącz lub wyłącz funkcję ponownego zamawiania dla użytkowników administratora.',
+                        'admin-reorder-info' => 'Zezwól administratorowi na ponowne złożenie zamówienia z panelu administracyjnego.',
+                        'info' => 'Zezwól na ponowne złożenie zamówienia z panelu administracyjnego lub ze sklepu.',
                         'shop-reorder' => 'Ponowne zamówienie przez sklep',
-                        'shop-reorder-info' => 'Włącz lub wyłącz funkcję ponownego zamawiania dla użytkowników sklepu.',
+                        'shop-reorder-info' => 'Zezwól klientowi na ponowne złożenie zamówienia ze sklepu.',
                         'title' => 'Zezwól na ponowne zamawianie',
                     ],
 
@@ -5012,12 +5271,12 @@ return [
                 ],
 
                 'invoice-settings' => [
-                    'info' => 'Ustaw numer faktury, warunki płatności, projekt faktury i przypomnienia o fakturze.',
+                    'info' => 'Numery faktur, terminy płatności, wydruki PDF i przypomnienia.',
                     'title' => 'Ustawienia faktury',
 
                     'invoice-number' => [
                         'generator' => 'Generator numerów faktur',
-                        'info' => 'Konfiguracja reguł lub parametrów generowania i przypisywania unikalnych numerów identyfikacyjnych do faktur w celach organizacyjnych i śledzenia.',
+                        'info' => 'Jak budowane są generowane numery faktur.',
                         'length' => 'Długość numeru faktury',
                         'prefix' => 'Prefiks numeru faktury',
                         'suffix' => 'Sufiks numeru faktury',
@@ -5028,7 +5287,7 @@ return [
                         'due-duration' => 'Czas na zapłatę',
                         'due-duration-day' => ':due-duration dzień',
                         'due-duration-days' => ':due-duration dni',
-                        'info' => 'Ustalone warunki określające, kiedy i w jaki sposób płatność za towary lub usługi powinna być dokonana przez kupującego na rzecz sprzedawcy.',
+                        'info' => 'Po jakim czasie od wystawienia faktura jest wymagalna.',
                         'title' => 'Warunki płatności',
                     ],
 
@@ -5046,7 +5305,7 @@ return [
                     ],
 
                     'invoice-reminders' => [
-                        'info' => 'Automatyczne powiadomienia lub komunikaty wysyłane do klientów, aby przypomnieć im o nadchodzących lub zaległych płatnościach za faktury.',
+                        'info' => 'Ile przypomnień o płatności jest wysyłanych za niezapłaconą fakturę i w jakich odstępach.',
                         'interval-between-reminders' => 'Odstęp między przypomnieniami',
                         'maximum-limit-of-reminders' => 'Maksymalny limit przypomnień',
                         'title' => 'Przypomnienia o fakturze',
@@ -5055,11 +5314,11 @@ return [
 
                 'taxes' => [
                     'title' => 'Podatki',
-                    'title-info' => 'Podatki to obowiązkowe opłaty nakładane przez rządy na towary, usługi lub transakcje, pobierane przez sprzedawców i przekazywane władzom.',
+                    'title-info' => 'Kategorie podatkowe, sposób naliczania i wyświetlania podatku.',
 
                     'categories' => [
                         'title' => 'Grupy podatkowe',
-                        'title-info' => 'Grupy podatkowe to klasyfikacje różnych rodzajów podatków, takich jak podatek od sprzedaży, podatek od wartości dodanej lub podatek akcyzowy, używane do kategoryzacji i stosowania stawek podatkowych do produktów lub usług.',
+                        'title-info' => 'Kategoria podatkowa stosowana do wysyłki oraz domyślna dla nowych produktów.',
                         'product' => 'Domyślna grupa podatkowa dla produktów',
                         'shipping' => 'Grupa podatkowa dla wysyłki',
                         'none' => 'Brak',
@@ -5079,7 +5338,7 @@ return [
                         'shipping-origin' => 'Pochodzenie wysyłki',
                         'shipping-prices' => 'Ceny wysyłki',
                         'title' => 'Ustawienia obliczeń',
-                        'title-info' => 'Szczegóły dotyczące kosztów towarów lub usług, w tym ceny podstawowej, rabatów, podatków i dodatkowych opłat.',
+                        'title-info' => 'Od czego naliczany jest podatek i czy wprowadzone ceny już go zawierają.',
                     ],
 
                     'default-destination-calculation' => [
@@ -5087,14 +5346,14 @@ return [
                         'default-post-code' => 'Domyślny kod pocztowy',
                         'default-state' => 'Domyślny stan',
                         'title' => 'Domyślne obliczenia dla miejsca docelowego',
-                        'title-info' => 'Automatyczne określanie standardowego lub początkowego miejsca docelowego na podstawie predefiniowanych czynników lub ustawień.',
+                        'title-info' => 'Adres, według którego naliczany jest podatek, zanim klient poda własny.',
                     ],
 
                     'shopping-cart' => [
                         'show-tax-breakdown' => 'Pokaż podział podatku',
                         'show-tax-breakdown-info' => 'Wyświetla szczegółowy podział podatku na produkt i stawkę w podsumowaniu koszyka i zamówienia. Przeznaczone do debugowania.',
                         'title' => 'Ustawienia wyświetlania koszyka',
-                        'title-info' => 'Ustaw wyświetlanie podatków w koszyku',
+                        'title-info' => 'Jak podatek jest pokazywany w koszyku i przy składaniu zamówienia.',
                         'display-prices' => 'Wyświetl ceny',
                         'display-subtotal' => 'Wyświetl sumę częściową',
                         'display-shipping-amount' => 'Wyświetl kwotę wysyłki',
@@ -5105,7 +5364,7 @@ return [
 
                     'sales' => [
                         'title' => 'Ustawienia wyświetlania zamówień, faktur i zwrotów',
-                        'title-info' => 'Ustaw wyświetlanie podatków w zamówieniach, fakturach i zwrotach',
+                        'title-info' => 'Jak podatek jest pokazywany w zamówieniach, fakturach i zwrotach.',
                         'display-prices' => 'Wyświetl ceny',
                         'display-subtotal' => 'Wyświetl sumę częściową',
                         'display-shipping-amount' => 'Wyświetl kwotę wysyłki',
@@ -5117,7 +5376,7 @@ return [
 
                 'checkout' => [
                     'title' => 'Koszyk',
-                    'info' => 'Ustaw finalizację transakcji bez rejestracji, włącz lub wyłącz mini koszyk, podsumowanie koszyka.',
+                    'info' => 'Zakupy bez rejestracji, strona koszyka, mini koszyk i podsumowanie koszyka.',
 
                     'shopping-cart' => [
                         'cart-page' => 'Strona koszyka',
@@ -5128,21 +5387,21 @@ return [
                         'estimate-shipping-info' => 'Włącz szacowaną wysyłkę, aby podać koszty wysyłki z góry.',
                         'guest-checkout' => 'Zezwalaj na zakupy gościom',
                         'guest-checkout-info' => 'Włącz zakupy gościom, aby przyspieszyć i uprościć proces zakupów.',
-                        'info' => 'Włącz zakupy gościom, stronę koszyka, sprzedaż krzyżową produktów i szacowaną wysyłkę, aby zwiększyć wygodę użytkowników i usprawnić proces zakupów w celu zwiększenia sprzedaży.',
+                        'info' => 'Zakupy bez rejestracji, strona koszyka, produkty sprzedaży krzyżowej i szacowana wysyłka.',
                         'title' => 'Koszyk',
                     ],
 
                     'my-cart' => [
                         'display-item-quantities' => 'Wyświetl ilości przedmiotów',
                         'display-number-in-cart' => 'Wyświetl liczbę przedmiotów w koszyku',
-                        'info' => 'Włącz ustawienia dla Mój Koszyk, aby pokazać podsumowanie ilości przedmiotów i wyświetlić całkowitą liczbę przedmiotów w koszyku dla łatwego śledzenia.',
+                        'info' => 'Czy licznik koszyka pokazuje łączną ilość, czy liczbę pozycji.',
                         'summary' => 'Podsumowanie',
                         'title' => 'Mój Koszyk',
                     ],
 
                     'mini-cart' => [
                         'display-mini-cart' => 'Wyświetl Mini Koszyk',
-                        'info' => 'Włącz ustawienia dla Mini Koszyka, aby wyświetlać mini koszyk i pokazywać informacje o ofertach Mini Koszyka dla szybkiego dostępu do szczegółów koszyka i promocji.',
+                        'info' => 'Pokaż mini koszyk oraz tekst oferty wyświetlany w jego wnętrzu.',
                         'mini-cart-offer-info' => 'Informacje o ofercie Mini Koszyka',
                         'title' => 'Mini Koszyk',
                     ],
@@ -5172,7 +5431,7 @@ return [
                     'evening' => 'Wieczór',
                     'exchange' => 'Wymiana',
                     'file-extension-info' => 'Typy plików, które klienci i administratorzy mogą dołączać do zgłoszenia zwrotu, takie jak zdjęcia produktu lub dokumenty potwierdzające.',
-                    'info' => 'RMA to część procesu zwracania produktu do firmy w celu uzyskania zwrotu pieniędzy, wymiany lub naprawy.',
+                    'info' => 'Zwroty, o które klienci mogą wystąpić po złożeniu zamówienia.',
                     'morning' => 'Poranek',
                     'new-rma-message-to-customer' => 'Nowa wiadomość RMA do klienta',
                     'no' => 'Nie',
@@ -5225,14 +5484,29 @@ return [
                 'warning-config-closures' => 'Polecenie config:cache nie powiedzie się, jeśli jakikolwiek plik konfiguracyjny zwraca funkcję anonimową (closure).',
                 'warning-permissions' => 'Brak odpowiednich uprawnień do systemu plików może uniemożliwić poprawne wygenerowanie lub wyczyszczenie cache.',
                 'invalid-action' => 'Zażądano nieprawidłowej operacji na pamięci podręcznej.',
-                'action-success' => 'Polecenie ":action" zostało wykonane pomyślnie.',
-                'action-failed' => 'Polecenie ":action" zakończyło się błędem. Sprawdź logi w konsoli poniżej.',
+                'action-success' => ':action zakończono pomyślnie.',
+                'action-failed' => ':action nie powiodło się. Sprawdź dane wyjściowe poniżej.',
                 'action-exception' => 'Operacja na pamięci podręcznej nie powiodła się: :message',
                 'clear-console' => 'Wyczyść konsolę',
                 'console-title' => 'Konsola wyjściowa',
                 'console-entries' => 'logów',
                 'console-empty' => 'Uruchom dowolną operację, aby zobaczyć wynik w konsoli...',
                 'console-unknown-error' => 'Wystąpił nieoczekiwany błąd.',
+
+                'results' => [
+                    'clear-all' => 'Wszystkie pamięci podręczne zostały wyczyszczone.',
+                    'clear-config' => 'Pamięć podręczna konfiguracji została wyczyszczona.',
+                    'clear-cache' => 'Pamięć podręczna aplikacji została wyczyszczona.',
+                    'clear-compiled' => 'Skompilowane pliki klas zostały usunięte.',
+                    'clear-events' => 'Pamięć podręczna zdarzeń została wyczyszczona.',
+                    'clear-routes' => 'Pamięć podręczna tras została wyczyszczona.',
+                    'clear-views' => 'Skompilowane widoki zostały wyczyszczone.',
+                    'clear-page-cache' => 'Pamięć podręczna stron została wyczyszczona. Każda strona sklepu zostanie wygenerowana ponownie przy następnej wizycie.',
+                    'build-all' => 'Wszystkie pamięci podręczne zostały odbudowane.',
+                    'build-config' => 'Pamięć podręczna konfiguracji została utworzona.',
+                    'build-routes' => 'Pamięć podręczna tras została utworzona.',
+                    'build-views' => 'Widoki zostały skompilowane.',
+                ],
 
                 'actions' => [
                     'clear-all' => 'Wyczyść cały cache',
@@ -5242,10 +5516,27 @@ return [
                     'clear-events' => 'Wyczyść cache zdarzeń',
                     'clear-routes' => 'Wyczyść cache tras (routingu)',
                     'clear-views' => 'Wyczyść cache widoków',
+                    'clear-page-cache' => 'Wyczyść pamięć podręczną stron',
                     'build-all' => 'Wygeneruj cały cache',
                     'build-config' => 'Wygeneruj cache konfiguracji',
                     'build-routes' => 'Wygeneruj cache tras (routingu)',
                     'build-views' => 'Wygeneruj cache widoków',
+                ],
+
+                'full-page-cache' => [
+                    'title' => 'Full Page Cache',
+                    'info' => 'Serve rendered storefront pages from a cache instead of building them for every visitor.',
+
+                    'settings' => [
+                        'title' => 'Settings',
+                        'info' => 'Turn the page cache on or off and choose how long a page stays cached.',
+                        'enabled' => 'Enable Full Page Cache',
+                        'enabled-info' => 'Storefront pages are served from the cache. Turning this off makes every page render again on each visit.',
+                        'lifetime' => 'Cache Lifetime (Minutes)',
+                        'lifetime-info' => 'How long a cached page is kept before it is rendered again. Leave empty to use the application default.',
+                        'flush' => 'Wyczyść pamięć podręczną stron',
+                        'flush-info' => 'Opróżnij pamięć podręczną stron, aby każda strona sklepu została wygenerowana ponownie przy następnej wizycie.',
+                    ],
                 ],
             ],
         ],
@@ -5280,6 +5571,10 @@ return [
             ],
 
             'sidebar' => [
+
+                'appearance' => 'Wygląd',
+
+                'sections' => 'Sekcje',
                 'attribute-families' => 'Rodziny atrybutów',
                 'attributes' => 'Atrybuty',
                 'booking-product' => 'Rezerwacje',
@@ -5352,6 +5647,7 @@ return [
 
             'toolbar' => [
                 'length-of' => ':length z',
+                'sort-by' => 'Sortuj według',
                 'of' => 'z',
                 'per-page' => 'Na stronę',
                 'results' => ':total Wyniki',
@@ -5420,6 +5716,17 @@ return [
                     'today' => 'Dziś',
                     'yesterday' => 'Wczoraj',
                 ],
+
+                'number-options' => [
+                    'between' => 'Between',
+                    'equals' => 'Equals',
+                    'from' => 'From',
+                    'greater-than' => 'Greater Than',
+                    'greater-than-or-equal' => 'Greater Than Or Equal',
+                    'less-than' => 'Less Than',
+                    'less-than-or-equal' => 'Less Than Or Equal',
+                    'to' => 'To',
+                ],
             ],
 
             'table' => [
@@ -5456,6 +5763,7 @@ return [
                 'ai-add-image-btn' => 'Magia AI',
                 'ai-btn-info' => 'Generuj obraz',
                 'allowed-types' => 'png, jpeg, jpg',
+                'image' => 'Obraz',
                 'not-allowed-error' => 'Dozwolone są tylko pliki graficzne (.jpeg, .jpg, .png, ..).',
 
                 'ai-generation' => [
@@ -5486,12 +5794,33 @@ return [
                     'use-cases' => 'Zastosowanie',
                     'zoom' => 'Powiększenie',
                 ],
+
+                'seo' => [
+                    'alt-text' => 'Tekst alternatywny',
+                    'alt-text-info' => 'Zapisywany dla aktualnie wybranego języka. Gdy pole jest puste, używana jest nazwa produktu.',
+                    'alt-text-placeholder' => 'Opisz, co przedstawia obraz',
+                    'done-btn' => 'Gotowe',
+                    'file-name' => 'Nazwa pliku',
+                    'file-name-info' => 'Zmiana nazwy zmienia adres URL obrazu. Stary adres przestaje działać, co może wpłynąć na pozycję w wyszukiwarce grafiki.',
+                    'file-name-placeholder' => 'blue-running-shoe-side',
+                    'info' => 'Popraw sposób, w jaki wyszukiwarki i czytniki ekranu rozumieją ten obraz.',
+                    'replace' => 'Zamień obraz',
+                    'replace-btn' => 'Wybierz plik',
+                    'replace-info' => 'Powyższy tekst alternatywny i nazwa pliku zostaną zachowane dla nowego obrazu.',
+                    'title' => 'SEO obrazu',
+                ],
             ],
 
             'videos' => [
                 'add-video-btn' => 'Dodaj film',
                 'allowed-types' => 'mp4, webm, mkv',
                 'not-allowed-error' => 'Dozwolone są tylko pliki wideo (.mp4, .mov, .ogg ..).',
+                'video' => 'Wideo',
+
+                'seo' => [
+                    'info' => 'Nadaj plikowi wideo opisową nazwę.',
+                    'title' => 'SEO wideo',
+                ],
             ],
         ],
 
@@ -5523,6 +5852,12 @@ return [
     ],
 
     'acl' => [
+
+        'activate' => 'Aktywuj',
+
+        'appearance' => 'Wygląd',
+
+        'sections' => 'Sekcje',
         'addresses' => 'Adresy',
         'attribute-families' => 'Rodziny Atrybutów',
         'attributes' => 'Atrybuty',

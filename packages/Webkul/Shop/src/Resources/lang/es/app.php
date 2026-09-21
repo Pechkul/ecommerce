@@ -42,7 +42,7 @@ return [
             'page-title' => 'Inicio de Sesión del Cliente',
             'password' => 'Contraseña',
             'resend-verification' => 'Reenviar correo de verificación',
-            'show-password' => 'Mostrar Contraseña',
+            'social-account-exists' => 'Ya existe una cuenta con este correo electrónico. Inicie sesión con su correo electrónico y contraseña.',
             'title' => 'Iniciar Sesión',
             'verify-first' => 'Verifica primero tu cuenta de correo electrónico.',
         ],
@@ -373,6 +373,7 @@ return [
                 'remaining-downloads' => 'Descargas Restantes',
                 'status' => 'Estado',
                 'title' => 'Título',
+                'unlimited' => 'Ilimitado',
             ],
 
             'wishlist' => [
@@ -545,6 +546,14 @@ return [
             'default-toggle' => 'Alternar predeterminado',
         ],
 
+        'form' => [
+            'control-group' => [
+                'control' => [
+                    'show-password' => 'Mostrar Contraseña',
+                ],
+            ],
+        ],
+
         'media' => [
             'index' => [
                 'add-attachments' => 'Agregar adjuntos',
@@ -689,6 +698,17 @@ return [
 
                     'custom-filters' => [
                         'clear-all' => 'Limpiar todo',
+                    ],
+
+                    'number-options' => [
+                        'between' => 'Between',
+                        'equals' => 'Equals',
+                        'from' => 'From',
+                        'greater-than' => 'Greater Than',
+                        'greater-than-or-equal' => 'Greater Than Or Equal',
+                        'less-than' => 'Less Than',
+                        'less-than-or-equal' => 'Less Than Or Equal',
+                        'to' => 'To',
                     ],
                 ],
             ],
@@ -1152,6 +1172,9 @@ return [
             'address' => [
                 'add-new' => 'Agregar nueva dirección',
                 'add-new-address' => 'Agregar nueva dirección',
+                'address-updated-payment-info' => 'Los métodos de pago y los totales del pedido se actualizarán para su nueva dirección. Haga clic en Continuar para ver las opciones más recientes.',
+                'address-updated-shipping-info' => 'Los métodos de envío y las tarifas se volverán a calcular para su nueva dirección. Haga clic en Continuar para ver las opciones más recientes.',
+                'address-updated-title' => 'Su dirección se ha actualizado',
                 'back' => 'Volver',
                 'billing-address' => 'Dirección de facturación',
                 'check-billing-address' => 'Falta la dirección de facturación.',
@@ -1255,6 +1278,7 @@ return [
             'categories-carousel' => 'Carrusel de categorías',
             'image-carousel' => 'Carrusel de imágenes',
             'offer' => 'Obtén HASTA 40% DE DESCUENTO en tu primer pedido, COMPRA AHORA',
+            'preview-banner' => 'Vista previa del tema :theme en el canal :channel. Los enlaces están desactivados en la vista previa.',
             'product-carousel' => 'Carrusel de productos',
             'resend-verify-email' => 'Reenviar correo de verificación',
             'verify-email' => 'Verifica tu cuenta de correo electrónico',
@@ -1760,7 +1784,9 @@ return [
 
         'response' => [
             'already-cancel' => 'El estado de RMA ya ha sido cancelado.',
+            'cancel-not-allowed' => 'No se permite cancelar esta solicitud de RMA.',
             'cancel-success' => 'El estado de RMA ha sido cancelado con éxito.',
+            'close-not-allowed' => 'No se permite cerrar esta solicitud de RMA.',
             'create-success' => 'Solicitud creada con éxito.',
             'creation-error' => 'El estado de RMA no se puede actualizar porque no se ha creado la factura para este pedido.',
             'invalid-item' => 'El artículo de pedido seleccionado no es válido.',

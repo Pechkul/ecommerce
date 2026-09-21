@@ -62,7 +62,7 @@ class Cart
     }
 
     /**
-     * Initialize cart
+     * Initialize cart.
      */
     public function initCart(?CustomerContract $customer = null): void
     {
@@ -76,12 +76,19 @@ class Cart
                 'is_active' => 1,
             ]);
         } elseif (session()->has('cart')) {
-            $this->cart = $this->cartRepository->find(session()->get('cart')->id);
+            $cart = $this->cartRepository->find(session()->get('cart')->id);
+
+            if (
+                $cart
+                && $cart->is_active
+            ) {
+                $this->cart = $cart;
+            }
         }
     }
 
     /**
-     * Returns cart
+     * Reload the cart from the database.
      */
     public function refreshCart(): void
     {
@@ -93,7 +100,7 @@ class Cart
     }
 
     /**
-     * Set cart
+     * Set cart.
      */
     public function setCart(Contracts\Cart $cart): void
     {
@@ -151,7 +158,7 @@ class Cart
     }
 
     /**
-     * Remove cart and destroy the session
+     * Remove cart and destroy the session.
      */
     public function removeCart(Contracts\Cart $cart): void
     {
@@ -165,7 +172,7 @@ class Cart
     }
 
     /**
-     * Reset cart
+     * Reset cart.
      */
     public function resetCart(): void
     {
@@ -218,9 +225,6 @@ class Cart
 
         $guestCart = $this->cartRepository->find(session()->get('cart')->id);
 
-        /**
-         * When the logged in customer is not having any of the cart instance previously and are active.
-         */
         if (! $cart) {
             $this->cartRepository->update([
                 'customer_id' => $customer->id,
@@ -241,7 +245,6 @@ class Cart
             try {
                 $this->addProduct($guestCartItem->product, $guestCartItem->additional);
             } catch (\Exception $e) {
-                // Ignore exception
             }
         }
 
@@ -255,15 +258,19 @@ class Cart
      */
     public function addProduct(ProductContract $product, array $data): Contracts\Cart|\Exception
     {
+        if (! $product->isAvailableInChannel($this->cart?->channel_id)) {
+            throw new \Exception(trans('shop::app.checkout.cart.inactive-add'));
+        }
+
         Event::dispatch('checkout.cart.add.before', $product->id);
 
         if (! $this->cart) {
             $this->createCart([]);
         }
 
-        $cartProducts = $product->getTypeInstance()->prepareForCart(array_merge([
+        $cartProducts = $product->getTypeInstance()->prepareForCart(array_merge($data, [
             'cart_id' => $this->cart->id,
-        ], $data));
+        ]));
 
         if (is_string($cartProducts)) {
             if (! $this->cart->all_items->count()) {
@@ -477,9 +484,6 @@ class Cart
      */
     public function updateOrCreateShippingAddress(array $params): ?CartAddressContract
     {
-        /**
-         * If cart is not having any stockable items then no need to save shipping address.
-         */
         if (! $this->cart->haveStockableItems()) {
             return null;
         }
@@ -849,9 +853,6 @@ class Cart
     public function collectTotals(): self
     {
         if (! $this->validateItems()) {
-            /**
-             * Reset the cart so that fresh copy of cart can be created.
-             */
             $this->refreshCart();
         }
 

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Storage;
 use Webkul\Attribute\Models\Attribute;
 
 use function Pest\Laravel\deleteJson;
@@ -44,6 +45,26 @@ it('should returns attributes options', function () {
     get(route('admin.catalog.attributes.options', $attribute->id))
         ->assertOk()
         ->assertJsonIsArray();
+});
+
+it('should link an image swatch option to its stored file rather than to an image cache template', function () {
+    $attribute = Attribute::factory()->create([
+        'type' => 'select',
+        'swatch_type' => 'image',
+    ]);
+
+    $option = $attribute->options()->create([
+        'admin_name' => 'Red',
+        'sort_order' => 1,
+        'swatch_value' => 'attribute_option/red.png',
+    ]);
+
+    $this->loginAsAdmin();
+
+    getJson(route('admin.catalog.attributes.options', $attribute->id))
+        ->assertOk()
+        ->assertJsonPath('0.id', $option->id)
+        ->assertJsonPath('0.swatch_value_url', Storage::url('attribute_option/red.png'));
 });
 
 it('should show create page of attribute', function () {
@@ -190,4 +211,66 @@ it('should mass delete attributes', function () {
             'id' => $attribute->id,
         ]);
     }
+});
+
+it('should refuse an attribute whose regex is not a usable pattern', function (string $pattern) {
+    // Act and Assert.
+    $this->loginAsAdmin();
+
+    postJson(route('admin.catalog.attributes.store'), [
+        'code' => 'regex_'.substr(md5($pattern), 0, 8),
+        'admin_name' => 'Regex Probe',
+        'type' => 'text',
+        'validation' => 'regex',
+        'regex' => $pattern,
+    ])
+        ->assertJsonValidationErrorFor('regex')
+        ->assertUnprocessable();
+})->with([
+    '^[A-Za-z0-9]+$',
+    '/[unclosed/',
+    'not a pattern',
+    '#^[A-Za-z0-9]+$#',
+    '~^[A-Za-z0-9]+$~',
+    '/^[A-Za-z0-9]+$/x',
+    '//',
+]);
+
+it('should accept an attribute whose regex is a usable pattern', function () {
+    // Act and Assert.
+    $this->loginAsAdmin();
+
+    postJson(route('admin.catalog.attributes.store'), [
+        'code' => 'regex_usable',
+        'admin_name' => 'Regex Probe',
+        'type' => 'text',
+        'validation' => 'regex',
+        'regex' => '/^[A-Za-z0-9]+$/',
+    ])->assertRedirectToRoute('admin.catalog.attributes.index');
+
+    $this->assertDatabaseHas('attributes', ['code' => 'regex_usable', 'regex' => '/^[A-Za-z0-9]+$/']);
+});
+
+it('should keep an unusable regex out of the rules the product form is given', function (string $pattern) {
+    // Arrange.
+    $attribute = Attribute::factory()->create([
+        'type' => 'text',
+        'validation' => 'regex',
+        'regex' => $pattern,
+    ]);
+
+    // Act and Assert.
+    expect($attribute->validations)->not->toContain('regex');
+})->with(['^[A-Za-z0-9]+$', '#^[A-Za-z0-9]+$#', '~^[A-Za-z0-9]+$~', '/^[A-Za-z0-9]+$/x', '//']);
+
+it('should write a usable regex into the rules the product form is given', function () {
+    // Arrange.
+    $attribute = Attribute::factory()->create([
+        'type' => 'text',
+        'validation' => 'regex',
+        'regex' => '/^[A-Za-z0-9]+$/',
+    ]);
+
+    // Act and Assert.
+    expect($attribute->validations)->toContain('regex: /^[A-Za-z0-9]+$/');
 });

@@ -262,6 +262,7 @@
                                                         <div v-if="swatchType == 'image'">
                                                             <img
                                                                 :src="element.swatch_value_url || '{{ bagisto_asset('images/product-placeholders/front.svg') }}'"
+                                                                :alt="element.swatch_alt"
                                                                 :ref="'image_' + element.id"
                                                                 class="h-[50px] w-[50px]"
                                                             >
@@ -272,6 +273,25 @@
                                                                 class="hidden"
                                                                 :ref="'imageInput_' + element.id"
                                                             />
+
+                                                            <!-- Swatch Image SEO -->
+                                                            <div class="mt-2 grid gap-1">
+                                                                <input
+                                                                    type="text"
+                                                                    class="w-[160px] rounded-md border px-2 py-1.5 text-xs text-gray-600 transition-all hover:border-gray-400 focus:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300"
+                                                                    :name="'options[' + element.id + '][swatch_alt]'"
+                                                                    :placeholder="@js(trans('admin::app.components.media.images.seo.alt-text'))"
+                                                                    v-model="element.swatch_alt"
+                                                                />
+
+                                                                <input
+                                                                    type="text"
+                                                                    class="w-[160px] rounded-md border px-2 py-1.5 text-xs text-gray-600 transition-all hover:border-gray-400 focus:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300"
+                                                                    :name="'options[' + element.id + '][swatch_file_name]'"
+                                                                    :placeholder="@js(trans('admin::app.components.media.images.seo.file-name'))"
+                                                                    v-model="element.swatch_file_name"
+                                                                />
+                                                            </div>
                                                         </div>
 
                                                         <!-- Swatch Color -->
@@ -535,32 +555,22 @@
                                 @if($attribute->validation == "regex")
                                     <x-admin::form.control-group>
                                         <x-admin::form.control-group.label>
-                                            @lang('admin::app.catalog.attributes.create.regex')
+                                            @lang('admin::app.catalog.attributes.edit.regex')
                                         </x-admin::form.control-group.label>
 
-                                        <v-field
+                                        <x-admin::form.control-group.control
                                             type="text"
+                                            class="cursor-not-allowed"
+                                            id="regex"
                                             name="regex"
-                                            :value="{{ json_encode($attribute->regex) }}"
-                                            label="{{ trans('admin::app.catalog.attributes.create.regex') }}"
-                                            v-slot="{ field }"
-                                        >
-                                            <input
-                                                type="text"
-                                                name="regex"
-                                                id="regex"
-                                                v-bind="field"
-                                                :value="{{ json_encode($attribute->regex) }}"
-                                                :class="[errors['{{ $attribute->regex }}'] ? 'border border-red-600 hover:border-red-600' : '']"
-                                                class="flex min-h-[39px] w-full cursor-not-allowed rounded-md border px-3 py-2 text-sm text-gray-600 transition-all hover:border-gray-400 focus:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-gray-400 dark:focus:border-gray-400"
-                                                placeholder="{{ trans('admin::app.catalog.attributes.create.regex') }}"
-                                                disabled
-                                            >
-                                        </v-field>
+                                            :value="$attribute->regex"
+                                            :label="trans('admin::app.catalog.attributes.edit.regex')"
+                                            disabled="disabled"
+                                        />
 
                                         <!-- Regex Info -->
                                         <p class="mt-2 text-xs font-medium text-gray-500 dark:text-gray-300">
-                                            @lang('admin::app.catalog.attributes.create.regex-info')
+                                            @lang('admin::app.catalog.attributes.edit.regex-info')
                                         </p>
                                     </x-admin::form.control-group>
                                 @endif
@@ -1042,26 +1052,33 @@
                             this.optionId++;
                         }
 
-                        let foundIndex = this.optionsData.findIndex(item => item.id === params.id);
-
-                        if (foundIndex !== -1) {
-                            params.isNew = String(params.id).startsWith('options_');
-
-                            this.optionsData.splice(foundIndex, 1, params);
-                        } else {
-                            this.optionsData.push(params);
-                        }
-
-                        let formData = new FormData(this.$refs.editOptionsForm);
+                        const formData = new FormData(this.$refs.editOptionsForm);
 
                         const sliderImage = formData.get("swatch_value[]");
 
                         if (sliderImage?.name) {
                             params.swatch_value = sliderImage;
+                        }
 
-                            if (sliderImage instanceof File) {
-                                this.setFile(sliderImage, params.id);
-                            }
+                        if (! params.swatch_value) {
+                            delete params.swatch_value;
+                        }
+
+                        let foundIndex = this.optionsData.findIndex(item => item.id === params.id);
+
+                        if (foundIndex !== -1) {
+                            params.isNew = String(params.id).startsWith('options_');
+
+                            this.optionsData.splice(foundIndex, 1, {
+                                ...this.optionsData[foundIndex],
+                                ...params,
+                            });
+                        } else {
+                            this.optionsData.push(params);
+                        }
+
+                        if (sliderImage?.name) {
+                            this.setFile(sliderImage, params.id);
                         }
 
                         this.$refs.addOptionsRow.toggle();
@@ -1128,6 +1145,8 @@
                                         'sort_order': option.sort_order,
                                         'swatch_value': option.swatch_value,
                                         'swatch_value_url': option.swatch_value_url,
+                                        'swatch_alt': option.swatch_alt,
+                                        'swatch_file_name': option.swatch_file_name,
                                         'notRequired': '',
                                         'locales': {},
                                         'isNew': false,

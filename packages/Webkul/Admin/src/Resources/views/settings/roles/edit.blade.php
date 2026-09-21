@@ -159,9 +159,11 @@
                             @lang('admin::app.settings.roles.edit.custom')
                         </option>
 
-                        <option value="all">
-                            @lang('admin::app.settings.roles.edit.all')
-                        </option>
+                        @if (bouncer()->canGrantPermissions('all', []))
+                            <option value="all">
+                                @lang('admin::app.settings.roles.edit.all')
+                            </option>
+                        @endif
                     </x-admin::form.control-group.control>
 
                     <x-admin::form.control-group.error control-name="permission_type" />
@@ -173,7 +175,9 @@
                         input-type="checkbox"
                         value-field="key"
                         id-field="key"
-                        :items="json_encode(acl()->getItems())"
+                        searchable="true"
+                        search-placeholder="{{ trans('admin::app.settings.roles.create.search-permissions') }}"
+                        :items="json_encode(bouncer()->getGrantableAclItems())"
                         :value="json_encode($role->permissions ?? [])"
                         :fallback-locale="config('app.fallback_locale')"
                     />

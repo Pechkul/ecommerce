@@ -1,5 +1,6 @@
 <?php
 
+use Webkul\Core\Mail\Transport\DynamicMailTransport;
 use Webkul\MagicAI\AiProvider;
 use Webkul\Sales\Models\Order;
 
@@ -108,12 +109,12 @@ return [
                 'name' => 'enabled',
                 'title' => 'admin::app.configuration.index.general.content.speculation-rules.enable-speculation',
                 'type' => 'boolean',
-                'default' => true,
+                'default' => false,
             ], [
                 'name' => 'prerender_enabled',
                 'title' => 'admin::app.configuration.index.general.content.speculation-rules.prerender.enabled',
                 'type' => 'boolean',
-                'default' => true,
+                'default' => false,
             ], [
                 'name' => 'prerender_ignore_urls',
                 'title' => 'admin::app.configuration.index.general.content.speculation-rules.prerender.ignore-urls',
@@ -256,8 +257,8 @@ return [
                     ],
                 ],
             ], [
-                'name' => 'agreement_label',
-                'title' => 'admin::app.configuration.index.general.gdpr.agreement.checkbox-label',
+                'name' => 'preview',
+                'title' => 'admin::app.configuration.index.general.design.menu-category.preview',
                 'type' => 'blade',
                 'path' => 'admin::configuration.custom-views.category-menu',
             ],
@@ -932,6 +933,7 @@ return [
                 'title' => 'admin::app.configuration.index.catalog.products.storefront.products-per-page',
                 'type' => 'text',
                 'info' => 'admin::app.configuration.index.catalog.products.storefront.comma-separated',
+                'validation' => 'comma_separated_integer',
                 'channel_based' => true,
             ], [
                 'name' => 'sort_by',
@@ -1406,7 +1408,7 @@ return [
             [
                 'name' => 'subscription',
                 'title' => 'admin::app.configuration.index.customer.settings.newsletter.subscription',
-                'info' => 'Enable subscription option for users in the footer section.',
+                'info' => 'admin::app.configuration.index.customer.settings.newsletter.subscription-info',
                 'type' => 'boolean',
                 'default' => 1,
             ],
@@ -1508,7 +1510,7 @@ return [
                 'default' => config('app.url').'/customer/social-login/google/callback',
                 'placeholder' => config('app.url').'/customer/social-login/google/callback',
             ], [
-                'name' => 'enable_linkedin-openid',
+                'name' => 'enable_linkedin',
                 'title' => 'admin::app.configuration.index.customer.settings.social-login.linkedin.enable-linkedin',
                 'type' => 'boolean',
                 'channel_based' => true,
@@ -1517,20 +1519,20 @@ return [
                 'title' => 'admin::app.configuration.index.customer.settings.social-login.linkedin.client-id.title',
                 'info' => 'admin::app.configuration.index.customer.settings.social-login.linkedin.client-id.title-info',
                 'type' => 'text',
-                'depends' => 'enable_linkedin-openid:1',
+                'depends' => 'enable_linkedin:1',
             ], [
                 'name' => 'linkedin_client_secret',
                 'title' => 'admin::app.configuration.index.customer.settings.social-login.linkedin.client-secret.title',
                 'info' => 'admin::app.configuration.index.customer.settings.social-login.linkedin.client-secret.title-info',
                 'type' => 'text',
-                'depends' => 'enable_linkedin-openid:1',
+                'depends' => 'enable_linkedin:1',
             ], [
                 'name' => 'linkedin_callback_url',
                 'title' => 'admin::app.configuration.index.customer.settings.social-login.linkedin.redirect.title',
                 'info' => 'admin::app.configuration.index.customer.settings.social-login.linkedin.redirect.title-info',
                 'type' => 'text',
                 'validation' => 'url',
-                'depends' => 'enable_linkedin-openid:1',
+                'depends' => 'enable_linkedin:1',
                 'placeholder' => config('app.url').'/customer/social-login/linkedin-openid/callback',
                 'default' => config('app.url').'/customer/social-login/linkedin-openid/callback',
             ], [
@@ -1590,12 +1592,37 @@ return [
                 'path' => 'admin::configuration.custom-views.smtp-driver-notice',
             ],
             [
+                'name' => 'driver',
+                'title' => 'admin::app.configuration.index.email.smtp.driver',
+                'info' => 'admin::app.configuration.index.email.smtp.driver-info',
+                'type' => 'select',
+                'options' => [
+                    [
+                        'title' => 'admin::app.configuration.index.email.smtp.driver-smtp',
+                        'value' => DynamicMailTransport::DRIVER_SMTP,
+                    ],
+                    [
+                        'title' => 'admin::app.configuration.index.email.smtp.driver-brevo-api',
+                        'value' => DynamicMailTransport::DRIVER_BREVO_API,
+                    ],
+                ],
+                'channel_based' => false,
+                'default' => DynamicMailTransport::DRIVER_SMTP,
+            ], [
+                'name' => 'brevo_api_key',
+                'title' => 'admin::app.configuration.index.email.smtp.brevo-api-key',
+                'info' => 'admin::app.configuration.index.email.smtp.brevo-api-key-info',
+                'type' => 'password',
+                'channel_based' => false,
+                'depends' => 'driver:'.DynamicMailTransport::DRIVER_BREVO_API,
+            ], [
                 'name' => 'host',
                 'title' => 'admin::app.configuration.index.email.smtp.host',
                 'type' => 'text',
                 'validation' => 'required',
                 'channel_based' => false,
                 'default' => config('mail.mailers.smtp.host'),
+                'depends' => 'driver:'.DynamicMailTransport::DRIVER_SMTP,
             ], [
                 'name' => 'port',
                 'title' => 'admin::app.configuration.index.email.smtp.port',
@@ -1603,6 +1630,7 @@ return [
                 'validation' => 'required|numeric',
                 'channel_based' => false,
                 'default' => config('mail.mailers.smtp.port'),
+                'depends' => 'driver:'.DynamicMailTransport::DRIVER_SMTP,
             ], [
                 'name' => 'encryption',
                 'title' => 'admin::app.configuration.index.email.smtp.encryption',
@@ -1614,24 +1642,27 @@ return [
                 ],
                 'channel_based' => false,
                 'default' => config('mail.mailers.smtp.encryption', 'tls'),
+                'depends' => 'driver:'.DynamicMailTransport::DRIVER_SMTP,
             ], [
                 'name' => 'username',
                 'title' => 'admin::app.configuration.index.email.smtp.username',
                 'type' => 'text',
                 'channel_based' => false,
                 'default' => config('mail.mailers.smtp.username'),
+                'depends' => 'driver:'.DynamicMailTransport::DRIVER_SMTP,
             ], [
                 'name' => 'password',
                 'title' => 'admin::app.configuration.index.email.smtp.password',
                 'type' => 'password',
                 'channel_based' => false,
                 'default' => config('mail.mailers.smtp.password'),
+                'depends' => 'driver:'.DynamicMailTransport::DRIVER_SMTP,
             ],
         ],
     ], [
         'key' => 'emails.configure.email_settings',
         'name' => 'admin::app.configuration.index.email.email-settings.title',
-        'info' => 'admin::app.configuration.index.email.email-settings.info',
+        'info' => 'admin::app.configuration.index.email.email-settings.title-info',
         'sort' => 2,
         'fields' => [
             [
@@ -1693,7 +1724,7 @@ return [
     ], [
         'key' => 'emails.general.notifications',
         'name' => 'admin::app.configuration.index.email.notifications.title',
-        'info' => 'admin::app.configuration.index.email.notifications.info',
+        'info' => 'admin::app.configuration.index.email.notifications.title-info',
         'sort' => 1,
         'fields' => [
             [
@@ -2471,7 +2502,7 @@ return [
                         'value' => 'paid',
                     ],
                 ],
-                'info' => 'admin::app.configuration.index.sales.payment-methods.set-order-status',
+                'info' => 'admin::app.configuration.index.sales.payment-methods.generate-invoice-applicable',
                 'channel_based' => true,
                 'locale_based' => false,
             ], [
@@ -2588,6 +2619,109 @@ return [
                 'name' => 'mailing_address',
                 'title' => 'admin::app.configuration.index.sales.payment-methods.mailing-address',
                 'type' => 'textarea',
+                'depends' => 'active:1',
+                'channel_based' => true,
+                'locale_based' => false,
+            ], [
+                'name' => 'sort',
+                'title' => 'admin::app.configuration.index.sales.payment-methods.sort-order',
+                'type' => 'number',
+                'depends' => 'active:1',
+                'validation' => 'required_if:active,1|integer|min:1',
+                'channel_based' => true,
+                'locale_based' => false,
+            ],
+        ],
+    ], [
+        'key' => 'sales.payment_methods.payglocal',
+        'name' => 'admin::app.configuration.index.sales.payment-methods.payglocal',
+        'info' => 'admin::app.configuration.index.sales.payment-methods.payglocal-info',
+        'sort' => 9,
+        'fields' => [
+            [
+                'name' => 'active',
+                'title' => 'admin::app.configuration.index.sales.payment-methods.status',
+                'type' => 'boolean',
+                'channel_based' => true,
+                'locale_based' => false,
+            ], [
+                'name' => 'title',
+                'title' => 'admin::app.configuration.index.sales.payment-methods.title',
+                'type' => 'text',
+                'depends' => 'active:1',
+                'validation' => 'required_if:active,1',
+                'channel_based' => true,
+                'locale_based' => true,
+            ], [
+                'name' => 'description',
+                'title' => 'admin::app.configuration.index.sales.payment-methods.description',
+                'type' => 'textarea',
+                'depends' => 'active:1',
+                'channel_based' => true,
+                'locale_based' => true,
+            ], [
+                'name' => 'image',
+                'title' => 'admin::app.configuration.index.sales.payment-methods.logo',
+                'info' => 'admin::app.configuration.index.sales.payment-methods.logo-information',
+                'type' => 'image',
+                'depends' => 'active:1',
+                'channel_based' => true,
+                'locale_based' => false,
+                'validation' => 'mimes:bmp,jpeg,jpg,png,webp',
+            ], [
+                'name' => 'merchant_id',
+                'title' => 'admin::app.configuration.index.sales.payment-methods.merchant-id',
+                'info' => 'admin::app.configuration.index.sales.payment-methods.payglocal-merchant-id-info',
+                'type' => 'password',
+                'depends' => 'active:1',
+                'channel_based' => true,
+                'locale_based' => false,
+            ], [
+                'name' => 'public_key_id',
+                'title' => 'admin::app.configuration.index.sales.payment-methods.public-key-id',
+                'info' => 'admin::app.configuration.index.sales.payment-methods.payglocal-public-key-id-info',
+                'type' => 'password',
+                'depends' => 'active:1',
+                'channel_based' => true,
+                'locale_based' => false,
+            ], [
+                'name' => 'private_key_id',
+                'title' => 'admin::app.configuration.index.sales.payment-methods.private-key-id',
+                'info' => 'admin::app.configuration.index.sales.payment-methods.payglocal-private-key-id-info',
+                'type' => 'password',
+                'depends' => 'active:1',
+                'channel_based' => true,
+                'locale_based' => false,
+            ], [
+                'name' => 'payglocal_public_key',
+                'title' => 'admin::app.configuration.index.sales.payment-methods.payglocal-public-key',
+                'info' => 'admin::app.configuration.index.sales.payment-methods.payglocal-public-key-info',
+                'type' => 'textarea',
+                'depends' => 'active:1',
+                'channel_based' => true,
+                'locale_based' => false,
+            ], [
+                'name' => 'merchant_private_key',
+                'title' => 'admin::app.configuration.index.sales.payment-methods.merchant-private-key',
+                'info' => 'admin::app.configuration.index.sales.payment-methods.merchant-private-key-info',
+                'type' => 'textarea',
+                'depends' => 'active:1',
+                'channel_based' => true,
+                'locale_based' => false,
+            ], [
+                'name' => 'accepted_currencies',
+                'title' => 'admin::app.configuration.index.sales.payment-methods.accepted-currencies',
+                'info' => 'admin::app.configuration.index.sales.payment-methods.accepted-currencies-info',
+                'type' => 'text',
+                'depends' => 'active:1',
+                'validation' => 'required_if:sales.payment_methods.payglocal.active,1',
+                'channel_based' => true,
+                'locale_based' => false,
+            ], [
+                'name' => 'sandbox',
+                'title' => 'admin::app.configuration.index.sales.payment-methods.sandbox',
+                'info' => 'admin::app.configuration.index.sales.payment-methods.payglocal-sandbox-info',
+                'type' => 'boolean',
                 'depends' => 'active:1',
                 'channel_based' => true,
                 'locale_based' => false,
@@ -3329,6 +3463,45 @@ return [
                 'title' => 'admin::app.configuration.index.cache-management.general.cache-actions.title',
                 'type' => 'blade',
                 'path' => 'admin::configuration.custom-views.cache-management',
+            ],
+        ],
+    ], [
+        'key' => 'cache_management.full_page_cache',
+        'name' => 'admin::app.configuration.index.cache-management.full-page-cache.title',
+        'info' => 'admin::app.configuration.index.cache-management.full-page-cache.info',
+        'icon' => 'settings/full-page-cache.svg',
+        'sort' => 2,
+    ], [
+        'key' => 'cache_management.full_page_cache.settings',
+        'name' => 'admin::app.configuration.index.cache-management.full-page-cache.settings.title',
+        'info' => 'admin::app.configuration.index.cache-management.full-page-cache.settings.info',
+        'sort' => 1,
+        'fields' => [
+            [
+                'name' => 'enabled',
+                'title' => 'admin::app.configuration.index.cache-management.full-page-cache.settings.enabled',
+                'info' => 'admin::app.configuration.index.cache-management.full-page-cache.settings.enabled-info',
+                'type' => 'boolean',
+                'default' => true,
+                'channel_based' => false,
+                'locale_based' => false,
+            ], [
+                'name' => 'lifetime',
+                'title' => 'admin::app.configuration.index.cache-management.full-page-cache.settings.lifetime',
+                'info' => 'admin::app.configuration.index.cache-management.full-page-cache.settings.lifetime-info',
+                'type' => 'text',
+                'validation' => 'nullable|numeric|min:1',
+                'depends' => 'enabled:1',
+                'channel_based' => false,
+                'locale_based' => false,
+            ], [
+                'name' => 'flush',
+                'title' => 'admin::app.configuration.index.cache-management.full-page-cache.settings.flush',
+                'type' => 'blade',
+                'path' => 'admin::configuration.custom-views.full-page-cache-flush',
+                'depends' => 'enabled:1',
+                'channel_based' => false,
+                'locale_based' => false,
             ],
         ],
     ],

@@ -42,7 +42,7 @@ return [
             'page-title' => 'تسجيل الدخول للعملاء',
             'password' => 'كلمة المرور',
             'resend-verification' => 'إعادة إرسال بريد التحقق',
-            'show-password' => 'عرض كلمة المرور',
+            'social-account-exists' => 'يوجد حساب بهذا البريد الإلكتروني بالفعل. يرجى تسجيل الدخول باستخدام بريدك الإلكتروني وكلمة المرور.',
             'title' => 'تسجيل الدخول',
             'verify-first' => 'الرجاء التحقق من حساب البريد الإلكتروني الخاص بك أولاً.',
         ],
@@ -373,6 +373,7 @@ return [
                 'remaining-downloads' => 'التنزيلات المتبقية',
                 'status' => 'الحالة',
                 'title' => 'العنوان',
+                'unlimited' => 'غير محدود',
             ],
 
             'wishlist' => [
@@ -545,6 +546,14 @@ return [
             'default-toggle' => 'التبديل الافتراضي',
         ],
 
+        'form' => [
+            'control-group' => [
+                'control' => [
+                    'show-password' => 'عرض كلمة المرور',
+                ],
+            ],
+        ],
+
         'media' => [
             'index' => [
                 'add-attachments' => 'إضافة المرفقات',
@@ -689,6 +698,17 @@ return [
 
                     'custom-filters' => [
                         'clear-all' => 'مسح الكل',
+                    ],
+
+                    'number-options' => [
+                        'between' => 'Between',
+                        'equals' => 'Equals',
+                        'from' => 'From',
+                        'greater-than' => 'Greater Than',
+                        'greater-than-or-equal' => 'Greater Than Or Equal',
+                        'less-than' => 'Less Than',
+                        'less-than-or-equal' => 'Less Than Or Equal',
+                        'to' => 'To',
                     ],
                 ],
             ],
@@ -1152,6 +1172,9 @@ return [
             'address' => [
                 'add-new' => 'إضافة عنوان جديد',
                 'add-new-address' => 'إضافة عنوان جديد',
+                'address-updated-payment-info' => 'سيتم تحديث طرق الدفع وإجماليات الطلب لعنوانك الجديد. انقر على «المتابعة» لعرض أحدث الخيارات.',
+                'address-updated-shipping-info' => 'ستتم إعادة احتساب طرق الشحن والأسعار لعنوانك الجديد. انقر على «المتابعة» لعرض أحدث الخيارات.',
+                'address-updated-title' => 'تم تحديث عنوانك',
                 'back' => 'العودة',
                 'billing-address' => 'عنوان الفواتير',
                 'check-billing-address' => 'العنوان الفوترة مفقود.',
@@ -1255,6 +1278,7 @@ return [
             'categories-carousel' => 'سلاسل الفئات',
             'image-carousel' => 'سلاسل الصور',
             'offer' => 'احصل على خصم يصل إلى 40% على طلبك الأول، تسوق الآن',
+            'preview-banner' => 'معاينة سمة :theme على قناة :channel. الروابط معطلة في المعاينة.',
             'product-carousel' => 'سلاسل المنتجات',
             'resend-verify-email' => 'إعادة إرسال بريد التحقق',
             'verify-email' => 'تحقق من حساب بريدك الإلكتروني',
@@ -1760,7 +1784,9 @@ return [
 
         'response' => [
             'already-cancel' => 'حالة RMA تم إلغاؤها بالفعل.',
+            'cancel-not-allowed' => 'إلغاء طلب RMA هذا غير مسموح به.',
             'cancel-success' => 'تم إلغاء حالة RMA بنجاح.',
+            'close-not-allowed' => 'إغلاق طلب RMA هذا غير مسموح به.',
             'create-success' => 'تم إنشاء الطلب بنجاح.',
             'creation-error' => 'لا يمكن تحديث حالة RMA لأن الفاتورة الخاصة بهذا الطلب لم يتم إنشاؤها.',
             'invalid-item' => 'عنصر الطلب المحدد غير صالح.',

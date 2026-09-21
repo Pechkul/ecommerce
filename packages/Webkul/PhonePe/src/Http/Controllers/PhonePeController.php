@@ -55,6 +55,17 @@ class PhonePeController extends Controller
             return redirect()->route('shop.checkout.cart.index');
         }
 
+        $currency = strtoupper($cart->base_currency_code ?? core()->getBaseCurrencyCode());
+
+        if (! $this->phonePe->isCurrencySupported($currency)) {
+            session()->flash('error', trans('phonepe::app.response.supported-currency-error', [
+                'currency' => $currency,
+                'supportedCurrencies' => implode(', ', $this->phonePe->getSupportedCurrencies()),
+            ]));
+
+            return redirect()->route('shop.checkout.cart.index');
+        }
+
         $paymentUrl = $this->phonePe->initiatePayment($cart);
 
         if (! $paymentUrl) {
@@ -131,6 +142,14 @@ class PhonePeController extends Controller
                 Cart::setCart($cart);
 
                 Cart::collectTotals();
+
+                $cart = Cart::getCart();
+
+                if (! $cart) {
+                    session()->flash('info', trans('phonepe::app.response.cart-not-found'));
+
+                    return redirect()->route('phonepe.cancel', ['merchantOrderId' => $merchantOrderId]);
+                }
 
                 $data = (new OrderResource($cart))->jsonSerialize();
 
@@ -259,6 +278,12 @@ class PhonePeController extends Controller
             Cart::setCart($cart);
 
             Cart::collectTotals();
+
+            $cart = Cart::getCart();
+
+            if (! $cart) {
+                return response()->json(['status' => 'cart_inactive'], 200);
+            }
 
             $data = (new OrderResource($cart))->jsonSerialize();
 

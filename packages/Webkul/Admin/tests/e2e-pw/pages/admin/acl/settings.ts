@@ -162,27 +162,6 @@ export class SettingsAclPage extends MarketingAclPage {
         };
     }
 
-    protected get themeActionPage() {
-        return {
-            iconEdit: this.page.locator(".icon-edit"),
-            successEditTheme: this.page.getByText("Theme updated successfully"),
-            deleteIcon: this.page.locator(".icon-delete"),
-            agreeBtn: this.page.getByRole("button", {
-                name: "Agree",
-                exact: true,
-            }),
-            createBtn: this.page.locator(".primary-button"),
-            sortOrder: this.page.locator('input[name="sort_order"]'),
-            selectTypeAttribute: this.page.locator('select[name="type"]'),
-            selectChannel: this.page.locator("select[name='channel_id']"),
-            name: this.page.locator('input[name="name"]'),
-            athorization: this.page.getByText("401"),
-            successDeleteTheme: this.page.getByText(
-                "Theme deleted successfully",
-            ),
-        };
-    }
-
     protected get taxRateActionPage() {
         return {
             createBtn: this.page.locator(".primary-button"),
@@ -480,10 +459,17 @@ export class SettingsAclPage extends MarketingAclPage {
         ).toBeVisible();
     }
 
+    async createDeletableUser() {
+        await this.createUser(`${this.userName}-deletable`, generateEmail());
+    }
+
     async deleteUserVerify() {
         await expect(this.userActionPage.createUser).not.toBeVisible();
         await expect(this.userActionPage.iconEdit.first()).not.toBeVisible();
-        await this.userActionPage.deleteIcon.nth(2).click();
+        await this.page
+            .locator(".row", { hasText: `${this.userName}-deletable` })
+            .locator(".icon-delete")
+            .click();
         await this.userActionPage.agreeBtn.click();
         await expect(
             this.userActionPage.successUserDelete.first(),
@@ -493,7 +479,11 @@ export class SettingsAclPage extends MarketingAclPage {
     async roleCreateVerify() {
         await this.roleActionPage.createRole.click();
         await this.roleActionPage.name.fill(this.roleName);
-        await this.roleActionPage.selectRoleType.selectOption("all");
+        await expect(
+            this.roleActionPage.selectRoleType.locator('option[value="all"]'),
+        ).toHaveCount(0);
+        await this.roleActionPage.selectRoleType.selectOption("custom");
+        await this.rolePermission(["settings.roles.create"]);
         await this.roleActionPage.roleDescription.fill("test description");
         await this.roleActionPage.saveRole.click();
         await expect(this.roleActionPage.successRole.first()).toBeVisible();
@@ -509,46 +499,23 @@ export class SettingsAclPage extends MarketingAclPage {
         ).toBeVisible();
     }
 
+    async createDeletableRole() {
+        await this.createRole(
+            "custom",
+            ["settings.roles.delete"],
+            `${this.roleName}-deletable`,
+        );
+    }
+
     async roleDeleteVerify() {
         await expect(this.roleActionPage.createRole).not.toBeVisible();
-        await this.roleActionPage.deleteIcon.nth(2).click();
+        await this.page
+            .locator(".row", { hasText: `${this.roleName}-deletable` })
+            .locator(".icon-delete")
+            .click();
         await this.roleActionPage.agreeBtn.click();
         await expect(
             this.roleActionPage.successDeleteRole.first(),
-        ).toBeVisible();
-    }
-
-    async themeCreateVerify() {
-        await this.themeActionPage.createBtn.click();
-        await this.page.waitForLoadState("networkidle");
-        await this.themeActionPage.name.fill(generateName());
-        await this.themeActionPage.sortOrder.fill("1");
-        await this.themeActionPage.selectTypeAttribute.selectOption(
-            "product_carousel",
-        );
-        await this.themeActionPage.selectChannel.selectOption("1");
-        await this.themeActionPage.createBtn.nth(1).click();
-        await expect(this.themeActionPage.athorization.first()).toBeVisible();
-    }
-
-    async themeEditVerify() {
-        await expect(this.themeActionPage.createBtn).not.toBeVisible();
-        await this.page.waitForLoadState("networkidle");
-        await this.themeActionPage.iconEdit.nth(3).click();
-        await this.page.waitForLoadState("networkidle");
-        await this.themeActionPage.createBtn.click();
-        await expect(
-            this.themeActionPage.successEditTheme.first(),
-        ).toBeVisible();
-    }
-
-    async themeDeleteVerify() {
-        await expect(this.themeActionPage.createBtn).not.toBeVisible();
-        await expect(this.themeActionPage.iconEdit.nth(3)).not.toBeVisible();
-        await this.themeActionPage.deleteIcon.first().click();
-        await this.themeActionPage.agreeBtn.click();
-        await expect(
-            this.themeActionPage.successDeleteTheme.first(),
         ).toBeVisible();
     }
 

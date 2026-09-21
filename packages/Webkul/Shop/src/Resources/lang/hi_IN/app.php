@@ -42,7 +42,7 @@ return [
             'page-title' => 'ग्राहक लॉगिन',
             'password' => 'पासवर्ड',
             'resend-verification' => 'सत्यापन ईमेल पुनः भेजें',
-            'show-password' => 'पासवर्ड दिखाएं',
+            'social-account-exists' => 'इस ईमेल से एक खाता पहले से मौजूद है। कृपया अपने ईमेल और पासवर्ड से साइन इन करें।',
             'title' => 'साइन इन करें',
             'verify-first' => 'पहले अपना ईमेल खाता सत्यापित करें।',
         ],
@@ -373,6 +373,7 @@ return [
                 'remaining-downloads' => 'शेष डाउनलोड',
                 'status' => 'स्थिति',
                 'title' => 'शीर्षक',
+                'unlimited' => 'असीमित',
             ],
 
             'wishlist' => [
@@ -545,6 +546,14 @@ return [
             'default-toggle' => 'डिफ़ॉल्ट टॉगल',
         ],
 
+        'form' => [
+            'control-group' => [
+                'control' => [
+                    'show-password' => 'पासवर्ड दिखाएं',
+                ],
+            ],
+        ],
+
         'media' => [
             'index' => [
                 'add-attachments' => 'अटैचमेंट जोड़ें',
@@ -689,6 +698,17 @@ return [
 
                     'custom-filters' => [
                         'clear-all' => 'सभी साफ़ करें',
+                    ],
+
+                    'number-options' => [
+                        'between' => 'Between',
+                        'equals' => 'Equals',
+                        'from' => 'From',
+                        'greater-than' => 'Greater Than',
+                        'greater-than-or-equal' => 'Greater Than Or Equal',
+                        'less-than' => 'Less Than',
+                        'less-than-or-equal' => 'Less Than Or Equal',
+                        'to' => 'To',
                     ],
                 ],
             ],
@@ -1152,6 +1172,9 @@ return [
             'address' => [
                 'add-new' => 'नया पता जोड़ें',
                 'add-new-address' => 'नया पता जोड़ें',
+                'address-updated-payment-info' => 'आपके नए पते के लिए भुगतान विधियों और ऑर्डर के कुल योग को रीफ़्रेश किया जाएगा। नवीनतम विकल्प देखने के लिए "आगे बढ़ें" पर क्लिक करें।',
+                'address-updated-shipping-info' => 'आपके नए पते के लिए शिपिंग विधियों और दरों की फिर से गणना की जाएगी। नवीनतम विकल्प देखने के लिए "आगे बढ़ें" पर क्लिक करें।',
+                'address-updated-title' => 'आपका पता अपडेट कर दिया गया है',
                 'back' => 'पीछे जाएं',
                 'billing-address' => 'बिलिंग पता',
                 'check-billing-address' => 'बिलिंग पता लापता है।',
@@ -1255,6 +1278,7 @@ return [
             'categories-carousel' => 'श्रेणियाँ कैरोसेल',
             'image-carousel' => 'चित्र कैरोसेल',
             'offer' => 'अपनी पहली ऑर्डर पर 40% तक छूट पाएं, अभी खरीदारी करें',
+            'preview-banner' => ':channel चैनल पर :theme थीम का पूर्वावलोकन। पूर्वावलोकन में लिंक बंद हैं।',
             'product-carousel' => 'उत्पाद कैरोसेल',
             'resend-verify-email' => 'सत्यापन ईमेल फिर से भेजें',
             'verify-email' => 'अपने ईमेल खाते की पुष्टि करें',
@@ -1760,7 +1784,9 @@ return [
 
         'response' => [
             'already-cancel' => 'RMA स्थिति पहले ही रद्द की जा चुकी है।',
+            'cancel-not-allowed' => 'इस RMA अनुरोध को रद्द करने की अनुमति नहीं है।',
             'cancel-success' => 'RMA स्थिति सफलतापूर्वक रद्द कर दी गई।',
+            'close-not-allowed' => 'इस RMA अनुरोध को बंद करने की अनुमति नहीं है।',
             'create-success' => 'अनुरोध सफलतापूर्वक बनाया गया।',
             'creation-error' => 'RMA स्थिति को अपडेट नहीं किया जा सकता क्योंकि इस ऑर्डर के लिए चालान नहीं बनाया गया है।',
             'invalid-item' => 'चयनित ऑर्डर आइटम अमान्य है।',

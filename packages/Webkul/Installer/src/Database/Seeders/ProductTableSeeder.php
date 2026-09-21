@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\File as Filesystem;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Webkul\Installer\Database\Seeders\Category\CategoryTableSeeder;
-use Webkul\Installer\Database\Seeders\Shop\ThemeCustomizationTableSeeder;
+use Webkul\Installer\Database\Seeders\Shop\SectionTableSeeder;
 
 class ProductTableSeeder extends Seeder
 {
@@ -142,13 +142,14 @@ class ProductTableSeeder extends Seeder
         $this->timestamp = $this->now->format('Y-m-d H:i:s');
 
         $this->defaultLocale = data_get($parameters, 'default_locale', config('app.locale'));
-        $this->locales = data_get($parameters, 'allowed_locales', [$this->defaultLocale]);
+
+        $this->locales = array_values(array_unique(data_get($parameters, 'allowed_locales', [$this->defaultLocale])));
 
         $this->seedAttributeInfrastructure();
 
         (new CategoryTableSeeder)->sampleCategories($parameters);
 
-        (new ThemeCustomizationTableSeeder)->sampleThemeCustomizations($parameters);
+        (new SectionTableSeeder)->sampleSections($parameters);
 
         $this->seedProducts($this->defaultLocale);
 
@@ -258,7 +259,10 @@ class ProductTableSeeder extends Seeder
                         continue;
                     }
 
-                    if ($locale !== 'en' && ! in_array($code, self::LOCALE_SPECIFIC_ATTRIBUTES)) {
+                    if (
+                        $locale !== $this->defaultLocale
+                        && ! in_array($code, self::LOCALE_SPECIFIC_ATTRIBUTES)
+                    ) {
                         continue;
                     }
 
