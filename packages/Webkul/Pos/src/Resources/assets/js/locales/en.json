@@ -1,0 +1,653 @@
+{
+    "pos": {
+        "title": "Bagisto POS",
+        "page_not_found": {
+            "title": "Something's missing.",
+            "message": "Sorry, we can't find that page. You'll find lots to explore on the home page.",
+            "back_btn_title": "Back to Homepage"
+        },
+        "login_form": {
+            "title": "Login",
+            "user_name": "User Name",
+            "user_name_placeholder": "Enter User Name",
+            "password": "Password",
+            "password_placeholder": "Enter Password",
+            "remember_password": "Remember Password",
+            "login_btn_title": "Login"
+        },
+        "footer": {
+            "warning": "Webkul doesn't authorize any third party sellers to re-sell Webkul modules.",
+            "copyright": "© Copyright 2010-2023, Webkul Software (Registered in India/USA). All rights reserved."
+        },
+        "layout": {
+            "header": {
+                "title": "Bagisto POS",
+                "search_products": "Search products...",
+                "hold_orders": "Hold Orders",
+                "barcode_form": {
+                    "title": "Enter Barcode",
+                    "barcode_placeholder": "Enter the barcode of the product",
+                    "cancel_btn_title": "Cancel",
+                    "proceed_btn_title": "Proceed"
+                },
+                "product_create_form": {
+                    "title": "Add New Product",
+                    "name": "Name",
+                    "sku": "SKU",
+                    "price": "Price",
+                    "weight": "Weight",
+                    "quantity": "Quantity",
+                    "cancel_btn_title": "Cancel",
+                    "proceed_btn_title": "Proceed"
+                }
+            },
+            "sidebar": {
+                "home": "Home",
+                "customers": "Customers",
+                "cashier": "Cashier",
+                "orders": "Orders",
+                "products": "Products",
+                "reports": "Reports",
+                "settings": "Settings",
+                "logout": "Logout"
+            },
+            "main": {
+                "cash_drawer": {
+                    "title": "Cash Drawer",
+                    "opening_drawer_amount": "Opening Drawer Amount",
+                    "remarks": "Remarks",
+                    "remarks_placeholder": "Enter counter closure remarks.",
+                    "open_drawer": "Open Drawer"
+                }
+            }
+        },
+        "common": {
+            "cart": {
+                "add": "Add",
+                "add_customer": "Add Customer",
+                "change_customer": "Change Customer",
+                "booking_from": "Booking From",
+                "booking_till": "Booking Till",
+                "closed": "Closed",
+                "create_success": "Cart created successfully.",
+                "discount": "Discount",
+                "discount_applied": "{percentage}% discount applied",
+                "discount_max_exceeded": "Discount percentage cannot be more than 99.99%.",
+                "downloads": "Downloads",
+                "event_expired": "This event has been expired.",
+                "event_from": "Event From",
+                "event_ticket": "Event Ticket",
+                "event_till": "Event Till",
+                "hold_order": "Hold Order",
+                "hold_order_success": "Order has been hold successfully.",
+                "inventory_warning": "The requested quantity is not available.",
+                "missing_links": "Downloadable links are missing for this product.",
+                "missing_options": "Options are missing for this product.",
+                "no_customer_selected": "No customer is selected.",
+                "note": "Note",
+                "payable_amount": "Payable Amount",
+                "proceed": "Proceed",
+                "product_add_success": "Product added to cart successfully!",
+                "product_remove_success": "Product removed from cart successfully!",
+                "qty_missing": "At least one product should have more than 1 quantity.",
+                "invalid_file_extension": "Invalid file extension found.",
+                "quantity": "Quantity",
+                "remove_cart": "Remove Cart",
+                "remove_customer": "Remove Customer",
+                "remove_success": "Cart removed successfully.",
+                "rent_from": "Rent From",
+                "rent_till": "Rent Till",
+                "rent_type": "Rent Type",
+                "select_hourly_duration": "Select a slot duration of one hour.",
+                "selected_products_simple": "Selected products must be of simple product type.",
+                "special_note": "Special Request/Notes",
+                "subtotal": "Subtotal",
+                "tax": "Tax",
+                "update_success": "Cart updated successfully.",
+                "insufficient_stock_warning": "Insufficient stock for {product} in the cart.",
+                "order_note_form": {
+                    "title": "Order Note",
+                    "note_placeholder": "Enter order note",
+                    "cancel_btn_title": "Cancel",
+                    "proceed_btn_title": "Proceed",
+                    "create_success": "Order note added successfully.",
+                    "remove_success": "Order note removed successfully."
+                }
+            },
+            "flash_messages": {
+                "close": "Close",
+                "error_message": "Something went wrong! Please try again.",
+                "offline_error": "Warning, You are in offline mode",
+                "offline_mode": "Warning: You are offline. Limited functionality available",
+                "online_mode": "Connection restored. You are back online"
+            },
+            "offline_loader": {
+                "title": "Warning, You are in offline mode",
+                "description": "Details will be accessible once your connection is restored.",
+                "reconnecting": "Reconnecting..."
+            },
+            "confirm_modal": {
+                "title": "Are you sure?",
+                "description": "Are you sure you want to perform this action?",
+                "disagree_btn_title": "Disagree",
+                "agree_btn_title": "Agree"
+            },
+            "pagination": {
+                "showing": "Showing {count} of {total} results ",
+                "page": "Page {current} of {total}"
+            }
+        },
+        "home": {
+            "title": "Home",
+            "print_confirmation_title": "Print Confirmation?",
+            "print_confirm_message": "Do you want to print the receipt of last order?",
+            "items_in_cart": "{count} items in cart.",
+            "view_cart_btn": "View Cart",
+            "categories": {
+                "all": "All"
+            },
+            "products": {
+                "view": {
+                    "qty": "{qty} Qty",
+                    "add_to_cart": "Add to Cart",
+                    "total_amount": "Total Amount",
+                    "type": {
+                        "simple": {
+                            "customizable_options": {
+                                "none": "None",
+                                "total_amount": "Total Amount"
+                            }
+                        },
+                        "booking": {
+                            "location": "Location",
+                            "view_on_map": "View on Map",
+                            "default": {
+                                "slot_duration_in_minutes": "{minutes} Minutes",
+                                "slot_duration": "Slot Duration"
+                            },
+                            "appointment": {
+                                "closed": "Closed",
+                                "see_details": "See Details",
+                                "slot_duration": "Slot Duration",
+                                "slot_duration_in_minutes": "{minutes} Minutes",
+                                "today_availability": "Today Availability"
+                            },
+                            "event": {
+                                "book_your_ticket": "Book Your Ticket",
+                                "per_ticket_price": "{price} Per Ticket",
+                                "title": "Event on :"
+                            },
+                            "rental": {
+                                "choose_rent_option": "Choose Rent Option",
+                                "daily_basis": "Daily Basis",
+                                "from": "From",
+                                "hourly_basis": "Hourly Basis",
+                                "rent_an_item": "Rent an Item",
+                                "select_date": "Select date",
+                                "select_rent_time": "Select Rent Time",
+                                "select_slot": "Select Slot",
+                                "select_time_slot": "Select Time Slot",
+                                "slot": "Slot",
+                                "no_slots_available": "No slots available",
+                                "to": "To"
+                            },
+                            "table": {
+                                "book_a_table": "Book a Table",
+                                "closed": "Closed",
+                                "slot_duration": "Slot Duration",
+                                "slot_duration_in_minutes": "{minutes} Minutes",
+                                "slots_for_all_days": "Show for all days",
+                                "special_notes": "Special Request/Notes",
+                                "today_availability": "Today Availability"
+                            },
+                            "slots": {
+                                "book_an_appointment": "Book an Appointment",
+                                "date": "Date",
+                                "no_slots_available": "No slots available",
+                                "select_slot": "Select Slot",
+                                "title": "Slot"
+                            }
+                        },
+                        "bundle": {
+                            "total_amount": "Total Amount",
+                            "none": "No Bundle Options Available"
+                        },
+                        "configurable": {
+                            "select_option": "Select Options",
+                            "select_above_option": "Please select above options first.",
+                            "price": "Selected Variant Price"
+                        },
+                        "downloadable": {
+                            "samples": "Samples",
+                            "links": "Links"
+                        },
+                        "grouped": {
+                            "name": "Name"
+                        }
+                    }
+                },
+                "no_barcode_product": "No product found with this barcode."
+            }
+        },
+        "customers": {
+            "add_btn": "Add New Customer",
+            "add_new_btn": "Add New",
+            "change_btn": "Change Customer",
+            "change_success": "Customer changed successfully.",
+            "delete_success": "Customer deleted successfully.",
+            "customers": "Customers",
+            "delete_btn": "Delete",
+            "edit_btn": "Edit",
+            "no_current_customer": "No customer found.",
+            "no_customers_found": "No customers found.",
+            "offline_customers": "Offline Customers",
+            "search_customers": "Search Customers...",
+            "select_btn": "Select Customer",
+            "title": "Customers",
+            "create": {
+                "title": "Add New Customer",
+                "back_btn_title": "Back",
+                "first_name": "First Name",
+                "last_name": "Last Name",
+                "email": "Email",
+                "phone_number": "Phone Number",
+                "address": "Address",
+                "city": "City",
+                "state": "State",
+                "select_state": "Select State",
+                "country": "Country",
+                "select_country": "Select Country",
+                "pin_code": "Pin code",
+                "save_btn_title": "Add Customer",
+                "phone_already_exist": "The phone has already been taken.",
+                "email_already_exist": "The email has already been taken.",
+                "create_success": "Customer created successfully."
+            },
+            "edit": {
+                "title": "Edit Customer",
+                "back_btn_title": "Back",
+                "first_name": "First Name",
+                "last_name": "Last Name",
+                "email": "Email",
+                "phone_number": "Phone Number",
+                "address": "Address",
+                "city": "City",
+                "state": "State",
+                "select_state": "Select State",
+                "country": "Country",
+                "select_country": "Select Country",
+                "pin_code": "Pin code",
+                "save_btn_title": "Update Customer",
+                "phone_already_exist": "The phone has already been taken.",
+                "email_already_exist": "The email has already been taken.",
+                "update_success": "Customer updated successfully."
+            }
+        },
+        "cashier": {
+            "title": "Cashier",
+            "cash_drawer": {
+                "title": "Cash Drawer",
+                "drawer_amount_summary": "Drawer Amount Summary",
+                "opening_drawer_amount": "Opening Drawer Amount",
+                "cash_payment_sale": "Cash Payment Sale",
+                "other_payment_sale": "Other Payment Sale",
+                "expected_drawer_amount": "Expected Drawer Amount",
+                "difference": "Difference",
+                "remarks": "Remarks",
+                "remarks_placeholder": "Enter counter closure remarks.",
+                "close_drawer": "Close Drawer"
+            },
+            "today_sale": {
+                "title": "Today's Sale",
+                "opening_drawer_amount": "Opening Drawer Amount",
+                "cash_payment_sale": "Cash Payment Sale",
+                "other_payment_sale": "Other Payment Sale",
+                "sale_history": "Sale History",
+                "filters": "Filters",
+                "order_id": "Order ID",
+                "time": "Time",
+                "order_total": "Order Total",
+                "payment_mode": "Payment Mode",
+                "no_records": "No records found.",
+                "no_records_desc": "Sales history will appear here once transactions are made.",
+                "drawer": {
+                    "title": "Filter",
+                    "order_id": "Order ID",
+                    "time": "Time",
+                    "order_total": "Order Total",
+                    "payment_mode": "Payment Mode",
+                    "select_payment_mode": "Select Payment Mode",
+                    "pos_cash": "Cash Payment",
+                    "pos_card": "Card Payment",
+                    "pos_split": "Split Payment",
+                    "filter_btn_title": "Apply Filter"
+                }
+            },
+            "sale_history": {
+                "active_filters": "Active Filters",
+                "cash_payments": "Cash Payments",
+                "clear_all": "Clear All",
+                "date": "Date",
+                "drawer_note": "Drawer Note",
+                "filters": "Filters",
+                "no_records": "No records found.",
+                "no_records_desc": "Sales history will appear here once transactions are made.",
+                "other_payments": "Other Payments",
+                "title": "Sale History",
+                "total_sale": "Total Sale",
+                "drawer": {
+                    "add": "Add",
+                    "cash_payment": "Cash Payment",
+                    "date_range": "Date Range",
+                    "filter_btn_title": "Apply Filter",
+                    "from_date": "From Date",
+                    "other_payment": "Other Payment",
+                    "remove_filter": "Remove Filter",
+                    "title": "Filter",
+                    "to_date": "To Date",
+                    "total_sale": "Total Sale"
+                }
+            }
+        },
+        "orders": {
+            "title": "Orders",
+            "history": {
+                "title": "History",
+                "search_orders": "Search Order Id or Customer Name...",
+                "filters": "Filters",
+                "order_id": "Order ID",
+                "date": "Date",
+                "total_sales": "Total Sales",
+                "total_qty": "Total Qty",
+                "subtotal": "Subtotal",
+                "tax": "Tax",
+                "no_records": "No records found.",
+                "no_records_desc": "Orders history will appear here once transactions are made.",
+                "return_btn": "Return",
+                "order_status": {
+                    "title": "Status",
+                    "completed": "Completed",
+                    "returned": "Returned"
+                }
+            },
+            "hold": {
+                "title": "Orders On Hold",
+                "note": "Note",
+                "resume": "Resume",
+                "remove": "Remove",
+                "remove_success": "Order removed successfully.",
+                "resume_success": "Order resumed successfully.",
+                "resume_error": "Please process the current cart first.",
+                "no_orders": "No orders found."
+            },
+            "offline": {
+                "title": "Offline Orders",
+                "sync_order": "Sync Order",
+                "sync_all_orders": "Sync All Orders",
+                "search_order_id": "Search Order Id...",
+                "order_id": "Order ID",
+                "qty": "Total Qty",
+                "total": "Total",
+                "date": "Date",
+                "no_orders": "No offline orders found.",
+                "sync_success": "Order synced successfully.",
+                "return": "Return",
+                "returned": "Returned",
+                "return_success": "Order returned successfully."
+            },
+            "info": {
+                "order_id": "Order ID",
+                "qty": "Qty- {qty}",
+                "sku": "SKU- {sku}",
+                "subtotal": "Subtotal",
+                "tax": "Tax",
+                "discount": "Discount",
+                "grand_total": "Grand Total",
+                "cash": "Cash",
+                "balance": "Balance",
+                "no_order_selected": "No order selected to preview or print invoice.",
+                "reorder": "Reorder"
+            },
+            "print": {
+                "btn_title": "Print Invoice",
+                "cashier": "Cashier",
+                "change": "Change",
+                "contact_info": "Contact Info",
+                "customer": "Customer",
+                "customer_care": "Customer Care",
+                "date": "Date",
+                "discount": "Discount",
+                "email": "Email",
+                "grand_total": "Grand Total",
+                "item": "Product",
+                "name": "Name",
+                "no_receipt": "No receipt available for this outlet.",
+                "order_id": "Order ID",
+                "phone": "Phone",
+                "price": "Price",
+                "qty": "Qty",
+                "subtotal": "Subtotal",
+                "tax": "Tax",
+                "total": "Total",
+                "total_qty": "Total Qty",
+                "website": "Website"
+            },
+            "reorder": {
+                "select_customer_first": "Please select a customer first.",
+                "cart_held": "Current cart has been moved to hold orders.",
+                "summary": {
+                    "title": "Reorder Summary",
+                    "added": "Items successfully added to cart: {count}",
+                    "modified_label": "Items modified (due to stock limits):",
+                    "modified_message": "Requested {requested}, but only {added} available.",
+                    "skipped_label": "Items skipped:",
+                    "close_btn": "Close"
+                },
+                "reason": {
+                    "deleted": "Product deleted",
+                    "disabled": "Product disabled",
+                    "out_of_stock": "Out of stock"
+                }
+            }
+        },
+        "products": {
+            "title": "Products",
+            "low_stock_products": {
+                "title": "Low Stock Products",
+                "qty": "{qty} Qty",
+                "purchase_request": "Purchase Request",
+                "send_request_btn": "Send Request",
+                "no_purchase_request": "No purchase request found.",
+                "no_products": "No low stock products found.",
+                "items_in_request": "{count} items in purchase request.",
+                "view_btn_title": "View",
+                "request": {
+                    "title": "Send Quantity Request",
+                    "requested_quantity": "Requested Quantity",
+                    "comment": "Comment",
+                    "comment_placeholder": "Enter comment",
+                    "add_btn_title": "Add Product",
+                    "cancel_btn_title": "Cancel",
+                    "already_exist": "Product already exist in the request list."
+                }
+            },
+            "requested_products": {
+                "title": "Requested Products",
+                "search_products": "Search Products...",
+                "qty": "Qty:- {qty}",
+                "pending": "Pending",
+                "received": "Received",
+                "declined": "Declined",
+                "no_products": "No product request was found."
+            },
+            "settings": {
+                "title": "Settings",
+                "minimum_qty": "Minimum Qty",
+                "save_btn_title": "Save",
+                "save_success": "Settings saved successfully."
+            }
+        },
+        "reports": {
+            "title": "Reports",
+            "day": "Day",
+            "week": "Week",
+            "month": "Month"
+        },
+        "settings": {
+            "title": "Settings",
+            "profile": {
+                "title": "Profile",
+                "first_name": "First Name",
+                "last_name": "Last Name",
+                "email": "Email",
+                "old_password": "Old Password",
+                "new_password": "New Password",
+                "confirm_password": "Confirm Password",
+                "update_btn_title": "Update Profile"
+            },
+            "sync": {
+                "completed": "Completed",
+                "customers": "Customers",
+                "deselect_all": "Deselect All",
+                "entities": "Entities",
+                "entities_desc": "Select the entities you want to sync with the server.",
+                "fetching": "Fetching...",
+                "orders": "Orders",
+                "products": "Products",
+                "ready": "Ready",
+                "records": "Records",
+                "select_all": "Select All",
+                "start_syncing": "Start Syncing",
+                "sync_btn_title": "Sync Now",
+                "title": "Sync"
+            },
+            "shortcuts": {
+                "title": "Shortcuts",
+                "description": "Keyboard combinations that allow you to perform actions quickly.",
+                "sections": {
+                    "header": "Header",
+                    "menu": "Menu",
+                    "customer": "Customer",
+                    "cart": "Cart"
+                },
+                "items": {
+                    "open_barcode": {
+                        "action": "Open Barcode Mode",
+                        "description": "Switch to barcode scanning"
+                    },
+                    "open_product_modal": {
+                        "action": "Open Product Create Modal",
+                        "description": "Quickly add a new product"
+                    },
+                    "fullscreen": {
+                        "action": "Toggle Fullscreen",
+                        "description": "Enter/Exit fullscreen"
+                    },
+                    "dark_mode": {
+                        "action": "Toggle Dark Mode",
+                        "description": "Switch theme"
+                    },
+                    "hold_orders": {
+                        "action": "Hold Orders",
+                        "description": "Manage held orders"
+                    },
+                    "home": {
+                        "action": "Go to Home",
+                        "description": "Navigate to home page"
+                    },
+                    "customers": {
+                        "action": "Go to Customers",
+                        "description": "Open customer section"
+                    },
+                    "cashier": {
+                        "action": "Go to Cashier",
+                        "description": "Access POS cashier"
+                    },
+                    "orders": {
+                        "action": "Go to Orders",
+                        "description": "Check order history"
+                    },
+                    "products": {
+                        "action": "Go to Products",
+                        "description": "Manage products"
+                    },
+                    "reports": {
+                        "action": "Go to Reports",
+                        "description": "View analytics"
+                    },
+                    "settings": {
+                        "action": "Go to Settings",
+                        "description": "Adjust preferences"
+                    },
+                    "create_customer": {
+                        "action": "Create New Customer",
+                        "description": "Add a customer"
+                    },
+                    "edit_customer": {
+                        "action": "Edit Current Customer",
+                        "description": "Update selected customer info"
+                    },
+                    "delete_customer": {
+                        "action": "Delete Current Customer",
+                        "description": "Remove selected customer"
+                    },
+                    "change_customer": {
+                        "action": "Change Current Customer",
+                        "description": "Select different customer"
+                    },
+                    "add_note": {
+                        "action": "Add Note",
+                        "description": "Attach a note to the order"
+                    },
+                    "remove_note": {
+                        "action": "Remove Note",
+                        "description": "Delete note from cart"
+                    },
+                    "checkout": {
+                        "action": "Proceed to Checkout",
+                        "description": "Start payment process"
+                    },
+                    "hold_order": {
+                        "action": "Hold Order",
+                        "description": "Put order on hold"
+                    }
+                }
+            },
+            "regional": {
+                "title": "Regional",
+                "locale": "Locale",
+                "select_locale": "Select Locale",
+                "currency": "Currency",
+                "select_currency": "Select Currency",
+                "save_btn_title": "Save"
+            },
+            "save_success": "Settings saved successfully."
+        },
+        "payment": {
+            "title": "Payment",
+            "back": "Back",
+            "order_details": "Order Details",
+            "subtotal": "Subtotal",
+            "tax": "Tax",
+            "discount": "Discount",
+            "grand_total": "Grand Total",
+            "payable_amount": "Payable Amount",
+            "received": "Received",
+            "remaining": "Remaining",
+            "pos_cash": "Cash",
+            "pos_card": "Card",
+            "pos_split": "Split",
+            "cancel": "Cancel",
+            "card_details": "Card Details",
+            "bank": "Bank",
+            "select_bank": "Select Bank",
+            "qty": "Qty- {qty}",
+            "sku": "SKU- {sku}",
+            "other": "Other",
+            "confirm_payment": "Confirm Payment",
+            "empty_cart": "Cart is empty!",
+            "amount_exceeded": "Payable amount exceeded!",
+            "order_placed": "Order placed successfully"
+        }
+    }
+}

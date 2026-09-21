@@ -1,0 +1,74 @@
+{
+  "src/Resources/assets/css/admin.css": {
+    "file": "assets/admin-BQ1oWIqG.css",
+    "src": "src/Resources/assets/css/admin.css",
+    "isEntry": true
+  },
+  "src/Resources/assets/css/shop.css": {
+    "file": "assets/shop-XGpDCuTY.css",
+    "src": "src/Resources/assets/css/shop.css",
+    "isEntry": true
+  },
+  "src/Resources/assets/fonts/admin.woff": {
+    "file": "assets/admin-HcSkZKOp.woff",
+    "src": "src/Resources/assets/fonts/admin.woff"
+  },
+  "src/Resources/assets/fonts/shop.woff": {
+    "file": "assets/shop-FTN318EN.woff",
+    "src": "src/Resources/assets/fonts/shop.woff"
+  },
+  "src/Resources/assets/images/change-user-dark.svg": {
+    "file": "assets/change-user-dark-CEO7L6-8.svg",
+    "src": "src/Resources/assets/images/change-user-dark.svg"
+  },
+  "src/Resources/assets/images/change-user.svg": {
+    "file": "assets/change-user-DfR6Q7lc.svg",
+    "src": "src/Resources/assets/images/change-user.svg"
+  },
+  "src/Resources/assets/images/favicon.ico": {
+    "file": "assets/favicon--PZ4cBiP.ico",
+    "src": "src/Resources/assets/images/favicon.ico"
+  },
+  "src/Resources/assets/images/icon-192.png": {
+    "file": "assets/icon-192-B5ar47TH.png",
+    "src": "src/Resources/assets/images/icon-192.png"
+  },
+  "src/Resources/assets/images/icon-512.png": {
+    "file": "assets/icon-512-BQ7Cbu73.png",
+    "src": "src/Resources/assets/images/icon-512.png"
+  },
+  "src/Resources/assets/images/logo.png": {
+    "file": "assets/logo-D5m9rjCn.png",
+    "src": "src/Resources/assets/images/logo.png"
+  },
+  "src/Resources/assets/images/product-placeholder.webp": {
+    "file": "assets/product-placeholder-INODB-G2.webp",
+    "src": "src/Resources/assets/images/product-placeholder.webp"
+  },
+  "src/Resources/assets/images/user-placeholder.png": {
+    "file": "assets/user-placeholder-C_FiyGd9.png",
+    "src": "src/Resources/assets/images/user-placeholder.png"
+  },
+  "src/Resources/assets/js/admin.js": {
+    "file": "assets/admin-l0sNRNKZ.js",
+    "name": "admin",
+    "src": "src/Resources/assets/js/admin.js",
+    "isEntry": true
+  },
+  "src/Resources/assets/js/shop.js": {
+    "file": "assets/shop-BFlops1n.js",
+    "name": "shop",
+    "src": "src/Resources/assets/js/shop.js",
+    "isEntry": true,
+    "css": [
+      "assets/shop-BsM4JrO0.css"
+    ],
+    "assets": [
+      "assets/logo-D5m9rjCn.png",
+      "assets/user-placeholder-C_FiyGd9.png",
+      "assets/product-placeholder-INODB-G2.webp",
+      "assets/change-user-DfR6Q7lc.svg",
+      "assets/change-user-dark-CEO7L6-8.svg"
+    ]
+  }
+}

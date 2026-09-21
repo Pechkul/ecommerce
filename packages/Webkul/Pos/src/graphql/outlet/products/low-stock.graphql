@@ -1,0 +1,13 @@
+#outlet/products/low-stock.graphql Related APIs
+
+extend type Query @guard(with: ["pos_user"]) {
+    getLowStockProducts(
+        first: Int!
+        page: Int!
+    ): LowStockProductsResponse @field(resolver: "Webkul\\Pos\\Queries\\Products\\ProductQuery@getLowStockProducts")
+}
+
+type LowStockProductsResponse {
+    paginatorInfo: PaginatorInfo!
+    data: [OutletProductResult]
+}

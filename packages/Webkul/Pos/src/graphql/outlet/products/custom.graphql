@@ -1,0 +1,22 @@
+#outlet/products/custom.graphql
+
+extend type Mutation @guard(with: ["pos_user"]) {
+    createOutletProduct(
+        input: createOutletProductInput! @spread
+    ): createOutletProductResult @field(resolver: "Webkul\\Pos\\Mutations\\Outlet\\ProductMutation@createProduct")
+}
+
+input createOutletProductInput {
+    name: String!
+    sku: String!
+    price: Float!
+    quantity: Int!
+    weight: Float!
+}
+
+type createOutletProductResult {
+    success: Boolean!
+    errors: String
+    message: String
+    product: OutletProductResult
+}

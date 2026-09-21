@@ -1,0 +1,53 @@
+# HatYaiBBGun - eCommerce & POS System
+
+โปรเจกต์ระบบบริหารจัดการร้านค้าออนไลน์และระบบขายหน้าร้าน (Point of Sale) สำเร็จรูปในตัวเดียวกัน พัฒนาขึ้นโดยเฉพาะสำหรับ **ลูกค้าร้านหาดใหญ่บีบีกัน (HatYaiBBGun)** เพื่อเชื่อมโยงการขายหน้าร้านและออนไลน์เข้าด้วยกันแบบไร้รอยต่อ
+
+---
+
+## ภาพรวมระบบ (Overview)
+
+ระบบนี้ถูกพัฒนาและต่อยอดบนโครงสร้างหลักของ **Bagisto (Open Source Headless eCommerce Framework)** ร่วมกับส่วนขยาย **Bagisto POS** และ **Bagisto GraphQL API** เพื่อให้ครอบคลุมการทำงานทั้งการขายผ่านหน้าเว็บและการขายหน้าร้านผ่านเครื่อง POS
+
+---
+
+## คุณสมบัติและความสามารถหลัก (Features)
+
+### ระบบร้านค้าออนไลน์ (Official Bagisto Core)
+
+* **Product & Inventory Management:** รองรับสินค้าหลากหลายประเภท (Simple, Configurable, Bundle, Grouped, Virtual, Booking) พร้อมระบบจัดการคลังสินค้า
+* **Multi-Channel & Multi-Currency:** รองรับการขายหลายช่องทาง สลับสกุลเงิน และระบบหลายภาษา
+* **Customer & Order Management:** ระบบสมัครสมาชิก ประวัติการสั่งซื้อ ระบบตระกร้าสินค้า และการจัดการคำสั่งซื้อหลังบ้าน
+* **Marketing & Promotions:** ระบบสร้างคูปองส่วนลด การจัดโปรโมชัน และการส่งอีเมลแจ้งเตือน
+
+### ระบบขายหน้าร้าน (Bagisto POS Extension)
+
+* **Real-time Sync:** เชื่อมโยงข้อมูลสินค้า สต็อก และคำสั่งซื้อระหว่างหน้าร้านและออนไลน์แบบเรียลไทม์
+* **Multi-Outlet Support:** รองรับการจัดการหลายสาขาและหลายจุดขาย (Drawer/Register)
+* **Cart & Payment Handling:** ระบบถือตะกร้าสินค้าชั่วคราว (Hold/Resume Cart) และรองรับการชำระเงินทั้งเงินสด บัตรเครดิต หรือการเพิ่มรายการสินค้าแบบกำหนดเอง (Custom Product)
+* **Barcode & Thermal Printing:** ระบบสร้างและสแกนบาร์โค้ด พร้อมการพิมพ์สลิปใบเสร็จรับเงินขนาด 80mm ( Thermal Printer 80x80mm ) รองรับภาษาไทยสมบูรณ์แบบ
+
+### ระบบเชื่อมต่อ API (GraphQL API Extension)
+
+* **Headless Architecture:** รองรับการเชื่อมต่อกับแอปพลิเคชันภายนอก ทั้ง Mobile App และ Frontend อื่นๆ ผ่าน **GraphQL Endpoint (`/graphql`)**
+* **High Performance:** รับ-ส่งข้อมูลได้อย่างรวดเร็วและปลอดภัยด้วยมาตรฐาน Lighthouse GraphQL
+
+---
+
+## โครงสร้างคู่มือการติดตั้ง (Documentation Index)
+
+คู่มือการติดตั้งระบบถูกแบ่งออกเป็นส่วนๆ อย่างชัดเจน เพื่อความสะดวกในการตั้งค่าบนเครื่องใหม่ (Local / Production Environment):
+
+* **[ส่วนที่ 1: การติดตั้ง Bagisto eCommerce (Core System)](README-CORE-SYSTEM.md)**
+* **[ส่วนที่ 2: การนำเข้าฐานข้อมูล (Database Import)](README-DATABASE-BACKUP.md)**
+* **[ส่วนที่ 3: การติดตั้งและตั้งค่า GraphQL API](README-GRAPHQL.md)**
+* **[ส่วนที่ 4: การตั้งค่าระบบ POS (Point of Sale)](README-POS.md)**
+
+---
+
+## Requirements (สิ่งที่ต้องมีในเครื่อง)
+
+* **PHP:** `>= 8.2`
+* **Composer:** `>= 2.x`
+* **Node.js:** `>= 18.x` & **NPM**
+* **Database:** MySQL / MariaDB
+* **Web Server Environment:** Laragon, Laravel Herd หรือ Local Domain (`.test`)
