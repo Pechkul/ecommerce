@@ -1,7 +1,4 @@
 <?php
-
-use League\Fractal\Serializer\DataArraySerializer;
-
 /*
 |--------------------------------------------------------------------------
 | Prettus Repository Config
@@ -18,7 +15,7 @@ return [
     |
     */
     'pagination' => [
-        'limit' => 15,
+        'limit' => 15
     ],
 
     /*
@@ -33,11 +30,11 @@ return [
     JsonApiSerializer
 
     */
-    'fractal' => [
-        'params' => [
-            'include' => 'include',
+    'fractal'    => [
+        'params'     => [
+            'include' => 'include'
         ],
-        'serializer' => DataArraySerializer::class,
+        'serializer' => League\Fractal\Serializer\DataArraySerializer::class
     ],
 
     /*
@@ -46,7 +43,7 @@ return [
     |--------------------------------------------------------------------------
     |
     */
-    'cache' => [
+    'cache'      => [
         /*
          |--------------------------------------------------------------------------
          | Cache Status
@@ -55,7 +52,7 @@ return [
          | Enable or disable cache
          |
          */
-        'enabled' => false,
+        'enabled'    => false,
 
         /*
          |--------------------------------------------------------------------------
@@ -65,7 +62,7 @@ return [
          | Time of expiration cache
          |
          */
-        'minutes' => 10080,
+        'minutes'    => 30,
 
         /*
          |--------------------------------------------------------------------------
@@ -85,7 +82,7 @@ return [
           |
           |
           */
-        'clean' => [
+        'clean'      => [
 
             /*
               |--------------------------------------------------------------------------
@@ -105,14 +102,14 @@ return [
               | delete : Clear Cache on delete Entry in repository
               |
               */
-            'on' => [
-                'created' => true,
-                'updated' => true,
-                'deleted' => true,
-            ],
+            'on'      => [
+                'create' => true,
+                'update' => true,
+                'delete' => true,
+            ]
         ],
 
-        'params' => [
+        'params'     => [
             /*
             |--------------------------------------------------------------------------
             | Skip Cache Params
@@ -122,7 +119,7 @@ return [
             | Ex: http://prettus.local/?search=lorem&skipCache=true
             |
             */
-            'skipCache' => 'skipCache',
+            'skipCache' => 'skipCache'
         ],
 
         /*
@@ -140,54 +137,10 @@ return [
        |
        | 'except'  =>['find'],
        */
-        'allowed' => [
-            'only' => null,
-            'except' => null,
-        ],
-
-        'repositories' => [
-            'Webkul\Core\Repositories\CoreConfigRepository' => [
-                'enabled' => true,
-
-                // 'minutes'    => 10080,
-
-                // 'clean'      => [
-                //     'enabled' => true,
-
-                //     'on'      => [
-                //         'created' => true,
-                //         'updated' => true,
-                //         'deleted' => true,
-                //     ]
-                // ],
-
-                // 'allowed' => [
-                //     'only' => null,
-
-                //     'except' => null
-                // ],
-            ],
-
-            'Webkul\Core\Repositories\ChannelRepository' => [
-                'enabled' => true,
-            ],
-
-            'Webkul\Core\Repositories\CountryRepository' => [
-                'enabled' => true,
-            ],
-
-            'Webkul\Core\Repositories\CountryStateRepository' => [
-                'enabled' => true,
-            ],
-
-            'Webkul\Core\Repositories\CurrencyRepository' => [
-                'enabled' => true,
-            ],
-
-            'Webkul\Core\Repositories\LocaleRepository' => [
-                'enabled' => true,
-            ],
-        ],
+        'allowed'    => [
+            'only'   => null,
+            'except' => null
+        ]
     ],
 
     /*
@@ -198,7 +151,7 @@ return [
     | Settings of request parameters names that will be used by Criteria
     |
     */
-    'criteria' => [
+    'criteria'   => [
         /*
         |--------------------------------------------------------------------------
         | Accepted Conditions
@@ -217,7 +170,7 @@ return [
         'acceptedConditions' => [
             '=',
             'like',
-            'in',
+            'in'
         ],
         /*
         |--------------------------------------------------------------------------
@@ -257,16 +210,16 @@ return [
         |   http://prettus.local/?search=lorem&searchJoin=or
         |
         */
-        'params' => [
-            'search' => 'search',
+        'params'             => [
+            'search'       => 'search',
             'searchFields' => 'searchFields',
-            'filter' => 'filter',
-            'orderBy' => 'orderBy',
-            'sortedBy' => 'sortedBy',
-            'with' => 'with',
-            'searchJoin' => 'searchJoin',
-            'withCount' => 'withCount',
-        ],
+            'filter'       => 'filter',
+            'orderBy'      => 'orderBy',
+            'sortedBy'     => 'sortedBy',
+            'with'         => 'with',
+            'searchJoin'   => 'searchJoin',
+            'withCount'    => 'withCount'
+        ]
     ],
     /*
     |--------------------------------------------------------------------------
@@ -274,20 +227,20 @@ return [
     |--------------------------------------------------------------------------
     |
     */
-    'generator' => [
-        'basePath' => app()->path(),
+    'generator'  => [
+        'basePath'      => app()->path(),
         'rootNamespace' => 'App\\',
         'stubsOverridePath' => app()->path(),
-        'paths' => [
-            'models' => 'Entities',
+        'paths'         => [
+            'models'       => 'Entities',
             'repositories' => 'Repositories',
-            'interfaces' => 'Repositories',
+            'interfaces'   => 'Repositories',
             'transformers' => 'Transformers',
-            'presenters' => 'Presenters',
-            'validators' => 'Validators',
-            'controllers' => 'Http/Controllers',
-            'provider' => 'RepositoryServiceProvider',
-            'criteria' => 'Criteria',
-        ],
-    ],
+            'presenters'   => 'Presenters',
+            'validators'   => 'Validators',
+            'controllers'  => 'Http/Controllers',
+            'provider'     => 'RepositoryServiceProvider',
+            'criteria'     => 'Criteria'
+        ]
+    ]
 ];

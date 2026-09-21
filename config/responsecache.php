@@ -1,16 +1,10 @@
 <?php
 
-use Spatie\ResponseCache\CacheProfiles\CacheAllSuccessfulGetRequests;
-use Spatie\ResponseCache\Replacers\CsrfTokenReplacer;
-use Spatie\ResponseCache\Serializers\DefaultSerializer;
-use Webkul\FPC\Hasher\DefaultHasher;
-use Webkul\FPC\Replacers\FlashMessagesReplacer;
-
 return [
     /*
      * Determine if the response cache middleware should be enabled.
      */
-    'enabled' => env('RESPONSE_CACHE_ENABLED', false),
+    'enabled' => env('RESPONSE_CACHE_ENABLED', true),
 
     /*
      *  The given class will determinate if a request should be cached. The
@@ -19,7 +13,7 @@ return [
      *  You can provide your own class given that it implements the
      *  CacheProfile interface.
      */
-    'cache_profile' => CacheAllSuccessfulGetRequests::class,
+    'cache_profile' => Spatie\ResponseCache\CacheProfiles\CacheAllSuccessfulGetRequests::class,
 
     /*
      *  Optionally, you can specify a header that will force a cache bypass.
@@ -41,13 +35,13 @@ return [
      * should be added to a cached response. This can be handy when
      * debugging.
      */
-    'add_cache_time_header' => env('APP_DEBUG', true),
+    'add_cache_time_header' => env('APP_DEBUG', false),
 
     /*
      * This setting determines the name of the http header that contains
      * the time at which the response was cached
      */
-    'cache_time_header_name' => env('RESPONSE_CACHE_HEADER_NAME', 'Bagisto-FPC'),
+    'cache_time_header_name' => env('RESPONSE_CACHE_HEADER_NAME', 'laravel-responsecache'),
 
     /*
      * This setting determines if a http header named with the cache age
@@ -61,7 +55,7 @@ return [
      * This setting determines the name of the http header that contains
      * the age of cache
      */
-    'cache_age_header_name' => env('RESPONSE_CACHE_AGE_HEADER_NAME', 'Bagisto-FPC-Age'),
+    'cache_age_header_name' => env('RESPONSE_CACHE_AGE_HEADER_NAME', 'laravel-responsecache-age'),
 
     /*
      * Here you may define the cache store that should be used to store
@@ -75,8 +69,7 @@ return [
      * Each replacer must implement the Replacer interface.
      */
     'replacers' => [
-        CsrfTokenReplacer::class,
-        FlashMessagesReplacer::class,
+        \Spatie\ResponseCache\Replacers\CsrfTokenReplacer::class,
     ],
 
     /*
@@ -92,10 +85,10 @@ return [
      * This class is responsible for generating a hash for a request. This hash
      * is used to look up a cached response.
      */
-    'hasher' => DefaultHasher::class,
+    'hasher' => \Spatie\ResponseCache\Hasher\DefaultHasher::class,
 
     /*
      * This class is responsible for serializing responses.
      */
-    'serializer' => DefaultSerializer::class,
+    'serializer' => \Spatie\ResponseCache\Serializers\DefaultSerializer::class,
 ];
