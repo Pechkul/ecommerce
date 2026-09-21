@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 return [
     /*
@@ -12,13 +14,12 @@ return [
     | You can add multiple routes pointing to different GraphQL endpoints.
     |
     */
-
     'routes' => [
         '/graphiql' => [
             'name' => 'graphiql',
-            // 'middleware' => ['web'],
+            // 'middleware' => ['web']
             // 'prefix' => '',
-            // 'domain' => 'graphql.' . env('APP_DOMAIN', 'localhost'),
+            // 'domain' => 'graphql.'.env('APP_DOMAIN', 'localhost'),
 
             /*
             |--------------------------------------------------------------------------
@@ -30,8 +31,7 @@ return [
             | as GraphiQL, but can be set to any URL.
             |
             */
-
-            'endpoint' => '/graphql',
+            'endpoint' => env('GRAPHQL_ENDPOINT', '/graphql'),
 
             /*
             |--------------------------------------------------------------------------
@@ -44,7 +44,6 @@ return [
             | Example: `ws://your-endpoint` or `wss://your-endpoint`
             |
             */
-
             'subscription-endpoint' => env('GRAPHIQL_SUBSCRIPTION_ENDPOINT', null),
         ],
     ],
@@ -59,6 +58,5 @@ return [
     | for example you might not want it active in production.
     |
     */
-
     'enabled' => env('GRAPHIQL_ENABLED', true),
 ];
