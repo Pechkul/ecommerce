@@ -20,6 +20,8 @@
         "astrotomic/laravel-translatable": "^11.16",
         "bagisto/b2b-suite": "^2.2 || dev-main",
         "bagisto/graphql-api": "v2.3.2",
+        "bagistoplus/visual": "^2.0@dev",
+        "bagistoplus/visual-debut": "^2.0@dev",
         "barryvdh/laravel-dompdf": "^2.0.0|^3.0",
         "diglactic/laravel-breadcrumbs": "^10.0",
         "elasticsearch/elasticsearch": "^8.10",
@@ -169,7 +171,7 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "support": {
         "issues": "https://github.com/bagisto/bagisto/issues",
