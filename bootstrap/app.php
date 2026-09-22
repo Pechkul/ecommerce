@@ -45,6 +45,11 @@ return Application::configure(basePath: dirname(__DIR__))
 
         $middleware->validateCsrfTokens(except: [
             'stripe/*',
+            'stripe/*',
+            'admin/visual/*',
+            'admin/visual/editor/*',
+            'visual/*',
+            'vendor/bagistoplus/*',
         ]);
 
         $middleware->trustProxies(at: '*');

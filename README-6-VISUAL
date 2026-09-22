@@ -1,0 +1,24 @@
+## 📌 ส่วนที่ 6: การติดตั้ง Bagisto Visual
+
+### สิ่งที่ตั้งค่าและแนบมาให้แล้วในไฟล์ ZIP (สำหรับตรวจสอบ)
+
+* **โฟลเดอร์ระบบ Bagisto Visual:** รวมไฟล์โมดูลทั้งหมดไว้ที่ `packages/Webkul/Visual/src` เรียบร้อยแล้ว[cite: 1]
+* **`composer.json`:** เพิ่มการเชื่อมโยงระบบ `"Webkul\\Visual\\": "packages/Webkul/Visual/src"` ในส่วนของ `autoload` ไว้แล้ว
+* **`bootstrap/providers.php`:** ลงทะเบียนการทำงาน `Webkul\Visual\Providers\VisualServiceProvider::class` ไว้แล้ว
+* **ระบบจัดการธีมและองค์ประกอบภาพ (Theme & Visual Config):** รวมไฟล์ตั้งค่าการปรับแต่งรูปลักษณ์ (Appearance), ตัวจัดการหน้าเว็บแบบ Live Preview และการตั้งค่าสินทรัพย์สื่อ (Media Assets) ไว้ครบถ้วน
+
+---
+
+### สั่งรันคำสั่งติดตั้ง Bagisto Visual บนเครื่องใหม่
+
+เปิด Terminal แล้วรันคำสั่งเพื่อลงทะเบียนระบบ Visual, Publish Assets และดำเนินการ Migration ตารางข้อมูลลงฐานข้อมูล:
+
+```bash
+composer require bagistoplus/visual:^2.0@dev // ถ้าจำเป็น
+composer config minimum-stability dev && composer config prefer-stable true // ถ้าบังคับตรวจสถานะ dev
+
+php artisan vendor:publish --tag="visual-assets" // คัดลอกไฟล์ config
+php artisan migrate // ติดตั้งฐานข้อมูล
+
+composer dump-autoload
+php artisan bagisto-visual:install

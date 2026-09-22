@@ -14,5 +14,7 @@
 เปิด Terminal แล้วรันคำสั่งเพื่อลงทะเบียนระบบ B2BSuite และ Migration ตารางข้อมูลลงฐานข้อมูล:
 
 ```bash
+composer require bagisto/b2b-suite // ถ้าจำเป็น
+
 composer dump-autoload
 php artisan b2bsuite:install
