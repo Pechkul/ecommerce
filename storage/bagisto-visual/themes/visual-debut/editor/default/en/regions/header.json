@@ -1,0 +1,179 @@
+{
+    "blocks": {
+        "announcement-bar": {
+            "id": "announcement-bar",
+            "type": "@visual-debut/announcement-bar",
+            "name": null,
+            "properties": {
+                "text": "Free shipping on orders over $50",
+                "link": null,
+                "variant": "primary",
+                "scheme": null
+            },
+            "parentId": null,
+            "children": [],
+            "disabled": true,
+            "static": false,
+            "repeated": false,
+            "ghost": false,
+            "keepInTree": false,
+            "semanticId": null,
+            "index": 0,
+            "iteration": 1
+        },
+        "visual_debut_logo_0_8343267e_90ba2223": {
+            "type": "@visual-debut/logo",
+            "name": "t:visual-debut::blocks.logo.name",
+            "id": "visual_debut_logo_0_8343267e_90ba2223",
+            "parentId": "container-logo_9d7fa7a3",
+            "children": []
+        },
+        "container-logo_9d7fa7a3": {
+            "type": "@visual-debut/header-group",
+            "id": "container-logo_9d7fa7a3",
+            "name": "t:visual-debut::sections.header.region.logo_group",
+            "properties": {
+                "layout_type": "flex",
+                "flex_gap": {
+                    "_default": 4
+                },
+                "width": "auto"
+            },
+            "children": [
+                "visual_debut_logo_0_8343267e_90ba2223"
+            ],
+            "parentId": "main-header"
+        },
+        "navigation_19f9ec69": {
+            "type": "@visual-debut/header-nav",
+            "id": "navigation_19f9ec69",
+            "name": "t:visual-debut::blocks.header-nav.name",
+            "parentId": "container-nav_186ca83a",
+            "children": []
+        },
+        "container-nav_186ca83a": {
+            "type": "@visual-debut/header-group",
+            "id": "container-nav_186ca83a",
+            "name": "t:visual-debut::blocks.header-nav.name",
+            "properties": {
+                "layout_type": "flex",
+                "flex_justify": "start",
+                "flex_gap": {
+                    "_default": 4
+                },
+                "width": "full"
+            },
+            "children": [
+                "navigation_19f9ec69"
+            ],
+            "parentId": "main-header"
+        },
+        "currency-selector_f5098607": {
+            "type": "@visual-debut/header-currency",
+            "id": "currency-selector_f5098607",
+            "name": "t:visual-debut::blocks.header-currency.name",
+            "parentId": "container-actions_8ad895b5",
+            "children": []
+        },
+        "locale-selector_4b6ecffd": {
+            "type": "@visual-debut/header-locale",
+            "id": "locale-selector_4b6ecffd",
+            "name": "t:visual-debut::blocks.header-locale.name",
+            "properties": {
+                "icon": "lucide-globe"
+            },
+            "parentId": "container-actions_8ad895b5",
+            "children": []
+        },
+        "search_ed447185": {
+            "type": "@visual-debut/header-search",
+            "id": "search_ed447185",
+            "name": "t:visual-debut::blocks.header-search.name",
+            "properties": {
+                "search_icon": "lucide-search",
+                "image_search_icon": "lucide-camera"
+            },
+            "parentId": "container-actions_8ad895b5",
+            "children": []
+        },
+        "compare_07227deb": {
+            "type": "@visual-debut/header-compare",
+            "id": "compare_07227deb",
+            "name": "t:visual-debut::blocks.header-compare.name",
+            "properties": {
+                "icon": "lucide-arrow-left-right"
+            },
+            "parentId": "container-actions_8ad895b5",
+            "children": []
+        },
+        "user_5cdf71c1": {
+            "type": "@visual-debut/header-user",
+            "id": "user_5cdf71c1",
+            "name": "t:visual-debut::blocks.header-user.name",
+            "properties": {
+                "icon": "lucide-user",
+                "guest_heading": "t:visual-debut::blocks.header-user.settings.guest_heading_default",
+                "guest_description": "t:visual-debut::blocks.header-user.settings.guest_description_default"
+            },
+            "parentId": "container-actions_8ad895b5",
+            "children": []
+        },
+        "cart_60c8a578": {
+            "type": "@visual-debut/header-cart",
+            "id": "cart_60c8a578",
+            "name": "t:visual-debut::blocks.header-cart.name",
+            "properties": {
+                "heading": "t:visual-debut::blocks.header-cart.settings.heading_default",
+                "description": "t:visual-debut::blocks.header-cart.settings.description_default"
+            },
+            "parentId": "container-actions_8ad895b5",
+            "children": []
+        },
+        "container-actions_8ad895b5": {
+            "type": "@visual-debut/header-group",
+            "id": "container-actions_8ad895b5",
+            "name": "t:visual-debut::sections.header.region.actions_group",
+            "properties": {
+                "layout_type": "flex",
+                "flex_justify": "end",
+                "flex_gap": {
+                    "_default": 2
+                },
+                "width": "auto"
+            },
+            "children": [
+                "currency-selector_f5098607",
+                "locale-selector_4b6ecffd",
+                "search_ed447185",
+                "compare_07227deb",
+                "user_5cdf71c1",
+                "cart_60c8a578"
+            ],
+            "parentId": "main-header"
+        },
+        "main-header": {
+            "type": "@visual-debut/header",
+            "id": "main-header",
+            "properties": {
+                "content_width": "container"
+            },
+            "children": [
+                "container-logo_9d7fa7a3",
+                "container-nav_186ca83a",
+                "container-actions_8ad895b5"
+            ],
+            "parentId": null
+        }
+    },
+    "regions": [
+        {
+            "id": "header",
+            "name": "Header",
+            "blocks": [
+                "announcement-bar",
+                "main-header"
+            ],
+            "shared": true
+        }
+    ]
+}
